@@ -18,7 +18,7 @@ export default async function Home(props: LocaleParams) {
       <HomeScreen data={data} />
       {/* Footer */}
       <footer className="py-8 pb-20  border-t border-white/5 text-center text-zinc-600 text-sm">
-        <p>&copy; 2026 Beyond Code.</p>
+        <p>&copy; 2026 GENZY</p>
       </footer>
 
       <BottomNavigation />

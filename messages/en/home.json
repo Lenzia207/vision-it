@@ -56,7 +56,7 @@
         "title": "Institut for Electrochemistry, Galvanic and Materialchemistry",
         "description": "A full-featured online store with cart, checkout, and admin dashboard.",
         "category": "Web",
-        "image": null,
+        "image": "/images/portfolio/web-egm.png",
         "url": "https://elektrochemie.eu/",
         "tags": ["Next.js", "TypeScript", "Stripe"]
       },

@@ -10,7 +10,7 @@ export default function Header() {
             <Code2 className="w-5 h-5 text-white" />
           </div>
           <span className="font-serif text-lg font-medium tracking-tight text-white">
-            Beyond Code
+            GENZY
           </span>
         </div>
 

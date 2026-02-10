@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import Header from "@/components/MainNavigation";
 import HeroSection from "./sections/HeroSection";
 import ServiceSection from "./sections/ServiceSection";
 import PortfolioSection from "./sections/PortfolioSection";
@@ -13,8 +13,6 @@ interface HomeScreenProps {
 export default function HomeScreen({ data }: HomeScreenProps) {
   return (
     <>
-      <Header />
-
       {/* Hero Section */}
       <HeroSection
         titleLine1={data.hero_section.title_line1}

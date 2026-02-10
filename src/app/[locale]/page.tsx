@@ -3,6 +3,8 @@ import ScrollRevealObserver from "@/components/ScrollRevealObserver";
 import { LocaleParams } from "../i18n/local-params";
 import HomeScreen from "./home/HomeScreen";
 import fetchHomePageData from "./home/sections/data/home-page-data";
+import MainNavigation from "@/components/MainNavigation";
+import Footer from "./home/sections/Footer";
 
 export const dynamic = "force-static";
 
@@ -22,12 +24,11 @@ export default async function Home(props: LocaleParams) {
   return (
     <main className="min-h-screen bg-[#050505] text-zinc-200 selection:bg-blue-500/30 selection:text-blue-200">
       <ScrollRevealObserver />
+      <MainNavigation />
       <HomeScreen data={data} />
-      {/* Footer */}
-      <footer className="py-8 pb-20  border-t border-white/5 text-center text-zinc-600 text-sm">
-        <p>&copy; 2026 GENZY</p>
-      </footer>
+      <Footer />
 
+      {/* Mobile View */}
       <BottomNavigation />
     </main>
   );

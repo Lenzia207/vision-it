@@ -1,7 +1,6 @@
 {
   "hero_section": {
     "title_line1": "Building Websites for your Business",
-    
     "description": "Turn your ideas into visual reality.\nFrom concept to production, your digital product becomes a responsive, high-performance website with modern animations and intuitive user experiences.",
     "btn_text": "Contact Me"
   },
@@ -29,7 +28,7 @@
       },
       {
         "title": "Feature Integration",
-              "description": "Need something extra? I extend existing websites with new features that enhance functionality and create real value. From forms, authentication, databases, and APIs to payment systems, dashboards, or custom interactive elements like animations — your site evolves without disrupting the original design.",
+        "description": "Need something extra? I extend existing websites with new features that enhance functionality and create real value. From forms, authentication, databases, and APIs to payment systems, dashboards, or custom interactive elements like animations — your site evolves without disrupting the original design.",
         "icon_images": {
           "icon": "MousePointerClick",
           "icon_color": "cyan-400",
@@ -50,40 +49,37 @@
   "portfolio_section": {
     "title": "Selected Works",
     "description": "A selection of digital experiences I’ve developed and contributed to over the years. My work includes modern websites built with Next.js, React and Tailwind CSS, as well as cross-platform mobile apps created with Flutter and Dart. More is on the way.",
-    "categories": ["Web", "App"],
+    "categories": [
+      "Web",
+      "App"
+    ],
     "projects": [
       {
         "title": "Institut for Electrochemistry, Galvanic and Materialchemistry",
-        "description": "A full-featured online store with cart, checkout, and admin dashboard.",
+        "description": "The Institute of Electrochemistry is a state-authorized civil engineering institute with expertise in chemistry, corrosion, and surface engineering, providing technical, expert, and regulatory support for complex industrial processes. The project included concept, design, and full implementation of the website. This covered front-end development as well as deployment, with a focus on a clear, structured, and professional design that reflects the institute’s technical expertise.",
         "category": "Web",
         "image": "/images/portfolio/web-egm.png",
         "url": "https://elektrochemie.eu/",
-        "tags": ["Next.js", "TypeScript", "Stripe"]
+       "tags": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Tailwind CSS"
+        ]
       },
-
       {
         "title": "Camp Currie",
-        "description": "A farmer-project website called Camp Currie. I worked on developing the front-end using React and Tailwind CSS to create a responsive and visually appealing design.",
+        "description": "Camp Currie is a website for a non-profit agricultural initiative. The project covers the full process from concept and design to complete implementation, including front-end development with React and Tailwind CSS as well as deployment. The focus was on creating a clean, welcoming, and user-friendly design.",
         "category": "Web",
         "image": "/images/portfolio/web-camp-currie.png",
         "url": "https://camp-currie.at/",
-        "tags": ["React", "Tailwind CSS"]
-      },
-      {
-        "title": "Aktionsfinder App",
-        "description": "A mobile app that helps users find local deals and promotions in Austria.",
-        "category": "App",
-        "image": "/images/project-app-2.jpg",
-        "url": "#",
-        "tags": ["Flutter", "Dart"]
-      },
-      {
-        "title": "Tiroler Tageszeitung App",
-        "description": "A news app delivering the latest headlines and articles from Tiroler Tageszeitung. I worked on adding various functionalities and UI components including integrating Dark Mode.",
-        "category": "App",
-        "image": "/images/project-app-2.jpg",
-        "url": "#",
-        "tags": ["Flutter", "Dart"]
+        "tags": [
+          "Figma",
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Tailwind CSS"
+        ]
       },
       {
         "title": "Protokoll on Demand App",
@@ -91,7 +87,32 @@
         "category": "App",
         "image": "/images/project-app-2.jpg",
         "url": "#",
-        "tags": ["Flutter", "Dart"]
+        "tags": [
+          "Flutter",
+          "Dart"
+        ]
+      },
+      {
+        "title": "Aktionsfinder App",
+        "description": "A mobile app that helps users find local deals and promotions in Austria.",
+        "category": "App",
+        "image": "/images/project-app-2.jpg",
+        "url": "#",
+        "tags": [
+          "Flutter",
+          "Dart"
+        ]
+      },
+      {
+        "title": "Tiroler Tageszeitung App",
+        "description": "A news app delivering the latest headlines and articles from Tiroler Tageszeitung. I worked on adding various functionalities and UI components including integrating Dark Mode.",
+        "category": "App",
+        "image": "/images/project-app-2.jpg",
+        "url": "#",
+        "tags": [
+          "Flutter",
+          "Dart"
+        ]
       }
     ]
   },
@@ -101,11 +122,23 @@
     "stacks": [
       {
         "category": "Web",
-        "items": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js"]
+        "items": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Node.js"
+        ]
       },
       {
         "category": "App",
-        "items": ["Flutter", "Dart", "Firebase", "Riverpod", "Serverpod"]
+        "items": [
+          "Flutter",
+          "Dart",
+          "Firebase",
+          "Riverpod",
+          "Serverpod"
+        ]
       }
     ]
   },

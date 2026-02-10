@@ -1,0 +1,174 @@
+{
+  "hero_section": {
+    "title_line1": "Websites für Ihr Unternehmen erstellen",
+    "description": "Ideen in visuelle Realität verwandeln.\nVom Konzept bis zur Produktion wird Ihr digitales Produkt zu einer responsiven, leistungsstarken Website mit modernen Animationen und intuitiven Nutzererlebnissen.",
+    "btn_text": "Kontaktieren Sie mich"
+  },
+  "service_section": {
+    "title": "Wie kann ich helfen?",
+    "description": "Ich entwickle maßgeschneiderte Weblösungen, die Ihren Anforderungen entsprechen.\nEgal ob eine brandneue Website, ein Redesign oder neue Funktionen, die Ihr bestehendes Projekt weiterbringen.",
+    "services": [
+      {
+        "title": "Maßgeschneiderte Webentwicklung von Grund auf",
+        "description": "Noch keine Website, aber eine klare Idee im Kopf? Ich verwandle Ihr Konzept in ein vollständig entwickeltes digitales Produkt, inklusive Design, Entwicklung und Deployment. Jedes Projekt wird mit sauberem Code, Skalierbarkeit und einer natürlichen Nutzererfahrung umgesetzt.",
+        "icon_images": {
+          "icon": "Code2",
+          "icon_color": "blue-400",
+          "icon_animation": "/animations/code-anim.json"
+        }
+      },
+      {
+        "title": "Ihr Design zum Leben erwecken",
+        "description": "Sie haben bereits ein fertiges Design? Perfekt. Ich verwandeln Ihr statisches Design in eine voll funktionsfähige, responsive Website mit sauberem, wartbarem Code und präziser Detailarbeit.",
+        "icon_images": {
+          "icon": "Layers",
+          "icon_color": "pink-400",
+          "icon_animation": "/animations/layer-anim.json"
+        }
+      },
+      {
+        "title": "Funktionserweiterungen",
+        "description": "Brauchen Sie etwas Extra? Ich erweitere bestehende Websites um neue Funktionen, die die Funktionalität verbessern und echten Mehrwert schaffen. Von Formularen, Authentifizierung, Datenbanken und APIs bis hin zu Zahlungssystemen, Dashboards oder maßgeschneiderten interaktiven Elementen wie Animationen – Ihre Website entwickelt sich weiter, ohne das ursprüngliche Design zu stören.",
+        "icon_images": {
+          "icon": "MousePointerClick",
+          "icon_color": "cyan-400",
+          "icon_animation": "/animations/click-anim.json"
+        }
+      },
+      {
+        "title": "Website Redesign",
+        "description": "Fühlt sich Ihre Website veraltet an? Das kann Ihr Unternehmen bremsen. Ich verwandle bestehende Designs in moderne, responsive Erlebnisse mit verbesserter Performance, besserer Struktur und einer visuellen Identität, die Ihre Marke widerspiegelt.",
+        "icon_images": {
+          "icon": "PenTool",
+          "icon_color": "orange-400",
+          "icon_animation": "/animations/pentool-anim.json"
+        }
+      }
+    ]
+  },
+  "portfolio_section": {
+    "title": "Ausgewählte Projekte",
+    "description": "Eine Auswahl digitaler Erfahrungen, die ich im Laufe der Jahre entwickelt und mitgestaltet habe. Meine Arbeiten umfassen moderne Websites mit Next.js, React und Tailwind CSS sowie plattformübergreifende Mobile Apps mit Flutter und Dart. Weitere Projekte folgen.",
+    "categories": [
+      "Web",
+      "App"
+    ],
+    "projects": [
+      {
+        "title": "Institut für Elektrochemie, Galvanotechnik und Materialchemie",
+        "description": "Das Institut für Elektrochemie ist ein staatlich befugtes Ziviltechniker-Institut und spezialisiert auf Chemie, Korrosion, Oberflächentechnik sowie die technische, gutachterliche und behördliche Begleitung komplexer industrieller Prozesse.Das Projekt umfasste die Konzeption, das Design und die vollständige Umsetzung der Website. Dazu zählten die Frontend-Entwicklung sowie das Deployment, mit Fokus auf ein klares, strukturiertes und professionelles Design, das die technische Expertise des Instituts widerspiegelt.",
+        "category": "Web",
+        "image": "/images/portfolio/web-egm.png",
+        "url": "https://elektrochemie.eu/",
+        "tags": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Tailwind CSS"
+        ]
+      },
+      {
+        "title": "Camp Currie",
+        "description": "Camp Currie ist eine Website für ein gemeinnütziges Landwirtschaftsprojekt. Das Projekt umfasst Konzeption, Design und vollständige Umsetzung der Website. Von der Frontend-Entwicklung mit React und Tailwind CSS bis hin zum Deployment. Der Fokus lag auf klaren und freundlichen Design.",
+        "category": "Web",
+        "image": "/images/portfolio/web-camp-currie.png",
+        "url": "https://camp-currie.at/",
+        "tags": [
+          "Figma",
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Tailwind CSS"
+        ]
+      },
+      {
+        "title": "Protokoll on Demand App",
+        "description": "Eine mobile On-Demand-App zur Dokumentenverwaltung und -freigabe.",
+        "category": "App",
+        "image": "/images/project-app-2.jpg",
+        "url": "#",
+        "tags": [
+          "Flutter",
+          "Dart"
+        ]
+      },
+      {
+        "title": "Aktionsfinder App",
+        "description": "Eine mobile App, die Nutzern hilft, lokale Angebote und Promotionen in Österreich zu finden.",
+        "category": "App",
+        "image": "/images/project-app-2.jpg",
+        "url": "#",
+        "tags": [
+          "Flutter",
+          "Dart"
+        ]
+      },
+      {
+        "title": "Tiroler Tageszeitung App",
+        "description": "Eine News-App, die die neuesten Schlagzeilen und Artikel der Tiroler Tageszeitung liefert. Ich arbeitete an verschiedenen Funktionalitäten und UI-Komponenten, einschließlich der Integration eines Dark Mode.",
+        "category": "App",
+        "image": "/images/project-app-2.jpg",
+        "url": "#",
+        "tags": [
+          "Flutter",
+          "Dart"
+        ]
+      }
+    ]
+  },
+  "tech_stack_section": {
+    "title": "Technologien und Frameworks",
+    "description": "Die Technologien, die ich zur Erstellung digitaler Produkte einsetze.",
+    "stacks": [
+      {
+        "category": "Web",
+        "items": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Node.js"
+        ]
+      },
+      {
+        "category": "App",
+        "items": [
+          "Flutter",
+          "Dart",
+          "Firebase",
+          "Riverpod",
+          "Serverpod"
+        ]
+      }
+    ]
+  },
+  "about_me_section": {
+    "title": "Hallo Welt",
+    "description": "Ich bin eine freiberufliche Entwicklerin und begann meine Karriere in einer Digitalagentur, wo ich zwei Jahre lang an der Entwicklung und Pflege digitaler Anwendungen mitarbeitete. Meine Reise geht nun als unabhängige Kreatorin weiter, was mir die Freiheit gibt, meinen Designhintergrund in Animation und Medien mit meiner Leidenschaft für Web- und App-Entwicklung zu verbinden. Diese Kombination aus Design und Technik macht mich zu einer vielseitigen Partnerin für Projekte, die sowohl Kreativität als auch technische Expertise benötigen.",
+    "social_media": [
+      {
+        "name": "Github",
+        "icon": "/images/github.svg",
+        "url": "https://github.com/Lenzia207"
+      },
+      {
+        "name": "LinkedIn",
+        "icon": "/images/linkedIn.svg",
+        "url": "https://www.linkedin.com/in/lena-z-230b01176/"
+      }
+    ]
+  },
+  "contact_section": {
+    "title": "Kontakt aufnehmen",
+    "description": "Bereit, Ihre Ideen zum Leben zu erwecken? Kontaktieren Sie mich für eine kostenlose Beratung und lassen Sie uns besprechen, wie ich Ihnen helfen kann, Ihre Ziele zu erreichen.",
+    "nameLabel": "Name*",
+    "namePlaceholder": "Bitte geben Sie Ihren vollständigen Namen ein",
+    "companyLabel": "Firma",
+    "companyPlaceholder": "Ihr Unternehmen",
+    "emailLabel": "E-Mail*",
+    "emailPlaceholder": "ihre.name@mail.com",
+    "messageLabel": "Nachricht",
+    "messagePlaceholder": "Wie kann ich Ihnen helfen?",
+    "btn_text": "Nachricht senden"
+  }
+}

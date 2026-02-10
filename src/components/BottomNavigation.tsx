@@ -18,11 +18,11 @@ export default function BottomNavigation() {
           Service
         </Link>
         <Link
-          href="#about"
+          href="#projects"
           className="text-zinc-400 text-[12px] justify-items-center text-center hover:text-white transition-colors"
         >
           <Monitor className="w-3 h-3" />
-          Portfolio
+          Projects
         </Link>
         <Link
           href="#about"

@@ -3,7 +3,6 @@ import BackgroundEffect from "@/components/BackgroundEffect";
 
 interface HeroSectionProps {
   titleLine1: string;
-  titleLine2: string;
   description: string;
   btnText: string;
 }
@@ -21,9 +20,7 @@ export default function HeroSection({
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight leading-[1.1] mb-8">
           <span className="block animate-enter text-white">{titleLine1}</span>
-          {/* <span className="block animate-enter delay-200 text-gradient-blue italic">
-            {titleLine2}
-          </span> */}
+      
         </h1>
 
         <p className="animate-enter delay-300 text-lg md:text-xl text-zinc-400 max-w-xxl mx-auto font-light leading-relaxed mb-10 whitespace-pre-line">

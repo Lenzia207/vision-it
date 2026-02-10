@@ -18,7 +18,6 @@ export default function HomeScreen({ data }: HomeScreenProps) {
       {/* Hero Section */}
       <HeroSection
         titleLine1={data.hero_section.title_line1}
-        titleLine2={data.hero_section.title_line2}
         description={data.hero_section.description}
         btnText={data.hero_section.btn_text}
       />

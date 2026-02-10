@@ -49,7 +49,7 @@ export default function PortfolioSection({
   }, [activeCategory]);
 
   return (
-    <section id="portfolio" className="py-24 md:py-32 border-t border-white/5">
+    <section id="projects" className="py-24 md:py-32 border-t border-white/5">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16 reveal-on-scroll">
           <h2 className="font-serif text-4xl md:text-5xl font-medium tracking-tight text-white mb-4">

@@ -1,9 +1,11 @@
+import TitleHeader from "@/components/TitleHeader";
 import { Github, Linkedin } from "lucide-react";
 import Image from "next/image";
 
 interface AboutMeSectionProps {
   title: string;
   description: string;
+  fullname: string;
   social_media: {
     name: string;
     icon: string;
@@ -14,6 +16,7 @@ interface AboutMeSectionProps {
 export default function AboutMeSection({
   title,
   description,
+  fullname,
   social_media,
 }: AboutMeSectionProps) {
   return (
@@ -21,29 +24,24 @@ export default function AboutMeSection({
       id="about"
       className="relative py-24 md:py-16 bg-zinc-900/20 border-t border-white/5"
     >
-      <div className="max-w-4xl mx-auto px-6 text-center reveal-on-scroll">
-        <h2 className="font-serif text-4xl md:text-5xl font-medium tracking-tight text-white mb-12">
-          {title}
-        </h2>
-        <div className=" max-w-2xl mx-auto pb-28">
-          <p className="text-zinc-400 font-light leading-relaxed">
-            {description}
-          </p>
-        </div>
+      <div className="max-w-6xl mx-auto px-6 text-center reveal-on-scroll">
+        <TitleHeader title={title} description={description} />
+
 
         <div className="flex flex-col items-center gap-10">
           {/* Avatar Placeholder with Glow */}
-          <div className="relative mb-8 group cursor-pointer">
+          <div className="relative justify-items-center mb-8 group cursor-pointer">
             <div className="absolute -inset-1 bg-linear-to-r from-blue-600 to-cyan-500 rounded-full  blur-3xl transition duration-500 group-hover:opacity-100"></div>
-            <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden bg-zinc-800 border-2 border-zinc-700 flex items-center justify-center">
-              <Image
+              <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden bg-zinc-800 border-2 border-zinc-700 flex items-center justify-center">
+                <Image
                 src="/images/about-me.jpg"
                 alt="Profile Image"
                 width={160}
                 height={160}
                 className="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-700"
-              />
-            </div>
+                />
+              </div>
+           <div className="text-2xl lg:text-4xl mt-4">{fullname}</div>
           </div>
 
           <div className="flex flex-row gap-10">

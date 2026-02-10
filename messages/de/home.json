@@ -1,16 +1,16 @@
 {
   "hero_section": {
-    "title_line1": "Websites für Ihr Unternehmen erstellen",
-    "description": "Ideen in visuelle Realität verwandeln.\nVom Konzept bis zur Produktion wird Ihr digitales Produkt zu einer responsiven, leistungsstarken Website mit modernen Animationen und intuitiven Nutzererlebnissen.",
-    "btn_text": "Kontaktieren Sie mich"
+    "title_line1": "Websites und Apps für dein Unternehmen",
+    "description": "Transformiere Ideen in dein persönliches, digitales Produkt.\n\nDein Projekt wird von der Konzeptphase bis zum Launch begleitet und als geräteübergreifend optimierte Website oder mobile App für Android und iOS mit modernen Animationen und klarer Nutzerführung umgesetzt.",
+    "btn_text": "Kontakt aufnehmen"
   },
   "service_section": {
     "title": "Wie kann ich helfen?",
-    "description": "Ich entwickle maßgeschneiderte Weblösungen, die Ihren Anforderungen entsprechen.\nEgal ob eine brandneue Website, ein Redesign oder neue Funktionen, die Ihr bestehendes Projekt weiterbringen.",
+    "description": "Ich entwickle individuelle Weblösungen, die genau auf deine Bedürfnisse zugeschnitten sind.\nSei es eine neue Website, ein Redesign oder zusätzliche Funktionen, die du für dein bestehendes Projekt benötigst.",
     "services": [
       {
-        "title": "Maßgeschneiderte Webentwicklung von Grund auf",
-        "description": "Noch keine Website, aber eine klare Idee im Kopf? Ich verwandle Ihr Konzept in ein vollständig entwickeltes digitales Produkt, inklusive Design, Entwicklung und Deployment. Jedes Projekt wird mit sauberem Code, Skalierbarkeit und einer natürlichen Nutzererfahrung umgesetzt.",
+        "title": "Angepasste Webentwicklung von Grund auf",
+        "description": "Noch keine Website, aber eine klare Idee im Kopf? Ich verwandle dein Konzept in ein vollständig entwickeltes digitales Produkt, inklusive Design, Entwicklung und Deployment. Jedes Projekt wird mit sauberem Code, Skalierbarkeit und einer natürlichen Nutzererfahrung umgesetzt.",
         "icon_images": {
           "icon": "Code2",
           "icon_color": "blue-400",
@@ -18,8 +18,8 @@
         }
       },
       {
-        "title": "Ihr Design zum Leben erwecken",
-        "description": "Sie haben bereits ein fertiges Design? Perfekt. Ich verwandeln Ihr statisches Design in eine voll funktionsfähige, responsive Website mit sauberem, wartbarem Code und präziser Detailarbeit.",
+        "title": "Dein Design Funktionsfähig machen",
+        "description": "Du hast bereits ein fertiges Design? Perfekt. Ich verwandle dein statisches Design in eine voll funktionsfähige, plattformübergreifende Website mit sauberem, wartbarem Code und präziser Detailarbeit.",
         "icon_images": {
           "icon": "Layers",
           "icon_color": "pink-400",
@@ -27,8 +27,8 @@
         }
       },
       {
-        "title": "Funktionserweiterungen",
-        "description": "Brauchen Sie etwas Extra? Ich erweitere bestehende Websites um neue Funktionen, die die Funktionalität verbessern und echten Mehrwert schaffen. Von Formularen, Authentifizierung, Datenbanken und APIs bis hin zu Zahlungssystemen, Dashboards oder maßgeschneiderten interaktiven Elementen wie Animationen – Ihre Website entwickelt sich weiter, ohne das ursprüngliche Design zu stören.",
+        "title": "Feature-Erweiterungen",
+        "description": "Brauchst du etwas Extra? Ich erweitere bestehende Websites um neue Funktionen, die die Funktionalität verbessern und echten Mehrwert schaffen. Von Formularen, Authentifizierung, Datenbanken und APIs bis hin zu Zahlungssystemen, Dashboards oder maßgeschneiderten interaktiven Elementen wie Animationen – deine Website entwickelt sich weiter, ohne das ursprüngliche Design zu stören.",
         "icon_images": {
           "icon": "MousePointerClick",
           "icon_color": "cyan-400",
@@ -37,7 +37,7 @@
       },
       {
         "title": "Website Redesign",
-        "description": "Fühlt sich Ihre Website veraltet an? Das kann Ihr Unternehmen bremsen. Ich verwandle bestehende Designs in moderne, responsive Erlebnisse mit verbesserter Performance, besserer Struktur und einer visuellen Identität, die Ihre Marke widerspiegelt.",
+        "description": "Fühlt sich deine Website veraltet an? Das kann dein Unternehmen bremsen. Ich verwandle bestehende Designs in moderne, responsive Erlebnisse mit verbesserter Performance, besserer Struktur und einer visuellen Identität, die deine Marke widerspiegelt.",
         "icon_images": {
           "icon": "PenTool",
           "icon_color": "orange-400",
@@ -47,8 +47,8 @@
     ]
   },
   "portfolio_section": {
-    "title": "Ausgewählte Projekte",
-    "description": "Eine Auswahl digitaler Erfahrungen, die ich im Laufe der Jahre entwickelt und mitgestaltet habe. Meine Arbeiten umfassen moderne Websites mit Next.js, React und Tailwind CSS sowie plattformübergreifende Mobile Apps mit Flutter und Dart. Weitere Projekte folgen.",
+    "title": "Projekte",
+    "description": "Die Auswahl meiner digitalen Projekte umfasst moderne Webanwendungen sowie plattformübergreifende Mobile-Apps für Android und iOS.",
     "categories": [
       "Web",
       "App"
@@ -143,8 +143,9 @@
     ]
   },
   "about_me_section": {
-    "title": "Hallo Welt",
-    "description": "Ich bin eine freiberufliche Entwicklerin und begann meine Karriere in einer Digitalagentur, wo ich zwei Jahre lang an der Entwicklung und Pflege digitaler Anwendungen mitarbeitete. Meine Reise geht nun als unabhängige Kreatorin weiter, was mir die Freiheit gibt, meinen Designhintergrund in Animation und Medien mit meiner Leidenschaft für Web- und App-Entwicklung zu verbinden. Diese Kombination aus Design und Technik macht mich zu einer vielseitigen Partnerin für Projekte, die sowohl Kreativität als auch technische Expertise benötigen.",
+    "title": "Über mich",
+    "name": "Lena Zyadeh",
+    "description": "Ich bin freiberufliche Web- und Appentwicklerin und begann meine Karriere in der Digitalagentur Marqably GmbH, wo ich zwei lehrreiche Jahre an der Entwicklung und Pflege digitaler Anwendungen mitarbeitete.\nNun setze ich meine Reise als unabhängige Entwicklerin fort, was mir die Freiheit gibt, meinen Designhintergrund in Animation und Medien mit meiner Leidenschaft für Web- und App-Entwicklung zu verbinden. Diese Kombination aus Design und Technik macht mich zu einer vielseitigen Partnerin für Projekte, die sowohl Kreativität als auch technische Expertise benötigen.",
     "social_media": [
       {
         "name": "Github",
@@ -159,16 +160,16 @@
     ]
   },
   "contact_section": {
-    "title": "Kontakt aufnehmen",
-    "description": "Bereit, Ihre Ideen zum Leben zu erwecken? Kontaktieren Sie mich für eine kostenlose Beratung und lassen Sie uns besprechen, wie ich Ihnen helfen kann, Ihre Ziele zu erreichen.",
+    "title": "Bereit zu Starten?",
+    "description": "Lass uns deine Ideen zum Leben erwecken!\nSchreib mir gerne für ein kostenloses Gespräch. Egal ob online oder bei einem Kaffee vor Ort. Wir schauen gemeinsam, wie dein Projekt Form annimmt und welche Schritte dich deinem Ziel näherbringen.",
     "nameLabel": "Name*",
-    "namePlaceholder": "Bitte geben Sie Ihren vollständigen Namen ein",
+    "namePlaceholder": "Vollständiger Namen",
     "companyLabel": "Firma",
-    "companyPlaceholder": "Ihr Unternehmen",
+    "companyPlaceholder": "Dein Unternehmen",
     "emailLabel": "E-Mail*",
     "emailPlaceholder": "ihre.name@mail.com",
     "messageLabel": "Nachricht",
-    "messagePlaceholder": "Wie kann ich Ihnen helfen?",
+    "messagePlaceholder": "Wie kann ich helfen?",
     "btn_text": "Nachricht senden"
   }
 }

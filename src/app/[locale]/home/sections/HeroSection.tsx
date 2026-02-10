@@ -17,13 +17,13 @@ export default function HeroSection({
       <BackgroundEffect />
       
       {/* Main Title */}
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
         <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight leading-[1.1] mb-8">
           <span className="block animate-enter text-white">{titleLine1}</span>
       
         </h1>
 
-        <p className="animate-enter delay-300 text-lg md:text-xl text-zinc-400 max-w-xxl mx-auto font-light leading-relaxed mb-10 whitespace-pre-line">
+        <p className="animate-enter delay-300 text-lg lg:text-2xl text-zinc-400  mx-auto font-light leading-relaxed mb-10 whitespace-pre-line">
           {description}
         </p>
 

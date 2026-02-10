@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import IconLucide from "@/components/IconsLucide";
 import { Project } from "./data/types/home-types";
 import Image from "next/image";
+import TitleHeader from "@/components/TitleHeader";
 
 interface PortfolioSectionProps {
   title: string;
@@ -51,12 +52,7 @@ export default function PortfolioSection({
   return (
     <section id="projects" className="py-24 md:py-32 border-t border-white/5">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16 reveal-on-scroll">
-          <h2 className="font-serif text-4xl md:text-5xl font-medium tracking-tight text-white mb-4">
-            {title}
-          </h2>
-          <p className="text-zinc-500 max-w-2xl mx-auto">{description}</p>
-        </div>
+        <TitleHeader title={title} description={description} />
 
         {/* Category Filter */}
         <div className="flex justify-center mb-12 reveal-on-scroll">
@@ -65,11 +61,10 @@ export default function PortfolioSection({
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-6 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 ${
-                  activeCategory === category
+                className={`px-6 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 ${activeCategory === category
                     ? "bg-white text-black shadow-lg scale-105"
                     : "text-zinc-400 hover:text-white hover:bg-white/5"
-                }`}
+                  }`}
               >
                 {category}
               </button>

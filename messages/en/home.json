@@ -1,6 +1,6 @@
 {
   "hero_section": {
-    "title_line1": "Building Websites for your Business",
+    "title_line1": "Building Websites and Apps for your Business",
     "description": "Turn your ideas into visual reality.\nFrom concept to production, your digital product becomes a responsive, high-performance website with modern animations and intuitive user experiences.",
     "btn_text": "Contact Me"
   },
@@ -144,6 +144,7 @@
   },
   "about_me_section": {
     "title": "Hello World",
+    "name": "Lena Zyadeh",
     "description": "I am a freelance developer who started out in a digital agency, where I spent two years helping to build and maintain digital applications. My journey now continues as an independent creator, which gives me the freedom to combine my design background in animation and media with my passion for web and app development. This blend of design and engineering makes me a multi-skilled partner for projects that need both creativity and technical expertise.",
     "social_media": [
       {

@@ -16,8 +16,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Beyond Code - Digital Reality",
-  description: "Turn your abstract ideas into visual reality.",
+  title: "GENZY- Digital Reality",
 };
 
 export async function generateStaticParams() {

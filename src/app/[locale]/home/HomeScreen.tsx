@@ -47,6 +47,7 @@ export default function HomeScreen({ data }: HomeScreenProps) {
         title={data.about_me_section.title}
         description={data.about_me_section.description}
         social_media={data.about_me_section.social_media}
+        fullname={data.about_me_section.name}
       />
 
       {/* Contact Section */}

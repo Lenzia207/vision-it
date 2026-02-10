@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { TechStackSection as TechStackSectionType } from "./data/types/home-types";
+import TitleHeader from "@/components/TitleHeader";
 
 interface TechStackSectionProps {
   title: string;
@@ -51,9 +52,8 @@ function StackBubble({ stack }: { stack: TechStackSectionType["stacks"][0] }) {
           return (
             <div
               key={item}
-              className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-500 cubic-bezier(0.34, 1.56, 0.64, 1) ${
-                isHovered ? "scale-[0.9] md:scale-[1.2]" : "scale-[0.65] md:scale-[0.8]"
-              }`}
+              className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-500 cubic-bezier(0.34, 1.56, 0.64, 1) ${isHovered ? "scale-[0.9] md:scale-[1.2]" : "scale-[0.65] md:scale-[0.8]"
+                }`}
               style={{
                 transform: isHovered
                   ? `translate(calc(0% + ${x}px), calc(0% + ${y}px))`
@@ -63,9 +63,8 @@ function StackBubble({ stack }: { stack: TechStackSectionType["stacks"][0] }) {
               }}
             >
               <div
-                className={`px-4 py-2 rounded-full bg-zinc-900/90 border border-white/10 text-sm text-zinc-300 whitespace-nowrap shadow-xl backdrop-blur-md ${
-                  !isHovered ? "animate-subtle-shake" : ""
-                }`}
+                className={`px-4 py-2 rounded-full bg-zinc-900/90 border border-white/10 text-sm text-zinc-300 whitespace-nowrap shadow-xl backdrop-blur-md ${!isHovered ? "animate-subtle-shake" : ""
+                  }`}
                 style={{
                   animationDelay: `${index * 0.1}s`,
                   animationDuration: `${3 + (index % 3)}s`,
@@ -91,13 +90,8 @@ export default function TechStackSection({
 }: TechStackSectionProps) {
   return (
     <section className="pb-10 relative overflow-hidden">
-      <div className="container mx-auto px-4 pb-10">
-        <div className="text-center mb-20 max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-linear-to-r from-white to-white/60">
-            {title}
-          </h2>
-          <p className="text-zinc-400 text-lg leading-relaxed">{description}</p>
-        </div>
+      <div className="container mx-auto max-w-6xl px-4 pb-10">
+        <TitleHeader title={title} description={description} />
 
         <div className="flex flex-col md:flex-row justify-center items-center gap-32 md:gap-60 p-10">
           {stacks.map((stack) => (

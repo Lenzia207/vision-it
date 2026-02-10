@@ -56,6 +56,7 @@ export interface TechStackSection {
 
 export interface AboutMeSection {
   title: string;
+  name: string;
   description: string;
   social_media: {
     name: string;

@@ -6,6 +6,7 @@ import codeAnim from "@public/animations/code-anim.json";
 import layerAnim from "@public/animations/layer-anim.json";
 import clickAnim from "@public/animations/click-anim.json";
 import pentoolAnim from "@public/animations/pentool-anim.json";
+import TitleHeader from "@/components/TitleHeader";
 
 interface ServiceSectionProps {
   title: string;
@@ -34,13 +35,8 @@ export default function ServiceSection({
       className="relative py-24 md:py-32 border-t border-white/5"
     >
       <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-20 reveal-on-scroll">
-          <h2 className="font-serif text-4xl md:text-5xl font-medium tracking-tight text-white mb-4">
-            {title}
-          </h2>
-          <p className="text-zinc-500 whitespace-pre-line">{description}</p>
-        </div>
-
+        <TitleHeader title={title} description={description} />
+        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {services.map((service, index) => {
             const animationMap: { [key: string]: any } = {

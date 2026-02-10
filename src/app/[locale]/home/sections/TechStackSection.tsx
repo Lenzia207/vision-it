@@ -6,7 +6,6 @@ import TitleHeader from "@/components/TitleHeader";
 
 interface TechStackSectionProps {
   title: string;
-  description: string;
   stacks: TechStackSectionType["stacks"];
 }
 
@@ -85,13 +84,12 @@ function StackBubble({ stack }: { stack: TechStackSectionType["stacks"][0] }) {
 
 export default function TechStackSection({
   title,
-  description,
   stacks,
 }: TechStackSectionProps) {
   return (
     <section className="pb-10 relative overflow-hidden">
       <div className="container mx-auto max-w-6xl px-4 pb-10">
-        <TitleHeader title={title} description={description} />
+        <TitleHeader title={title} />
 
         <div className="flex flex-col md:flex-row justify-center items-center gap-32 md:gap-60 p-10">
           {stacks.map((stack) => (

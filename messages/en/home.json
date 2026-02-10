@@ -118,7 +118,6 @@
   },
   "tech_stack_section": {
     "title": "Tech Stack",
-    "description": "The technologies I use to build digital products.",
     "stacks": [
       {
         "category": "Web",

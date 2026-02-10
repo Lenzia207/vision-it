@@ -118,7 +118,6 @@
   },
   "tech_stack_section": {
     "title": "Technologien und Frameworks",
-    "description": "Die Technologien, die ich zur Erstellung digitaler Produkte einsetze.",
     "stacks": [
       {
         "category": "Web",
@@ -161,9 +160,9 @@
   },
   "contact_section": {
     "title": "Bereit zu Starten?",
-    "description": "Lass uns deine Ideen zum Leben erwecken!\nSchreib mir gerne für ein kostenloses Gespräch. Egal ob online oder bei einem Kaffee vor Ort. Wir schauen gemeinsam, wie dein Projekt Form annimmt und welche Schritte dich deinem Ziel näherbringen.",
+    "description": "Lass uns deine Ideen zum Leben erwecken!\nSchreib mir gerne für ein kostenloses Gespräch. Egal ob online oder bei einem Kaffee vor Ort. Wir schauen gemeinsam, wie dein Projekt Gestalt annimmt und welche Schritte dich deinem Ziel näherbringen.",
     "nameLabel": "Name*",
-    "namePlaceholder": "Vollständiger Namen",
+    "namePlaceholder": "Vollständiger Name",
     "companyLabel": "Firma",
     "companyPlaceholder": "Dein Unternehmen",
     "emailLabel": "E-Mail*",

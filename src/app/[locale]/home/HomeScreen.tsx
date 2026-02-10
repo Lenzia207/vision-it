@@ -9,8 +9,9 @@ import { HomePageData } from "./sections/data/types/home-types";
 
 interface HomeScreenProps {
   data: HomePageData;
+  locale: string;
 }
-export default function HomeScreen({ data }: HomeScreenProps) {
+export default function HomeScreen({ data, locale }: HomeScreenProps) {
   return (
     <>
       {/* Hero Section */}
@@ -38,7 +39,6 @@ export default function HomeScreen({ data }: HomeScreenProps) {
       {/* Tech Stack Section */}
       <TechStackSection
         title={data.tech_stack_section.title}
-        description={data.tech_stack_section.description}
         stacks={data.tech_stack_section.stacks}
       />
 
@@ -63,6 +63,7 @@ export default function HomeScreen({ data }: HomeScreenProps) {
         messageLabel={data.contact_section.messageLabel}
         messagePlaceholder={data.contact_section.messagePlaceholder}
         btn_text={data.contact_section.btn_text}
+        locale={locale}
       />
     </>
   );

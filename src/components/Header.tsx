@@ -1,6 +1,7 @@
 import { Code2, Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { SwitchLanguage } from "./LanguageSwitcher";
 
 export default function Header() {
   return (
@@ -31,6 +32,7 @@ export default function Header() {
           <Link href="#contact" className="hover:text-white transition-colors">
             Contact
           </Link>
+          <SwitchLanguage />
         </div>
       </div>
     </nav>

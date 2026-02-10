@@ -26,8 +26,6 @@ export default function ServiceSection({
   description,
   services,
 }: ServiceSectionProps) {
-  // Create an array of refs - one for each service
-  const lottieRefs = useRef<(any | null)[]>([]);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   return (

@@ -1,4 +1,10 @@
 {
+  "main_navigation":[ 
+    {"name":"Leistungen","href":"#services"},
+    {"name":"Projekte","href":"#projects"},
+    {"name":"Hello World","href":"#about"},
+    {"name":"Kontakt","href":"#contact"}
+  ],
   "hero_section": {
     "title_line1": "Websites und Apps für dein Unternehmen",
     "description": "Transformiere Ideen in dein persönliches, digitales Produkt.\n\nDein Projekt wird von der Konzeptphase bis zum Launch begleitet und als geräteübergreifend optimierte Website oder mobile App für Android und iOS mit modernen Animationen und klarer Nutzerführung umgesetzt.",

@@ -1,4 +1,10 @@
 {
+  "main_navigation":[ 
+    {"name":"Services","href":"#services"},
+    {"name":"Projects","href":"#projects"},
+    {"name":"Hello World","href":"#about"},
+    {"name":"Contact","href":"#contact"}
+  ],
   "hero_section": {
     "title_line1": "Building Websites and Apps for your Business",
     "description": "Turn your ideas into visual reality.\nFrom concept to production, your digital product becomes a responsive, high-performance website with modern animations and intuitive user experiences.",
@@ -60,7 +66,7 @@
         "category": "Web",
         "image": "/images/portfolio/web-egm.png",
         "url": "https://elektrochemie.eu/",
-       "tags": [
+        "tags": [
           "Next.js",
           "React",
           "TypeScript",

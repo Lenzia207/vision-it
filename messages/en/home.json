@@ -1,9 +1,21 @@
 {
-  "main_navigation":[ 
-    {"name":"Services","href":"#services"},
-    {"name":"Projects","href":"#projects"},
-    {"name":"Hello World","href":"#about"},
-    {"name":"Contact","href":"#contact"}
+  "main_navigation": [
+    {
+      "name": "Services",
+      "href": "#services"
+    },
+    {
+      "name": "Projects",
+      "href": "#projects"
+    },
+    {
+      "name": "Hello World",
+      "href": "#about"
+    },
+    {
+      "name": "Contact",
+      "href": "#contact"
+    }
   ],
   "hero_section": {
     "title_line1": "Building Websites and Apps for your Business",
@@ -100,10 +112,10 @@
       },
       {
         "title": "Aktionsfinder App",
-        "description": "A mobile app that helps users find local deals and promotions in Austria.",
+        "description": "As part of the team at Marqably, I helped continuously develop the Aktionsfinder app and its PWA. My focus was on fixing bugs, implementing small features, and integrating new design updates.",
         "category": "App",
-        "image": "/images/project-app-2.jpg",
-        "url": "#",
+        "image": "/images/portfolio/aktionsfinder.jpg",
+        "url": "https://marqably.com/case-study/aktionsfinder-app",
         "tags": [
           "Flutter",
           "Dart"
@@ -113,8 +125,8 @@
         "title": "Tiroler Tageszeitung App",
         "description": "A news app delivering the latest headlines and articles from Tiroler Tageszeitung. I worked on adding various functionalities and UI components including integrating Dark Mode.",
         "category": "App",
-        "image": "/images/project-app-2.jpg",
-        "url": "#",
+        "image": "/images/portfolio/tt.jpg",
+        "url": "https://marqably.com/case-study/tt-app",
         "tags": [
           "Flutter",
           "Dart"

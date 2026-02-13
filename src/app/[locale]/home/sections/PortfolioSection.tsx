@@ -5,6 +5,7 @@ import IconLucide from "@/components/IconsLucide";
 import { Project } from "./data/types/home-types";
 import Image from "next/image";
 import TitleHeader from "@/components/TitleHeader";
+import OverlayOnHover from "@/components/OverlayOnHover";
 
 interface PortfolioSectionProps {
   title: string;
@@ -20,12 +21,12 @@ export default function PortfolioSection({
   projects,
 }: PortfolioSectionProps) {
   const [activeCategory, setActiveCategory] = useState<string>(
-    categories[0] || "Web"
+    categories[0] || "Web",
   );
   const gridRef = useRef<HTMLDivElement>(null);
 
   const filteredProjects = projects.filter(
-    (project) => project.category === activeCategory
+    (project) => project.category === activeCategory,
   );
 
   // Re-trigger scroll reveal animation when category changes
@@ -40,7 +41,7 @@ export default function PortfolioSection({
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     const elements = gridRef.current.querySelectorAll(".reveal-on-scroll");
@@ -61,10 +62,11 @@ export default function PortfolioSection({
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-6 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 ${activeCategory === category
+                className={`px-6 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 ${
+                  activeCategory === category
                     ? "bg-white text-black shadow-lg scale-105"
                     : "text-zinc-400 hover:text-white hover:bg-white/5"
-                  }`}
+                }`}
               >
                 {category}
               </button>
@@ -95,8 +97,8 @@ export default function PortfolioSection({
                   className="group relative bg-zinc-900/40 border border-white/5 rounded-2xl overflow-hidden hover:border-white/10 transition-all duration-500 hover:-translate-y-1 reveal-on-scroll"
                 >
                   {/* Image Placeholder - In a real app, use Next.js Image */}
-                  <div className="aspect-video w-full bg-zinc-800/50 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-linear-to-t from-zinc-900 via-transparent to-transparent opacity-60" />
+                  <div className="aspect-video w-full  relative overflow-hidden">
+                    <div className="absolute inset-0" />
                     {/* Placeholder for actual image */}
                     {project.image == null && (
                       <div className="absolute inset-0 flex items-center justify-center text-zinc-700">
@@ -106,27 +108,16 @@ export default function PortfolioSection({
                         />
                       </div>
                     )}
+
                     <Image
                       src={project.image || "/images/placeholder.png"}
                       alt={project.title}
                       layout="fill"
                       objectFit="cover"
                     />
-                    {/* Overlay on hover */}
-                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
-                      <a
-                        href={project.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black rounded-full font-medium transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
-                      >
-                        View Project
-                        <IconLucide
-                          iconName="ArrowUpRight"
-                          className="w-4 h-4"
-                        />
-                      </a>
-                    </div>
+                    
+                    {/* Overlay on Items */}
+                    <OverlayOnHover text="View Project" url={project.url} />
                   </div>
 
                   <div className="p-6">

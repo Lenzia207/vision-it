@@ -22,7 +22,7 @@ export default function IconLucide({
   const formattedName = formatIconName(iconName);
 
   // Get the icon component from the Lucide icons object
-  const IconComponent = (LucideIcons as Record<string, any>)[formattedName];
+  const IconComponent = (LucideIcons as Record<string, LucideIcons.LucideIcon>)[formattedName];
 
   // Fallback to a default icon if the requested icon doesn't exist
   if (!IconComponent) {

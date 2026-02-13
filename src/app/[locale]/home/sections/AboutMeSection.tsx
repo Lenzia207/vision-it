@@ -1,5 +1,4 @@
 import TitleHeader from "@/components/TitleHeader";
-import { Github, Linkedin } from "lucide-react";
 import Image from "next/image";
 
 interface AboutMeSectionProps {

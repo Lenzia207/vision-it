@@ -1,6 +1,5 @@
 export const runtime = "nodejs";
 
-import nodemailer from 'nodemailer';
 import { NextResponse } from 'next/server';
 import { getOwnerNotificationEmail, getCustomerConfirmationEmail } from './email-format';
 import { emailRegex, transporter } from './utils';
@@ -12,16 +11,26 @@ export async function POST(request: Request) {
     return NextResponse.json({ success: false, error: 'Payload too large' }, { status: 413 });
   }
 
-  let body: any;
+  let body: unknown;
   try {
     body = await request.json();
   } catch {
     return NextResponse.json({ success: false, error: 'Invalid JSON' }, { status: 400 });
   }
 
-  const { name, company, email, message, recaptchaToken, locale, privacyAccepted } = body ?? {};
+  const payload = (body && typeof body === 'object' ? body : {}) as {
+    name?: unknown;
+    company?: unknown;
+    email?: unknown;
+    message?: unknown;
+    recaptchaToken?: unknown;
+    locale?: unknown;
+    privacyAccepted?: unknown;
+  };
+
+  const { name, company, email, message, locale, privacyAccepted } = payload;
   if (!name || !email || !message || typeof name !== 'string' || typeof email !== 'string' || typeof message !== 'string') {
-    return NextResponse.json({ success: false, error: 'Invalid input' }, { status: 400 });
+    return NextResponse.json({ success: false, error: 'Invalid  input' }, { status: 400 });
   }
   if (message.length > 5000) {
     return NextResponse.json({ success: false, error: 'Message too long' }, { status: 413 });
@@ -31,7 +40,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ success: false, error: 'Invalid email format' }, { status: 400 });
   }
 
-  if (!privacyAccepted) {
+  if (privacyAccepted !== true) {
     return NextResponse.json({ success: false, error: 'Privacy policy not accepted' }, { status: 400 });
   }
 
@@ -55,9 +64,14 @@ export async function POST(request: Request) {
 
 
   try {
-    const contactData = { name, company, email, message };
+    const contactData = {
+      name,
+      company: typeof company === 'string' ? company : undefined,
+      email,
+      message,
+    };
     const ownerEmail = getOwnerNotificationEmail(contactData);
-    const customerEmail = getCustomerConfirmationEmail(contactData, locale || 'de');
+    const customerEmail = getCustomerConfirmationEmail(contactData, typeof locale === 'string' ? locale : 'de');
 
     // Send email to site owner (me)
     await transporter.sendMail({

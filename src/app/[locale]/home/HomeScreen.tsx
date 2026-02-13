@@ -1,4 +1,3 @@
-import Header from "@/components/MainNavigation";
 import HeroSection from "./sections/HeroSection";
 import ServiceSection from "./sections/ServiceSection";
 import PortfolioSection from "./sections/PortfolioSection";

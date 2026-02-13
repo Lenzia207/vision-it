@@ -144,7 +144,7 @@ export default function ContactSection({
           message: data.error || t.sendError,
         });
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus({
         type: "error",
         message: t.networkError,

@@ -1,7 +1,7 @@
 "use client";
 import IconLucide from "@/components/IconsLucide";
 import Lottie from "lottie-react";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import codeAnim from "@public/animations/code-anim.json";
 import layerAnim from "@public/animations/layer-anim.json";
 import clickAnim from "@public/animations/click-anim.json";
@@ -39,7 +39,7 @@ export default function ServiceSection({
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {services.map((service, index) => {
-            const animationMap: { [key: string]: any } = {
+            const animationMap: Record<string, typeof codeAnim> = {
               "/animations/code-anim.json": codeAnim,
               "/animations/layer-anim.json": layerAnim,
               "/animations/click-anim.json": clickAnim,

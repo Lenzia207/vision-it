@@ -1,5 +1,4 @@
 import { HomePageData } from "./types/home-types";
-
 import { cache } from "react";
 
 /*

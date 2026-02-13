@@ -37,19 +37,6 @@ export default function MainNavigation({ data }: MainNavigationProps) {
               </Link>
             );
           })}
-          {/* <Link
-            href="#services"
-            className="hover:text-white transition-colors"
-          ></Link>
-          <Link href="#projects" className="hover:text-white transition-colors">
-            Projects
-          </Link>
-          <Link href="#about" className="hover:text-white transition-colors">
-            Hello World
-          </Link>
-          <Link href="#contact" className="hover:text-white transition-colors">
-            Contact
-          </Link> */}
           <SwitchLanguage />
         </div>
       </div>

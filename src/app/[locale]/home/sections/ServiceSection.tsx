@@ -39,7 +39,7 @@ export default function ServiceSection({
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {services.map((service, index) => {
-            const animationMap: Record<string, typeof codeAnim> = {
+            const animationMap: Record<string, unknown> = {
               "/animations/code-anim.json": codeAnim,
               "/animations/layer-anim.json": layerAnim,
               "/animations/click-anim.json": clickAnim,
@@ -53,7 +53,7 @@ export default function ServiceSection({
             ];
             
             const animationData =
-              animationMap[service.icon_images.icon_animation];
+              animationMap[service.icon_images.icon_animation] as unknown as object;
 
             return (
               <div

@@ -2,7 +2,7 @@
  * Type declarations for the home page.
  */
 export interface HomePageData {
-  main_navigation: MainNavigation;
+  main_navigation: MainNavigation[];
   hero_section: HeroSection;
   service_section: ServiceSection;
   portfolio_section: PortfolioSection;
@@ -11,7 +11,7 @@ export interface HomePageData {
   contact_section: ContactSection;
 }
 
-interface MainNavigation {
+export interface MainNavigation {
   name: string;
   href: string;
 }

@@ -1,10 +1,15 @@
 import * as LucideIcons from "lucide-react";
+import React from "react";
 
 interface IconLucideProps {
   iconName: string;
   className?: string;
   size?: number;
 }
+
+type LucideIcon = React.ComponentType<
+  React.SVGProps<SVGSVGElement> & { size?: string | number; className?: string }
+>;
 
 export default function IconLucide({
   iconName,
@@ -22,14 +27,14 @@ export default function IconLucide({
   const formattedName = formatIconName(iconName);
 
   // Get the icon component from the Lucide icons object
-  const IconComponent = (LucideIcons as Record<string, LucideIcons.LucideIcon>)[formattedName];
+  const IconComponent = (LucideIcons as unknown as Record<string, LucideIcon>)[formattedName];
 
   // Fallback to a default icon if the requested icon doesn't exist
   if (!IconComponent) {
     console.warn(
       `Icon "${iconName}" (${formattedName}) not found. Using default icon.`
     );
-    const DefaultIcon = LucideIcons.HelpCircle;
+    const DefaultIcon: LucideIcon = LucideIcons.HelpCircle;
     return <DefaultIcon className={className} size={size} />;
   }
 

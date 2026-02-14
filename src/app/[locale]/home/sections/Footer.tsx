@@ -1,20 +1,6 @@
 "use client";
 import { Link } from "@/app/i18n/routing";
-
-const getLocalizedPath = (locale: string, page: 'imprint' | 'privacy') => {
-    const paths = {
-        imprint: {
-            de: { path: "/impressum", text: "Impressum" },
-            en: { path: "/imprint", text: "Imprint" }
-        },
-        privacy: {
-            de: { path: "/datenschutz", text: "Datenschutz" },
-            en: { path: "/data-privacy", text: "Data Privacy" }
-        }
-    };
-    
-    return paths[page][locale as 'de' | 'en'];
-};
+import { getLocalizedPath } from "@/app/i18n/routing";
 
 export default function Footer({locale}: {locale: string}) {
     const imprint = getLocalizedPath(locale, 'imprint');

@@ -15,14 +15,14 @@ export const routing = defineRouting({
       en: "/",
     },
 
-    // "/impressum": {
-    //   en: "/imprint",
-    //   de: "/impressum",
-    // },
-    // "/datenschutz": {
-    //   en: "/privacy",
-    //   de: "/datenschutz",
-    // },
+    "/impressum": {
+      de: "/impressum",
+      en: "/impressum",
+    },
+    "/datenschutz": {
+      de: "/datenschutz",
+      en: "/datenschutz",
+    },
   },
 });
 

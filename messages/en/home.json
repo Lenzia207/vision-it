@@ -111,25 +111,33 @@
         ]
       },
       {
-        "title": "Aktionsfinder App",
-        "description": "As part of the team at Marqably, I helped continuously develop the Aktionsfinder app and its PWA. My focus was on fixing bugs, implementing small features, and integrating new design updates.",
+        "title": "Aktionsfinder App and PWA",
+        "description": "Aktionsfinder is an Austrian platform that brings together leaflets, promotions, and special offers, making it easy to discover current deals and plan your shopping. As part of the team at Marqably, I helped continuously develop the Aktionsfinder app and its PWA. My focus was on fixing bugs, implementing small features, and integrating new design updates.",
         "category": "App",
         "image": "/images/portfolio/aktionsfinder.jpg",
         "url": "https://marqably.com/case-study/aktionsfinder-app",
-        "tags": [
+         "tags": [
           "Flutter",
-          "Dart"
+          "Dart",
+          "PWA",
+          "Bugfixes",
+          "Design Updates",
+          "Functionalities"
         ]
       },
       {
         "title": "Tiroler Tageszeitung App",
-        "description": "A news app delivering the latest headlines and articles from Tiroler Tageszeitung. I worked on adding various functionalities and UI components including integrating Dark Mode.",
+        "description": "A news app delivering the latest headlines and articles from Tiroler Tageszeitung. During my time at Marqably, I contributed to the ongoing development of the Tiroler Tageszeitung app. My focus was on bug fixes, small feature enhancements, implementing Dark Mode, and integrating new design updates.",
         "category": "App",
         "image": "/images/portfolio/tt.jpg",
         "url": "https://marqably.com/case-study/tt-app",
-        "tags": [
+       "tags": [
           "Flutter",
-          "Dart"
+          "Dart",
+          "Bugfixes",
+          "Functionalities",
+          "Darkmode",
+          "Design Updates"
         ]
       }
     ]

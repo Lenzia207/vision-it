@@ -100,36 +100,45 @@
         ]
       },
       {
-        "title": "Protokoll on Demand App",
+        "title": "Pictolog PDF",
         "description": "Eine mobile On-Demand-App zur Dokumentenverwaltung und -freigabe.",
         "category": "App",
-        "image": "/images/project-app-2.jpg",
+        "image": "/images/portfolio/pictolog-pdf.jpg",
         "url": "#",
         "tags": [
           "Flutter",
-          "Dart"
+          "Dart",
+          "iOS"
         ]
       },
       {
         "title": "Aktionsfinder App und PWA",
-        "description": "Als Teil des Teams bei Marqably habe ich die Aktionsfinder App und die PWA kontinuierlich mitentwickelt. Dabei lag mein Fokus auf Bugfixes, kleinen Implementierungen und der Integration neuer Design-Updates.",
+        "description": "Aktionsfinder ist Österreichs Plattform für Prospekte, Aktionen und Angebote, die aktuelle Flugblätter und Rabatte bündelt und Preisvergleiche sowie die Einkaufsplanung erleichtert. Als Teil des Teams bei Marqably habe ich die Aktionsfinder App und die PWA kontinuierlich mitentwickelt. Dabei lag mein Fokus auf Bugfixes, kleinen Implementierungen und der Integration neuer Design-Updates.",
         "category": "App",
         "image": "/images/portfolio/aktionsfinder.jpg",
         "url": "https://marqably.com/case-study/aktionsfinder-app",
         "tags": [
           "Flutter",
-          "Dart"
+          "Dart",
+          "PWA",
+          "Bugfixes",
+          "Design Updates",
+          "Functionalities"
         ]
       },
       {
         "title": "Tiroler Tageszeitung App",
-        "description": "Eine News-App, die die neuesten Schlagzeilen und Artikel der Tiroler Tageszeitung liefert. Ich arbeitete an verschiedenen Funktionalitäten und UI-Komponenten, einschließlich der Integration eines Dark Mode.",
+        "description": "Eine News-App, die die neuesten Schlagzeilen und Artikel der Tiroler Tageszeitung liefert. Im Rahmen meiner Tätigkeit bei Marqably war ich an der kontinuierlichen Weiterentwicklung der Tiroler Tageszeitung App beteiligt. Mein Schwerpunkt lag auf Bugfixes, kleinen funktionalen Erweiterungen, der Implementierung des Dark Modes und der Integration neuer Design-Updates.",
         "category": "App",
         "image": "/images/portfolio/tt.jpg",
         "url": "https://marqably.com/case-study/tt-app",
-        "tags": [
+       "tags": [
           "Flutter",
-          "Dart"
+          "Dart",
+          "Bugfixes",
+          "Functionalities",
+          "Darkmode",
+          "Design Updates"
         ]
       }
     ]

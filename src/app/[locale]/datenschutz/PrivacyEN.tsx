@@ -94,6 +94,19 @@ export default function PrivacyEN() {
             We implement appropriate technical and organisational measures to
             protect personal data, but absolute security cannot be guaranteed.
           </p>
+          <h3 className="text-2xl font-bold">Google Fonts</h3>
+          <p>
+            This website uses the Google Fonts <em>Urbanist</em> and
+            <em> Playfair Display</em>. When using Next.js font optimization
+            (next/font) the required font files are typically downloaded at build
+            time and served locally from the site, so no external requests to
+            Google (fonts.googleapis.com / fonts.gstatic.com) occur at runtime.
+            If the fonts are loaded directly from Googles servers, requests to
+            Google may occur and data could be transferred to Google (potentially
+            outside the EU). In that case processing is based on legitimate
+            interests (Art. 6(1)(f) GDPR). To avoid external transfers consider
+            self‑hosting the fonts.
+          </p>
 
           <p>
             This privacy notice is tailored to the described setup: no

@@ -101,6 +101,20 @@ export default function PrivacyDE() {
             um die Sicherheit Ihrer Daten zu gewährleisten. Absolute Sicherheit
             kann jedoch nicht garantiert werden.
           </p>
+          <h3 className="text-2xl font-bold">Google Fonts</h3>
+          <p>
+            Diese Website verwendet die Google Fonts <em>Urbanist</em> und
+            <em> Playfair Display</em>. Schriftarten werden über die
+            Next.js Font‑Optimierung (next/font) eingebunden und im Regelfall
+            während der Build‑Zeit heruntergeladen und lokal vom Server ausgeliefert.
+            Dadurch werden beim Aufruf der Website keine externen Verbindungen zu
+            Google‑Servern (fonts.googleapis.com / fonts.gstatic.com) hergestellt.
+            Falls die Fonts nicht lokal bereitgestellt werden, können beim Laden
+            Informationen an Google übertragen werden; in diesem Fall erfolgt die
+            Verarbeitung auf Grundlage berechtigter Interessen (Art. 6 Abs. 1 lit. f DSGVO)
+            bzw. Sie können alternativ Self‑Hosting der Fonts wählen, um externe
+            Übertragungen zu vermeiden.
+          </p>
         </div>
       </div>
     </main>

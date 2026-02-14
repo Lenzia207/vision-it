@@ -1,20 +1,24 @@
 {
   "main_navigation": [
     {
+      "page": "/",
       "name": "Services",
-      "href": "#services"
+      "pageId": "#services"
     },
     {
+      "page": "/",
       "name": "Projects",
-      "href": "#projects"
+      "pageId": "#projects"
     },
     {
+      "page": "/",
       "name": "Hello World",
-      "href": "#about"
+      "pageId": "#about"
     },
     {
+      "page": "/",
       "name": "Contact",
-      "href": "#contact"
+      "pageId": "#contact"
     }
   ],
   "hero_section": {

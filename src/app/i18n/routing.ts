@@ -8,22 +8,6 @@ export const routing = defineRouting({
   // Used when no locale matches
   defaultLocale: "en",
   localePrefix: 'always',
-
-  pathnames: {
-    "/": {
-      de: "/",
-      en: "/",
-    },
-
-    "/impressum": {
-      de: "/impressum",
-      en: "/impressum",
-    },
-    "/datenschutz": {
-      de: "/datenschutz",
-      en: "/datenschutz",
-    },
-  },
 });
 
 export type Locale = (typeof routing.locales)[number];

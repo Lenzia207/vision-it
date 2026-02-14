@@ -22,14 +22,5 @@ export default async function Home(props: LocaleParams) {
       locale={locale}
       pageContent={<HomeScreen data={data} locale={locale} />}
     />
-    // <main className="min-h-screen bg-[#050505] text-zinc-200 selection:bg-blue-500/30 selection:text-blue-200">
-    //   <ScrollRevealObserver />
-    //   <MainNavigation data={data} />
-    //   <HomeScreen data={data} locale={locale} />
-    //   <Footer locale={locale} />
-
-    //   {/* Mobile View */}
-    //   <BottomNavigation data={data}/>
-    // </main>
   );
 }

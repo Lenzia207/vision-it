@@ -1,20 +1,25 @@
 {
   "main_navigation": [
     {
+      "page": "/",
       "name": "Leistungen",
-      "href": "#services"
+      "pageId": "#services"
+
     },
     {
+      "page": "/",
       "name": "Projekte",
-      "href": "#projects"
+      "pageId": "#projects"
     },
     {
+      "page": "/",
       "name": "Hello World",
-      "href": "#about"
+      "pageId": "#about"
     },
     {
+      "page": "/",
       "name": "Kontakt",
-      "href": "#contact"
+      "pageId": "#contact"
     }
   ],
   "hero_section": {

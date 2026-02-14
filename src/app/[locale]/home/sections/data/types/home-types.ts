@@ -13,7 +13,8 @@ export interface HomePageData {
 
 export interface MainNavigation {
   name: string;
-  href: string;
+  page: string;
+  pageId: string;
 }
 
 export interface HeroSection {

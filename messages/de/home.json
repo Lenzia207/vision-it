@@ -175,7 +175,7 @@
   },
   "about_me_section": {
     "title": "Über mich",
-    "name": "Lena Zyadeh",
+    "name": "Lena Zyadeh, BSc.",
     "description": "Ich bin freiberufliche Web- und Appentwicklerin und begann meine Karriere in der Digitalagentur Marqably GmbH, wo ich zwei lehrreiche Jahre an der Entwicklung und Pflege digitaler Anwendungen mitarbeitete.\nNun setze ich meine Reise als unabhängige Entwicklerin fort, was mir die Freiheit gibt, meinen Designhintergrund in Animation und Medien mit meiner Leidenschaft für Web- und App-Entwicklung zu verbinden. Diese Kombination aus Design und Technik macht mich zu einer vielseitigen Partnerin für Projekte, die sowohl Kreativität als auch technische Expertise benötigen.",
     "social_media": [
       {
@@ -198,7 +198,7 @@
     "companyLabel": "Firma",
     "companyPlaceholder": "Dein Unternehmen",
     "emailLabel": "E-Mail*",
-    "emailPlaceholder": "ihre.name@mail.com",
+    "emailPlaceholder": "dein.name@mail.com",
     "messageLabel": "Nachricht",
     "messagePlaceholder": "Wie kann ich helfen?",
     "btn_text": "Nachricht senden"

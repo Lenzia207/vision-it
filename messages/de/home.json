@@ -23,7 +23,7 @@
     }
   ],
   "hero_section": {
-    "title_line1": "Websites und Apps für dein Unternehmen",
+    "title_line1": "Website und App für dein Unternehmen",
     "description": "Transformiere Ideen in dein persönliches, digitales Produkt.\n\nDein Projekt wird von der Konzeptphase bis zum Launch begleitet und als geräteübergreifend optimierte Website oder mobile App für Android und iOS mit modernen Animationen und klarer Nutzerführung umgesetzt.",
     "btn_text": "Kontakt aufnehmen"
   },
@@ -42,7 +42,7 @@
       },
       {
         "title": "Dein Design Funktionsfähig machen",
-        "description": "Du hast bereits ein fertiges Design? Perfekt. Ich verwandle dein statisches Design in eine voll funktionsfähige, plattformübergreifende Website mit sauberem, wartbarem Code und präziser Detailarbeit.",
+        "description": "Du hast bereits ein fertiges Design? Perfekt. Ich mache aus deinem fertigen Design eine moderne, plattformübergreifende Website – umfangreicher Umsetzung, mit Leidenschaft zum Detail und nachhaltiger Codequalität.",
         "icon_images": {
           "icon": "Layers",
           "icon_color": "pink-400",
@@ -51,7 +51,7 @@
       },
       {
         "title": "Feature-Erweiterungen",
-        "description": "Brauchst du etwas Extra? Ich erweitere bestehende Websites um neue Funktionen, die die Funktionalität verbessern und echten Mehrwert schaffen. Von Formularen, Authentifizierung, Datenbanken und APIs bis hin zu Zahlungssystemen, Dashboards oder maßgeschneiderten interaktiven Elementen wie Animationen – deine Website entwickelt sich weiter, ohne das ursprüngliche Design zu stören.",
+        "description": "Brauchst du ein neues Feature oder Funktionen? Ich erweitere bestehende Websites um neue Funktionen, die die Funktionalität verbessern und echten Mehrwert schaffen. Von Formularen, Authentifizierung, Datenbanken und APIs bis hin zu Zahlungssystemen, Dashboards oder maßgeschneiderten interaktiven Elementen wie Animationen. Deine Website entwickelt sich weiter und wird angepasst auf dein bestehendes Design.",
         "icon_images": {
           "icon": "MousePointerClick",
           "icon_color": "cyan-400",
@@ -60,7 +60,7 @@
       },
       {
         "title": "Website Redesign",
-        "description": "Fühlt sich deine Website veraltet an? Das kann dein Unternehmen bremsen. Ich verwandle bestehende Designs in moderne, responsive Erlebnisse mit verbesserter Performance, besserer Struktur und einer visuellen Identität, die deine Marke widerspiegelt.",
+        "description": "Fühlt sich deine Website veraltet un nicht mehr up-to-date an? Das kann dein Unternehmen bremsen. Ich verwandle bestehende Designs in moderne, plattformübergreifende Erlebnisse mit verbesserter Performance, besserer Struktur und einer visuellen Identität, die deine Marke widerspiegelt.",
         "icon_images": {
           "icon": "PenTool",
           "icon_color": "orange-400",

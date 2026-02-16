@@ -1,6 +1,7 @@
 import PageWrapper from "@/components/PageWrapper";
 import PrivacyDE from "./PrivacyDE";
 import PrivacyEN from "./PrivacyEN";
+import { LocaleParams } from "@/app/i18n/local-params";
 
 export const dynamic = "force-static";
 

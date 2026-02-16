@@ -1,6 +1,8 @@
 import PageWrapper from "@/components/PageWrapper";
 import ImprintDE from "./ImprintDE";
 import ImprintEN from "./ImprintEN";
+import { LocaleParams } from "@/app/i18n/local-params";
+
 
 export const dynamic = "force-static";
 

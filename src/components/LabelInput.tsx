@@ -6,7 +6,7 @@ export default function LabelInput({
   formName,
   onChange,
 }: {
-  type: "text" | "email";
+  type: string;
   labelName: string;
   inputName: string;
   namePlaceholder: string;

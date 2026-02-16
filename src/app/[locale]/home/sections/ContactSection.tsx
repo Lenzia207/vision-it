@@ -2,6 +2,7 @@
 import Checkbox from "@/components/Checkbox";
 import { Send } from "lucide-react";
 import { useState, FormEvent } from "react";
+import LabelInput from "@/components/LabelInput";
 
 interface ContactSectionProps {
   title: string;
@@ -38,7 +39,8 @@ export default function ContactSection({
       invalidEmail: "Please enter a valid email address.",
       success: "Thank you! Your message has been sent successfully.",
       sendError: "Failed to send message. Please try again.",
-      networkError: "Network error. Please check your connection and try again.",
+      networkError:
+        "Network error. Please check your connection and try again.",
       sending: "Sending...",
       privacyPolicy: "I have read and agree to the privacy policy",
       privacyRequired: "Please accept the privacy policy to continue.",
@@ -47,18 +49,22 @@ export default function ContactSection({
       requiredFields: "Bitte fülle alle erforderlichen Felder aus.",
       invalidEmail: "Bitte gib eine gültige E-Mail-Adresse ein.",
       success: "Vielen Dank! Deine Nachricht wurde erfolgreich gesendet.",
-      sendError: "Nachricht konnte nicht gesendet werden. Bitte versuche es erneut.",
-      networkError: "Netzwerkfehler. Bitte überprüfe deine Verbindung und versuche es erneut.",
+      sendError:
+        "Nachricht konnte nicht gesendet werden. Bitte versuche es erneut.",
+      networkError:
+        "Netzwerkfehler. Bitte überprüfe deine Verbindung und versuche es erneut.",
       sending: "Wird gesendet...",
       privacyPolicy: "Ich habe die Datenschutzerklärung gelesen und stimme zu",
-      privacyRequired: "Bitte akzeptieren Sie die Datenschutzerklärung, um fortzufahren.",
+      privacyRequired:
+        "Bitte akzeptieren Sie die Datenschutzerklärung, um fortzufahren.",
     },
   };
 
   // Email validation regex
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  const t = translations[locale as keyof typeof translations] || translations.en;
+  const t =
+    translations[locale as keyof typeof translations] || translations.en;
   const [formData, setFormData] = useState({
     name: "",
     company: "",
@@ -96,7 +102,6 @@ export default function ContactSection({
       setIsSubmitting(false);
       return;
     }
-
 
     if (!emailRegex.test(formData.email)) {
       setSubmitStatus({
@@ -155,7 +160,7 @@ export default function ContactSection({
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData((prev) => ({
       ...prev,
@@ -175,7 +180,9 @@ export default function ContactSection({
           <h2 className="font-serif text-4xl md:text-5xl font-medium tracking-tight text-white mb-4">
             {title}
           </h2>
-          <p className="text-zinc-400 text-lg whitespace-pre-line">{description}</p>
+          <p className="text-zinc-400 text-lg whitespace-pre-line">
+            {description}
+          </p>
         </div>
 
         <div className="bg-zinc-900/40 border border-white/5 rounded-3xl p-8 md:p-10 shadow-2xl backdrop-blur-sm">
@@ -183,10 +190,11 @@ export default function ContactSection({
 
           {submitStatus.type && (
             <div
-              className={`mb-6 p-4 rounded-xl ${submitStatus.type === "success"
-                ? "bg-green-500/10 border border-green-500/20 text-green-400"
-                : "bg-red-500/10 border border-red-500/20 text-red-400"
-                }`}
+              className={`mb-6 p-4 rounded-xl ${
+                submitStatus.type === "success"
+                  ? "bg-green-500/10 border border-green-500/20 text-green-400"
+                  : "bg-red-500/10 border border-red-500/20 text-red-400"
+              }`}
             >
               {submitStatus.message}
             </div>
@@ -194,50 +202,33 @@ export default function ContactSection({
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-zinc-400 ml-1">
-                  {nameLabel}
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 rounded-xl input-glass text-white placeholder-zinc-600 transition-all focus:outline-none focus:ring-2 focus:ring-blue-500/50"
-                  placeholder={namePlaceholder}
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-zinc-400 ml-1">
-                  {companyLabel}
-                </label>
-                <input
-                  type="text"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-xl input-glass text-white placeholder-zinc-600 transition-all focus:outline-none focus:ring-2 focus:ring-blue-500/50"
-                  placeholder={companyPlaceholder}
-                />
-              </div>
-            </div>
-
-            <div className="space-y-2">
-              <label className="text-sm font-medium text-zinc-400 ml-1">
-                {emailLabel}
-              </label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
+              <LabelInput
+                type="text"
+                labelName={nameLabel}
+                namePlaceholder={namePlaceholder}
+                inputName="name"
+                formName={formData.name}
                 onChange={handleChange}
-                required
-                className="w-full px-4 py-3 rounded-xl input-glass text-white placeholder-zinc-600 transition-all focus:outline-none focus:ring-2 focus:ring-blue-500/50"
-                placeholder={emailPlaceholder}
+              />
+              <LabelInput
+                type="text"
+                labelName={companyLabel}
+                namePlaceholder={companyPlaceholder}
+                inputName="company"
+                formName={formData.company}
+                onChange={handleChange}
               />
             </div>
 
+            <LabelInput
+              type="email"
+              labelName={emailLabel}
+              namePlaceholder={emailPlaceholder}
+              inputName="email"
+              formName={formData.email}
+              onChange={handleChange}
+            />
+            
             <div className="space-y-2">
               <label className="text-sm font-medium text-zinc-400 ml-1">
                 {messageLabel}
@@ -253,7 +244,11 @@ export default function ContactSection({
               ></textarea>
             </div>
 
-            <Checkbox privacyAccepted={privacyAccepted} onChange={(e) => setPrivacyAccepted(e.target.checked)} message={t.privacyPolicy} />
+            <Checkbox
+              privacyAccepted={privacyAccepted}
+              onChange={(e) => setPrivacyAccepted(e.target.checked)}
+              message={t.privacyPolicy}
+            />
 
             <button
               type="submit"

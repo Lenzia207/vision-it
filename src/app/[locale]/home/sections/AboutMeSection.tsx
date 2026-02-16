@@ -24,8 +24,7 @@ export default function AboutMeSection({
       className="relative py-24 md:py-16 bg-zinc-900/20 border-t border-white/5"
     >
       <div className="max-w-6xl mx-auto px-6 text-center reveal-on-scroll">
-        <TitleHeader title={title} description={description} />
-
+        <TitleHeader title={title}  />
 
         <div className="flex flex-col items-center gap-10">
           {/* Avatar Placeholder with Glow */}
@@ -42,7 +41,6 @@ export default function AboutMeSection({
               </div>
            <div className="text-2xl lg:text-4xl mt-4">{fullname}</div>
           </div>
-
           <div className="flex flex-row gap-10">
             {social_media.map(({ name, icon, url }, index) => (
               <a
@@ -57,6 +55,8 @@ export default function AboutMeSection({
               </a>
             ))}
           </div>
+            <p className="text-zinc-500  text-justify text-lg lg:text-xl whitespace-pre-line">{description}</p>
+
         </div>
       </div>
     </section>

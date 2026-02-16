@@ -18,7 +18,7 @@ export default async function PageWrapper({
   return (
     <main className="min-h-screen bg-[#050505] text-zinc-200 selection:bg-blue-500/30 selection:text-blue-200">
       <ScrollRevealObserver />
-      <MainNavigation data={data} />
+      <MainNavigation data={data} locale={locale} />
       {pageContent}
       <Footer locale={locale} />
       {/* Mobile View */}

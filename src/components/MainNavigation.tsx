@@ -1,23 +1,25 @@
 "use client";
 
-import Image from "next/image";
+// import Image from "next/image";
 import { Link } from "@/app/i18n/routing";
 import { usePathname } from "next/navigation";
-
 import { SwitchLanguage } from "./LanguageSwitcher";
 import { HomePageData } from "@/app/[locale]/home/sections/data/types/home-types";
 
 interface MainNavigationProps {
   data: HomePageData;
+  locale: string;
 }
 
-export default function MainNavigation({ data }: MainNavigationProps) {
+export default function MainNavigation({ data, locale }: MainNavigationProps) {
   const pathname = usePathname();
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-black/50 border-b border-white/5 transition-all duration-300">
-      <div className="max-w-7xl mx-auto  flex items-center justify-between">
-        <Link
+      <div className="max-w-7xl mx-auto flex items-end justify-end my-4">
+        {/* <Link
           href="/"
+          locale={locale}
           className="flex items-center hover:opacity-80 transition-opacity cursor-pointer"
         >
           <Image
@@ -27,7 +29,7 @@ export default function MainNavigation({ data }: MainNavigationProps) {
             height={70}
             className="rounded-lg"
           />
-        </Link>
+        </Link> */}
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
@@ -44,6 +46,7 @@ export default function MainNavigation({ data }: MainNavigationProps) {
               <Link
                 key={index}
                 href={linkHref}
+                locale={locale}
                 className="hover:text-white transition-colors"
               >
                 {item.name}

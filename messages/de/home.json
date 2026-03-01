@@ -4,12 +4,11 @@
       "page": "/",
       "name": "Leistungen",
       "pageId": "#services"
-
-    }, {
+    },
+    {
       "page": "/",
       "name": "Ablauf",
       "pageId": "#project-phases"
-
     },
     {
       "page": "/",
@@ -77,6 +76,7 @@
   "project_phases_section": {
     "title": "Von der Idee zum Launch",
     "description": "Jedes Projekt durchläuft mehrere Phasen, von der anfänglichen Ideenfindung über die Planung und Entwicklung bis hin zum Launch und darüber hinaus. Hier ist ein Überblick über die typischen Phasen eines Projekts:",
+    "btnText": "Anfrage schicken",
     "phases": [
       {
         "name": "Anfrage",
@@ -88,7 +88,6 @@
           "Du erhältst ein maßgeschneidertes Angebot für dein Projekt"
         ]
       },
-  
       {
         "name": "Konzept",
         "description": "Struktur vor Stil. Ein solides Konzept legt das Fundament für alles, was folgt – vom ersten Wireframe bis zur letzten Codezeile.",
@@ -187,7 +186,7 @@
         "category": "App",
         "image": "/images/portfolio/tt.jpg",
         "url": "https://marqably.com/case-study/tt-app",
-       "tags": [
+        "tags": [
           "Flutter",
           "Dart",
           "Bugfixes",

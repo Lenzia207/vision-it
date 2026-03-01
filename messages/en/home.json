@@ -9,7 +9,6 @@
       "page": "/",
       "name": "Workflow",
       "pageId": "#project-phases"
-
     },
     {
       "page": "/",
@@ -74,9 +73,10 @@
       }
     ]
   },
-    "project_phases_section": {
+  "project_phases_section": {
     "title": "From Idea to Launch",
     "description": "Every project goes through several phases, from initial brainstorming to planning and development, all the way to launch and beyond. Here is an overview of the typical phases of a project:",
+    "btnText": "Send Inquiry",
     "phases": [
       {
         "name": "Inquiry",
@@ -88,7 +88,6 @@
           "You receive a tailored offer for your project"
         ]
       },
-    
       {
         "name": "Concept",
         "description": "Structure before style. A solid concept lays the foundation for everything that follows — from the first wireframe to the final line of code.",
@@ -172,7 +171,7 @@
         "category": "App",
         "image": "/images/portfolio/aktionsfinder.jpg",
         "url": "https://marqably.com/case-study/aktionsfinder-app",
-         "tags": [
+        "tags": [
           "Flutter",
           "Dart",
           "PWA",
@@ -187,7 +186,7 @@
         "category": "App",
         "image": "/images/portfolio/tt.jpg",
         "url": "https://marqably.com/case-study/tt-app",
-       "tags": [
+        "tags": [
           "Flutter",
           "Dart",
           "Bugfixes",

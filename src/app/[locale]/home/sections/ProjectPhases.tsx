@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import TitleHeader from "@/components/TitleHeader";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import AppButton from "@/components/AppButton";
 
 interface Phase {
     name: string;
@@ -14,9 +15,10 @@ interface ProjectPhasesProps {
     title: string;
     description?: string;
     phases: Phase[];
+    btnText: string;
 }
 
-export default function ProjectPhases({ title, description, phases }: ProjectPhasesProps) {
+export default function ProjectPhases({ title, description, phases, btnText }: ProjectPhasesProps) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [direction, setDirection] = useState<"right" | "left">("right");
 
@@ -157,6 +159,12 @@ export default function ProjectPhases({ title, description, phases }: ProjectPha
                         />
                     ))}
                 </div>
+
+                <div className="mt-20">
+
+                <AppButton btnText={btnText} />
+                </div>
+
             </div>
         </section>
     );

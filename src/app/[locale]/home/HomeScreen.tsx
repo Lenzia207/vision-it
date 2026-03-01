@@ -33,6 +33,7 @@ export default function HomeScreen({ data, locale }: HomeScreenProps) {
         title={data.project_phases_section.title}
         description={data.project_phases_section.description}
         phases={data.project_phases_section.phases}
+        btnText={data.project_phases_section.btnText}
       />
 
       {/* Portfolio Section */}

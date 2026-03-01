@@ -21,6 +21,7 @@ export interface ProjectPhase {
 export interface ProjectPhasesSection {
   title: string;
   description?: string;
+  btnText: string;
   phases: ProjectPhase[];
 }
 

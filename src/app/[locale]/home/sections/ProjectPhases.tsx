@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import TitleHeader from "@/components/TitleHeader";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -20,6 +20,18 @@ export default function ProjectPhases({ title, description, phases }: ProjectPha
     const [currentIndex, setCurrentIndex] = useState(0);
     const [direction, setDirection] = useState<"right" | "left">("right");
 
+    const scrollContainerRef = useRef<HTMLDivElement>(null);
+    const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+    useEffect(() => {
+        const container = scrollContainerRef.current;
+        const activeStep = stepRefs.current[currentIndex];
+        if (!container || !activeStep) return;
+        const scrollTo =
+            activeStep.offsetLeft - container.offsetWidth / 2 + activeStep.offsetWidth / 2;
+        container.scrollTo({ left: Math.max(0, scrollTo), behavior: "smooth" });
+    }, [currentIndex]);
+
     const navigate = (newIndex: number) => {
         if (newIndex === currentIndex || newIndex < 0 || newIndex >= phases.length) return;
         setDirection(newIndex > currentIndex ? "right" : "left");
@@ -34,10 +46,10 @@ export default function ProjectPhases({ title, description, phases }: ProjectPha
                 <TitleHeader title={title} description={description} />
 
                 {/* Step indicator */}
-                <div className="mb-14 overflow-x-auto pb-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+                <div ref={scrollContainerRef} className="mb-14 overflow-x-auto pb-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
                     <div className="flex items-center justify-start md:justify-center min-w-max mx-auto gap-0">
                         {phases.map((phase, index) => (
-                            <div key={index} className="flex items-center">
+                            <div key={index} ref={(el) => { stepRefs.current[index] = el; }} className="flex items-center">
                                 <button
                                     onClick={() => navigate(index)}
                                     className={`flex items-center gap-2 px-1 py-1 transition-all duration-300 group ${
@@ -67,14 +79,6 @@ export default function ProjectPhases({ title, description, phases }: ProjectPha
                                 )}
                             </div>
                         ))}
-                    </div>
-
-                    {/* Progress bar */}
-                    <div className="mt-4 h-px bg-zinc-800 max-w-3xl mx-auto rounded-full overflow-hidden">
-                        <div
-                            className="h-full bg-zinc-400 rounded-full transition-all duration-500 ease-in-out"
-                            style={{ width: `${((currentIndex + 1) / phases.length) * 100}%` }}
-                        />
                     </div>
                 </div>
 

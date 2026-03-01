@@ -1,8 +1,16 @@
 export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
 
 import { NextResponse } from 'next/server';
 import { getOwnerNotificationEmail, getCustomerConfirmationEmail } from './email-format';
 import { emailRegex, transporter } from './utils';
+
+// ...existing code...
+
+export async function GET() {
+  return NextResponse.json({ ok: true }, { status: 200 });
+}
 
 export async function POST(request: Request) {
   // basic size limit

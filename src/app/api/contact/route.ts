@@ -1,15 +1,8 @@
 export const runtime = "nodejs";
 
-
 import { NextResponse } from 'next/server';
 import { getOwnerNotificationEmail, getCustomerConfirmationEmail } from './email-format';
 import { emailRegex, transporter } from './utils';
-
-// ...existing code...
-
-export async function GET() {
-  return NextResponse.json({ ok: true }, { status: 200 });
-}
 
 export async function POST(request: Request) {
   // basic size limit
@@ -100,4 +93,10 @@ export async function POST(request: Request) {
     console.error('mail error:', error);
     return NextResponse.json({ success: false, error: 'Mail send failed' }, { status: 500 });
   }
+}
+
+
+
+export async function GET() {
+  return NextResponse.json({ ok: true }, { status: 200 });
 }

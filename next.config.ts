@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
-  output: "export",
+  // output: "export",
 };
 
 export default withNextIntl(nextConfig);

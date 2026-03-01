@@ -17,7 +17,7 @@ export default function Footer({locale}: {locale: string}) {
                         {privacy.text}
                     </Link>
                 </div>
-                <p>&copy; 2026 GENZY</p>
+                <p>&copy; 2026 VisionIT</p>
             </div>
         </footer>
     );

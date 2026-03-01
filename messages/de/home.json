@@ -5,6 +5,11 @@
       "name": "Leistungen",
       "pageId": "#services"
 
+    }, {
+      "page": "/",
+      "name": "Ablauf",
+      "pageId": "#project-phases"
+
     },
     {
       "page": "/",

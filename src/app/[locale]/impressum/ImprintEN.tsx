@@ -25,16 +25,16 @@ export default function ImprintDE() {
           </div>
 
           <div className="space-y-1">
-            <p>
+            {/* <p>
               <span className="text-zinc-500">Tel:</span> +43 6765700757
-            </p>
+            </p> */}
             <p>
               <span className="text-zinc-500">E-Mail:</span>{" "}
               <a
-                href="mailto:email@server.domain"
+                href="mailto:office@vision-it.at"
                 className="text-blue-400 hover:text-blue-300 transition-colors"
               >
-                office@genzy.dev
+                office@vision-it.at
               </a>
             </p>
           </div>

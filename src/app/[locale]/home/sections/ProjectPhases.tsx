@@ -41,7 +41,7 @@ export default function ProjectPhases({ title, description, phases }: ProjectPha
     const current = phases[currentIndex];
 
     return (
-        <section id="projects-phases" className="py-24 md:py-32 border-t border-white/5">
+        <section id="project-phases" className="py-24 md:py-32 border-t border-white/5">
             <div className="max-w-6xl mx-auto px-6">
                 <TitleHeader title={title} description={description} />
 

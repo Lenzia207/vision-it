@@ -7,6 +7,12 @@
     },
     {
       "page": "/",
+      "name": "Workflow",
+      "pageId": "#project-phases"
+
+    },
+    {
+      "page": "/",
       "name": "Projects",
       "pageId": "#projects"
     },
@@ -104,7 +110,7 @@
         ]
       },
       {
-        "name": "Entwicklung",
+        "name": "Development",
         "description": "Clean code meets pixel-perfect execution. Your product is built with performance, accessibility, and maintainability at its core.",
         "details": [
           "Component-based development with modern frameworks",

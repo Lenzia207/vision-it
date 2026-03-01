@@ -9,11 +9,11 @@ export function getOwnerNotificationEmail(data: ContactData) {
   const { name, company, email, message } = data;
   
   return {
-    subject: `Nachricht von ${name} über genzy.dev`,
+    subject: `Nachricht von ${name} über vision-it.at`,
     text: `Name: ${name}\nCompany: ${company || 'N/A'}\nEmail: ${email}\n\nMessage:\n${message}`,
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-        <h2 style="color: #2563eb;">Neue Nachricht vom Kontaktformular GENZY</h2>
+        <h2 style="color: #2563eb;">Neue Nachricht vom Kontaktformular VisionIT</h2>
         <div style="background-color: #f3f4f6; padding: 20px; border-radius: 8px; margin: 20px 0;">
           <p><strong>Name:</strong> ${name}</p>
           <p><strong>Company:</strong> ${company || 'N/A'}</p>
@@ -35,14 +35,14 @@ export function getCustomerConfirmationEmail(data: ContactData, locale: string) 
     en: {
       subject: 'Thank you for contacting me!',
       greeting: `Hello ${name},`,
-      intro: "Thank you for reaching out to me! I've received your message and will get back to you as soon as possible.",
+      intro: "thank you for reaching out to me! I've received your message and will get back to you as soon as possible.",
       yourMessage: 'Your message:',
       closing: 'Best regards,<br>Lena Zyadeh, BSc.',
     },
     de: {
       subject: 'Vielen Dank für deine Nachricht!',
       greeting: `Hallo ${name},`,
-      intro: 'Vielen Dank für deine Nachricht! Ich habe deine Anfrage erhalten und werde mich so schnell wie möglich bei dir melden.',
+      intro: 'vielen Dank für deine Nachricht! Ich habe deine Anfrage erhalten und werde mich so schnell wie möglich bei dir melden.',
       yourMessage: 'Nochmals deine Nachricht bzw. Anfrage:',
       closing: 'Mit freundlichen Grüßen,<br>Lena Zyadeh, BSc.',
     },

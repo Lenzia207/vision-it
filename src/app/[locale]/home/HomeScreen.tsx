@@ -5,6 +5,7 @@ import TechStackSection from "./sections/TechStackSection";
 import AboutMeSection from "./sections/AboutMeSection";
 import ContactSection from "./sections/ContactSection";
 import { HomePageData } from "./sections/data/types/home-types";
+import ProjectPhases from "./sections/ProjectPhases";
 
 interface HomeScreenProps {
   data: HomePageData;
@@ -25,6 +26,13 @@ export default function HomeScreen({ data, locale }: HomeScreenProps) {
         title={data.service_section.title}
         description={data.service_section.description}
         services={data.service_section.services}
+      />
+
+      {/* Project Phases */}
+      <ProjectPhases
+        title={data.project_phases_section.title}
+        description={data.project_phases_section.description}
+        phases={data.project_phases_section.phases}
       />
 
       {/* Portfolio Section */}

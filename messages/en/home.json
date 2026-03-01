@@ -68,6 +68,63 @@
       }
     ]
   },
+    "project_phases_section": {
+    "title": "From Idea to Launch",
+    "description": "Every project goes through several phases, from initial brainstorming to planning and development, all the way to launch and beyond. Here is an overview of the typical phases of a project:",
+    "phases": [
+      {
+        "name": "Inquiry",
+        "description": "Every great project starts with an initial consultation.",
+        "details": [
+          "You reach out with your idea or a short project brief",
+          "We have an initial call to discuss goals, timeline, and budget",
+          "I answer your questions and give you honest feedback",
+          "You receive a tailored offer for your project"
+        ]
+      },
+    
+      {
+        "name": "Concept",
+        "description": "Structure before style. A solid concept lays the foundation for everything that follows — from the first wireframe to the final line of code.",
+        "details": [
+          "Information architecture and user flows are mapped out",
+          "Wireframes and rough layout concepts are sketched, if there is no given design yet",
+          "Technical architecture and stack decisions are finalized",
+          "You receive a clear project roadmap with timeline"
+        ]
+      },
+      {
+        "name": "Design",
+        "description": "Your vision takes visual shape. Every screen, component, and interaction is designed with purpose, precision, and your brand in mind.",
+        "details": [
+          "High-fidelity mockups are created in Figma",
+          "You review and provide feedback in rounds",
+          "Responsive layouts for mobile, tablet, and desktop are designed",
+          "Final design is approved before development begins"
+        ]
+      },
+      {
+        "name": "Entwicklung",
+        "description": "Clean code meets pixel-perfect execution. Your product is built with performance, accessibility, and maintainability at its core.",
+        "details": [
+          "Component-based development with modern frameworks",
+          "Regular progress updates and demo previews keep you in the loop",
+          "Cross-browser and cross-device testing throughout the build",
+          "Code is clean, documented, and ready for handoff"
+        ]
+      },
+      {
+        "name": "Launch",
+        "description": "Your product is ready for the world. The launch phase ensures a smooth, stress-free go-live with everything properly in place.",
+        "details": [
+          "Final quality assurance and bug fixing before launch",
+          "Deployment to your hosting environment or server",
+          "Domain setup, SSL, and performance optimization",
+          "Post-launch support to make sure everything runs smoothly"
+        ]
+      }
+    ]
+  },
   "portfolio_section": {
     "title": "Selected Works",
     "description": "A selection of digital experiences I’ve developed and contributed to over the years. My work includes modern websites built with Next.js, React and Tailwind CSS, as well as cross-platform mobile apps created with Flutter and Dart. More is on the way.",

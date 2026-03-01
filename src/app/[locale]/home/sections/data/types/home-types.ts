@@ -5,10 +5,23 @@ export interface HomePageData {
   main_navigation: MainNavigation[];
   hero_section: HeroSection;
   service_section: ServiceSection;
+  project_phases_section: ProjectPhasesSection;
   portfolio_section: PortfolioSection;
   tech_stack_section: TechStackSection;
   about_me_section: AboutMeSection;
   contact_section: ContactSection;
+}
+
+export interface ProjectPhase {
+  name: string;
+  description: string;
+  details: string[];
+}
+
+export interface ProjectPhasesSection {
+  title: string;
+  description?: string;
+  phases: ProjectPhase[];
 }
 
 export interface MainNavigation {

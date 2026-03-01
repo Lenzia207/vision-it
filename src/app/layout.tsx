@@ -15,7 +15,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "GENZY - Digital Reality",
+  title: "Vision-IT",
 };
 
 export default function RootLayout({

@@ -69,6 +69,63 @@
       }
     ]
   },
+  "project_phases_section": {
+    "title": "Von der Idee zum Launch",
+    "description": "Jedes Projekt durchläuft mehrere Phasen, von der anfänglichen Ideenfindung über die Planung und Entwicklung bis hin zum Launch und darüber hinaus. Hier ist ein Überblick über die typischen Phasen eines Projekts:",
+    "phases": [
+      {
+        "name": "Anfrage",
+        "description": "Jedes gute Projekt beginnt mit einem unverbindlichen Erstgespräch.",
+        "details": [
+          "Du nimmst mit deiner Idee oder einem kurzen Projektbrief Kontakt auf",
+          "Wir führen ein erstes Gespräch über Ziele, Zeitplan und Budget",
+          "Ich beantworte deine Fragen und gebe dir ehrliches Feedback",
+          "Du erhältst ein maßgeschneidertes Angebot für dein Projekt"
+        ]
+      },
+  
+      {
+        "name": "Konzept",
+        "description": "Struktur vor Stil. Ein solides Konzept legt das Fundament für alles, was folgt – vom ersten Wireframe bis zur letzten Codezeile.",
+        "details": [
+          "Informationsarchitektur und User Flows werden ausgearbeitet",
+          "Wireframes und grobe Layout-Konzepte werden skizziert, vorausgesetzt es gibt bereits ein fertiges Design.",
+          "Technische Architektur und Stack-Entscheidungen werden finalisiert",
+          "Du erhältst eine klare Projekt-Roadmap mit Zeitplan"
+        ]
+      },
+      {
+        "name": "Design",
+        "description": "Deine Vision nimmt visuelle Form an. Jeder Screen, jede Komponente und jede Interaktion wird mit Sorgfalt, Präzision und deiner Marke im Fokus gestaltet.",
+        "details": [
+          "High-Fidelity-Mockups werden in Figma erstellt",
+          "Du reviewst und gibst Feedback in mehreren Runden",
+          "Responsive Layouts für Mobil, Tablet und Desktop werden designed",
+          "Das finale Design erhält deine Freigabe vor dem Entwicklungsstart"
+        ]
+      },
+      {
+        "name": "Entwicklung",
+        "description": "Sauberer Code trifft pixel-genaue Umsetzung. Dein Produkt wird mit Fokus auf Performance, Barrierefreiheit und Wartbarkeit gebaut.",
+        "details": [
+          "Komponentenbasierte Entwicklung mit modernen Frameworks",
+          "Regelmäßige Fortschrittsupdates und Demo-Previews halten dich auf dem Laufenden",
+          "Browser- und geräteübergreifende Tests während der gesamten Entwicklung",
+          "Code ist sauber, dokumentiert und übergabebereit"
+        ]
+      },
+      {
+        "name": "Launch",
+        "description": "Dein Produkt ist bereit für die Welt. Die Launch-Phase sorgt für einen reibungslosen, stressfreien Go-Live mit allem an seinem Platz.",
+        "details": [
+          "Finale Qualitätssicherung und Fehlerbehebung vor dem Launch",
+          "Deployment in deine Hosting-Umgebung oder deinen Server",
+          "Domain-Einrichtung, SSL und Performance-Optimierung",
+          "Support nach dem Launch, damit alles reibungslos läuft"
+        ]
+      }
+    ]
+  },
   "portfolio_section": {
     "title": "Projekte",
     "description": "Die Auswahl meiner digitalen Projekte umfasst moderne Webanwendungen sowie plattformübergreifende Mobile-Apps für Android und iOS.",

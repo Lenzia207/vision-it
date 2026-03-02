@@ -1,4 +1,3 @@
-import { MessageCircle } from "lucide-react";
 import BackgroundEffect from "@/components/BackgroundEffect";
 import AppButton from "@/components/AppButton";
 

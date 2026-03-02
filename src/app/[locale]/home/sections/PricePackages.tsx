@@ -20,7 +20,7 @@ export default function PricePackages({ title, btnText, packages }: PricePackage
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {packages.map((pkg, index) => {
-            const isHighlighted = index === 1; // Highlight the middle package
+            const isHighlighted = index === 1; // highlights the middle package
             const bgClass = isHighlighted 
               ? "bg-zinc-800/60 border-blue-500/50" 
               : "bg-zinc-900/40 border-white/5";

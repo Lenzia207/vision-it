@@ -250,6 +250,54 @@
     "emailPlaceholder": "dein.name@mail.com",
     "messageLabel": "Nachricht",
     "messagePlaceholder": "Wie kann ich helfen?",
-    "btn_text": "Nachricht senden"
+    "btn_text": "Nachricht senden",
+    "interestLabel": "Woran bist du interessiert?",
+    "interestWebsite": "Website",
+    "interestMobileApp": "Mobile App",
+    "packageLabel": "Paket auswählen"
+  },
+  "price_packages_section": {
+    "title": "Website-Pakete",
+    "btnText":"Jetzt Anfragen",
+    "packages": [
+      {
+        "name": "Starter",
+        "price": "ab 1.200 €",
+        "for": "Ideal für: Einzelunternehmer, kleine Dienstleister",
+        "features": [
+          "Landingpage oder bis zu 5 Seiten",
+          "Webdesign inklusive",
+          "Kontaktformular inklusive",
+          "Mobile-optimiert (Responsive Design)",
+          "Basis-SEO (Meta-Tags, Seitenstruktur)",
+          "Lieferzeit: 1–2 Wochen"
+        ]
+      },
+      {
+        "name": "Business",
+        "price": "ab 2.800 €",
+        "for": "Ideal für: Etablierte Unternehmen, reglementierte Gewerbe (Ärzte, Anwälte, Gastronomie etc.)",
+        "features": [
+          "Bis zu 10 Seiten",
+          "Terminkalender / Buchungssystem",
+          "Blog oder Newssystem",
+          "Erweiterte SEO-Grundstruktur",
+          "Google Analytics Integration",
+          "Lieferzeit: 2–4 Wochen"
+        ]
+      },
+      {
+        "name": "Premium / Webshop",
+        "price": "ab 5.000 €",
+        "for": "Ideal für: E-Commerce, Startups, komplexe Anforderungen",
+        "features": [
+          "Webshop oder Web-App nach Maß",
+          "Custom Funktionen & Integrationen",
+          "Dashboard / Admin-Bereich möglich",
+          "Performance-Optimierung & Testing",
+          "Lieferzeit: 4–8 Wochen"
+        ]
+      }
+    ]
   }
 }

@@ -3,9 +3,10 @@ import ServiceSection from "./sections/ServiceSection";
 import PortfolioSection from "./sections/PortfolioSection";
 import TechStackSection from "./sections/TechStackSection";
 import AboutMeSection from "./sections/AboutMeSection";
-import ContactSection from "./sections/ContactSection";
+import ContactSection from "./sections/ContactSection/ContactSection";
 import { HomePageData } from "./sections/data/types/home-types";
 import ProjectPhases from "./sections/ProjectPhases";
+import PricePackages from "./sections/PricePackages";
 
 interface HomeScreenProps {
   data: HomePageData;
@@ -26,6 +27,12 @@ export default function HomeScreen({ data, locale }: HomeScreenProps) {
         title={data.service_section.title}
         description={data.service_section.description}
         services={data.service_section.services}
+      />
+
+      <PricePackages 
+        title={data.price_packages_section.title}
+        packages={data.price_packages_section.packages}
+        btnText={data.price_packages_section.btnText}
       />
 
       {/* Project Phases */}
@@ -72,6 +79,11 @@ export default function HomeScreen({ data, locale }: HomeScreenProps) {
         messagePlaceholder={data.contact_section.messagePlaceholder}
         btn_text={data.contact_section.btn_text}
         locale={locale}
+        interestLabel={data.contact_section.interestLabel}
+        interestWebsite={data.contact_section.interestWebsite}
+        interestMobileApp={data.contact_section.interestMobileApp}
+        packageLabel={data.contact_section.packageLabel}
+        packages={data.price_packages_section.packages}
       />
     </>
   );

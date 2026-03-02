@@ -250,6 +250,54 @@
     "emailPlaceholder": "your.name@mail.com",
     "messageLabel": "Message",
     "messagePlaceholder": "How can I help you?",
-    "btn_text": "Send Message"
+    "btn_text": "Send Message",
+    "interestLabel": "What are you interested in?",
+    "interestWebsite": "Website",
+    "interestMobileApp": "Mobile App",
+    "packageLabel": "Select a package"
+  },
+  "price_packages_section": {
+    "title": "Website Packages",
+    "btnText":"Request Now",
+    "packages": [
+      {
+        "name": "Starter",
+        "price": "from 1,200 €",
+        "for": "For: Solo entrepreneurs, small service providers",
+        "features": [
+          "Landing page or up to 5 pages",
+          "Webdesign inluded",
+          "Contact form included",
+          "Mobile-optimized (Responsive Design)",
+          "Basic SEO (Meta tags, page structure)",
+          "Delivery time: 1–2 weeks"
+        ]
+      },
+      {
+        "name": "Business",
+        "price": "from 2,800 €",
+        "for": "For: Established businesses, regulated professions (doctors, lawyers, restaurants etc.)",
+        "features": [
+          "Up to 10 pages",
+          "Appointment calendar / Booking system",
+          "Blog or News system",
+          "Advanced SEO base structure",
+          "Google Analytics integration",
+          "Delivery time: 2–4 weeks"
+        ]
+      },
+      {
+        "name": "Premium / Webshop",
+        "price": "from 5,000 €",
+        "for": "For: E-commerce, startups, complex requirements",
+        "features": [
+          "Custom webshop or web app",
+          "Custom features & integrations",
+          "Dashboard / Admin area possible",
+          "Performance optimization & testing",
+          "Delivery time: 4–8 weeks"
+        ]
+      }
+    ]
   }
 }

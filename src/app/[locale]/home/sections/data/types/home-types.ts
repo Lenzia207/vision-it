@@ -10,6 +10,20 @@ export interface HomePageData {
   tech_stack_section: TechStackSection;
   about_me_section: AboutMeSection;
   contact_section: ContactSection;
+  price_packages_section: PricePackagesSection;
+}
+
+export interface PricePackage {
+  name: string;
+  price: string;
+  for: string;
+  features: string[];
+}
+
+export interface PricePackagesSection {
+  title: string;
+  btnText: string;
+  packages: PricePackage[];
 }
 
 export interface ProjectPhase {
@@ -97,4 +111,8 @@ export interface ContactSection {
   messageLabel: string;
   messagePlaceholder: string;
   btn_text: string;
+  interestLabel: string;
+  interestWebsite: string;
+  interestMobileApp: string;
+  packageLabel: string;
 }

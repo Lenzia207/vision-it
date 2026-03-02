@@ -26,9 +26,11 @@ export async function POST(request: Request) {
     recaptchaToken?: unknown;
     locale?: unknown;
     privacyAccepted?: unknown;
+    interests?: unknown;
+    selectedPackage?: unknown;
   };
 
-  const { name, company, email, message, locale, privacyAccepted } = payload;
+  const { name, company, email, message, locale, privacyAccepted, interests, selectedPackage } = payload;
   if (!name || !email || !message || typeof name !== 'string' || typeof email !== 'string' || typeof message !== 'string') {
     return NextResponse.json({ success: false, error: 'Invalid  input' }, { status: 400 });
   }
@@ -69,6 +71,8 @@ export async function POST(request: Request) {
       company: typeof company === 'string' ? company : undefined,
       email,
       message,
+      interests: Array.isArray(interests) ? interests.filter((i): i is string => typeof i === 'string') : undefined,
+      selectedPackage: typeof selectedPackage === 'string' ? selectedPackage : null,
     };
     const ownerEmail = getOwnerNotificationEmail(contactData);
     const customerEmail = getCustomerConfirmationEmail(contactData, typeof locale === 'string' ? locale : 'de');

@@ -1,8 +1,8 @@
 "use client";
-import Checkbox from "@/components/Checkbox";
-import { Send } from "lucide-react";
-import { useState, FormEvent } from "react";
-import LabelInput from "@/components/LabelInput";
+
+import { useState, FormEvent, useEffect } from "react";
+import { PricePackage } from "../data/types/home-types";
+import ContactView from "./ContactView";
 
 interface ContactSectionProps {
   title: string;
@@ -17,6 +17,11 @@ interface ContactSectionProps {
   messagePlaceholder: string;
   btn_text: string;
   locale: string;
+  interestLabel: string;
+  interestWebsite: string;
+  interestMobileApp: string;
+  packageLabel: string;
+  packages: PricePackage[];
 }
 
 export default function ContactSection({
@@ -32,6 +37,11 @@ export default function ContactSection({
   messagePlaceholder,
   btn_text,
   locale,
+  interestLabel,
+  interestWebsite,
+  interestMobileApp,
+  packageLabel,
+  packages,
 }: ContactSectionProps) {
   const translations = {
     en: {
@@ -65,18 +75,44 @@ export default function ContactSection({
 
   const t =
     translations[locale as keyof typeof translations] || translations.en;
+
   const [formData, setFormData] = useState({
     name: "",
     company: "",
     email: "",
     message: "",
   });
+  const [interests, setInterests] = useState({
+    website: false,
+    mobileApp: false,
+  });
+  const [selectedPackage, setSelectedPackage] = useState<string | null>(null);
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{
     type: "success" | "error" | null;
     message: string;
   }>({ type: null, message: "" });
+
+  const toggleInterest = (key: "website" | "mobileApp") => {
+    setInterests((prev) => {
+      const next = { ...prev, [key]: !prev[key] };
+      if (key === "website" && !next.website) {
+        setSelectedPackage(null);
+      }
+      return next;
+    });
+  };
+
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const { packageName } = (e as CustomEvent<{ packageName: string }>).detail;
+      setInterests((prev) => ({ ...prev, website: true }));
+      setSelectedPackage(packageName);
+    };
+    window.addEventListener("select-package", handler);
+    return () => window.removeEventListener("select-package", handler);
+  }, []);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -125,6 +161,11 @@ export default function ContactSection({
           message: formData.message,
           locale: locale,
           privacyAccepted: privacyAccepted,
+          interests: [
+            ...(interests.website ? [interestWebsite] : []),
+            ...(interests.mobileApp ? [interestMobileApp] : []),
+          ],
+          selectedPackage: interests.website ? selectedPackage : null,
         }),
       });
 
@@ -136,12 +177,9 @@ export default function ContactSection({
           message: t.success,
         });
         // Reset form
-        setFormData({
-          name: "",
-          company: "",
-          email: "",
-          message: "",
-        });
+        setFormData({ name: "", company: "", email: "", message: "" });
+        setInterests({ website: false, mobileApp: false });
+        setSelectedPackage(null);
         setPrivacyAccepted(false);
       } else {
         setSubmitStatus({
@@ -169,98 +207,38 @@ export default function ContactSection({
   };
 
   return (
-    <section
-      id="contact"
-      className="relative py-24 md:py-32 border-t border-white/5"
-    >
-      <div className="absolute inset-0 bg-linear-to-t from-blue-900/10 via-transparent to-transparent pointer-events-none"></div>
-
-      <div className="max-w-6xl mx-auto px-6 reveal-on-scroll">
-        <div className="text-center mb-12">
-          <h2 className="font-serif text-4xl md:text-5xl font-medium tracking-tight text-white mb-4">
-            {title}
-          </h2>
-          <p className="text-zinc-400 text-lg whitespace-pre-line">
-            {description}
-          </p>
-        </div>
-
-        <div className="bg-zinc-900/40 border border-white/5 rounded-3xl p-8 md:p-10 shadow-2xl backdrop-blur-sm">
-          <h3 className="text-xl font-medium text-white mb-8">{btn_text}</h3>
-
-          {submitStatus.type && (
-            <div
-              className={`mb-6 p-4 rounded-xl ${
-                submitStatus.type === "success"
-                  ? "bg-green-500/10 border border-green-500/20 text-green-400"
-                  : "bg-red-500/10 border border-red-500/20 text-red-400"
-              }`}
-            >
-              {submitStatus.message}
-            </div>
-          )}
-
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <LabelInput
-                type="text"
-                labelName={nameLabel}
-                namePlaceholder={namePlaceholder}
-                inputName="name"
-                formName={formData.name}
-                onChange={handleChange}
-              />
-              <LabelInput
-                type="text"
-                labelName={companyLabel}
-                namePlaceholder={companyPlaceholder}
-                inputName="company"
-                formName={formData.company}
-                onChange={handleChange}
-              />
-            </div>
-
-            <LabelInput
-              type="email"
-              labelName={emailLabel}
-              namePlaceholder={emailPlaceholder}
-              inputName="email"
-              formName={formData.email}
-              onChange={handleChange}
-            />
-            
-            <div className="space-y-2">
-              <label className="text-sm font-medium text-zinc-400 ml-1">
-                {messageLabel}
-              </label>
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                rows={4}
-                className="w-full px-4 py-3 rounded-xl input-glass text-white placeholder-zinc-600 transition-all resize-none focus:outline-none focus:ring-2 focus:ring-blue-500/50"
-                placeholder={messagePlaceholder}
-              ></textarea>
-            </div>
-
-            <Checkbox
-              privacyAccepted={privacyAccepted}
-              onChange={(e) => setPrivacyAccepted(e.target.checked)}
-              message={t.privacyPolicy}
-            />
-
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="w-full py-4 mt-4 bg-linear-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-medium rounded-xl transition-all transform hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-blue-500/20 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
-            >
-              {isSubmitting ? t.sending : btn_text}
-              <Send className="w-4 h-4" />
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
+    <ContactView title={title} description={description} submitStatusType={submitStatus.type} submitStatusMessage={submitStatus.message}
+    handleSubmit={handleSubmit}
+    nameLabel={nameLabel}
+    namePlaceholder={namePlaceholder}
+    formDataName={formData.name}
+    handleChange={handleChange}
+    companyLabel={companyLabel}
+    companyPlaceholder={companyPlaceholder}
+    formDataCompany={formData.company}
+    emailLabel={emailLabel}
+    emailPlaceholder={emailPlaceholder}
+    formDataEmail={formData.email}
+    messageLabel={messageLabel}
+    messagePlaceholder={messagePlaceholder}
+    formDataMessage={formData.message}
+    btn_text={btn_text}
+    interestLabel={interestLabel}
+    interestWebsite={interestWebsite}
+    interestMobileApp={interestMobileApp}
+    packageLabel={packageLabel}
+    packages={packages}
+    interests={interests}
+    toggleInterest={toggleInterest}
+    selectedPackage={selectedPackage}
+    setSelectedPackage={setSelectedPackage}
+    privacyAccepted={privacyAccepted}
+    setPrivacyAccepted={setPrivacyAccepted}
+    isSubmitting={isSubmitting}
+    textPrivacyPolicy={t.privacyPolicy}
+    textSending={t.sending}
+    />
+ 
   );
 }
+

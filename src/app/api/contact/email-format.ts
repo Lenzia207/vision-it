@@ -3,14 +3,22 @@ interface ContactData {
   company?: string;
   email: string;
   message: string;
+  interests?: string[];
+  selectedPackage?: string | null;
 }
 
 export function getOwnerNotificationEmail(data: ContactData) {
-  const { name, company, email, message } = data;
-  
+  const { name, company, email, message, interests, selectedPackage } = data;
+
+  const interestHtml = interests && interests.length > 0
+    ? `<p><strong>Interesse:</strong> ${interests.join(', ')}${
+        selectedPackage ? ` &rarr; Paket: <strong>${selectedPackage}</strong>` : ''
+      }</p>`
+    : '';
+
   return {
     subject: `Nachricht von ${name} über vision-it.at`,
-    text: `Name: ${name}\nCompany: ${company || 'N/A'}\nEmail: ${email}\n\nMessage:\n${message}`,
+    text: `Name: ${name}\nCompany: ${company || 'N/A'}\nEmail: ${email}\n${interests?.length ? `Interesse: ${interests.join(', ')}${selectedPackage ? ` → Paket: ${selectedPackage}` : ''}\n` : ''}\nMessage:\n${message}`,
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #2563eb;">Neue Nachricht vom Kontaktformular VisionIT</h2>
@@ -18,6 +26,7 @@ export function getOwnerNotificationEmail(data: ContactData) {
           <p><strong>Name:</strong> ${name}</p>
           <p><strong>Company:</strong> ${company || 'N/A'}</p>
           <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
+          ${interestHtml}
         </div>
         <div style="margin-top: 20px;">
           <h3>Nachricht:</h3>

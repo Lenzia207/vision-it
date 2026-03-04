@@ -12,7 +12,7 @@ interface BottomNavigationProps {
 export default function BottomNavigation({ data }: BottomNavigationProps) {
   const iconMap: Record<string, ElementType> = {
     services: Wrench,
-    projectPhases: Network, // use a calendar icon for phases
+    projectPhases: Network,
     projects: Monitor,
     about: Hand,
     contact: Contact,

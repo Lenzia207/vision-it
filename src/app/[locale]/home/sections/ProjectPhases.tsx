@@ -24,6 +24,8 @@ export default function ProjectPhases({ title, description, phases, btnText }: P
 
     const scrollContainerRef = useRef<HTMLDivElement>(null);
     const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
+    const touchStartX = useRef<number | null>(null);
+    const touchStartY = useRef<number | null>(null);
 
     useEffect(() => {
         const container = scrollContainerRef.current;
@@ -33,6 +35,24 @@ export default function ProjectPhases({ title, description, phases, btnText }: P
             activeStep.offsetLeft - container.offsetWidth / 2 + activeStep.offsetWidth / 2;
         container.scrollTo({ left: Math.max(0, scrollTo), behavior: "smooth" });
     }, [currentIndex]);
+
+    const handleTouchStart = (e: React.TouchEvent) => {
+        touchStartX.current = e.touches[0].clientX;
+        touchStartY.current = e.touches[0].clientY;
+    };
+
+    const handleTouchEnd = (e: React.TouchEvent) => {
+        if (touchStartX.current === null || touchStartY.current === null) return;
+        const dx = touchStartX.current - e.changedTouches[0].clientX;
+        const dy = touchStartY.current - e.changedTouches[0].clientY;
+        // Only trigger if horizontal swipe dominates
+        if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 50) {
+            if (dx > 0) navigate(currentIndex + 1);
+            else navigate(currentIndex - 1);
+        }
+        touchStartX.current = null;
+        touchStartY.current = null;
+    };
 
     const navigate = (newIndex: number) => {
         if (newIndex === currentIndex || newIndex < 0 || newIndex >= phases.length) return;
@@ -89,13 +109,17 @@ export default function ProjectPhases({ title, description, phases, btnText }: P
                     <button
                         onClick={() => navigate(currentIndex - 1)}
                         disabled={currentIndex === 0}
-                        className="shrink-0 p-2 text-zinc-700 hover:text-white transition-colors duration-200 disabled:opacity-20 disabled:cursor-not-allowed"
+                        className="hidden md:block shrink-0 p-2 text-zinc-700 hover:text-white transition-colors duration-200 disabled:opacity-20 disabled:cursor-not-allowed"
                         aria-label="Previous phase"
                     >
                         <ChevronLeft className="w-6 h-6" />
                     </button>
 
-                    <div className="flex-1 overflow-hidden">
+                    <div
+                        className="flex-1 overflow-hidden"
+                        onTouchStart={handleTouchStart}
+                        onTouchEnd={handleTouchEnd}
+                    >
                         <div
                             key={currentIndex}
                             className={direction === "right" ? "phase-slide-right" : "phase-slide-left"}
@@ -137,7 +161,7 @@ export default function ProjectPhases({ title, description, phases, btnText }: P
                     <button
                         onClick={() => navigate(currentIndex + 1)}
                         disabled={currentIndex === phases.length - 1}
-                        className="shrink-0 p-2 text-zinc-700 hover:text-white transition-colors duration-200 disabled:opacity-20 disabled:cursor-not-allowed"
+                        className="hidden md:block shrink-0 p-2 text-zinc-700 hover:text-white transition-colors duration-200 disabled:opacity-20 disabled:cursor-not-allowed"
                         aria-label="Next phase"
                     >
                         <ChevronRight className="w-6 h-6" />

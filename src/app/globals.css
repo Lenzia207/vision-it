@@ -45,6 +45,13 @@ body {
     background-clip: text;
   }
 
+    .text-gradient-logo-IT {
+    background: linear-gradient(135deg,#60a5fa 0%,#6e3fa7 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
   .hover-lift {
     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
       border-color 0.3s ease, box-shadow 0.3s ease;

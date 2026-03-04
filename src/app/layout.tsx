@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Urbanist, Playfair_Display } from "next/font/google";
+import { Urbanist, Playfair_Display, Prompt } from "next/font/google";
 import "./globals.css";
 
 const urbanist = Urbanist({
@@ -14,6 +14,13 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
+const prompt = Prompt({
+  subsets: ["latin"],
+  variable: "--font-prompt",
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
+
 export const metadata: Metadata = {
   title: "Vision-IT",
 };
@@ -26,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${urbanist.variable} ${playfair.variable} font-sans antialiased bg-[#050505] text-zinc-200 selection:bg-blue-500/30 selection:text-blue-200`}
+        className={`${urbanist.variable} ${playfair.variable} ${prompt.variable} font-sans antialiased bg-[#050505] text-zinc-200 selection:bg-blue-500/30 selection:text-blue-200`}
       >
         {children}
       </body>

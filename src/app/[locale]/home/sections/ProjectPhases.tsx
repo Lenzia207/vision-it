@@ -43,7 +43,7 @@ export default function ProjectPhases({ title, description, phases, btnText }: P
     const current = phases[currentIndex];
 
     return (
-        <section id="project-phases" className="py-24 md:py-32 border-t border-white/5">
+        <section id="projectPhases" className="py-24 md:py-32 border-t border-white/5">
             <div className="max-w-6xl mx-auto px-6">
                 <TitleHeader title={title} description={description} />
 

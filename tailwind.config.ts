@@ -9,4 +9,15 @@ module.exports = {
         'text-zinc-400',
     ],
 
+    theme:{
+
+        extend: {
+            fontFamily: {
+                sans: ['var(--font-urbanist)', 'sans-serif'],
+                serif: ['var(--font-playfair)', 'serif'],
+                prompt: ['var(--font-prompt)', 'sans-serif' ],
+            },
+        },  
+    }
+
 }

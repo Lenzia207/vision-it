@@ -1,7 +1,7 @@
 "use client";
 
 import { Link } from "@/app/i18n/routing";
-import { Wrench, Contact, Monitor, Hand } from "lucide-react";
+import { Wrench, Contact, Monitor, Hand, Network } from "lucide-react";
 import { ElementType } from "react";
 import { HomePageData } from "@/app/[locale]/home/sections/data/types/home-types";
 
@@ -12,6 +12,7 @@ interface BottomNavigationProps {
 export default function BottomNavigation({ data }: BottomNavigationProps) {
   const iconMap: Record<string, ElementType> = {
     services: Wrench,
+    projectPhases: Network, // use a calendar icon for phases
     projects: Monitor,
     about: Hand,
     contact: Contact,
@@ -20,7 +21,7 @@ export default function BottomNavigation({ data }: BottomNavigationProps) {
   const getIcon = (href: string): ElementType | null => {
     const key = href.toLowerCase();
     for (const k of Object.keys(iconMap)) {
-      if (key.includes(k)) return iconMap[k];
+      if (key.includes(k.toLowerCase())) return iconMap[k];
     }
     return null;
   };

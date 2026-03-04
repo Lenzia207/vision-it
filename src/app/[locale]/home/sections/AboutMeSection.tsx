@@ -41,7 +41,7 @@ export default function AboutMeSection({
               </div>
            <div className="text-2xl lg:text-4xl mt-4">{fullname}</div>
           </div>
-          <div className="flex flex-row gap-10">
+          {/* <div className="flex flex-row gap-10">
             {social_media.map(({ name, icon, url }, index) => (
               <a
                 href={url}
@@ -54,7 +54,7 @@ export default function AboutMeSection({
                 <Image src={icon} alt={name} width={16} height={16} />
               </a>
             ))}
-          </div>
+          </div> */}
             <p className="text-zinc-500  text-justify text-lg lg:text-xl whitespace-pre-line">{description}</p>
 
         </div>

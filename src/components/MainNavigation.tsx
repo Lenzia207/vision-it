@@ -16,7 +16,7 @@ export default function MainNavigation({ data, locale }: MainNavigationProps) {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-black/50 border-b border-white/5 transition-all duration-300">
-      <div className="max-w-7xl mx-auto flex items-center justify-between my-4">
+      <div className="max-w-7xl mx-auto flex items-center justify-between my-4 pl-4 lg:pl-0">
         <Link
           href="/"
           locale={locale}

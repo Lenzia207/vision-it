@@ -11,17 +11,17 @@
         "fields": [
             {
                 "name": "companyName",
-                "label": "Firmenname / Name",
+                "label": "Firmenname / Name*",
                 "required": true
             },
             {
                 "name": "contactPerson",
-                "label": "Ansprechperson",
+                "label": "Ansprechperson*",
                 "required": true
             },
             {
                 "name": "emailPhone",
-                "label": "E-Mail / Telefon",
+                "label": "E-Mail / Telefon*",
                 "required": true
             },
             {
@@ -261,58 +261,9 @@
         ],
         "note": "Hinweis: Rechtliche Texte werden vom Kunden bereitgestellt oder extern beauftragt."
     },
+  
     "section9": {
-        "title": "9. Mobile App – Zusatzfragen",
-        "subtitle": "(Nur ausfüllen wenn App gewünscht)",
-        "platformLabel": "Plattform:",
-        "platforms": [
-            {
-                "value": "ios",
-                "label": "iOS"
-            },
-            {
-                "value": "android",
-                "label": "Android"
-            },
-            {
-                "value": "both",
-                "label": "Beides"
-            }
-        ],
-        "options": [
-            {
-                "key": "hasWireframe",
-                "label": "Wireframe / Konzept vorhanden"
-            },
-            {
-                "key": "needsBackend",
-                "label": "Backend / Datenbank benötigt"
-            },
-            {
-                "key": "pushNotifications",
-                "label": "Push-Benachrichtigungen"
-            },
-            {
-                "key": "offline",
-                "label": "Offline-Funktion"
-            },
-            {
-                "key": "login",
-                "label": "Login / Registrierung"
-            },
-            {
-                "key": "payment",
-                "label": "Zahlungsabwicklung"
-            },
-            {
-                "key": "webConnection",
-                "label": "Verbindung zur bestehenden Website"
-            }
-        ],
-        "appDescriptionLabel": "App-Idee kurz beschreiben:"
-    },
-    "section10": {
-        "title": "10. Budget & Zeitplan",
+        "title": "9. Budget & Zeitplan",
         "budgetLabel": "Budgetrahmen:",
         "budgetOptions": [
             {
@@ -365,8 +316,8 @@
         ],
         "dateLabel": "Datum:"
     },
-    "section11": {
-        "title": "11. Wartung & Support",
+    "section10": {
+        "title": "10. Wartung & Support",
         "maintenanceLabel": "Wartungspaket gewünscht",
         "maintenanceOptions": [
             {
@@ -393,8 +344,8 @@
             }
         ]
     },
-    "section12": {
-        "title": "12. Kommunikation & Ablauf",
+    "section11": {
+        "title": "11. Kommunikation & Ablauf",
         "channelLabel": "Bevorzugter Kanal:",
         "channelOptions": [
             {

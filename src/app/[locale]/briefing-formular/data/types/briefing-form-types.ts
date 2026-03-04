@@ -80,16 +80,8 @@ export interface BriefingFormData {
     note: string;
   };
 
-  section9: {
-    title: string;
-    subtitle: string;
-    platformLabel: string;
-    platforms: RadioOption[];
-    options: CheckboxOption[];
-    appDescriptionLabel: string;
-  };
 
-  section10: {
+  section9: {
     title: string;
     budgetLabel: string;
     budgetOptions: RadioOption[];
@@ -98,14 +90,14 @@ export interface BriefingFormData {
     dateLabel: string;
   };
 
-  section11: {
+  section10: {
     title: string;
     maintenanceLabel: string;
     maintenanceOptions: RadioOption[];
     extraOptions: CheckboxOption[];
   };
 
-  section12: {
+  section11: {
     title: string;
     channelLabel: string;
     channelOptions: RadioOption[];
@@ -211,18 +203,7 @@ export interface BriefingFormState {
     accessibility: boolean;
   };
 
-  // Section 9
-  appPlatform: "ios" | "android" | "both" | "";
-  app: {
-    hasWireframe: boolean;
-    needsBackend: boolean;
-    pushNotifications: boolean;
-    offline: boolean;
-    login: boolean;
-    payment: boolean;
-    webConnection: boolean;
-  };
-  appDescription: string;
+
 
   // Section 10
   budget: "under1500" | "1500-3000" | "3000-6000" | "6000-10000" | "over10000" | "open" | "";

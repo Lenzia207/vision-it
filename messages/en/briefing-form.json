@@ -11,7 +11,7 @@
         "fields": [
             {
                 "name": "companyName",
-                "label": "Company Name / Name",
+                "label": "Company Name / Name*",
                 "required": true
             },
             {
@@ -21,7 +21,7 @@
             },
             {
                 "name": "emailPhone",
-                "label": "E-Mail / Phone",
+                "label": "E-Mail / Phone*",
                 "required": true
             },
             {
@@ -261,58 +261,9 @@
         ],
         "note": "Note: Legal texts are provided by the client or commissioned externally."
     },
+   
     "section9": {
-        "title": "9. Mobile App – Additional Questions",
-        "subtitle": "(Only fill in if an app is desired)",
-        "platformLabel": "Platform:",
-        "platforms": [
-            {
-                "value": "ios",
-                "label": "iOS"
-            },
-            {
-                "value": "android",
-                "label": "Android"
-            },
-            {
-                "value": "both",
-                "label": "Both"
-            }
-        ],
-        "options": [
-            {
-                "key": "hasWireframe",
-                "label": "Wireframe / concept available"
-            },
-            {
-                "key": "needsBackend",
-                "label": "Backend / database needed"
-            },
-            {
-                "key": "pushNotifications",
-                "label": "Push notifications"
-            },
-            {
-                "key": "offline",
-                "label": "Offline functionality"
-            },
-            {
-                "key": "login",
-                "label": "Login / registration"
-            },
-            {
-                "key": "payment",
-                "label": "Payment processing"
-            },
-            {
-                "key": "webConnection",
-                "label": "Connection to existing website"
-            }
-        ],
-        "appDescriptionLabel": "Briefly describe the app idea:"
-    },
-    "section10": {
-        "title": "10. Budget & Timeline",
+        "title": "9. Budget & Timeline",
         "budgetLabel": "Budget range:",
         "budgetOptions": [
             {
@@ -365,8 +316,8 @@
         ],
         "dateLabel": "Date:"
     },
-    "section11": {
-        "title": "11. Maintenance & Support",
+    "section10": {
+        "title": "10. Maintenance & Support",
         "maintenanceLabel": "Maintenance package desired",
         "maintenanceOptions": [
             {
@@ -393,8 +344,8 @@
             }
         ]
     },
-    "section12": {
-        "title": "12. Communication & Process",
+    "section11": {
+        "title": "11. Communication & Process",
         "channelLabel": "Preferred channel:",
         "channelOptions": [
             {

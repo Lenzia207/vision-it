@@ -35,9 +35,7 @@ const initialState: BriefingFormState = {
     seo: { basicSEO: false, localSEO: false, googleBusiness: false, analytics: false, socialMedia: false },
     socialPlatforms: "",
     legal: { imprint: false, privacy: false, cookieBanner: false, agb: false, accessibility: false },
-    appPlatform: "",
-    app: { hasWireframe: false, needsBackend: false, pushNotifications: false, offline: false, login: false, payment: false, webConnection: false },
-    appDescription: "",
+
     budget: "",
     timeline: "",
     fixedDate: "",

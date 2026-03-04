@@ -213,58 +213,40 @@ export default function BriefingFormularView({
                     <p className="text-xs text-zinc-500 italic mt-2">{data.section8.note}</p>
                 </SectionCard>
 
-                {/* ── Section 9 · Mobile App ── */}
-                <SectionCard title={data.section9.title}>
-                    <p className="text-sm text-zinc-500 italic">{data.section9.subtitle}</p>
-                    <RadioGroup
-                        label={data.section9.platformLabel}
-                        name="appPlatform"
-                        value={f.appPlatform}
-                        options={data.section9.platforms}
-                        onChange={v => onRadio("appPlatform", v)}
-                    />
-                    <ChecklistGroup
-                        options={data.section9.options}
-                        groupValues={f.app}
-                        formState={f}
-                        onNestedCheck={makeNestedCheck("app")}
-                        onTextChange={onTextChange}
-                    />
-                    <TextareaInput label={data.section9.appDescriptionLabel} name="appDescription" value={f.appDescription} onChange={onTextChange} rows={2} />
-                </SectionCard>
+      
 
-                {/* ── Section 10 · Budget & Timeline ── */}
-                <SectionCard title={data.section10.title}>
+                {/* ── Section 9 · Budget & Timeline ── */}
+                <SectionCard title={data.section9.title}>
                     <RadioGroup
-                        label={data.section10.budgetLabel}
+                        label={data.section9.budgetLabel}
                         name="budget"
                         value={f.budget}
-                        options={data.section10.budgetOptions}
+                        options={data.section9.budgetOptions}
                         onChange={v => onRadio("budget", v)}
                     />
                     <RadioGroup
-                        label={data.section10.timelineLabel}
+                        label={data.section9.timelineLabel}
                         name="timeline"
                         value={f.timeline}
-                        options={data.section10.timelineOptions}
+                        options={data.section9.timelineOptions}
                         onChange={v => onRadio("timeline", v)}
                     />
                     {f.timeline === "fixedDate" && (
-                        <InlineInput name="fixedDate" value={f.fixedDate} placeholder={data.section10.dateLabel} onChange={onTextChange} />
+                        <InlineInput name="fixedDate" value={f.fixedDate} placeholder={data.section9.dateLabel} onChange={onTextChange} />
                     )}
                 </SectionCard>
 
-                {/* ── Section 11 · Maintenance & Support ── */}
-                <SectionCard title={data.section11.title}>
+                {/* ── Section 10 · Maintenance & Support ── */}
+                <SectionCard title={data.section10.title}>
                     <RadioGroup
-                        label={data.section11.maintenanceLabel}
+                        label={data.section10.maintenanceLabel}
                         name="maintenanceType"
                         value={f.maintenanceType}
-                        options={data.section11.maintenanceOptions}
+                        options={data.section10.maintenanceOptions}
                         onChange={v => onRadio("maintenanceType", v)}
                     />
                     <ChecklistGroup
-                        options={data.section11.extraOptions}
+                        options={data.section10.extraOptions}
                         groupValues={{ onboarding: f.onboarding, documentation: f.documentation }}
                         formState={f}
                         onNestedCheck={(key, checked) => onBoolCheck(key as keyof BriefingFormState, checked)}
@@ -272,31 +254,31 @@ export default function BriefingFormularView({
                     />
                 </SectionCard>
 
-                {/* ── Section 12 · Communication ── */}
-                <SectionCard title={data.section12.title}>
+                {/* ── Section 11 · Communication ── */}
+                <SectionCard title={data.section11.title}>
                     <RadioGroup
-                        label={data.section12.channelLabel}
+                        label={data.section11.channelLabel}
                         name="preferredChannel"
                         value={f.preferredChannel}
-                        options={data.section12.channelOptions}
+                        options={data.section11.channelOptions}
                         onChange={v => onRadio("preferredChannel", v)}
                     />
                     {f.preferredChannel === "other" && (
                         <InlineInput name="channelOther" value={f.channelOther} placeholder="..." onChange={onTextChange} />
                     )}
                     <RadioGroup
-                        label={data.section12.feedbackLabel}
+                        label={data.section11.feedbackLabel}
                         name="feedbackRounds"
                         value={f.feedbackRounds}
-                        options={data.section12.feedbackOptions}
+                        options={data.section11.feedbackOptions}
                         onChange={v => onRadio("feedbackRounds", v)}
                     />
                     <CheckItem
-                        label={data.section12.multipleStakeholders}
+                        label={data.section11.multipleStakeholders}
                         checked={f.multipleStakeholders}
                         onChange={v => onBoolCheck("multipleStakeholders", v)}
                     />
-                    <TextInput label={data.section12.availabilityLabel} name="feedbackAvailability" value={f.feedbackAvailability} placeholder="z.B. Mo–Fr 09:00–17:00" onChange={onTextChange} />
+                    <TextInput label={data.section11.availabilityLabel} name="feedbackAvailability" value={f.feedbackAvailability} placeholder="z.B. Mo–Fr 09:00–17:00" onChange={onTextChange} />
                 </SectionCard>
 
                 {/* ── Privacy + Submit ── */}

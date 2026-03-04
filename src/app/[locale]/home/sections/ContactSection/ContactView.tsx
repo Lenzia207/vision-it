@@ -29,14 +29,16 @@ interface ContactViewProps {
     interests: {
         website: boolean;
         mobileApp: boolean;
+        general: boolean;
     };
-    toggleInterest: (interest: "website" | "mobileApp") => void;
+    toggleInterest: (interest: "website" | "mobileApp" | "general") => void;
     selectedPackage: string | null;
     setSelectedPackage: (pkgName: string | null) => void;
     btn_text: string;
     interestLabel: string;
     interestWebsite: string;
     interestMobileApp: string;
+    interestGeneral: string;
     packageLabel: string;
     packages: PricePackage[];
     textPrivacyPolicy: string;
@@ -72,6 +74,7 @@ export default function ContactView({ title,
     interestLabel,
     interestWebsite,
     interestMobileApp,
+    interestGeneral,
     packageLabel,
     packages,
     textPrivacyPolicy,
@@ -209,6 +212,39 @@ export default function ContactView({ title,
                                 </span>
                                 {interestMobileApp}
                             </button>
+                              <button
+                                type="button"
+                                onClick={() => toggleInterest("general")}
+                                className={`flex items-center gap-2.5 px-4 py-2.5 rounded-xl border text-sm font-medium transition-all duration-200 ${interests.general
+                                        ? "bg-blue-500/15 border-blue-500/50 text-blue-300"
+                                        : "bg-zinc-800/60 border-white/10 text-zinc-400 hover:border-white/20 hover:text-zinc-300"
+                                    }`}
+                            >
+                                <span
+                                    className={`w-4 h-4 rounded flex items-center justify-center border-2 transition-all shrink-0 ${interests.general
+                                            ? "bg-blue-500 border-blue-500"
+                                            : "border-zinc-600"
+                                        }`}
+                                >
+                                    {interests.general && (
+                                        <svg
+                                            className="w-2.5 h-2.5 text-white"
+                                            viewBox="0 0 10 8"
+                                            fill="none"
+                                        >
+                                            <path
+                                                d="M1 4L4 7L9 1"
+                                                stroke="currentColor"
+                                                strokeWidth="1.5"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            />
+                                        </svg>
+                                    )}
+                                </span>
+                                {interestGeneral}
+                            </button>
+
                         </div>
 
                         {/* Package sub-selection — visible only when Website is checked */}

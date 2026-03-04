@@ -114,5 +114,6 @@ export interface ContactSection {
   interestLabel: string;
   interestWebsite: string;
   interestMobileApp: string;
+  interestGeneral: string;
   packageLabel: string;
 }

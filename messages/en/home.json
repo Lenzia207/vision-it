@@ -254,6 +254,7 @@
     "interestLabel": "What are you interested in?",
     "interestWebsite": "Website",
     "interestMobileApp": "Mobile App",
+    "interestGeneral": "General Inquiry",
     "packageLabel": "Select a package"
   },
   "price_packages_section": {

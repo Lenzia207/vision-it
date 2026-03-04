@@ -20,6 +20,7 @@ interface ContactSectionProps {
   interestLabel: string;
   interestWebsite: string;
   interestMobileApp: string;
+  interestGeneral: string;
   packageLabel: string;
   packages: PricePackage[];
 }
@@ -40,6 +41,7 @@ export default function ContactSection({
   interestLabel,
   interestWebsite,
   interestMobileApp,
+  interestGeneral,
   packageLabel,
   packages,
 }: ContactSectionProps) {
@@ -85,6 +87,7 @@ export default function ContactSection({
   const [interests, setInterests] = useState({
     website: false,
     mobileApp: false,
+    general: false,
   });
   const [selectedPackage, setSelectedPackage] = useState<string | null>(null);
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
@@ -94,7 +97,7 @@ export default function ContactSection({
     message: string;
   }>({ type: null, message: "" });
 
-  const toggleInterest = (key: "website" | "mobileApp") => {
+  const toggleInterest = (key: "website" | "mobileApp" | "general") => {
     setInterests((prev) => {
       const next = { ...prev, [key]: !prev[key] };
       if (key === "website" && !next.website) {
@@ -164,6 +167,7 @@ export default function ContactSection({
           interests: [
             ...(interests.website ? [interestWebsite] : []),
             ...(interests.mobileApp ? [interestMobileApp] : []),
+            ...(interests.general ? [interestGeneral] : []),
           ],
           selectedPackage: interests.website ? selectedPackage : null,
         }),
@@ -178,7 +182,7 @@ export default function ContactSection({
         });
         // Reset form
         setFormData({ name: "", company: "", email: "", message: "" });
-        setInterests({ website: false, mobileApp: false });
+        setInterests({ website: false, mobileApp: false, general: false });
         setSelectedPackage(null);
         setPrivacyAccepted(false);
       } else {
@@ -226,6 +230,7 @@ export default function ContactSection({
     interestLabel={interestLabel}
     interestWebsite={interestWebsite}
     interestMobileApp={interestMobileApp}
+    interestGeneral={interestGeneral}
     packageLabel={packageLabel}
     packages={packages}
     interests={interests}

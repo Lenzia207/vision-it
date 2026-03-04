@@ -82,6 +82,7 @@ export default function HomeScreen({ data, locale }: HomeScreenProps) {
         interestLabel={data.contact_section.interestLabel}
         interestWebsite={data.contact_section.interestWebsite}
         interestMobileApp={data.contact_section.interestMobileApp}
+        interestGeneral={data.contact_section.interestGeneral}
         packageLabel={data.contact_section.packageLabel}
         packages={data.price_packages_section.packages}
       />

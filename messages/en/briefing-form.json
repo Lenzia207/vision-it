@@ -1,0 +1,435 @@
+{
+    "title": "Vision-IT\nClient-Briefing Checklist",
+    "description": "Please fill out this form as completely as possible so we can prepare a concrete proposal. All information is treated confidentially.",
+    "submitButton": "Submit Briefing",
+    "submittingText": "Sending...",
+    "successMessage": "Thank you! Your briefing has been successfully submitted. We will get back to you as soon as possible.",
+    "errorMessage": "Failed to send. Please try again.",
+    "privacyLabel": "I have read and agree to the privacy policy.",
+    "clientInfo": {
+        "sectionTitle": "Client Information",
+        "fields": [
+            {
+                "name": "companyName",
+                "label": "Company Name / Name",
+                "required": true
+            },
+            {
+                "name": "contactPerson",
+                "label": "Contact Person",
+                "required": true
+            },
+            {
+                "name": "emailPhone",
+                "label": "E-Mail / Phone",
+                "required": true
+            },
+            {
+                "name": "existingWebsite",
+                "label": "Existing Website (if applicable)"
+            }
+        ]
+    },
+    "section1": {
+        "title": "1. Project Type",
+        "subtitle": "What is needed?",
+        "options": [
+            {
+                "key": "landingPage",
+                "label": "Landing Page"
+            },
+            {
+                "key": "businessWebsite",
+                "label": "Business Website (multiple pages)"
+            },
+            {
+                "key": "webshop",
+                "label": "Web Shop / E-Commerce"
+            },
+            {
+                "key": "webapp",
+                "label": "Web App / Portal"
+            },
+            {
+                "key": "mobileApp",
+                "label": "Mobile App (iOS / Android / both)"
+            },
+            {
+                "key": "other",
+                "label": "Other:",
+                "inlineInputName": "projectTypeOther",
+                "inlineInputPlaceholder": "..."
+            }
+        ],
+        "descriptionLabel": "Brief description – What should the website do?"
+    },
+    "section2": {
+        "title": "2. Design & Branding",
+        "options": [
+            {
+                "key": "hasDesign",
+                "label": "Finished design / mockup available",
+                "inlineInputName": "designFile",
+                "inlineInputPlaceholder": "File:"
+            },
+            {
+                "key": "hasLogo",
+                "label": "Logo / CI available"
+            },
+            {
+                "key": "hasColors",
+                "label": "Colors & fonts defined"
+            },
+            {
+                "key": "noDesign",
+                "label": "No design available → Vision-IT will create it"
+            }
+        ],
+        "referencesLabel": "Reference websites:",
+        "styleLabel": "Style preference: modern-minimalist / corporate / creative / ___"
+    },
+    "section3": {
+        "title": "3. Content & Texts",
+        "options": [
+            {
+                "key": "hasTexts",
+                "label": "All texts provided by client"
+            },
+            {
+                "key": "hasImages",
+                "label": "Images / photos available"
+            },
+            {
+                "key": "needsTexts",
+                "label": "Texts need to be created / revised → extra cost"
+            },
+            {
+                "key": "needsStockPhotos",
+                "label": "Stock photos needed"
+            }
+        ],
+        "pagesLabel": "Required pages: Home / About / Services / Contact / Blog / Imprint / ___"
+    },
+    "section4": {
+        "title": "4. Features & Integrations",
+        "options": [
+            {
+                "key": "contactForm",
+                "label": "Contact form"
+            },
+            {
+                "key": "booking",
+                "label": "Appointment booking / calendar"
+            },
+            {
+                "key": "newsletter",
+                "label": "Newsletter sign-up"
+            },
+            {
+                "key": "login",
+                "label": "User login / member area"
+            },
+            {
+                "key": "shop",
+                "label": "Web shop / payment processing"
+            },
+            {
+                "key": "multilingual",
+                "label": "Multilingual",
+                "inlineInputName": "languages",
+                "inlineInputPlaceholder": "Languages:"
+            },
+            {
+                "key": "api",
+                "label": "API integration / interfaces",
+                "inlineInputName": "apiDetails",
+                "inlineInputPlaceholder": "Which:"
+            },
+            {
+                "key": "googleMaps",
+                "label": "Google Maps"
+            },
+            {
+                "key": "liveChat",
+                "label": "Live Chat"
+            },
+            {
+                "key": "other",
+                "label": "Other:",
+                "inlineInputName": "featuresOther",
+                "inlineInputPlaceholder": "..."
+            }
+        ]
+    },
+    "section5": {
+        "title": "5. Technical – Domain & Hosting",
+        "options": [
+            {
+                "key": "hasDomain",
+                "label": "Domain already available",
+                "inlineInputName": "domainName",
+                "inlineInputPlaceholder": "Domain:"
+            },
+            {
+                "key": "needsDomain",
+                "label": "Domain needs to be registered"
+            },
+            {
+                "key": "hasHosting",
+                "label": "Hosting already available",
+                "inlineInputName": "hostingProvider",
+                "inlineInputPlaceholder": "Provider:"
+            },
+            {
+                "key": "visionItHosting",
+                "label": "Hosting by Vision-IT (Vercel / Cloudflare)"
+            },
+            {
+                "key": "wantsCMS",
+                "label": "CMS desired (so client can edit content themselves)"
+            },
+            {
+                "key": "keepEmails",
+                "label": "Existing email addresses should be retained"
+            }
+        ]
+    },
+    "section6": {
+        "title": "6. Existing Website / Access",
+        "options": [
+            {
+                "key": "siteReplaced",
+                "label": "Existing website will be replaced"
+            },
+            {
+                "key": "contentMigration",
+                "label": "Content from old website should be migrated"
+            }
+        ],
+        "accessesLabel": "Accesses to provide: Domain management / Hosting / Google Analytics / CMS / ___"
+    },
+    "section7": {
+        "title": "7. SEO & Marketing",
+        "options": [
+            {
+                "key": "basicSEO",
+                "label": "Basic SEO desired (meta tags, structure, load time)"
+            },
+            {
+                "key": "localSEO",
+                "label": "Local SEO (Google Maps, local search)"
+            },
+            {
+                "key": "googleBusiness",
+                "label": "Google Business listing available / should be created"
+            },
+            {
+                "key": "analytics",
+                "label": "Google Analytics / Tracking"
+            },
+            {
+                "key": "socialMedia",
+                "label": "Social media integration",
+                "inlineInputName": "socialPlatforms",
+                "inlineInputPlaceholder": "Platforms:"
+            }
+        ]
+    },
+    "section8": {
+        "title": "8. Legal & Compliance",
+        "options": [
+            {
+                "key": "imprint",
+                "label": "Imprint required"
+            },
+            {
+                "key": "privacy",
+                "label": "Privacy policy / GDPR"
+            },
+            {
+                "key": "cookieBanner",
+                "label": "Cookie banner needed"
+            },
+            {
+                "key": "agb",
+                "label": "Terms & conditions available / should be integrated"
+            },
+            {
+                "key": "accessibility",
+                "label": "Accessibility (WCAG) desired"
+            }
+        ],
+        "note": "Note: Legal texts are provided by the client or commissioned externally."
+    },
+    "section9": {
+        "title": "9. Mobile App – Additional Questions",
+        "subtitle": "(Only fill in if an app is desired)",
+        "platformLabel": "Platform:",
+        "platforms": [
+            {
+                "value": "ios",
+                "label": "iOS"
+            },
+            {
+                "value": "android",
+                "label": "Android"
+            },
+            {
+                "value": "both",
+                "label": "Both"
+            }
+        ],
+        "options": [
+            {
+                "key": "hasWireframe",
+                "label": "Wireframe / concept available"
+            },
+            {
+                "key": "needsBackend",
+                "label": "Backend / database needed"
+            },
+            {
+                "key": "pushNotifications",
+                "label": "Push notifications"
+            },
+            {
+                "key": "offline",
+                "label": "Offline functionality"
+            },
+            {
+                "key": "login",
+                "label": "Login / registration"
+            },
+            {
+                "key": "payment",
+                "label": "Payment processing"
+            },
+            {
+                "key": "webConnection",
+                "label": "Connection to existing website"
+            }
+        ],
+        "appDescriptionLabel": "Briefly describe the app idea:"
+    },
+    "section10": {
+        "title": "10. Budget & Timeline",
+        "budgetLabel": "Budget range:",
+        "budgetOptions": [
+            {
+                "value": "under1500",
+                "label": "up to €1,500"
+            },
+            {
+                "value": "1500-3000",
+                "label": "€1,500 – €3,000"
+            },
+            {
+                "value": "3000-6000",
+                "label": "€3,000 – €6,000"
+            },
+            {
+                "value": "6000-10000",
+                "label": "€6,000 – €10,000"
+            },
+            {
+                "value": "over10000",
+                "label": "over €10,000"
+            },
+            {
+                "value": "open",
+                "label": "open / recommendation desired"
+            }
+        ],
+        "timelineLabel": "Timeline:",
+        "timelineOptions": [
+            {
+                "value": "asap",
+                "label": "As soon as possible"
+            },
+            {
+                "value": "within4weeks",
+                "label": "Within 4 weeks"
+            },
+            {
+                "value": "2to3months",
+                "label": "2–3 months"
+            },
+            {
+                "value": "fixedDate",
+                "label": "Fixed deadline"
+            },
+            {
+                "value": "noFixedDate",
+                "label": "No fixed deadline"
+            }
+        ],
+        "dateLabel": "Date:"
+    },
+    "section11": {
+        "title": "11. Maintenance & Support",
+        "maintenanceLabel": "Maintenance package desired",
+        "maintenanceOptions": [
+            {
+                "value": "basic",
+                "label": "Basic (€79/month) – Hosting, Security, 1h changes"
+            },
+            {
+                "value": "professional",
+                "label": "Professional (€149/month) – + SEO reporting, 3h changes, priority"
+            },
+            {
+                "value": "none",
+                "label": "No maintenance package – self-managed"
+            }
+        ],
+        "extraOptions": [
+            {
+                "key": "onboarding",
+                "label": "Onboarding / handover session desired"
+            },
+            {
+                "key": "documentation",
+                "label": "Documentation / user manual desired"
+            }
+        ]
+    },
+    "section12": {
+        "title": "12. Communication & Process",
+        "channelLabel": "Preferred channel:",
+        "channelOptions": [
+            {
+                "value": "email",
+                "label": "E-Mail"
+            },
+            {
+                "value": "whatsapp",
+                "label": "WhatsApp"
+            },
+            {
+                "value": "phone",
+                "label": "Phone / Video Call"
+            },
+            {
+                "value": "other",
+                "label": "Other:"
+            }
+        ],
+        "feedbackLabel": "Feedback rounds:",
+        "feedbackOptions": [
+            {
+                "value": "1",
+                "label": "1x"
+            },
+            {
+                "value": "2",
+                "label": "2x"
+            },
+            {
+                "value": "3+",
+                "label": "3x+"
+            }
+        ],
+        "multipleStakeholders": "Multiple contact persons / decision makers",
+        "availabilityLabel": "Availability for feedback:"
+    }
+}

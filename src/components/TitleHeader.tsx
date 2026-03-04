@@ -2,7 +2,7 @@ export default function TitleHeader({ title, description }: { title: string; des
 
     return (
         <div className="text-center justify-items-center mb-20 reveal-on-scroll">
-          <h2 className="font-serif text-4xl lg:text-5xl font-medium tracking-tight text-white mb-10">
+          <h2 className="font-serif text-4xl lg:text-5xl font-medium tracking-tight text-white whitespace-pre-line mb-10">
             {title}
           </h2>
           {description && (

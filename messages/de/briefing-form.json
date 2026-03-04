@@ -1,0 +1,435 @@
+{
+    "title": "Vision-IT\nKunden-Briefing Checkliste",
+    "description": "Bitte füllen Sie dieses Formular so vollständig wie möglich aus, damit ein konkretes Angebot erstellt werden kann. Alle Angaben werden vertraulich behandelt.",
+    "submitButton": "Briefing absenden",
+    "submittingText": "Wird gesendet...",
+    "successMessage": "Vielen Dank! Ihr Briefing wurde erfolgreich übermittelt. Wir melden uns so bald wie möglich bei Ihnen.",
+    "errorMessage": "Fehler beim Senden. Bitte versuche es erneut.",
+    "privacyLabel": "Ich habe die Datenschutzerklärung gelesen und stimme zu.",
+    "clientInfo": {
+        "sectionTitle": "Kundendaten",
+        "fields": [
+            {
+                "name": "companyName",
+                "label": "Firmenname / Name",
+                "required": true
+            },
+            {
+                "name": "contactPerson",
+                "label": "Ansprechperson",
+                "required": true
+            },
+            {
+                "name": "emailPhone",
+                "label": "E-Mail / Telefon",
+                "required": true
+            },
+            {
+                "name": "existingWebsite",
+                "label": "Bestehende Website (falls vorhanden)"
+            }
+        ]
+    },
+    "section1": {
+        "title": "1. Projekttyp",
+        "subtitle": "Was wird benötigt?",
+        "options": [
+            {
+                "key": "landingPage",
+                "label": "Landingpage"
+            },
+            {
+                "key": "businessWebsite",
+                "label": "Business-Website (mehrere Seiten)"
+            },
+            {
+                "key": "webshop",
+                "label": "Webshop / E-Commerce"
+            },
+            {
+                "key": "webapp",
+                "label": "Web-App / Portal"
+            },
+            {
+                "key": "mobileApp",
+                "label": "Mobile App (iOS / Android / beides)"
+            },
+            {
+                "key": "other",
+                "label": "Sonstiges:",
+                "inlineInputName": "projectTypeOther",
+                "inlineInputPlaceholder": "..."
+            }
+        ],
+        "descriptionLabel": "Kurzbeschreibung – Was soll die Webseite leisten?"
+    },
+    "section2": {
+        "title": "2. Design & Branding",
+        "options": [
+            {
+                "key": "hasDesign",
+                "label": "Fertiges Design / Mockup vorhanden",
+                "inlineInputName": "designFile",
+                "inlineInputPlaceholder": "Datei:"
+            },
+            {
+                "key": "hasLogo",
+                "label": "Logo / CI vorhanden"
+            },
+            {
+                "key": "hasColors",
+                "label": "Farben & Schriften definiert"
+            },
+            {
+                "key": "noDesign",
+                "label": "Kein Design vorhanden → Vision-IT erstellt es"
+            }
+        ],
+        "referencesLabel": "Referenz-Websites:",
+        "styleLabel": "Stilwunsch: modern-minimalistisch / corporate / kreativ / ___"
+    },
+    "section3": {
+        "title": "3. Inhalte & Texte",
+        "options": [
+            {
+                "key": "hasTexts",
+                "label": "Alle Texte vom Kunden vorhanden"
+            },
+            {
+                "key": "hasImages",
+                "label": "Bilder / Fotos vorhanden"
+            },
+            {
+                "key": "needsTexts",
+                "label": "Texte müssen noch erstellt / überarbeitet werden → Aufpreis"
+            },
+            {
+                "key": "needsStockPhotos",
+                "label": "Stock-Fotos benötigt"
+            }
+        ],
+        "pagesLabel": "Benötigte Seiten: Startseite / Über uns / Leistungen / Kontakt / Blog / Impressum / ___"
+    },
+    "section4": {
+        "title": "4. Funktionen & Integrationen",
+        "options": [
+            {
+                "key": "contactForm",
+                "label": "Kontaktformular"
+            },
+            {
+                "key": "booking",
+                "label": "Terminbuchung / Kalender"
+            },
+            {
+                "key": "newsletter",
+                "label": "Newsletter-Anmeldung"
+            },
+            {
+                "key": "login",
+                "label": "Benutzer-Login / Mitgliederbereich"
+            },
+            {
+                "key": "shop",
+                "label": "Webshop / Zahlungsabwicklung"
+            },
+            {
+                "key": "multilingual",
+                "label": "Mehrsprachigkeit",
+                "inlineInputName": "languages",
+                "inlineInputPlaceholder": "Sprachen:"
+            },
+            {
+                "key": "api",
+                "label": "API-Anbindung / Schnittstellen",
+                "inlineInputName": "apiDetails",
+                "inlineInputPlaceholder": "Welche:"
+            },
+            {
+                "key": "googleMaps",
+                "label": "Google Maps"
+            },
+            {
+                "key": "liveChat",
+                "label": "Live-Chat"
+            },
+            {
+                "key": "other",
+                "label": "Sonstiges:",
+                "inlineInputName": "featuresOther",
+                "inlineInputPlaceholder": "..."
+            }
+        ]
+    },
+    "section5": {
+        "title": "5. Technisches – Domain & Hosting",
+        "options": [
+            {
+                "key": "hasDomain",
+                "label": "Domain bereits vorhanden",
+                "inlineInputName": "domainName",
+                "inlineInputPlaceholder": "Domain:"
+            },
+            {
+                "key": "needsDomain",
+                "label": "Domain muss noch registriert werden"
+            },
+            {
+                "key": "hasHosting",
+                "label": "Hosting bereits vorhanden",
+                "inlineInputName": "hostingProvider",
+                "inlineInputPlaceholder": "Anbieter:"
+            },
+            {
+                "key": "visionItHosting",
+                "label": "Hosting durch Vision-IT (Vercel / Cloudflare)"
+            },
+            {
+                "key": "wantsCMS",
+                "label": "CMS gewünscht (damit Kunde selbst Inhalte bearbeiten kann)"
+            },
+            {
+                "key": "keepEmails",
+                "label": "Bestehende E-Mail-Adressen sollen erhalten bleiben"
+            }
+        ]
+    },
+    "section6": {
+        "title": "6. Bestehende Website / Zugänge",
+        "options": [
+            {
+                "key": "siteReplaced",
+                "label": "Bestehende Website wird abgelöst"
+            },
+            {
+                "key": "contentMigration",
+                "label": "Inhalte der alten Website sollen übernommen werden"
+            }
+        ],
+        "accessesLabel": "Bereitzustellende Zugänge: Domain-Verwaltung / Hosting / Google Analytics / CMS / ___"
+    },
+    "section7": {
+        "title": "7. SEO & Marketing",
+        "options": [
+            {
+                "key": "basicSEO",
+                "label": "Basis-SEO gewünscht (Meta-Tags, Struktur, Ladezeit)"
+            },
+            {
+                "key": "localSEO",
+                "label": "Lokales SEO (Google Maps, lokale Suche)"
+            },
+            {
+                "key": "googleBusiness",
+                "label": "Google Business Eintrag vorhanden / soll erstellt werden"
+            },
+            {
+                "key": "analytics",
+                "label": "Google Analytics / Tracking"
+            },
+            {
+                "key": "socialMedia",
+                "label": "Social Media Verknüpfung",
+                "inlineInputName": "socialPlatforms",
+                "inlineInputPlaceholder": "Plattformen:"
+            }
+        ]
+    },
+    "section8": {
+        "title": "8. Rechtliches & Compliance",
+        "options": [
+            {
+                "key": "imprint",
+                "label": "Impressum erforderlich"
+            },
+            {
+                "key": "privacy",
+                "label": "Datenschutzerklärung / DSGVO"
+            },
+            {
+                "key": "cookieBanner",
+                "label": "Cookie-Banner benötigt"
+            },
+            {
+                "key": "agb",
+                "label": "AGB vorhanden / sollen eingebunden werden"
+            },
+            {
+                "key": "accessibility",
+                "label": "Barrierefreiheit (WCAG) gewünscht"
+            }
+        ],
+        "note": "Hinweis: Rechtliche Texte werden vom Kunden bereitgestellt oder extern beauftragt."
+    },
+    "section9": {
+        "title": "9. Mobile App – Zusatzfragen",
+        "subtitle": "(Nur ausfüllen wenn App gewünscht)",
+        "platformLabel": "Plattform:",
+        "platforms": [
+            {
+                "value": "ios",
+                "label": "iOS"
+            },
+            {
+                "value": "android",
+                "label": "Android"
+            },
+            {
+                "value": "both",
+                "label": "Beides"
+            }
+        ],
+        "options": [
+            {
+                "key": "hasWireframe",
+                "label": "Wireframe / Konzept vorhanden"
+            },
+            {
+                "key": "needsBackend",
+                "label": "Backend / Datenbank benötigt"
+            },
+            {
+                "key": "pushNotifications",
+                "label": "Push-Benachrichtigungen"
+            },
+            {
+                "key": "offline",
+                "label": "Offline-Funktion"
+            },
+            {
+                "key": "login",
+                "label": "Login / Registrierung"
+            },
+            {
+                "key": "payment",
+                "label": "Zahlungsabwicklung"
+            },
+            {
+                "key": "webConnection",
+                "label": "Verbindung zur bestehenden Website"
+            }
+        ],
+        "appDescriptionLabel": "App-Idee kurz beschreiben:"
+    },
+    "section10": {
+        "title": "10. Budget & Zeitplan",
+        "budgetLabel": "Budgetrahmen:",
+        "budgetOptions": [
+            {
+                "value": "under1500",
+                "label": "bis 1.500 €"
+            },
+            {
+                "value": "1500-3000",
+                "label": "1.500 – 3.000 €"
+            },
+            {
+                "value": "3000-6000",
+                "label": "3.000 – 6.000 €"
+            },
+            {
+                "value": "6000-10000",
+                "label": "6.000 – 10.000 €"
+            },
+            {
+                "value": "over10000",
+                "label": "über 10.000 €"
+            },
+            {
+                "value": "open",
+                "label": "offen / Empfehlung gewünscht"
+            }
+        ],
+        "timelineLabel": "Zeitplan:",
+        "timelineOptions": [
+            {
+                "value": "asap",
+                "label": "So schnell wie möglich"
+            },
+            {
+                "value": "within4weeks",
+                "label": "Innerhalb 4 Wochen"
+            },
+            {
+                "value": "2to3months",
+                "label": "2–3 Monate"
+            },
+            {
+                "value": "fixedDate",
+                "label": "Fixtermin"
+            },
+            {
+                "value": "noFixedDate",
+                "label": "Kein fixer Termin"
+            }
+        ],
+        "dateLabel": "Datum:"
+    },
+    "section11": {
+        "title": "11. Wartung & Support",
+        "maintenanceLabel": "Wartungspaket gewünscht",
+        "maintenanceOptions": [
+            {
+                "value": "basic",
+                "label": "Basic (79 €/Monat) – Hosting, Security, 1h Änderungen"
+            },
+            {
+                "value": "professional",
+                "label": "Professional (149 €/Monat) – + SEO-Reporting, 3h Änderungen, Priorität"
+            },
+            {
+                "value": "none",
+                "label": "Kein Wartungspaket – eigenständige Verwaltung"
+            }
+        ],
+        "extraOptions": [
+            {
+                "key": "onboarding",
+                "label": "Einschulung / Übergabe-Session gewünscht"
+            },
+            {
+                "key": "documentation",
+                "label": "Dokumentation / Bedienungsanleitung gewünscht"
+            }
+        ]
+    },
+    "section12": {
+        "title": "12. Kommunikation & Ablauf",
+        "channelLabel": "Bevorzugter Kanal:",
+        "channelOptions": [
+            {
+                "value": "email",
+                "label": "E-Mail"
+            },
+            {
+                "value": "whatsapp",
+                "label": "WhatsApp"
+            },
+            {
+                "value": "phone",
+                "label": "Telefon / Video-Call"
+            },
+            {
+                "value": "other",
+                "label": "Sonstiges:"
+            }
+        ],
+        "feedbackLabel": "Feedback-Runden:",
+        "feedbackOptions": [
+            {
+                "value": "1",
+                "label": "1x"
+            },
+            {
+                "value": "2",
+                "label": "2x"
+            },
+            {
+                "value": "3+",
+                "label": "3x+"
+            }
+        ],
+        "multipleStakeholders": "Mehrere Ansprechpersonen / Entscheidungsträger",
+        "availabilityLabel": "Verfügbarkeit für Feedback:"
+    }
+}

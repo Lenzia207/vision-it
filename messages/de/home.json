@@ -166,6 +166,17 @@
         ]
       },
       {
+        "title": "Pictolog PDF",
+        "category": "App",
+        "description": "Pictolog ist eine simple und intuitive App zur Projektverwaltung und Berichtserstellung. Alle Projekt- und Berichtsdaten werden direkt auf dem Gerät gespeichert. Einfach, effizient und ohne Internetverbindung. Pictolog richtet sich an Nutzer, die ein schlankes Offline-Werkzeug suchen, um den Projektfortschritt zu verfolgen, ihre Arbeit visuell und schriftlich zu dokumentieren um diese dann als Berichte im PDF Format zu exportieren.",
+        "image": "/images/portfolio/pictolog.jpg",
+        "url": "https://apps.apple.com/us/app/pictolog-pdf/id6759091493",
+        "tags": [
+          "Flutter",
+          "Dart"
+        ]
+      },
+      {
         "title": "Aktionsfinder App und PWA",
         "description": "Aktionsfinder ist Österreichs Plattform für Prospekte, Aktionen und Angebote, die aktuelle Flugblätter und Rabatte bündelt und Preisvergleiche sowie die Einkaufsplanung erleichtert. Als Teil des Teams bei Marqably habe ich die Aktionsfinder App und die PWA kontinuierlich mitentwickelt. Dabei lag mein Fokus auf Bugfixes, kleinen Implementierungen und der Integration neuer Design-Updates.",
         "category": "App",
@@ -259,7 +270,7 @@
   },
   "price_packages_section": {
     "title": "Website-Pakete",
-    "btnText":"Jetzt Anfragen",
+    "btnText": "Jetzt Anfragen",
     "packages": [
       {
         "name": "Starter",

@@ -165,6 +165,17 @@
           "Tailwind CSS"
         ]
       },
+       {
+        "title": "Pictolog PDF",
+        "category": "App",
+        "description": "Pictolog is a simple and intuitive app for project management and report creation. All project and report data is stored directly on the device. Simple, efficient, and offline. Pictolog is aimed at users who need a lightweight offline tool to track project progress, document work visually and in writing, and export reports as PDFs.",
+        "image": "/images/portfolio/pictolog.jpg",
+        "url": "https://apps.apple.com/us/app/pictolog-pdf/id6759091493",
+        "tags": [
+          "Flutter",
+          "Dart"
+        ]
+      },
       {
         "title": "Aktionsfinder App and PWA",
         "description": "Aktionsfinder is an Austrian platform that brings together leaflets, promotions, and special offers, making it easy to discover current deals and plan your shopping. As part of the team at Marqably, I helped continuously develop the Aktionsfinder app and its PWA. My focus was on fixing bugs, implementing small features, and integrating new design updates.",

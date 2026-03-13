@@ -276,7 +276,7 @@
     "packages": [
       {
         "name": "Starter",
-        "price": "ab 1.200 €",
+        "price": "ab 800 €",
         "for": "Ideal für: Einzelunternehmer, kleine Dienstleister",
         "features": [
           "Landingpage oder bis zu 5 Seiten",
@@ -289,7 +289,7 @@
       },
       {
         "name": "Business",
-        "price": "ab 2.800 €",
+        "price": "ab 1.800 €",
         "for": "Ideal für: Etablierte Unternehmen, reglementierte Gewerbe (Ärzte, Anwälte, Gastronomie etc.)",
         "features": [
           "Bis zu 10 Seiten",

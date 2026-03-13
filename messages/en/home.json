@@ -276,7 +276,7 @@
     "packages": [
       {
         "name": "Starter",
-        "price": "from 1,200 €",
+        "price": "from 800 €",
         "for": "For: Solo entrepreneurs, small service providers",
         "features": [
           "Landing page or up to 5 pages",
@@ -289,7 +289,7 @@
       },
       {
         "name": "Business",
-        "price": "from 2,800 €",
+        "price": "from 1.800 €",
         "for": "For: Established businesses, regulated professions (doctors, lawyers, restaurants etc.)",
         "features": [
           "Up to 10 pages",
@@ -302,7 +302,7 @@
       },
       {
         "name": "Premium / Webshop",
-        "price": "from 5,000 €",
+        "price": "from 5.000 €",
         "for": "For: E-commerce, startups, complex requirements",
         "features": [
           "Custom webshop or web app",

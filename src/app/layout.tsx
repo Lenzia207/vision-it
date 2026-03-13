@@ -22,7 +22,7 @@ const prompt = Prompt({
 });
 
 export const metadata: Metadata = {
-  title: "Vision-IT",
+  title: "VisionIT",
 };
 
 export default function RootLayout({

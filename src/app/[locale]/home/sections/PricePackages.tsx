@@ -17,14 +17,14 @@ export default function PricePackages({ title, btnText, packages }: PricePackage
     >
       <div className="max-w-6xl mx-auto px-6">
         <TitleHeader title={title} />
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {packages.map((pkg, index) => {
             const isHighlighted = index === 1; // highlights the middle package
-            const bgClass = isHighlighted 
-              ? "bg-zinc-800/60 border-blue-500/50" 
+            const bgClass = isHighlighted
+              ? "bg-zinc-800/60 border-blue-500/50"
               : "bg-zinc-900/40 border-white/5";
-            
+
             return (
               <div
                 key={index}
@@ -41,7 +41,7 @@ export default function PricePackages({ title, btnText, packages }: PricePackage
                     {pkg.for}
                   </p>
                 </div>
-                
+
                 <div className="grow">
                   <ul className="space-y-4 mb-8">
                     {pkg.features.map((feature, fIndex) => (
@@ -57,7 +57,10 @@ export default function PricePackages({ title, btnText, packages }: PricePackage
                     ))}
                   </ul>
                 </div>
-                <AppButton btnText={btnText} packageName={pkg.name} />
+
+                <div className=" mt-8 flex justify-end">
+                  <AppButton btnText={btnText} packageName={pkg.name} />
+                </div>
               </div>
             );
           })}

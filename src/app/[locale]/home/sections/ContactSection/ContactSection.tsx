@@ -2,6 +2,7 @@
 
 import { useState, FormEvent, useEffect } from "react";
 import { PricePackage } from "../data/types/home-types";
+import { ServiceSectionType } from "../data/types/home-types";
 import ContactView from "./ContactView";
 
 interface ContactSectionProps {
@@ -22,7 +23,9 @@ interface ContactSectionProps {
   interestMobileApp: string;
   interestGeneral: string;
   packageLabel: string;
+  serviceLabel: string;
   packages: PricePackage[];
+  services: ServiceSectionType["services"];
 }
 
 export default function ContactSection({
@@ -43,7 +46,9 @@ export default function ContactSection({
   interestMobileApp,
   interestGeneral,
   packageLabel,
+  serviceLabel,
   packages,
+  services,
 }: ContactSectionProps) {
   const translations = {
     en: {
@@ -90,6 +95,21 @@ export default function ContactSection({
     general: false,
   });
   const [selectedPackage, setSelectedPackage] = useState<string | null>(null);
+  const [selectedServices, setSelectedServices] = useState<string[]>([]);
+
+  const toggleService = (serviceName: string) => {
+    setSelectedPackage(null);
+    setSelectedServices((prev) =>
+      prev.includes(serviceName)
+        ? prev.filter((s) => s !== serviceName)
+        : [...prev, serviceName]
+    );
+  };
+
+  const handleSelectPackage = (pkgName: string | null) => {
+    setSelectedServices([]);
+    setSelectedPackage(pkgName);
+  };
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{
@@ -111,6 +131,7 @@ export default function ContactSection({
     const handler = (e: Event) => {
       const { packageName } = (e as CustomEvent<{ packageName: string }>).detail;
       setInterests((prev) => ({ ...prev, website: true }));
+      setSelectedServices([]);
       setSelectedPackage(packageName);
     };
     window.addEventListener("select-package", handler);
@@ -170,6 +191,7 @@ export default function ContactSection({
             ...(interests.general ? [interestGeneral] : []),
           ],
           selectedPackage: interests.website ? selectedPackage : null,
+          selectedServices: interests.website ? selectedServices : [],
         }),
       });
 
@@ -184,6 +206,7 @@ export default function ContactSection({
         setFormData({ name: "", company: "", email: "", message: "" });
         setInterests({ website: false, mobileApp: false, general: false });
         setSelectedPackage(null);
+        setSelectedServices([]);
         setPrivacyAccepted(false);
       } else {
         setSubmitStatus({
@@ -236,7 +259,11 @@ export default function ContactSection({
     interests={interests}
     toggleInterest={toggleInterest}
     selectedPackage={selectedPackage}
-    setSelectedPackage={setSelectedPackage}
+    setSelectedPackage={handleSelectPackage}
+    selectedServices={selectedServices}
+    toggleService={toggleService}
+    serviceLabel={serviceLabel}
+    services={services}
     privacyAccepted={privacyAccepted}
     setPrivacyAccepted={setPrivacyAccepted}
     isSubmitting={isSubmitting}

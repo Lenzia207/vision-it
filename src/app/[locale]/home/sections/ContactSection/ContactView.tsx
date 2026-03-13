@@ -2,7 +2,11 @@ import Checkbox from "@/components/Checkbox";
 import LabelInput from "@/components/LabelInput";
 import { Send } from "lucide-react";
 import { PricePackage } from "../data/types/home-types";
+import type { ServiceSectionType } from "../data/types/home-types";
 import { FormEvent } from "react";
+import ServiceSection from "./components/ServiceSection";
+import PackageSection from "./components/PackageSection";
+import ToggleButton from "./components/ToggleButton";
 
 interface ContactViewProps {
     title: string;
@@ -41,6 +45,10 @@ interface ContactViewProps {
     interestGeneral: string;
     packageLabel: string;
     packages: PricePackage[];
+    serviceLabel: string;
+    services: ServiceSectionType["services"];
+    selectedServices: string[];
+    toggleService: (serviceName: string) => void;
     textPrivacyPolicy: string;
     textSending: string;
 }
@@ -77,6 +85,10 @@ export default function ContactView({ title,
     interestGeneral,
     packageLabel,
     packages,
+    serviceLabel,
+    services,
+    selectedServices,
+    toggleService,
     textPrivacyPolicy,
     textSending,
 }: ContactViewProps) {
@@ -102,8 +114,8 @@ export default function ContactView({ title,
                 {submitStatusType && (
                     <div
                         className={`mb-6 p-4 rounded-xl ${submitStatusType === "success"
-                                ? "bg-green-500/10 border border-green-500/20 text-green-400"
-                                : "bg-red-500/10 border border-red-500/20 text-red-400"
+                            ? "bg-green-500/10 border border-green-500/20 text-green-400"
+                            : "bg-red-500/10 border border-red-500/20 text-red-400"
                             }`}
                     >
                         {submitStatusMessage}
@@ -146,150 +158,47 @@ export default function ContactView({ title,
                         </label>
                         <div className="flex flex-wrap gap-3">
                             {/* Website toggle */}
-                            <button
-                                type="button"
+                            <ToggleButton
                                 onClick={() => toggleInterest("website")}
-                                className={`flex items-center gap-2.5 px-4 py-2.5 rounded-xl border text-sm font-medium transition-all duration-200 ${interests.website
-                                        ? "bg-blue-500/15 border-blue-500/50 text-blue-300"
-                                        : "bg-zinc-800/60 border-white/10 text-zinc-400 hover:border-white/20 hover:text-zinc-300"
-                                    }`}
-                            >
-                                <span
-                                    className={`w-4 h-4 rounded flex items-center justify-center border-2 transition-all shrink-0 ${interests.website
-                                            ? "bg-blue-500 border-blue-500"
-                                            : "border-zinc-600"
-                                        }`}
-                                >
-                                    {interests.website && (
-                                        <svg
-                                            className="w-2.5 h-2.5 text-white"
-                                            viewBox="0 0 10 8"
-                                            fill="none"
-                                        >
-                                            <path
-                                                d="M1 4L4 7L9 1"
-                                                stroke="currentColor"
-                                                strokeWidth="1.5"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                            />
-                                        </svg>
-                                    )}
-                                </span>
-                                {interestWebsite}
-                            </button>
-
+                                isActive={interests.website}
+                                label={interestWebsite}
+                            />
                             {/* Mobile App toggle */}
-                            <button
-                                type="button"
+                            <ToggleButton
                                 onClick={() => toggleInterest("mobileApp")}
-                                className={`flex items-center gap-2.5 px-4 py-2.5 rounded-xl border text-sm font-medium transition-all duration-200 ${interests.mobileApp
-                                        ? "bg-cyan-500/15 border-cyan-500/50 text-cyan-300"
-                                        : "bg-zinc-800/60 border-white/10 text-zinc-400 hover:border-white/20 hover:text-zinc-300"
-                                    }`}
-                            >
-                                <span
-                                    className={`w-4 h-4 rounded flex items-center justify-center border-2 transition-all shrink-0 ${interests.mobileApp
-                                            ? "bg-cyan-500 border-cyan-500"
-                                            : "border-zinc-600"
-                                        }`}
-                                >
-                                    {interests.mobileApp && (
-                                        <svg
-                                            className="w-2.5 h-2.5 text-white"
-                                            viewBox="0 0 10 8"
-                                            fill="none"
-                                        >
-                                            <path
-                                                d="M1 4L4 7L9 1"
-                                                stroke="currentColor"
-                                                strokeWidth="1.5"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                            />
-                                        </svg>
-                                    )}
-                                </span>
-                                {interestMobileApp}
-                            </button>
-                              <button
-                                type="button"
+                                isActive={interests.mobileApp}
+                                label={interestMobileApp}
+                            />
+                            {/* General toggle */}
+                            <ToggleButton
                                 onClick={() => toggleInterest("general")}
-                                className={`flex items-center gap-2.5 px-4 py-2.5 rounded-xl border text-sm font-medium transition-all duration-200 ${interests.general
-                                        ? "bg-blue-500/15 border-blue-500/50 text-blue-300"
-                                        : "bg-zinc-800/60 border-white/10 text-zinc-400 hover:border-white/20 hover:text-zinc-300"
-                                    }`}
-                            >
-                                <span
-                                    className={`w-4 h-4 rounded flex items-center justify-center border-2 transition-all shrink-0 ${interests.general
-                                            ? "bg-blue-500 border-blue-500"
-                                            : "border-zinc-600"
-                                        }`}
-                                >
-                                    {interests.general && (
-                                        <svg
-                                            className="w-2.5 h-2.5 text-white"
-                                            viewBox="0 0 10 8"
-                                            fill="none"
-                                        >
-                                            <path
-                                                d="M1 4L4 7L9 1"
-                                                stroke="currentColor"
-                                                strokeWidth="1.5"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                            />
-                                        </svg>
-                                    )}
-                                </span>
-                                {interestGeneral}
-                            </button>
-
+                                isActive={interests.general}
+                                label={interestGeneral}
+                            />
                         </div>
+
+                        {/* Service sub-selection — visible only when Website is checked */}
+                        {interests.website && (
+                            <ServiceSection
+                                serviceLabel={serviceLabel}
+                                services={services}
+                                selectedServices={selectedServices}
+                                toggleService={toggleService}
+                            />
+                        )}
+
 
                         {/* Package sub-selection — visible only when Website is checked */}
                         {interests.website && (
-                            <div className="mt-1 pl-1 space-y-2.5">
-                                <label className="text-sm font-medium text-zinc-500 ml-1 block">
-                                    {packageLabel}
-                                </label>
-                                <div className="space-y-2">
-                                    {packages.map((pkg) => (
-                                        <button
-                                            key={pkg.name}
-                                            type="button"
-                                            onClick={() => setSelectedPackage(pkg.name)}
-                                            className={`w-full flex items-center justify-between px-4 py-3 rounded-xl border text-sm transition-all duration-200 ${selectedPackage === pkg.name
-                                                    ? "bg-blue-500/10 border-blue-500/40 text-white"
-                                                    : "bg-zinc-800/30 border-white/5 text-zinc-400 hover:border-white/15 hover:text-zinc-300"
-                                                }`}
-                                        >
-                                            <div className="flex items-center gap-3">
-                                                <span
-                                                    className={`w-4 h-4 rounded-full flex items-center justify-center border-2 transition-colors shrink-0 ${selectedPackage === pkg.name
-                                                            ? "border-blue-400"
-                                                            : "border-zinc-600"
-                                                        }`}
-                                                >
-                                                    {selectedPackage === pkg.name && (
-                                                        <span className="w-2 h-2 rounded-full bg-blue-400 block" />
-                                                    )}
-                                                </span>
-                                                <span className="font-medium">{pkg.name}</span>
-                                            </div>
-                                            <span
-                                                className={`text-xs font-medium tabular-nums ${selectedPackage === pkg.name
-                                                        ? "text-blue-300"
-                                                        : "text-zinc-600"
-                                                    }`}
-                                            >
-                                                {pkg.price}
-                                            </span>
-                                        </button>
-                                    ))}
-                                </div>
-                            </div>
+                            <PackageSection
+                                packageLabel={packageLabel}
+                                packages={packages}
+                                selectedPackage={selectedPackage}
+                                setSelectedPackage={setSelectedPackage}
+                            />
                         )}
+
+
                     </div>
 
                     <div className="space-y-2">

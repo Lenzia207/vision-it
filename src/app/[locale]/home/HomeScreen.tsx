@@ -27,9 +27,10 @@ export default function HomeScreen({ data, locale }: HomeScreenProps) {
         title={data.service_section.title}
         description={data.service_section.description}
         services={data.service_section.services}
+        btnText={data.service_section.btnText}
       />
 
-      <PricePackages 
+      <PricePackages
         title={data.price_packages_section.title}
         packages={data.price_packages_section.packages}
         btnText={data.price_packages_section.btnText}
@@ -84,7 +85,9 @@ export default function HomeScreen({ data, locale }: HomeScreenProps) {
         interestMobileApp={data.contact_section.interestMobileApp}
         interestGeneral={data.contact_section.interestGeneral}
         packageLabel={data.contact_section.packageLabel}
+        serviceLabel={data.contact_section.serviceLabel}
         packages={data.price_packages_section.packages}
+        services={data.service_section.services}
       />
     </>
   );

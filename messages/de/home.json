@@ -71,7 +71,8 @@
           "icon_animation": "/animations/pentool-anim.json"
         }
       }
-    ]
+    ], 
+    "btnText": "Jetzt Anfragen"
   },
   "project_phases_section": {
     "title": "Von der Idee zum Launch",
@@ -266,7 +267,8 @@
     "interestWebsite": "Website",
     "interestMobileApp": "Mobile App",
     "interestGeneral": "Allgemein",
-    "packageLabel": "Paket auswählen"
+    "serviceLabel": "Leistungen wählen",
+    "packageLabel": "Oder ein All-in-One Paket auswählen"
   },
   "price_packages_section": {
     "title": "Website-Pakete",

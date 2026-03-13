@@ -7,25 +7,21 @@ import layerAnim from "@public/animations/layer-anim.json";
 import clickAnim from "@public/animations/click-anim.json";
 import pentoolAnim from "@public/animations/pentool-anim.json";
 import TitleHeader from "@/components/TitleHeader";
+import AppButton from "@/components/AppButton";
+import { ServiceSectionType } from "./data/types/home-types";
 
 interface ServiceSectionProps {
   title: string;
   description: string;
-  services: {
-    title: string;
-    description: string;
-    icon_images: {
-      icon: string;
-      icon_color: string;
-      icon_animation: string;
-    };
-  }[];
+  services: ServiceSectionType["services"];
+  btnText: string;
 }
 
 export default function ServiceSection({
   title,
   description,
   services,
+  btnText,
 }: ServiceSectionProps) {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
@@ -36,7 +32,7 @@ export default function ServiceSection({
     >
       <div className="max-w-6xl mx-auto px-6">
         <TitleHeader title={title} description={description} />
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {services.map((service, index) => {
             const animationMap: Record<string, unknown> = {
@@ -51,13 +47,13 @@ export default function ServiceSection({
               "bg-cyan-500/10 border-cyan-500/20",
               "bg-orange-500/10 border-orange-500/20",
             ];
-            
+
             const animationData =
               animationMap[service.icon_images.icon_animation] as unknown as object;
 
             return (
               <div
-                className="group p-8 rounded-2xl bg-zinc-900/40 border border-white/5 hover-lift reveal-on-scroll"
+                className="group p-8 rounded-2xl bg-zinc-900/40 border border-white/5 hover-lift reveal-on-scroll flex flex-col h-full"
                 key={index}
                 onMouseEnter={() => {
                   setHoveredCard(index);
@@ -67,9 +63,8 @@ export default function ServiceSection({
                 }}
               >
                 <div
-                  className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 border ${
-                    bgColors[index] || bgColors[0]
-                  }`}
+                  className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 border ${bgColors[index] || bgColors[0]
+                    }`}
                 >
                   {hoveredCard !== index && (
                     <IconLucide
@@ -91,13 +86,17 @@ export default function ServiceSection({
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {service.title}
                 </h3>
-                <p className="text-zinc-400 leading-relaxed text-sm">
+                <p className="text-zinc-400 leading-relaxed text-md">
                   {service.description}
                 </p>
               </div>
             );
           })}
+
         </div>
+          <div className="mt-auto pt-20">
+            <AppButton btnText={btnText} packageName={title} fullWidth />
+          </div>
       </div>
     </section>
   );

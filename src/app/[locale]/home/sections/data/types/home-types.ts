@@ -4,7 +4,7 @@
 export interface HomePageData {
   main_navigation: MainNavigation[];
   hero_section: HeroSection;
-  service_section: ServiceSection;
+  service_section: ServiceSectionType;
   project_phases_section: ProjectPhasesSection;
   portfolio_section: PortfolioSection;
   tech_stack_section: TechStackSection;
@@ -50,7 +50,7 @@ export interface HeroSection {
   description: string;
   btn_text: string;
 }
-export interface ServiceSection {
+export interface ServiceSectionType {
   title: string;
   description: string;
   services: {
@@ -62,6 +62,7 @@ export interface ServiceSection {
       icon_animation: string;
     };
   }[];
+  btnText: string;
 }
 
 export interface PortfolioSection {
@@ -116,4 +117,5 @@ export interface ContactSection {
   interestMobileApp: string;
   interestGeneral: string;
   packageLabel: string;
+  serviceLabel: string;
 }

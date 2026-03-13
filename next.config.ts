@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
-  // output: "export",
+  // output: "export", // Keystatic needs server routes
 };
 
 export default withNextIntl(nextConfig);

@@ -1,28 +1,28 @@
 {
   "main_navigation": [
     {
-      "page": "/",
       "name": "Services",
+      "page": "/",
       "pageId": "#services"
     },
     {
-      "page": "/",
       "name": "Workflow",
+      "page": "/",
       "pageId": "#projectPhases"
     },
     {
-      "page": "/",
       "name": "Projects",
+      "page": "/",
       "pageId": "#projects"
     },
     {
-      "page": "/",
       "name": "Hello",
+      "page": "/",
       "pageId": "#about"
     },
     {
-      "page": "/",
       "name": "Contact",
+      "page": "/",
       "pageId": "#contact"
     }
   ],
@@ -33,7 +33,8 @@
   },
   "service_section": {
     "title": "How can I Help?",
-    "description": "I develop custom web solutions that fit your needs.\nWhether you want a brand-new website, a redesign, or new features that take your existing project further.",
+    "description": "I develop custom web solutions that fit your needs.\nWhether you want a brand-new website, a redesign, or new features like a CM-System that take your existing project further.",
+    "btnText": "Request Service",
     "services": [
       {
         "title": "Custom Web Development from Scratch",
@@ -71,8 +72,7 @@
           "icon_animation": "/animations/pentool-anim.json"
         }
       }
-    ],
-    "btnText": "Request Service"
+    ]
   },
   "project_phases_section": {
     "title": "From Idea to Launch",
@@ -166,10 +166,10 @@
           "Tailwind CSS"
         ]
       },
-       {
+      {
         "title": "Pictolog PDF",
-        "category": "App",
         "description": "Pictolog is a simple and intuitive app for project management and report creation. All project and report data is stored directly on the device. Simple, efficient, and offline. Pictolog is aimed at users who need a lightweight offline tool to track project progress, document work visually and in writing, and export reports as PDFs.",
+        "category": "App",
         "image": "/images/portfolio/pictolog.jpg",
         "url": "https://apps.apple.com/us/app/pictolog-pdf/id6759091493",
         "tags": [
@@ -272,7 +272,7 @@
   },
   "price_packages_section": {
     "title": "Website Packages",
-    "btnText":"Request Now",
+    "btnText": "Request Now",
     "packages": [
       {
         "name": "Starter",

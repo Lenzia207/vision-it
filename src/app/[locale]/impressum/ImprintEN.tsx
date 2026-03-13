@@ -47,12 +47,12 @@ export default function ImprintDE() {
               k.A.
             </p>
 
-            <p>
+            {/* <p>
               <span className="block text-sm text-zinc-500 uppercase tracking-wider mb-1">
                 Memberships
               </span>
               Member of the WKÖ
-            </p>
+            </p> */}
 
             <p>
               <span className="block text-sm text-zinc-500 uppercase tracking-wider mb-1">

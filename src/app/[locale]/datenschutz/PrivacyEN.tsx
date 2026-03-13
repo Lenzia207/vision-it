@@ -17,7 +17,7 @@ export default function PrivacyEN() {
           <h3 className="text-2xl font-bold">Contact</h3>
           <p>
             For privacy inquiries please contact:{" "}
-            <strong>office@genzy.dev</strong>.
+            <strong>office@vision-it.at</strong>.
           </p>
 
           <h3 className="text-2xl font-bold">What data we process</h3>

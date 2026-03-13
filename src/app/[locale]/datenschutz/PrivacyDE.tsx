@@ -17,7 +17,7 @@ export default function PrivacyDE() {
           <h3 className="text-2xl font-bold">Kontakt</h3>
           <p>
             Für datenschutzrechtliche Anfragen erreichen Sie uns unter:{" "}
-            <strong>office@genzy.dev</strong>.
+            <strong>office@vision-it.at</strong>.
           </p>
 
           <h3 className="text-2xl font-bold">Welche Daten verarbeiten wir?</h3>

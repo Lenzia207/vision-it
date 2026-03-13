@@ -6,16 +6,16 @@ export default function ImprintDE() {
         <main className="relative min-h-screen">
             {/* Background Effect */}
             <BackgroundEffect />
-            
+
             {/* Content Container */}
             <div className="relative z-10 container mx-auto px-6 py-24 md:py-32 max-w-4xl">
-                
-            {/* Header */}
-             <HeaderSimple title="Impressum" />
+
+                {/* Header */}
+                <HeaderSimple title="Impressum" />
 
                 {/* Imprint Details */}
                 <div className="space-y-8 text-zinc-300 text-lg leading-relaxed max-w-2xl mx-auto">
-                    
+
                     <div className="space-y-1">
                         <p className="text-xl font-medium text-white">Lena Zyadeh, BSc.</p>
                         <p>Softwareentwicklung für Webseiten und Applikationen</p>
@@ -38,14 +38,14 @@ export default function ImprintDE() {
                             k.A.
                         </p>
 
-                        <p>
+                        {/* <p>
                             <span className="block text-sm text-zinc-500 uppercase tracking-wider mb-1">Mitgliedschaften</span>
                             Mitglied der WKÖ
-                        </p>
+                        </p> */}
 
                         <p>
                             <span className="block text-sm text-zinc-500 uppercase tracking-wider mb-1">Gewerbeordnung</span>
-EPU                        </p>
+                            EPU                        </p>
 
                         <p>
                             <span className="block text-sm text-zinc-500 uppercase tracking-wider mb-1">Aufsichtsbehörde</span>

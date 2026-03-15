@@ -40,12 +40,12 @@ export default function ImprintDE() {
           </div>
 
           <div className="pt-4 space-y-4">
-            <p>
+            {/* <p>
               <span className="block text-sm text-zinc-500 uppercase tracking-wider mb-1">
                 UID-Nummer
               </span>
               k.A.
-            </p>
+            </p> */}
 
             {/* <p>
               <span className="block text-sm text-zinc-500 uppercase tracking-wider mb-1">

@@ -1,5 +1,6 @@
 
 
+import type { Metadata } from "next";
 import { LocaleParams } from "@/app/i18n/local-params";
 import PageWrapper from "@/components/PageWrapper";
 import { fetchBriefingFormData } from "./data/home-page-data";
@@ -26,4 +27,38 @@ export default async function BriefingFormular(props: LocaleParams) {
       </div>
        } />
   );
+}
+
+const base = "https://www.vision-it.at";
+
+export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
+  const locale = (await params).locale || "de";
+  const canonical = `${base}/${locale}/briefing-formular/`;
+
+  const shared = {
+    alternates: {
+      canonical,
+      languages: {
+        de: `${base}/de/briefing-formular/`,
+        en: `${base}/en/briefing-formular/`,
+        "x-default": `${base}/de/briefing-formular/`,
+      },
+    },
+  };
+
+  if (locale === "en") {
+    return {
+      ...shared,
+      title: "Project Brief — Request a Quote | VisionIT",
+      description:
+        "Describe your project goals, scope and budget — get a tailored proposal from VisionIT.",
+    };
+  }
+
+  return {
+    ...shared,
+    title: "Briefing-Formular — Projekt anfragen | VisionIT",
+    description:
+      "Beschreibe kurz Ziel, Umfang und Budget deines Webprojekts — wir melden uns mit einem Vorschlag.",
+  };
 }

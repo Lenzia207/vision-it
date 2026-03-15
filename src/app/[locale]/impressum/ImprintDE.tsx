@@ -1,6 +1,13 @@
 
+import type { Metadata } from "next";
 import BackgroundEffect from "@/components/BackgroundEffect";
 import HeaderSimple from "@/components/HeaderSimple";
+
+export const metadata: Metadata = {
+    title: "Impressum — VisionIT",
+    description: "Anbieterinformationen und Kontaktangaben zu VisionIT.",
+};
+
 export default function ImprintDE() {
     return (
         <main className="relative min-h-screen">

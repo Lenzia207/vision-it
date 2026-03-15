@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import BackgroundEffect from "@/components/BackgroundEffect";
 import HeaderSimple from "@/components/HeaderSimple";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy — VisionIT",
+  description: "How we process data, cookies and contact options.",
+};
 
 export default function PrivacyEN() {
   return (

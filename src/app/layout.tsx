@@ -1,28 +1,31 @@
 import type { Metadata } from "next";
-import { Urbanist, Playfair_Display, Prompt } from "next/font/google";
 import "./globals.css";
 
-const urbanist = Urbanist({
-  subsets: ["latin"],
-  variable: "--font-urbanist",
-  display: "swap",
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-  display: "swap",
-});
-
-const prompt = Prompt({
-  subsets: ["latin"],
-  variable: "--font-prompt",
-  display: "swap",
-  weight: ["400", "500", "600", "700"],
-});
-
 export const metadata: Metadata = {
-  title: "VisionIT",
+  title: {
+    default: "VisionIT",
+    template: "%s | VisionIT",
+  },
+  description:
+    "Individuelles Webdesign und moderne Webentwicklung für kleine Unternehmen und Freelancer. Portfolio, Preise & Kontakt.",
+  applicationName: "VisionIT",
+  openGraph: {
+    title: "VisionIT",
+    description:
+      "Individuelles Webdesign und moderne Webentwicklung für kleine Unternehmen und Freelancer.",
+    siteName: "VisionIT",
+    images: [
+      {
+        url: "/og/og-default.png",
+        width: 1200,
+        height: 630,
+        alt: "VisionIT – Webdesign & Webentwicklung",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({
@@ -30,13 +33,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en" className="scroll-smooth">
-      <body
-        className={`${urbanist.variable} ${playfair.variable} ${prompt.variable} font-sans antialiased bg-[#050505] text-zinc-200 selection:bg-blue-500/30 selection:text-blue-200`}
-      >
-        {children}
-      </body>
-    </html>
-  );
+  // html/body/lang are rendered in src/app/[locale]/layout.tsx
+  // so Google gets the correct language per locale
+  return <>{children}</>;
 }

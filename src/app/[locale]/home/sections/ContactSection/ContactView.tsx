@@ -189,14 +189,14 @@ export default function ContactView({ title,
 
 
                         {/* Package sub-selection — visible only when Website is checked */}
-                        {interests.website && (
+                        {/* {interests.website && (
                             <PackageSection
                                 packageLabel={packageLabel}
                                 packages={packages}
                                 selectedPackage={selectedPackage}
                                 setSelectedPackage={setSelectedPackage}
                             />
-                        )}
+                        )} */}
 
 
                     </div>

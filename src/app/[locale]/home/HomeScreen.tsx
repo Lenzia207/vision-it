@@ -30,11 +30,11 @@ export default function HomeScreen({ data, locale }: HomeScreenProps) {
         btnText={data.service_section.btnText}
       />
 
-      <PricePackages
+      {/* <PricePackages
         title={data.price_packages_section.title}
         packages={data.price_packages_section.packages}
         btnText={data.price_packages_section.btnText}
-      />
+      /> */}
 
       {/* Project Phases */}
       <ProjectPhases

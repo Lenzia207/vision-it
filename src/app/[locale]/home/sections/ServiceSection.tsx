@@ -8,7 +8,6 @@ import layerAnim from "@public/animations/layer-anim.json";
 import clickAnim from "@public/animations/click-anim.json";
 import pentoolAnim from "@public/animations/pentool-anim.json";
 import TitleHeader from "@/components/TitleHeader";
-import AppButton from "@/components/AppButton";
 import { ServiceSectionType } from "./data/types/home-types";
 
 interface ServiceSectionProps {
@@ -18,6 +17,8 @@ interface ServiceSectionProps {
   btnText: string;
 }
 
+const META_LABELS = ["SV-01", "SV-02", "SV-03", "SV-04", "SV-05"];
+
 export default function ServiceSection({
   title,
   description,
@@ -26,73 +27,72 @@ export default function ServiceSection({
 }: ServiceSectionProps) {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
-  const accentColors = [
-    { border: "rgba(148,163,184,0.25)", glow: "rgba(148,163,184,0.08)", icon: "text-white-400" },
-    { border: "rgba(59,130,246,0.25)", glow: "rgba(59,130,246,0.08)", icon: "text-blue-400" },
-    { border: "rgba(236,72,153,0.25)", glow: "rgba(236,72,153,0.08)", icon: "text-pink-400" },
-    { border: "rgba(6,182,212,0.25)", glow: "rgba(6,182,212,0.08)", icon: "text-cyan-400" },
-    { border: "rgba(251,146,60,0.25)", glow: "rgba(251,146,60,0.08)", icon: "text-orange-400" },
-  ];
+  const animationMap: Record<string, unknown> = {
+    "/animations/team-anim.json": teamAnim,
+    "/animations/code-anim.json": codeAnim,
+    "/animations/layer-anim.json": layerAnim,
+    "/animations/click-anim.json": clickAnim,
+    "/animations/pentool-anim.json": pentoolAnim,
+  };
 
   return (
     <section id="services" className="relative section-padding">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <TitleHeader tag="[ SRV_MATRX ]" title={title} description={description} />
 
-        {/* Header with Title and Description */}
-        <TitleHeader title={title} description={description} />
-
-        {/* Services Grid with Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Bento grid: col 1 and 4 span 2 on md+ */}
+        <div
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          style={{ gridAutoRows: "minmax(240px, auto)" }}
+        >
           {services.map((service, index) => {
-            const animationMap: Record<string, unknown> = {
-              "/animations/team-anim.json": teamAnim,
-              "/animations/code-anim.json": codeAnim,
-              "/animations/layer-anim.json": layerAnim,
-              "/animations/click-anim.json": clickAnim,
-              "/animations/pentool-anim.json": pentoolAnim,
-            };
-            const colors = accentColors[index] || accentColors[0];
-            const animationData =
-              animationMap[service.icon_images.icon_animation] as unknown as object;
+            const animationData = animationMap[service.icon_images.icon_animation] as unknown as object;
+            const isHovered = hoveredCard === index;
+            const isWide = index === 2 || index === 3;
+            const isSingle = index === 0;
 
             return (
               <div
-                className={`group p-8 rounded-2xl card-dark hover-lift reveal-on-scroll flex flex-col h-full ${index === 0 ? "md:col-span-2" : ""}`}
                 key={index}
+                className={`card-dark relative flex flex-col gap-6 p-10 reveal-on-scroll${isWide ? " md:col-span-2" : isSingle ? " md:col-span-3" : ""}`}
                 onMouseEnter={() => setHoveredCard(index)}
                 onMouseLeave={() => setHoveredCard(null)}
-                style={{
-                  borderColor: hoveredCard === index ? colors.border : undefined,
-                  boxShadow: hoveredCard === index ? `0 0 40px ${colors.glow}` : undefined,
-                }}
               >
+                {/* Meta label */}
+                <span
+                  className="label-mono absolute top-6 right-6"
+                >
+                  {META_LABELS[index]}
+                </span>
+
+                {/* Icon box */}
                 <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500"
+                  className="w-12 h-12 rounded-xl flex items-center justify-center transition-colors duration-300"
                   style={{
-                    background: colors.glow,
-                    border: `1px solid ${colors.border}`,
+                    background: "rgba(255,255,255,0.03)",
+                    border: isHovered
+                      ? "1px solid rgba(66, 245, 233, 0.3)"
+                      : "1px solid var(--border-light)",
+                    color: isHovered ? "var(--accent-cyan)" : "var(--text-100)",
                   }}
                 >
-                  {hoveredCard !== index && (
-                    <IconLucide
-                      iconName={service.icon_images.icon}
-                      className={`w-6 h-6 ${colors.icon}`}
-                    />
+                  {!isHovered && (
+                    <IconLucide iconName={service.icon_images.icon} className="w-6 h-6" />
                   )}
-                  {hoveredCard === index && animationData && (
+                  {isHovered && animationData && (
                     <Lottie
                       animationData={animationData}
-                      style={{ width: 50, height: 50 }}
+                      style={{ width: 40, height: 40 }}
                       loop={false}
                       autoplay={true}
                     />
                   )}
                 </div>
 
-                <h3 className="text-xl font-semibold mb-3" style={{ color: "var(--text-primary)" }}>
+                <h3 className="text-xl font-bold" style={{ color: "var(--text-100)" }}>
                   {service.title}
                 </h3>
-                <p className="leading-relaxed text-md" style={{ color: "var(--text-secondary)" }}>
+                <p className="text-sm leading-relaxed" style={{ color: "var(--text-300)" }}>
                   {service.description}
                 </p>
               </div>
@@ -100,8 +100,11 @@ export default function ServiceSection({
           })}
         </div>
 
-        <div className="mt-auto pt-20">
-          <AppButton btnText={btnText} packageName={title} fullWidth />
+        {/* CTA */}
+        <div className="mt-16 text-center">
+          <a href="#contact" className="btn btn-primary">
+            {btnText}
+          </a>
         </div>
       </div>
     </section>

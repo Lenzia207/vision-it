@@ -1,276 +1,77 @@
-"use client";
-
-import { useState, FormEvent, useEffect } from "react";
-import { PricePackage } from "../data/types/home-types";
-import { ServiceSectionType } from "../data/types/home-types";
-import ContactView from "./ContactView";
-
 interface ContactSectionProps {
   title: string;
   description: string;
-  nameLabel: string;
-  namePlaceholder: string;
-  companyLabel: string;
-  companyPlaceholder: string;
-  emailLabel: string;
-  emailPlaceholder: string;
-  messageLabel: string;
-  messagePlaceholder: string;
   btn_text: string;
-  locale: string;
-  interestLabel: string;
-  interestWebsite: string;
-  interestMobileApp: string;
-  interestGeneral: string;
-  packageLabel: string;
-  serviceLabel: string;
-  packages: PricePackage[];
-  services: ServiceSectionType["services"];
 }
 
 export default function ContactSection({
   title,
   description,
-  nameLabel,
-  namePlaceholder,
-  companyLabel,
-  companyPlaceholder,
-  emailLabel,
-  emailPlaceholder,
-  messageLabel,
-  messagePlaceholder,
   btn_text,
-  locale,
-  interestLabel,
-  interestWebsite,
-  interestMobileApp,
-  interestGeneral,
-  packageLabel,
-  serviceLabel,
-  packages,
-  services,
 }: ContactSectionProps) {
-  const translations = {
-    en: {
-      requiredFields: "Please fill in all required fields.",
-      invalidEmail: "Please enter a valid email address.",
-      success: "Thank you! Your message has been sent successfully.",
-      sendError: "Failed to send message. Please try again.",
-      networkError:
-        "Network error. Please check your connection and try again.",
-      sending: "Sending...",
-      privacyPolicy: "I have read and agree to the privacy policy",
-      privacyRequired: "Please accept the privacy policy to continue.",
-    },
-    de: {
-      requiredFields: "Bitte fülle alle erforderlichen Felder aus.",
-      invalidEmail: "Bitte gib eine gültige E-Mail-Adresse ein.",
-      success: "Vielen Dank! Deine Nachricht wurde erfolgreich gesendet.",
-      sendError:
-        "Nachricht konnte nicht gesendet werden. Bitte versuche es erneut.",
-      networkError:
-        "Netzwerkfehler. Bitte überprüfe deine Verbindung und versuche es erneut.",
-      sending: "Wird gesendet...",
-      privacyPolicy: "Ich habe die Datenschutzerklärung gelesen und stimme zu",
-      privacyRequired:
-        "Bitte akzeptieren Sie die Datenschutzerklärung, um fortzufahren.",
-    },
-  };
-
-  // Email validation regex
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  const t =
-    translations[locale as keyof typeof translations] || translations.en;
-
-  const [formData, setFormData] = useState({
-    name: "",
-    company: "",
-    email: "",
-    message: "",
-  });
-  const [interests, setInterests] = useState({
-    website: false,
-    mobileApp: false,
-    general: false,
-  });
-  const [selectedPackage, setSelectedPackage] = useState<string | null>(null);
-  const [selectedServices, setSelectedServices] = useState<string[]>([]);
-
-  const toggleService = (serviceName: string) => {
-    setSelectedPackage(null);
-    setSelectedServices((prev) =>
-      prev.includes(serviceName)
-        ? prev.filter((s) => s !== serviceName)
-        : [...prev, serviceName]
-    );
-  };
-
-  const handleSelectPackage = (pkgName: string | null) => {
-    setSelectedServices([]);
-    setSelectedPackage(pkgName);
-  };
-  const [privacyAccepted, setPrivacyAccepted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<{
-    type: "success" | "error" | null;
-    message: string;
-  }>({ type: null, message: "" });
-
-  const toggleInterest = (key: "website" | "mobileApp" | "general") => {
-    setInterests((prev) => {
-      const next = { ...prev, [key]: !prev[key] };
-      if (key === "website" && !next.website) {
-        setSelectedPackage(null);
-      }
-      return next;
-    });
-  };
-
-  useEffect(() => {
-    const handler = (e: Event) => {
-      const { packageName } = (e as CustomEvent<{ packageName: string }>).detail;
-      setInterests((prev) => ({ ...prev, website: true }));
-      setSelectedServices([]);
-      setSelectedPackage(packageName);
-    };
-    window.addEventListener("select-package", handler);
-    return () => window.removeEventListener("select-package", handler);
-  }, []);
-
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus({ type: null, message: "" });
-
-    // Basic validation
-    if (!formData.name || !formData.email || !formData.message) {
-      setSubmitStatus({
-        type: "error",
-        message: t.requiredFields,
-      });
-      setIsSubmitting(false);
-      return;
-    }
-
-    // Privacy policy validation
-    if (!privacyAccepted) {
-      setSubmitStatus({
-        type: "error",
-        message: t.privacyRequired,
-      });
-      setIsSubmitting(false);
-      return;
-    }
-
-    if (!emailRegex.test(formData.email)) {
-      setSubmitStatus({
-        type: "error",
-        message: t.invalidEmail,
-      });
-      setIsSubmitting(false);
-      return;
-    }
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          company: formData.company,
-          email: formData.email,
-          message: formData.message,
-          locale: locale,
-          privacyAccepted: privacyAccepted,
-          interests: [
-            ...(interests.website ? [interestWebsite] : []),
-            ...(interests.mobileApp ? [interestMobileApp] : []),
-            ...(interests.general ? [interestGeneral] : []),
-          ],
-          selectedPackage: interests.website ? selectedPackage : null,
-          selectedServices: interests.website ? selectedServices : [],
-        }),
-      });
-
-      const data = await response.json();
-
-      if (response.ok && data.success) {
-        setSubmitStatus({
-          type: "success",
-          message: t.success,
-        });
-        // Reset form
-        setFormData({ name: "", company: "", email: "", message: "" });
-        setInterests({ website: false, mobileApp: false, general: false });
-        setSelectedPackage(null);
-        setSelectedServices([]);
-        setPrivacyAccepted(false);
-      } else {
-        setSubmitStatus({
-          type: "error",
-          message: data.error || t.sendError,
-        });
-      }
-    } catch {
-      setSubmitStatus({
-        type: "error",
-        message: t.networkError,
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
-  };
-
   return (
-    <ContactView title={title} description={description} submitStatusType={submitStatus.type} submitStatusMessage={submitStatus.message}
-    handleSubmit={handleSubmit}
-    nameLabel={nameLabel}
-    namePlaceholder={namePlaceholder}
-    formDataName={formData.name}
-    handleChange={handleChange}
-    companyLabel={companyLabel}
-    companyPlaceholder={companyPlaceholder}
-    formDataCompany={formData.company}
-    emailLabel={emailLabel}
-    emailPlaceholder={emailPlaceholder}
-    formDataEmail={formData.email}
-    messageLabel={messageLabel}
-    messagePlaceholder={messagePlaceholder}
-    formDataMessage={formData.message}
-    btn_text={btn_text}
-    interestLabel={interestLabel}
-    interestWebsite={interestWebsite}
-    interestMobileApp={interestMobileApp}
-    interestGeneral={interestGeneral}
-    packageLabel={packageLabel}
-    packages={packages}
-    interests={interests}
-    toggleInterest={toggleInterest}
-    selectedPackage={selectedPackage}
-    setSelectedPackage={handleSelectPackage}
-    selectedServices={selectedServices}
-    toggleService={toggleService}
-    serviceLabel={serviceLabel}
-    services={services}
-    privacyAccepted={privacyAccepted}
-    setPrivacyAccepted={setPrivacyAccepted}
-    isSubmitting={isSubmitting}
-    textPrivacyPolicy={t.privacyPolicy}
-    textSending={t.sending}
-    />
- 
+    <footer id="contact" className="footer-cta">
+      <div
+        className="max-w-6xl mx-auto px-6"
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <span className="section-tag">[ INIT_SEQ ]</span>
+
+        <h2
+          className="text-display-1"
+          style={{
+            fontSize: "clamp(2.5rem, 5vw, 4rem)",
+            marginBottom: "1rem",
+            marginTop: "1rem",
+            textAlign: "center",
+          }}
+        >
+          {title}
+        </h2>
+
+        <p
+          style={{
+            fontSize: "1.125rem",
+            color: "var(--text-300)",
+            marginBottom: "2.5rem",
+            textAlign: "center",
+            maxWidth: "500px",
+          }}
+        >
+          {description}
+        </p>
+
+        <a
+          href="mailto:office@vision-it.at"
+          className="btn btn-primary"
+          style={{ padding: "1rem 3rem", fontSize: "1.1rem" }}
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            style={{ marginRight: "10px" }}
+          >
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+          {btn_text}
+        </a>
+
+        <div
+          className="label-mono"
+          style={{ marginTop: "6rem", opacity: 0.5 }}
+        >
+          © 2026 LENA ZYADEH // ALL SYSTEMS NOMINAL
+        </div>
+      </div>
+    </footer>
   );
 }
-

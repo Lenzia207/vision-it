@@ -1,5 +1,3 @@
-"use client";
-import { useState } from "react";
 import Image from "next/image";
 
 interface AboutMeSectionProps {
@@ -14,105 +12,112 @@ interface AboutMeSectionProps {
 }
 
 export default function AboutMeSection({
-  title,
   description,
   fullname,
   social_media,
 }: AboutMeSectionProps) {
-  const [copied, setCopied] = useState(false);
+  const nameParts = fullname.split(", ");
+  const name = nameParts[0];
+  const credential = nameParts[1];
 
-  const handleCopyEmail = (e: React.MouseEvent) => {
-    e.preventDefault();
-    navigator.clipboard.writeText("office@vision-it.at");
-    setCopied(true);
-    setTimeout(() => setCopied(false), 1000);
-  };
+  const paragraphs = description.split("\n\n");
 
   return (
-    <section
-      id="about"
-      className="relative section-padding"
-      style={{ borderTop: "1px solid var(--border)", background: "var(--bg-deep)" }}
-    >
-      <div className="max-w-6xl mx-auto px-6 reveal-on-scroll">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-          
-          {/* Left Column (Text & Contact) */}
-          <div className="flex flex-col text-left h-full">
-            <h2 
-              className="text-4xl md:text-5xl lg:text-6xl font-serif uppercase tracking-widest mb-6" 
-              style={{ color: "var(--text-primary)" }}
-            >
-              {fullname}
-            </h2>
-            
-            <h3 
-              className="text-2xl md:text-3xl font-serif mb-8 leading-snug" 
-              style={{ color: "var(--text-primary)" }}
-            >
-              {title}
-            </h3>
-
-            <p 
-              className="text-base md:text-lg leading-relaxed whitespace-pre-line mb-16" 
-              style={{ color: "var(--text-secondary)" }}
-            >
-              {description}
-            </p>
-
-            <div className="mt-auto">
-              {/* <p 
-                className="text-xl font-serif mb-8" 
-                style={{ color: "var(--text-primary)" }}
-              >
-                Stay connected and let the good work begin.
-              </p> */}
-              
-              <button
-                onClick={handleCopyEmail}
-                className="inline-flex items-center justify-center bg-white font-medium px-8 py-4 mb-6 hover:bg-gray-200 transition-colors cursor-pointer rounded-lg"
-                style={{ color: "#000" }}
-              >
-                {copied ? "Copied to clipboard!" : "office@vision-it.at"}
-              </button>
-              
-              {/* Social links */}
-              <div className="flex flex-row gap-6">
-                {social_media.map(({ name, icon, url }, index) => (
-                  <a
-                    href={url}
-                    key={index}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group"
-                    title={name}
-                  >
-                    <Image 
-                      src={icon} 
-                      alt={name} 
-                      width={24} 
-                      height={24} 
-                      className="brightness-0 invert opacity-70 group-hover:opacity-100 transition-opacity" 
-                    />
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column (Image) */}
-          <div className="flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-md aspect-3/4 overflow-hidden">
-              <Image
-                src="/images/lena-zy-about-me.jpg"
-                alt={fullname}
-                fill
-                className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
-              />
-            </div>
-          </div>
-        </div>
+    <div className="glass-panel" style={{ padding: "3rem" }}>
+      {/* Avatar */}
+      <div
+        style={{
+          width: "80px",
+          height: "80px",
+          borderRadius: "50%",
+          background: "var(--bg-surface-3)",
+          border: "2px solid var(--border-accent)",
+          marginBottom: "1.5rem",
+          overflow: "hidden",
+          flexShrink: 0,
+        }}
+      >
+        <Image
+          src="/images/lena-zy-about-me.jpg"
+          alt={fullname}
+          width={80}
+          height={80}
+          style={{
+            objectFit: "cover",
+            filter: "grayscale(100%)",
+            mixBlendMode: "luminosity",
+          }}
+        />
       </div>
-    </section>
+
+      {/* Name */}
+      <h3
+        style={{
+          fontSize: "1.5rem",
+          fontWeight: 700,
+          marginBottom: "0.2rem",
+          color: "var(--text-100)",
+        }}
+      >
+        {name}{" "}
+        {credential && (
+          <span
+            className="label-mono"
+            style={{ fontSize: "0.8rem", verticalAlign: "middle" }}
+          >
+            {credential}
+          </span>
+        )}
+      </h3>
+
+      {/* Role */}
+      <p
+        className="label-mono"
+        style={{ color: "var(--accent-cyan)", marginBottom: "1.5rem" }}
+      >
+        SYS.ADMIN / DEV
+      </p>
+
+      {/* Bio */}
+      <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+        {paragraphs.map((para, i) => (
+          <p
+            key={i}
+            style={{
+              fontSize: "0.9rem",
+              color: "var(--text-300)",
+              lineHeight: 1.65,
+            }}
+          >
+            {para}
+          </p>
+        ))}
+      </div>
+
+      {/* Social links */}
+      {social_media.length > 0 && (
+        <div
+          style={{
+            marginTop: "1.5rem",
+            display: "flex",
+            gap: "0.75rem",
+            flexWrap: "wrap",
+          }}
+        >
+          {social_media.map(({ name: sName, url }, index) => (
+            <a
+              key={index}
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-secondary"
+              style={{ padding: "0.5rem 1.25rem", fontSize: "0.8rem" }}
+            >
+              {sName}
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
   );
 }

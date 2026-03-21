@@ -1,13 +1,13 @@
-export default function TitleHeader({ title, description }: { title: string; description?: string }) {
+export default function TitleHeader({ title, description, tag }: { title: string; description?: string; tag?: string }) {
 
     return (
-        <div className="text-center justify-items-center mb-20 reveal-on-scroll">
-          <h2 className="font-serif text-4xl lg:text-5xl font-medium tracking-tight whitespace-pre-line mb-4" style={{ color: "var(--text-primary)" }}>
-            {title}
-          </h2>
-          <div className="accent-line mx-auto mb-8"></div>
+        <div className="flex flex-col items-center text-center gap-4 mb-16 reveal-on-scroll">
+          {tag && <span className="section-tag">{tag}</span>}
+          <h2 className="text-display-2">{title}</h2>
           {description && (
-            <p className="text-lg lg:text-xl whitespace-pre-line max-w-5xl" style={{ color: "var(--text-secondary)" }}>{description}</p>
+            <p className="text-lg max-w-5xl" style={{ color: "var(--text-300)" }}>
+              {description}
+            </p>
           )}
         </div>
     )

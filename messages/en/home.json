@@ -46,6 +46,15 @@
           "icon_animation": "/animations/team-anim.json"
         }
       },
+       {
+        "title": "Design to Code",
+        "description": "Have a finished design or Figma file? I translate it into a fast, responsive website with precision — component-based, well-structured, and without cutting corners on quality.",
+        "icon_images": {
+          "icon": "Layers",
+          "icon_color": "pink-400",
+          "icon_animation": "/animations/layer-anim.json"
+        }
+      },
       {
         "title": "Custom Software Development from Scratch",
         "description": "No digital product yet, but a clear vision? I build websites and mobile apps end to end — design, development, and deployment included. Clean architecture, maintainable code, and a user experience that feels natural.",
@@ -55,15 +64,7 @@
           "icon_animation": "/animations/code-anim.json"
         }
       },
-      {
-        "title": "Design to Code",
-        "description": "Have a finished design or Figma file? I translate it into a fast, responsive website with precision — component-based, well-structured, and without cutting corners on quality.",
-        "icon_images": {
-          "icon": "Layers",
-          "icon_color": "pink-400",
-          "icon_animation": "/animations/layer-anim.json"
-        }
-      },
+     
       {
         "title": "Feature Development & Integration",
         "description": "New functionality for an existing codebase? I integrate into ongoing projects and deliver production-ready features — from forms, APIs, and authentication to dashboards, payment systems, and custom interactive elements.",
@@ -223,22 +224,27 @@
     "title": "Tech Stack",
     "stacks": [
       {
-        "category": "Web",
+        "category": "Frontend & Web",
         "items": [
           "React",
           "Next.js",
           "TypeScript",
-          "Tailwind CSS",
-          "Node.js"
+          "Tailwind CSS"
         ]
       },
       {
-        "category": "App",
+        "category": "Mobile Architecture",
         "items": [
           "Flutter",
           "Dart",
+          "Riverpod"
+        ]
+      },
+      {
+        "category": "Backend & Cloud",
+        "items": [
+          "Node.js",
           "Firebase",
-          "Riverpod",
           "Serverpod"
         ]
       }

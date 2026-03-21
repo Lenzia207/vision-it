@@ -1,18 +1,18 @@
-import HeroSection from "./sections/HeroSection";
+import HeroSection from "./sections/HeroSection/HeroSection";
 import ServiceSection from "./sections/ServiceSection";
 import PortfolioSection from "./sections/PortfolioSection";
 import TechStackSection from "./sections/TechStackSection";
 import AboutMeSection from "./sections/AboutMeSection";
 import ContactSection from "./sections/ContactSection/ContactSection";
 import { HomePageData } from "./sections/data/types/home-types";
-import ProjectPhases from "./sections/ProjectPhases";
-import PricePackages from "./sections/PricePackages";
+import ProjectPhases from "./ProjectPhases/ProjectPhases";
 
 interface HomeScreenProps {
   data: HomePageData;
   locale: string;
 }
-export default function HomeScreen({ data, locale }: HomeScreenProps) {
+
+export default function HomeScreen({ data }: HomeScreenProps) {
   return (
     <>
       {/* Hero Section */}
@@ -20,8 +20,7 @@ export default function HomeScreen({ data, locale }: HomeScreenProps) {
         titleLine1={data.hero_section.title_line1}
         description={data.hero_section.description}
         btnText={data.hero_section.btn_text}
-                viewMore={data.hero_section.view_more}
-
+        viewMore={data.hero_section.view_more}
       />
 
       {/* Services Section */}
@@ -30,14 +29,7 @@ export default function HomeScreen({ data, locale }: HomeScreenProps) {
         description={data.service_section.description}
         services={data.service_section.services}
         btnText={data.service_section.btnText}
-
       />
-
-      {/* <PricePackages
-        title={data.price_packages_section.title}
-        packages={data.price_packages_section.packages}
-        btnText={data.price_packages_section.btnText}
-      /> */}
 
       {/* Project Phases */}
       <ProjectPhases
@@ -55,42 +47,29 @@ export default function HomeScreen({ data, locale }: HomeScreenProps) {
         projects={data.portfolio_section.projects}
       />
 
-      {/* Tech Stack Section */}
-      <TechStackSection
-        title={data.tech_stack_section.title}
-        stacks={data.tech_stack_section.stacks}
-      />
+      {/* Dashboard: Tech Stack + About Me */}
+      <section id="about" className="section-padding">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="dashboard-layout">
+            <TechStackSection
+              title={data.tech_stack_section.title}
+              stacks={data.tech_stack_section.stacks}
+            />
+            <AboutMeSection
+              title={data.about_me_section.title}
+              description={data.about_me_section.description}
+              social_media={data.about_me_section.social_media}
+              fullname={data.about_me_section.name}
+            />
+          </div>
+        </div>
+      </section>
 
-      {/* About Me Section */}
-      <AboutMeSection
-        title={data.about_me_section.title}
-        description={data.about_me_section.description}
-        social_media={data.about_me_section.social_media}
-        fullname={data.about_me_section.name}
-      />
-
-      {/* Contact Section */}
+      {/* Contact / Footer */}
       <ContactSection
         title={data.contact_section.title}
         description={data.contact_section.description}
-        nameLabel={data.contact_section.nameLabel}
-        namePlaceholder={data.contact_section.namePlaceholder}
-        companyLabel={data.contact_section.companyLabel}
-        companyPlaceholder={data.contact_section.companyPlaceholder}
-        emailLabel={data.contact_section.emailLabel}
-        emailPlaceholder={data.contact_section.emailPlaceholder}
-        messageLabel={data.contact_section.messageLabel}
-        messagePlaceholder={data.contact_section.messagePlaceholder}
         btn_text={data.contact_section.btn_text}
-        locale={locale}
-        interestLabel={data.contact_section.interestLabel}
-        interestWebsite={data.contact_section.interestWebsite}
-        interestMobileApp={data.contact_section.interestMobileApp}
-        interestGeneral={data.contact_section.interestGeneral}
-        packageLabel={data.contact_section.packageLabel}
-        serviceLabel={data.contact_section.serviceLabel}
-        packages={data.price_packages_section.packages}
-        services={data.service_section.services}
       />
     </>
   );

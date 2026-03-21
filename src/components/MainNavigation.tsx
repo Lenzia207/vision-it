@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import { SwitchLanguage } from "./LanguageSwitcher";
 import { HomePageData } from "@/app/[locale]/home/sections/data/types/home-types";
 import { useEffect, useState } from "react";
-import { ArrowRight } from "lucide-react";
 
 interface MainNavigationProps {
   data: HomePageData;
@@ -23,63 +22,49 @@ export default function MainNavigation({ data, locale }: MainNavigationProps) {
   }, []);
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass-nav" : "bg-transparent"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-8" style={{ height: "var(--nav-height)" }}>
-        {/* Logo */}
-        <Link
-          href="/"
-          locale={locale}
-          className="flex items-center hover:opacity-80 transition-opacity cursor-pointer"
-        >
-          <h1 className="font-prompt font-bold text-xl" style={{ color: "var(--text-primary)" }}>
-            Vision<span className="text-gradient-logo-IT">IT</span>
-          </h1>
-        </Link>
-
-        {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
-          {data.main_navigation.map((item, index) => {
-            const isHomePage =
-              pathname === "/" || pathname === "/en" || pathname === "/de";
-            const linkHref = isHomePage
-              ? `${item.pageId}`
-              : (`/${item.pageId || item.page}` as string);
-
-            return (
-              <Link
-                key={index}
-                href={linkHref}
-                locale={locale}
-                className="text-sm font-medium transition-colors cursor-pointer"
-                style={{ color: "var(--text-secondary)" }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "var(--text-primary)")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
-              >
-                {item.name}
-              </Link>
-            );
-          })}
-
+    <>
+      {/* System Meta Bar — all screen sizes */}
+      <div className="label-mono fixed top-0 left-0 w-full z-50 h-10 flex justify-between items-center px-4 md:px-8 bg-[rgba(11,12,16,0.9)] border-b border-(--border-faint) backdrop-blur-md">
+        <span>SYS.VER // VISION.IT.28</span>
+        <div className="flex items-center gap-4 md:gap-6">
+          <span className="hidden sm:flex items-center gap-2">
+            <span className="status-dot w-1.5 h-1.5 animate-none shadow-none" />
+            {locale === "de" ? "VERFÜGBAR FÜR FREELANCE" : "AVAILABLE FOR FREELANCE"}
+          </span>
           <SwitchLanguage />
-
-          {/* CTA Button */}
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 px-5 py-2 text-sm font-medium text-white rounded-full transition-all duration-200 cursor-pointer hover:scale-105 active:scale-95"
-            style={{
-              background: "var(--accent)",
-              boxShadow: "0 0 20px var(--accent-glow)",
-            }}
-          >
-            {locale === "de" ? "Projekt starten" : "Start a Project"}
-            <ArrowRight className="w-3.5 h-3.5" />
-          </a>
         </div>
       </div>
-    </nav>
+
+      {/* Floating Pill Nav — desktop only (mobile uses BottomNavigation) */}
+      <nav
+        className={`hidden md:flex fixed z-40 top-11 left-1/2 -translate-x-1/2 items-center gap-1 p-1.5 rounded-full bg-[rgba(26,29,39,0.75)] border border-white/10 backdrop-blur-xl transition-all duration-300 ${
+          scrolled ? "shadow-[0_8px_32px_rgba(0,0,0,0.4)]" : "shadow-none"
+        }`}
+      >
+        {data.main_navigation.map((item, index) => {
+          const isHomePage =
+            pathname === "/" || pathname === "/en" || pathname === "/de";
+          const linkHref = isHomePage
+            ? `${item.pageId}`
+            : (`/${item.pageId || item.page}` as string);
+          const isLast = index === data.main_navigation.length - 1;
+
+          return (
+            <Link
+              key={index}
+              href={linkHref}
+              locale={locale}
+              className={`text-sm font-medium rounded-full px-4 py-2 transition-all duration-300 ${
+                isLast
+                  ? "text-white bg-(--accent-purple) shadow-[0_0_16px_rgba(139,92,246,0.4)]"
+                  : "text-(--text-300) bg-transparent hover:text-(--text-100) hover:bg-(--bg-surface-3)"
+              }`}
+            >
+              {item.name}
+            </Link>
+          );
+        })}
+      </nav>
+    </>
   );
 }

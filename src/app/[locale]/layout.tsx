@@ -1,24 +1,19 @@
 import { NextIntlClientProvider } from "next-intl";
-import { Urbanist, Playfair_Display, Prompt } from "next/font/google";
+import { Plus_Jakarta_Sans, Space_Mono } from "next/font/google";
 import Script from "next/script";
 
-const urbanist = Urbanist({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-urbanist",
+  variable: "--font-jakarta",
   display: "swap",
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
-const playfair = Playfair_Display({
+const spaceMono = Space_Mono({
   subsets: ["latin"],
-  variable: "--font-playfair",
+  variable: "--font-space-mono",
   display: "swap",
-});
-
-const prompt = Prompt({
-  subsets: ["latin"],
-  variable: "--font-prompt",
-  display: "swap",
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "700"],
 });
 
 const jsonLd = {
@@ -76,9 +71,7 @@ export default async function LocaleLayout({
         />
       </head>
       <body
-        className={`${
-          urbanist.variable
-        } ${playfair.variable} ${prompt.variable} font-sans antialiased grain-overlay`}
+        className={`${jakarta.variable} ${spaceMono.variable} font-sans antialiased grain-overlay`}
       >
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>

@@ -20,7 +20,10 @@ export function SwitchLanguage() {
     return (
         <button
             onClick={handleLanguageSwitch}
-            className="relative z-50 flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 transition-colors duration-200"
+            className="relative z-50 flex items-center justify-center w-10 h-10 rounded-full transition-colors duration-200"
+            style={{ background: "transparent" }}
+            onMouseEnter={(e) => (e.currentTarget.style.background = "var(--bg-surface)")}
+            onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
             aria-label={`Switch to ${currentLocale === "de" ? "English" : "German"}`}
         >
             {currentLocale === "de" ? (

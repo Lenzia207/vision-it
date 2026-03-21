@@ -16,7 +16,7 @@ export default async function PageWrapper({
 }: PageWrapperProps) {
       const data = await fetchHomePageData(locale);
   return (
-    <main className="min-h-screen bg-[#050505] text-zinc-200 selection:bg-blue-500/30 selection:text-blue-200">
+    <main className="min-h-screen">
       <ScrollRevealObserver />
       <MainNavigation data={data} locale={locale} />
       {pageContent}

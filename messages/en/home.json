@@ -27,18 +27,28 @@
     }
   ],
   "hero_section": {
-    "title_line1": "Building Websites and Apps for your Business",
-    "description": "Turn your ideas into visual reality.\nFrom concept to production, your digital product becomes a responsive, high-performance website with modern animations and intuitive user experiences.",
-    "btn_text": "Contact Me"
+    "title_line1": "Custom Software Development for Your Vision.",
+    "description": "As a freelancer, I build websites and mobile apps that align with your requirements and suit your business.",
+    "btn_text": "Get in Touch",
+    "view_more": "View Work"
   },
   "service_section": {
-    "title": "How can I Help?",
-    "description": "I develop custom web solutions that fit your needs.\nWhether you want a brand-new website, a redesign, or new features like a CM-System that take your existing project further.",
+    "title": "What I do",
+    "description": "Good development starts before the first line of code. With my tech stack, I build digital products with thoughtful concepts, clean architecture, and maintainable code that stands the test of time.",
     "btnText": "Request Service",
     "services": [
       {
-        "title": "Custom Web Development from Scratch",
-        "description": "No website yet, but a clear idea in mind? I turn your concept into a fully built digital product with design, development, and deployment included. Every project is built with clean code, scalability in mind, and a user experience that feels natural.",
+        "title": "Development as an Extension of Your Team",
+        "description": "An ongoing project and need for support? After a brief handover, I jump in, work independently, and deliver a clean pull request on time.",
+        "icon_images": {
+          "icon": "Users",
+          "icon_color": "violet-400",
+          "icon_animation": "/animations/team-anim.json"
+        }
+      },
+      {
+        "title": "Custom Software Development from Scratch",
+        "description": "No digital product yet, but a clear vision? I build websites and mobile apps end to end — design, development, and deployment included. Clean architecture, maintainable code, and a user experience that feels natural.",
         "icon_images": {
           "icon": "Code2",
           "icon_color": "blue-400",
@@ -46,8 +56,8 @@
         }
       },
       {
-        "title": "Bring Your Design to Life",
-        "description": "Already have a finished design? Perfect. I transform your static design into a fully functional, responsive website with clean, maintainable code and precise attention to detail.",
+        "title": "Design to Code",
+        "description": "Have a finished design or Figma file? I translate it into a fast, responsive website with precision — component-based, well-structured, and without cutting corners on quality.",
         "icon_images": {
           "icon": "Layers",
           "icon_color": "pink-400",
@@ -55,8 +65,8 @@
         }
       },
       {
-        "title": "Feature Integration",
-        "description": "Need something extra? I extend existing websites with new features that enhance functionality and create real value. From forms, authentication, databases, and APIs to payment systems, dashboards, or custom interactive elements like animations — your site evolves without disrupting the original design.",
+        "title": "Feature Development & Integration",
+        "description": "New functionality for an existing codebase? I integrate into ongoing projects and deliver production-ready features — from forms, APIs, and authentication to dashboards, payment systems, and custom interactive elements.",
         "icon_images": {
           "icon": "MousePointerClick",
           "icon_color": "cyan-400",
@@ -64,8 +74,8 @@
         }
       },
       {
-        "title": "Website Redesign",
-        "description": "Your website feels outdated? This may be holding your business back. I transform existing designs into modern, responsive experiences with improved performance, better structure, and a visual identity that reflects who you are as a brand.",
+        "title": "Website and App Redesign",
+        "description": "An outdated website or app costs more than it delivers. I transform existing projects into modern, high-performance experiences — improved load times, clearer structure, and a visual identity that still lands today.",
         "icon_images": {
           "icon": "PenTool",
           "icon_color": "orange-400",
@@ -76,55 +86,55 @@
   },
   "project_phases_section": {
     "title": "From Idea to Launch",
-    "description": "Every project goes through several phases, from initial brainstorming to planning and development, all the way to launch and beyond. Here is an overview of the typical phases of a project:",
+    "description": "Every project follows a clear structure — from the first inquiry to go-live. Transparent communication, defined milestones, and clean handoffs are not extras, they are standard.",
     "btnText": "Send Inquiry",
     "phases": [
       {
         "name": "Inquiry",
-        "description": "Every great project starts with an initial consultation.",
+        "description": "Every great project starts with a no-obligation initial conversation.",
         "details": [
           "You reach out with your idea or a short project brief",
-          "We have an initial call to discuss goals, timeline, and budget",
-          "I answer your questions and give you honest feedback",
-          "You receive a tailored offer for your project"
+          "We discuss goals, scope, and budget — by call, video, or in person",
+          "You get honest feedback and a clear assessment of the scope",
+          "You receive a tailored proposal"
         ]
       },
       {
         "name": "Concept",
-        "description": "Structure before style. A solid concept lays the foundation for everything that follows — from the first wireframe to the final line of code.",
+        "description": "Structure before style. A solid concept lays the foundation — from the first wireframe to the final line of code.",
         "details": [
           "Information architecture and user flows are mapped out",
-          "Wireframes and rough layout concepts are sketched, if there is no given design yet",
+          "Wireframes and rough layout concepts are sketched, if no design exists yet",
           "Technical architecture and stack decisions are finalized",
-          "You receive a clear project roadmap with timeline"
+          "You receive a clear project roadmap with a realistic timeline"
         ]
       },
       {
         "name": "Design",
-        "description": "Your vision takes visual shape. Every screen, component, and interaction is designed with purpose, precision, and your brand in mind.",
+        "description": "Your vision takes visual shape. Every screen and component is crafted with purpose and your brand in mind.",
         "details": [
           "High-fidelity mockups are created in Figma",
-          "You review and provide feedback in rounds",
-          "Responsive layouts for mobile, tablet, and desktop are designed",
+          "You review and provide feedback in defined rounds",
+          "Responsive layouts for mobile, tablet, and desktop",
           "Final design is approved before development begins"
         ]
       },
       {
         "name": "Development",
-        "description": "Clean code meets pixel-perfect execution. Your product is built with performance, accessibility, and maintainability at its core.",
+        "description": "Clean code meets pixel-perfect execution. Built with performance, maintainability, and scalability at its core.",
         "details": [
-          "Component-based development with modern frameworks",
+          "Component-based development with modern frameworks (Next.js, React, Flutter)",
           "Regular progress updates and demo previews keep you in the loop",
           "Cross-browser and cross-device testing throughout the build",
-          "Code is clean, documented, and ready for handoff"
+          "Code is documented, structured, and ready for handoff"
         ]
       },
       {
         "name": "Launch",
-        "description": "Your product is ready for the world. The launch phase ensures a smooth, stress-free go-live with everything properly in place.",
+        "description": "Your product is ready for the world. A smooth, structured go-live — with everything properly in place.",
         "details": [
           "Final quality assurance and bug fixing before launch",
-          "Deployment to your hosting environment or server",
+          "Deployment (Vercel, Cloudflare, or your own server)",
           "Domain setup, SSL, and performance optimization",
           "Post-launch support to make sure everything runs smoothly"
         ]
@@ -132,8 +142,8 @@
     ]
   },
   "portfolio_section": {
-    "title": "Selected Works",
-    "description": "A selection of digital experiences I’ve developed and contributed to over the years. My work includes modern websites built with Next.js, React and Tailwind CSS, as well as cross-platform mobile apps created with Flutter and Dart. More is on the way.",
+    "title": "Selected Work",
+    "description": "A selection of digital projects — from independently conceived and built websites to apps with hundreds of thousands of users, developed as part of an agency team.",
     "categories": [
       "Web",
       "App"
@@ -141,7 +151,7 @@
     "projects": [
       {
         "title": "Institut for Electrochemistry, Galvanic and Materialchemistry",
-        "description": "The Institute of Electrochemistry is a state-authorized civil engineering institute with expertise in chemistry, corrosion, and surface engineering, providing technical, expert, and regulatory support for complex industrial processes. The project included concept, design, and full implementation of the website. This covered front-end development as well as deployment, with a focus on a clear, structured, and professional design that reflects the institute’s technical expertise.",
+        "description": "A state-authorized civil engineering institute specializing in chemistry, corrosion, and surface engineering. The project covered concept, design, and full implementation — front-end development through to deployment — with a focus on a structured, professional presentation that reflects the institute's technical expertise.",
         "category": "Web",
         "image": "/images/portfolio/web-egm.png",
         "url": "https://elektrochemie.eu/",
@@ -154,7 +164,7 @@
       },
       {
         "title": "Camp Currie",
-        "description": "Camp Currie is a website for a non-profit agricultural initiative. The project covers the full process from concept and design to complete implementation, including front-end development with React and Tailwind CSS as well as deployment. The focus was on creating a clean, welcoming, and user-friendly design.",
+        "description": "A website for a non-profit agricultural initiative. Full project from concept and design to deployment — with a focus on a welcoming, clearly structured design that communicates the project's values.",
         "category": "Web",
         "image": "/images/portfolio/web-camp-currie.png",
         "url": "https://camp-currie.at/",
@@ -168,7 +178,7 @@
       },
       {
         "title": "Pictolog PDF",
-        "description": "Pictolog is a simple and intuitive app for project management and report creation. All project and report data is stored directly on the device. Simple, efficient, and offline. Pictolog is aimed at users who need a lightweight offline tool to track project progress, document work visually and in writing, and export reports as PDFs.",
+        "description": "An independently conceived, designed, and developed offline app for project management and report creation. All data is stored locally on-device. Users can document progress visually and in writing, and export reports directly as PDFs.",
         "category": "App",
         "image": "/images/portfolio/pictolog.jpg",
         "url": "https://apps.apple.com/us/app/pictolog-pdf/id6759091493",
@@ -179,7 +189,7 @@
       },
       {
         "title": "Aktionsfinder App and PWA",
-        "description": "Aktionsfinder is an Austrian platform that brings together leaflets, promotions, and special offers, making it easy to discover current deals and plan your shopping. As part of the team at Marqably, I helped continuously develop the Aktionsfinder app and its PWA. My focus was on fixing bugs, implementing small features, and integrating new design updates.",
+        "description": "Austria's leading platform for leaflets, promotions, and offers. As part of the development team at Marqably, I contributed continuously to the app and PWA — bug fixes, feature implementations, and design updates in a live, scaled codebase.",
         "category": "App",
         "image": "/images/portfolio/aktionsfinder.jpg",
         "url": "https://marqably.com/case-study/aktionsfinder-app",
@@ -194,7 +204,7 @@
       },
       {
         "title": "Tiroler Tageszeitung App",
-        "description": "A news app delivering the latest headlines and articles from Tiroler Tageszeitung. During my time at Marqably, I contributed to the ongoing development of the Tiroler Tageszeitung app. My focus was on bug fixes, small feature enhancements, implementing Dark Mode, and integrating new design updates.",
+        "description": "A news app with hundreds of thousands of active users. Ongoing development as part of the team at Marqably — bug fixes, feature enhancements, Dark Mode implementation, and continuous design updates.",
         "category": "App",
         "image": "/images/portfolio/tt.jpg",
         "url": "https://marqably.com/case-study/tt-app",
@@ -237,7 +247,7 @@
   "about_me_section": {
     "title": "Hello World",
     "name": "Lena Zyadeh, BSc.",
-    "description": "I am a freelance developer who started out in a digital agency, where I spent two years helping to build and maintain digital applications. My journey now continues as an independent creator, which gives me the freedom to combine my design background in animation and media with my passion for web and app development. This blend of design and engineering makes me a multi-skilled partner for projects that need both creativity and technical expertise.",
+    "description": "I am a freelance web and app developer specializing in React, Next.js, and Flutter.\n\nI started my career at Marqably, a digital agency in Vienna, where I spent two years building and maintaining several digital products — including apps with hundreds of thousands of active users. That experience shaped the standards I hold my work to: clean code, proper documentation, and a working style that doesn't need hand-holding.\n\nNow working independently, I take on projects where both sides matter — a strong sense for design, and the technical depth to execute it properly.",
     "social_media": [
       {
         "name": "Github",
@@ -252,18 +262,18 @@
     ]
   },
   "contact_section": {
-    "title": "Lets get in Touch",
-    "description": "Ready to bring your ideas to life? Contact me for a free consultation and let's discuss how I can help you achieve your goals.",
+    "title": "Let's work together.",
+    "description": "Have a project, an idea, or just a question? I'd love to hear from you — for a free initial conversation, online or over a coffee in Vienna.",
     "nameLabel": "Name*",
-    "namePlaceholder": "Please enter you full name",
+    "namePlaceholder": "Your full name",
     "companyLabel": "Company",
-    "companyPlaceholder": "Your Company",
+    "companyPlaceholder": "Your company",
     "emailLabel": "Email*",
     "emailPlaceholder": "your.name@mail.com",
     "messageLabel": "Message",
-    "messagePlaceholder": "How can I help you?",
+    "messagePlaceholder": "How can I help?",
     "btn_text": "Send Message",
-    "interestLabel": "What are you interested in?",
+    "interestLabel": "What's this about?",
     "interestWebsite": "Website",
     "interestMobileApp": "Mobile App",
     "interestGeneral": "General Inquiry",
@@ -276,20 +286,20 @@
     "packages": [
       {
         "name": "Starter",
-        "price": "from 800 €",
+        "price": "from €800",
         "for": "For: Solo entrepreneurs, small service providers",
         "features": [
           "Landing page or up to 5 pages",
-          "Webdesign inluded",
+          "Webdesign included",
           "Contact form included",
           "Mobile-optimized (Responsive Design)",
-          "Basic SEO (Meta tags, page structure)",
+          "Basic SEO (meta tags, page structure)",
           "Delivery time: 1–2 weeks"
         ]
       },
       {
         "name": "Business",
-        "price": "from 1.800 €",
+        "price": "from €1,800",
         "for": "For: Established businesses, regulated professions (doctors, lawyers, restaurants etc.)",
         "features": [
           "Up to 10 pages",
@@ -302,7 +312,7 @@
       },
       {
         "name": "Premium / Webshop",
-        "price": "from 5.000 €",
+        "price": "from €5,000",
         "for": "For: E-commerce, startups, complex requirements",
         "features": [
           "Custom webshop or web app",

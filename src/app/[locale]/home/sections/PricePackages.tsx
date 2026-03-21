@@ -13,31 +13,36 @@ export default function PricePackages({ title, btnText, packages }: PricePackage
   return (
     <section
       id="pricing"
-      className="relative py-24 md:py-32 border-t border-white/5"
+      className="relative section-padding"
+      style={{ borderTop: "1px solid var(--border)" }}
     >
       <div className="max-w-6xl mx-auto px-6">
         <TitleHeader title={title} />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {packages.map((pkg, index) => {
-            const isHighlighted = index === 1; // highlights the middle package
-            const bgClass = isHighlighted
-              ? "bg-zinc-800/60 border-blue-500/50"
-              : "bg-zinc-900/40 border-white/5";
+            const isHighlighted = index === 1;
 
             return (
               <div
                 key={index}
-                className={`group p-8 rounded-2xl border hover-lift reveal-on-scroll flex flex-col ${bgClass}`}
+                className="group p-8 rounded-2xl hover-lift reveal-on-scroll flex flex-col"
+                style={{
+                  background: isHighlighted
+                    ? "linear-gradient(135deg, var(--accent), #4f46e5)"
+                    : "var(--bg-card)",
+                  border: `1px solid ${isHighlighted ? "rgba(59,130,246,0.5)" : "var(--border)"}`,
+                  boxShadow: isHighlighted ? "0 0 40px var(--accent-glow)" : undefined,
+                }}
               >
                 <div className="mb-6">
-                  <h3 className="text-2xl font-semibold text-white mb-2">
+                  <h3 className="text-2xl font-semibold mb-2" style={{ color: isHighlighted ? "#fff" : "var(--text-primary)" }}>
                     {pkg.name}
                   </h3>
-                  <div className="text-3xl font-bold text-white mb-4">
+                  <div className="text-3xl font-bold mb-4" style={{ color: isHighlighted ? "#fff" : "var(--text-primary)" }}>
                     {pkg.price}
                   </div>
-                  <p className="text-zinc-400 text-sm h-10">
+                  <p className="text-sm h-10" style={{ color: isHighlighted ? "rgba(191,219,254,0.9)" : "var(--text-secondary)" }}>
                     {pkg.for}
                   </p>
                 </div>
@@ -48,9 +53,9 @@ export default function PricePackages({ title, btnText, packages }: PricePackage
                       <li key={fIndex} className="flex items-start">
                         <IconLucide
                           iconName="Check"
-                          className="w-5 h-5 text-blue-400 mr-3 shrink-0 mt-0.5"
+                          className={`w-5 h-5 mr-3 shrink-0 mt-0.5 ${isHighlighted ? "text-blue-200" : "text-blue-400"}`}
                         />
-                        <span className="text-zinc-300 text-sm leading-relaxed">
+                        <span className="text-sm leading-relaxed" style={{ color: isHighlighted ? "rgba(239,246,255,0.9)" : "var(--text-secondary)" }}>
                           {feature}
                         </span>
                       </li>
@@ -58,14 +63,13 @@ export default function PricePackages({ title, btnText, packages }: PricePackage
                   </ul>
                 </div>
 
-                <div className=" mt-8 flex justify-end">
+                <div className="mt-8 flex justify-end">
                   <AppButton btnText={btnText} packageName={pkg.name} />
                 </div>
               </div>
             );
           })}
         </div>
-
       </div>
     </section>
   );

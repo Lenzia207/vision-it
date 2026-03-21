@@ -51,22 +51,23 @@ export default function PortfolioSection({
   }, [activeCategory]);
 
   return (
-    <section id="projects" className="py-24 md:py-32 border-t border-white/5">
+    <section id="projects" className="section-padding" style={{ borderTop: "1px solid var(--border)" }}>
       <div className="max-w-6xl mx-auto px-6">
         <TitleHeader title={title} description={description} />
 
         {/* Category Filter */}
         <div className="flex justify-center mb-12 reveal-on-scroll">
-          <div className="inline-flex p-2 gap-4 bg-zinc-900/50 rounded-xl border border-white/5 backdrop-blur-sm">
+          <div className="inline-flex p-1.5 gap-2 rounded-xl" style={{ background: "var(--bg-surface)", border: "1px solid var(--border)" }}>
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-6 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 ${
-                  activeCategory === category
-                    ? "bg-white text-black shadow-lg scale-105"
-                    : "text-zinc-400 hover:text-white hover:bg-white/5"
-                }`}
+                className="px-6 py-2.5 rounded-lg text-sm font-medium transition-all duration-300"
+                style={{
+                  background: activeCategory === category ? "var(--accent)" : "transparent",
+                  color: activeCategory === category ? "#fff" : "var(--text-secondary)",
+                  boxShadow: activeCategory === category ? "0 0 20px var(--accent-glow)" : "none",
+                }}
               >
                 {category}
               </button>
@@ -85,23 +86,21 @@ export default function PortfolioSection({
           key={activeCategory}
         >
           {filteredProjects.length === 0 ? (
-            <div className="col-span-full text-center py-12 text-zinc-500 reveal-on-scroll">
+            <div className="col-span-full text-center py-12 reveal-on-scroll" style={{ color: "var(--text-muted)" }}>
               No projects found in this category.
             </div>
           ) : (
             filteredProjects.map((project, index) => {
-              console.log(project.url);
               return (
                 <div
                   key={`${project.title}-${index}`}
-                  className="group relative bg-zinc-900/40 border border-white/5 rounded-2xl overflow-hidden hover:border-white/10 transition-all duration-500 hover:-translate-y-1 reveal-on-scroll"
+                  className="group relative card-dark rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-1 reveal-on-scroll"
                 >
-                  {/* Image Placeholder - In a real app, use Next.js Image */}
-                  <div className="aspect-video w-full  relative overflow-hidden">
+                  {/* Image */}
+                  <div className="aspect-video w-full relative overflow-hidden">
                     <div className="absolute inset-0" />
-                    {/* Placeholder for actual image */}
                     {project.image == null && (
-                      <div className="absolute inset-0 flex items-center justify-center text-zinc-700">
+                      <div className="absolute inset-0 flex items-center justify-center" style={{ color: "var(--text-muted)" }}>
                         <IconLucide
                           iconName="Image"
                           className="w-12 h-12 opacity-20"
@@ -116,7 +115,6 @@ export default function PortfolioSection({
                       objectFit="cover"
                     />
                     
-                    {/* Overlay on Items */}
                     <OverlayOnHover text="View Project" url={project.url} />
                   </div>
 
@@ -125,17 +123,17 @@ export default function PortfolioSection({
                       {project.tags.map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
-                          className="px-3 py-1 text-xs font-medium text-zinc-400 bg-white/5 rounded-full border border-white/5"
+                          className="badge-outline text-xs"
                         >
                           {tag}
                         </span>
                       ))}
                     </div>
 
-                    <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                    <h3 className="text-xl font-semibold mb-2 transition-colors" style={{ color: "var(--text-primary)" }}>
                       {project.title}
                     </h3>
-                    <p className="text-zinc-400 text-sm leading-relaxed">
+                    <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
                       {project.description}
                     </p>
                   </div>

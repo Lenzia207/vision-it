@@ -49,6 +49,7 @@ export interface HeroSection {
   title_line1: string;
   description: string;
   btn_text: string;
+  view_more: string;
 }
 export interface ServiceSectionType {
   title: string;

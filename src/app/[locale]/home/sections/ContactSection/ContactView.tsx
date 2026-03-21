@@ -94,22 +94,26 @@ export default function ContactView({ title,
 }: ContactViewProps) {
     return (<section
         id="contact"
-        className="relative py-24 md:py-32 border-t border-white/5"
+        className="relative section-padding"
+        style={{ borderTop: "1px solid var(--border)" }}
     >
-        <div className="absolute inset-0 bg-linear-to-t from-blue-900/10 via-transparent to-transparent pointer-events-none"></div>
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="glow-blue" style={{ position: "absolute", bottom: 0, right: "-10%" }} />
+        </div>
 
         <div className="max-w-6xl mx-auto px-6 reveal-on-scroll">
             <div className="text-center mb-12">
-                <h2 className="font-serif text-4xl md:text-5xl font-medium tracking-tight text-white mb-4">
+                <h2 className="font-serif text-4xl md:text-5xl font-medium tracking-tight mb-4" style={{ color: "var(--text-primary)" }}>
                     {title}
                 </h2>
-                <p className="text-zinc-400 text-lg whitespace-pre-line">
+                <div className="accent-line mx-auto mb-8"></div>
+                <p className="text-lg whitespace-pre-line max-w-2xl mx-auto" style={{ color: "var(--text-secondary)" }}>
                     {description}
                 </p>
             </div>
 
-            <div className="bg-zinc-900/40 border border-white/5 rounded-3xl p-8 md:p-10 shadow-2xl backdrop-blur-sm">
-                <h3 className="text-xl font-medium text-white mb-8">{btn_text}</h3>
+            <div className="glass-elevated rounded-3xl p-8 md:p-10">
+                <h3 className="text-xl font-medium mb-8" style={{ color: "var(--text-primary)" }}>{btn_text}</h3>
 
                 {submitStatusType && (
                     <div
@@ -153,7 +157,7 @@ export default function ContactView({ title,
 
                     {/* Interest Selection */}
                     <div className="space-y-3">
-                        <label className="text-sm font-medium text-zinc-400 ml-1 block">
+                        <label className="text-sm font-medium ml-1 block" style={{ color: "var(--text-secondary)" }}>
                             {interestLabel}
                         </label>
                         <div className="flex flex-wrap gap-3">
@@ -202,7 +206,7 @@ export default function ContactView({ title,
                     </div>
 
                     <div className="space-y-2">
-                        <label className="text-sm font-medium text-zinc-400 ml-1">
+                        <label className="text-sm font-medium ml-1" style={{ color: "var(--text-secondary)" }}>
                             {messageLabel}
                         </label>
                         <textarea
@@ -211,7 +215,7 @@ export default function ContactView({ title,
                             onChange={handleChange}
                             required
                             rows={4}
-                            className="w-full px-4 py-3 rounded-xl input-glass text-white placeholder-zinc-600 transition-all resize-none focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+                            className="w-full px-4 py-3 rounded-xl input-dark transition-all resize-none focus:outline-none"
                             placeholder={messagePlaceholder}
                         ></textarea>
                     </div>
@@ -225,7 +229,8 @@ export default function ContactView({ title,
                     <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-full py-4 mt-4 bg-linear-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-medium rounded-xl transition-all transform hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-blue-500/20 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                        className="w-full py-4 mt-4 text-white font-medium rounded-xl transition-all transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                        style={{ background: "var(--accent)", boxShadow: "0 0 24px var(--accent-glow)" }}
                     >
                         {isSubmitting ? textSending : btn_text}
                         <Send className="w-4 h-4" />

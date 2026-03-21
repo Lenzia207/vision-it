@@ -14,12 +14,14 @@ export default function Checkbox({
                 id="privacy-policy"
                 checked={privacyAccepted}
                 onChange={onChange}
-                className="mt-1 w-4 h-4 text-blue-600 bg-zinc-800 border-zinc-600 rounded focus:ring-blue-500 focus:ring-2"
+                className="mt-1 w-4 h-4 rounded focus:ring-2"
+                style={{ accentColor: "var(--accent)" }}
                 required
             />
             <label
                 htmlFor="privacy-policy"
-                className="text-sm text-zinc-400 cursor-pointer"
+                className="text-sm cursor-pointer"
+                style={{ color: "var(--text-secondary)" }}
             >
                 {message}
             </label>

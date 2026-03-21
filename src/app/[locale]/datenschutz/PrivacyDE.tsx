@@ -15,18 +15,18 @@ export default function PrivacyDE() {
       <div className="relative z-10 container mx-auto px-6 py-24 md:py-32 max-w-4xl">
         <HeaderSimple title="Datenschutzerklärung" />
 
-        <div className="space-y-8 text-zinc-300 text-lg leading-relaxed max-w-2xl mx-auto">
+        <div className="space-y-8 text-lg leading-relaxed max-w-2xl mx-auto" style={{ color: "var(--text-secondary)" }}>
           <p>
             <strong>Verantwortlicher:</strong> Lena Zyadeh, BSc.
           </p>
 
-          <h3 className="text-2xl font-bold">Kontakt</h3>
+          <h3 className="text-2xl font-bold" style={{ color: "var(--text-primary)" }}>Kontakt</h3>
           <p>
             Für datenschutzrechtliche Anfragen erreichen Sie uns unter:{" "}
             <strong>office@vision-it.at</strong>.
           </p>
 
-          <h3 className="text-2xl font-bold">Welche Daten verarbeiten wir?</h3>
+          <h3 className="text-2xl font-bold" style={{ color: "var(--text-primary)" }}>Welche Daten verarbeiten wir?</h3>
           <p>
             Wir verarbeiten ausschließlich personenbezogene Daten, die Sie uns
             aktiv übermitteln (z. B. Name, E‑Mail‑Adresse und Nachricht im
@@ -36,7 +36,7 @@ export default function PrivacyDE() {
             gespeichert.
           </p>
 
-          <h3 className="text-2xl font-bold">Zweck und Rechtsgrundlagen</h3>
+          <h3 className="text-2xl font-bold" style={{ color: "var(--text-primary)" }}>Zweck und Rechtsgrundlagen</h3>
           <ul>
             <li>
               Kontaktbearbeitung: Verarbeitung zur Erfüllung Ihrer Anfrage und
@@ -48,13 +48,13 @@ export default function PrivacyDE() {
             </li>
           </ul>
 
-          <h3 className="text-2xl font-bold">Keine Analytik/Tracking</h3>
+          <h3 className="text-2xl font-bold" style={{ color: "var(--text-primary)" }}>Keine Analytik/Tracking</h3>
           <p>
             Wir verwenden keine Analyse‑ oder Tracking‑Dienste (z. B. Google
             Analytics). Es erfolgt keine Profilbildung zu Marketingzwecken.
           </p>
 
-          <h3 className="text-2xl font-bold">Kontaktformular / E‑Mail</h3>
+          <h3 className="text-2xl font-bold" style={{ color: "var(--text-primary)" }}>Kontaktformular / E‑Mail</h3>
           <p>
             Nach Absenden des Kontaktformulars werden Ihre Angaben per E‑Mail an{" "}
             <strong>office@genzy.dev</strong> übermittelt. Die E‑Mail‑Übertragung
@@ -63,7 +63,7 @@ export default function PrivacyDE() {
             Ihrer Anfrage (Art. 6 Abs. 1 lit. b DSGVO).
           </p>
 
-          <h3 className="text-2xl font-bold">Externe Links</h3>
+          <h3 className="text-2xl font-bold" style={{ color: "var(--text-primary)" }}>Externe Links</h3>
           <p>
             Die Website kann Verlinkungen zu externen Websites enthalten. Für
             die Inhalte und Datenschutzpraxis externer Seiten sind deren
@@ -71,14 +71,14 @@ export default function PrivacyDE() {
             Umständen Daten an Dritte übertragen werden.
           </p>
 
-          <h3 className="text-2xl font-bold">Speicherdauer</h3>
+          <h3 className="text-2xl font-bold" style={{ color: "var(--text-primary)" }}>Speicherdauer</h3>
           <p>
             Personenbezogene Daten werden nur so lange gespeichert, wie dies für
             die genannten Zwecke erforderlich ist oder gesetzliche
             Aufbewahrungsfristen dies verlangen.
           </p>
 
-          <h3 className="text-2xl font-bold">Empfänger</h3>
+          <h3 className="text-2xl font-bold" style={{ color: "var(--text-primary)" }}>Empfänger</h3>
           <p>
             Zur Bereitstellung des E‑Mail‑Dienstes und des Hostings können
             Dienstleister als Auftragsverarbeiter eingesetzt werden. Soweit
@@ -86,7 +86,7 @@ export default function PrivacyDE() {
             abgeschlossen.
           </p>
 
-          <h3 className="text-2xl font-bold">Ihre Rechte</h3>
+          <h3 className="text-2xl font-bold" style={{ color: "var(--text-primary)" }}>Ihre Rechte</h3>
           <p>
             Sie haben das Recht auf Auskunft, Berichtigung, Löschung,
             Einschränkung der Verarbeitung, Datenübertragbarkeit und
@@ -94,20 +94,20 @@ export default function PrivacyDE() {
             per E‑Mail an <strong>hello@genzy.com</strong>.
           </p>
 
-          <h3 className="text-2xl font-bold">Widerruf &amp; Beschwerde</h3>
+          <h3 className="text-2xl font-bold" style={{ color: "var(--text-primary)" }}>Widerruf &amp; Beschwerde</h3>
           <p>
             Sie können erteilte Einwilligungen jederzeit mit Wirkung für die
             Zukunft widerrufen. Bei datenschutzrechtlichen Beschwerden steht
             Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.
           </p>
 
-          <h3 className="text-2xl font-bold">Sicherheit</h3>
+          <h3 className="text-2xl font-bold" style={{ color: "var(--text-primary)" }}>Sicherheit</h3>
           <p>
             Wir setzen geeignete technische und organisatorische Maßnahmen ein,
             um die Sicherheit Ihrer Daten zu gewährleisten. Absolute Sicherheit
             kann jedoch nicht garantiert werden.
           </p>
-          <h3 className="text-2xl font-bold">Google Fonts</h3>
+          <h3 className="text-2xl font-bold" style={{ color: "var(--text-primary)" }}>Google Fonts</h3>
           <p>
             Diese Website verwendet die Google Fonts <em>Urbanist</em> und
             <em> Playfair Display</em>. Schriftarten werden über die

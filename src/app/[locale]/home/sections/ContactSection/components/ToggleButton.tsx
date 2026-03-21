@@ -8,16 +8,19 @@ export default function ToggleButton({ onClick, isActive, label }: ToggleButtonP
         <button
             type="button"
             onClick={onClick}
-            className={`flex items-center gap-2.5 px-4 py-2.5 rounded-xl border text-sm font-medium transition-all duration-200 ${isActive
-                ? "bg-blue-500/15 border-blue-500/50 text-blue-300"
-                : "bg-zinc-800/60 border-white/10 text-zinc-400 hover:border-white/20 hover:text-zinc-300"
-                }`}
+            className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl border text-sm font-medium transition-all duration-200"
+            style={{
+                background: isActive ? "rgba(59,130,246,0.1)" : "var(--bg-surface)",
+                borderColor: isActive ? "rgba(59,130,246,0.4)" : "var(--border)",
+                color: isActive ? "var(--accent-light)" : "var(--text-secondary)",
+            }}
         >
             <span
-                className={`w-4 h-4 rounded flex items-center justify-center border-2 transition-all shrink-0 ${isActive
-                    ? "bg-blue-500 border-blue-500"
-                    : "border-zinc-600"
-                    }`}
+                className="w-4 h-4 rounded flex items-center justify-center border-2 transition-all shrink-0"
+                style={{
+                    background: isActive ? "var(--accent)" : "transparent",
+                    borderColor: isActive ? "var(--accent)" : "var(--border-hover)",
+                }}
             >
                 {isActive && (
                     <svg

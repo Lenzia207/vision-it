@@ -21,10 +21,10 @@ export default function ImprintDE() {
                 <HeaderSimple title="Impressum" />
 
                 {/* Imprint Details */}
-                <div className="space-y-8 text-zinc-300 text-lg leading-relaxed max-w-2xl mx-auto">
+                <div className="space-y-8 text-lg leading-relaxed max-w-2xl mx-auto" style={{ color: "var(--text-secondary)" }}>
 
                     <div className="space-y-1">
-                        <p className="text-xl font-medium text-white">Lena Zyadeh, BSc.</p>
+                        <p className="text-xl font-medium" style={{ color: "var(--text-primary)" }}>Lena Zyadeh, BSc.</p>
                         <p>Softwareentwicklung für Webseiten und Applikationen</p>
                     </div>
 
@@ -36,7 +36,7 @@ export default function ImprintDE() {
 
                     <div className="space-y-1">
                         {/* <p><span className="text-zinc-500">Tel:</span> +43 6765700757</p> */}
-                        <p><span className="text-zinc-500">E-Mail:</span> <a href="mailto:office@vision-it.at" className="text-blue-400 hover:text-blue-300 transition-colors">office@vision-it.at</a></p>
+                        <p><span style={{ color: "var(--text-muted)" }}>E-Mail:</span> <a href="mailto:office@vision-it.at" className="text-blue-600 hover:text-blue-500 transition-colors">office@vision-it.at</a></p>
                     </div>
 
                     <div className="pt-4 space-y-4">
@@ -51,11 +51,11 @@ export default function ImprintDE() {
                         </p> */}
 
                         <p>
-                            <span className="block text-sm text-zinc-500 uppercase tracking-wider mb-1">Gewerbeordnung</span>
+                            <span className="block text-sm uppercase tracking-wider mb-1" style={{ color: "var(--text-muted)" }}>Gewerbeordnung</span>
                             EPU                        </p>
 
                         <p>
-                            <span className="block text-sm text-zinc-500 uppercase tracking-wider mb-1">Aufsichtsbehörde</span>
+                            <span className="block text-sm uppercase tracking-wider mb-1" style={{ color: "var(--text-muted)" }}>Aufsichtsbehörde</span>
                             Bezirkshauptmannschaft Wien
                         </p>
 

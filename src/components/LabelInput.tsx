@@ -15,7 +15,7 @@ export default function LabelInput({
 }) {
   return (
     <div className="space-y-2">
-      <label className="text-sm font-medium text-zinc-400">
+      <label className="text-sm font-medium" style={{ color: "var(--text-secondary)" }}>
         {labelName}
       </label>
       <input
@@ -24,7 +24,7 @@ export default function LabelInput({
         value={formName}
         onChange={onChange}
         required
-        className="w-full px-4 py-3 rounded-xl input-glass text-white placeholder-zinc-600 transition-all focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+        className="w-full px-4 py-3 rounded-xl input-dark transition-all focus:outline-none"
         placeholder={namePlaceholder}
       />
     </div>

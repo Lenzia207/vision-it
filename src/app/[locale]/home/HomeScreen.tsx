@@ -20,6 +20,8 @@ export default function HomeScreen({ data, locale }: HomeScreenProps) {
         titleLine1={data.hero_section.title_line1}
         description={data.hero_section.description}
         btnText={data.hero_section.btn_text}
+                viewMore={data.hero_section.view_more}
+
       />
 
       {/* Services Section */}
@@ -28,6 +30,7 @@ export default function HomeScreen({ data, locale }: HomeScreenProps) {
         description={data.service_section.description}
         services={data.service_section.services}
         btnText={data.service_section.btnText}
+
       />
 
       {/* <PricePackages

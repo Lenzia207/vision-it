@@ -114,7 +114,7 @@ export default function BriefingFormularView({
 
                 {/* ── Section 1 · Project Type ── */}
                 <SectionCard title={data.section1.title}>
-                    <p className="text-sm text-zinc-400">{data.section1.subtitle}</p>
+                    <p className="text-sm" style={{ color: "var(--text-secondary)" }}>{data.section1.subtitle}</p>
                     <ChecklistGroup
                         options={data.section1.options}
                         groupValues={f.projectTypes}
@@ -210,7 +210,7 @@ export default function BriefingFormularView({
                         onNestedCheck={makeNestedCheck("legal")}
                         onTextChange={onTextChange}
                     />
-                    <p className="text-xs text-zinc-500 italic mt-2">{data.section8.note}</p>
+                    <p className="text-xs italic mt-2" style={{ color: "var(--text-muted)" }}>{data.section8.note}</p>
                 </SectionCard>
 
       
@@ -282,16 +282,17 @@ export default function BriefingFormularView({
                 </SectionCard>
 
                 {/* ── Privacy + Submit ── */}
-                <div className="bg-zinc-900/50 border border-white/5 rounded-2xl p-6 md:p-8 space-y-6">
+                <div className="glass-card rounded-2xl p-6 md:p-8 space-y-6">
                     <label className="flex items-start gap-3 cursor-pointer">
                         <input
                             type="checkbox"
                             checked={f.privacyAccepted}
                             onChange={e => onBoolCheck("privacyAccepted", e.target.checked)}
                             required
-                            className="mt-0.5 w-4 h-4 rounded bg-zinc-800 border-zinc-600 text-blue-500 focus:ring-blue-500/50 focus:ring-2 shrink-0"
+                            className="mt-0.5 w-4 h-4 rounded shrink-0 focus:ring-2 focus:ring-(--ring)"
+                            style={{ background: "var(--bg-surface)", borderColor: "var(--border)", accentColor: "var(--accent)" }}
                         />
-                        <span className="text-sm text-zinc-400">{data.privacyLabel}</span>
+                        <span className="text-sm" style={{ color: "var(--text-secondary)" }}>{data.privacyLabel}</span>
                     </label>
 
                     {submitStatus && (
@@ -308,7 +309,7 @@ export default function BriefingFormularView({
                     <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-full flex items-center justify-center gap-2 px-8 py-3.5 bg-blue-600 hover:bg-blue-500 disabled:opacity-60 disabled:cursor-not-allowed text-white font-medium rounded-xl transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-blue-500/20"
+                        className="w-full flex items-center justify-center gap-2 px-8 py-3.5 bg-blue-600 hover:bg-blue-500 disabled:opacity-60 disabled:cursor-not-allowed text-white font-medium rounded-xl transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-blue-600/15"
                     >
                         {isSubmitting ? (
                             <span className="flex items-center gap-2">

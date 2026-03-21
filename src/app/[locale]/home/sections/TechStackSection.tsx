@@ -19,12 +19,14 @@ function StackBubble({ stack }: { stack: TechStackSectionType["stacks"][0] }) {
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Main Bubble */}
-      <div className={`relative z-20 w-full h-full rounded-full bg-zinc-900 border border-white/10 flex items-center justify-center shadow-2xl shadow-black/50 transition-all duration-500 ${isHovered ? 'scale-110 border-blue-500/30 shadow-blue-500/20' : ''}`}>
+      <div className={`relative z-20 w-full h-full rounded-full glass-elevated flex items-center justify-center transition-all duration-500 ${isHovered ? 'scale-110' : ''}`}
+        style={{ boxShadow: isHovered ? '0 0 40px var(--accent-glow)' : undefined }}
+      >
         <div className="text-center">
-          <span className="block text-2xl font-bold text-white mb-1">
+          <span className="block text-2xl font-bold mb-1" style={{ color: "var(--text-primary)" }}>
             {stack.category}
           </span>
-          <span className="text-xs text-zinc-500 uppercase tracking-wider">
+          <span className="text-xs uppercase tracking-wider" style={{ color: "var(--text-muted)" }}>
             Stack
           </span>
         </div>
@@ -35,12 +37,11 @@ function StackBubble({ stack }: { stack: TechStackSectionType["stacks"][0] }) {
         {stack.items.map((item, index) => {
           const totalItems = stack.items.length;
           const angleStep = 360 / totalItems;
-          const angle = index * angleStep - 10; // Start from top
+          const angle = index * angleStep - 10;
           const radian = (angle * Math.PI) / 180;
 
-          // Radii
-          const initialRadius = 100; // Barely visible
-          const expandedRadius = 140; // Move out
+          const initialRadius = 100;
+          const expandedRadius = 140;
 
           const x = Math.cos(radian) * expandedRadius;
           const y = Math.sin(radian) * expandedRadius;
@@ -51,8 +52,9 @@ function StackBubble({ stack }: { stack: TechStackSectionType["stacks"][0] }) {
           return (
             <div
               key={item}
-              className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-500 cubic-bezier(0.34, 1.56, 0.64, 1) ${isHovered ? "scale-[0.9] md:scale-[1.2]" : "scale-[0.65] md:scale-[0.8]"
-                }`}
+              className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-500 cubic-bezier(0.34, 1.56, 0.64, 1) ${
+                isHovered ? "scale-[0.9] md:scale-[1.2]" : "scale-[0.65] md:scale-[0.8]"
+              }`}
               style={{
                 transform: isHovered
                   ? `translate(calc(0% + ${x}px), calc(0% + ${y}px))`
@@ -62,9 +64,11 @@ function StackBubble({ stack }: { stack: TechStackSectionType["stacks"][0] }) {
               }}
             >
               <div
-                className={`px-4 py-2 rounded-full bg-zinc-900/90 border border-white/10 text-sm text-zinc-300 whitespace-nowrap shadow-xl backdrop-blur-md ${!isHovered ? "animate-subtle-shake" : ""
-                  }`}
+                className={`px-4 py-2 rounded-full text-sm whitespace-nowrap backdrop-blur-md ${!isHovered ? "animate-subtle-shake" : ""}`}
                 style={{
+                  background: "var(--bg-surface)",
+                  border: "1px solid var(--border)",
+                  color: "var(--text-secondary)",
                   animationDelay: `${index * 0.1}s`,
                   animationDuration: `${3 + (index % 3)}s`,
                 }}
@@ -77,7 +81,9 @@ function StackBubble({ stack }: { stack: TechStackSectionType["stacks"][0] }) {
       </div>
 
       {/* Decorative background glow */}
-      <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-blue-400/20 rounded-full blur-3xl -z-10 transition-colors duration-500 ${isHovered ? 'bg-blue-500/30' : ''}`}></div>
+      <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full blur-3xl -z-10 transition-colors duration-500`}
+        style={{ background: isHovered ? 'rgba(59,130,246,0.15)' : 'rgba(59,130,246,0.08)' }}
+      />
     </div>
   );
 }

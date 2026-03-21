@@ -16,9 +16,10 @@ export default function CheckItem({
                     type="checkbox"
                     checked={checked}
                     onChange={e => onChange(e.target.checked)}
-                    className="mt-0.5 w-4 h-4 rounded bg-zinc-800 border-zinc-600 text-blue-500 focus:ring-blue-500/50 focus:ring-2 shrink-0"
+                    className="mt-0.5 w-4 h-4 rounded shrink-0 focus:ring-2 focus:ring-(--ring)"
+                    style={{ background: "var(--bg-surface)", borderColor: "var(--border)", accentColor: "var(--accent)" }}
                 />
-                <span className="text-sm text-zinc-300 group-hover:text-white transition-colors leading-snug">{label}</span>
+                <span className="text-sm text-(--text-secondary) group-hover:text-(--text-primary) transition-colors leading-snug">{label}</span>
             </label>
             {checked && children && <div className="ml-7">{children}</div>}
         </div>

@@ -1,4 +1,5 @@
-import TitleHeader from "@/components/TitleHeader";
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 
 interface AboutMeSectionProps {
@@ -18,48 +19,97 @@ export default function AboutMeSection({
   fullname,
   social_media,
 }: AboutMeSectionProps) {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyEmail = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigator.clipboard.writeText("office@vision-it.at");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1000);
+  };
+
   return (
     <section
       id="about"
       className="relative section-padding"
-      style={{ borderTop: "1px solid var(--border)" }}
+      style={{ borderTop: "1px solid var(--border)", background: "var(--bg-deep)" }}
     >
-      <div className="max-w-6xl mx-auto px-6 text-center reveal-on-scroll">
-        <TitleHeader title={title} />
+      <div className="max-w-6xl mx-auto px-6 reveal-on-scroll">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+          
+          {/* Left Column (Text & Contact) */}
+          <div className="flex flex-col text-left h-full">
+            <h2 
+              className="text-4xl md:text-5xl lg:text-6xl font-serif uppercase tracking-widest mb-6" 
+              style={{ color: "var(--text-primary)" }}
+            >
+              {fullname}
+            </h2>
+            
+            <h3 
+              className="text-2xl md:text-3xl font-serif mb-8 leading-snug" 
+              style={{ color: "var(--text-primary)" }}
+            >
+              {title}
+            </h3>
 
-        <div className="flex flex-col items-center gap-10">
-          {/* Avatar with dark glow */}
-          <div className="relative flex flex-col items-center mb-8 group cursor-pointer">
-            <div className="absolute -inset-1 rounded-full blur-3xl opacity-30 transition duration-500 group-hover:opacity-50" style={{ background: "linear-gradient(to right, var(--accent), rgba(99,102,241,0.6))" }}></div>
-            <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden shadow-xl flex items-center justify-center" style={{ border: "2px solid var(--border-hover)", background: "var(--bg-card)" }}>
-              <Image
-                src="/images/about-me.jpg"
-                alt="Profile Image"
-                width={160}
-                height={160}
-                className="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-700"
-              />
+            <p 
+              className="text-base md:text-lg leading-relaxed whitespace-pre-line mb-16" 
+              style={{ color: "var(--text-secondary)" }}
+            >
+              {description}
+            </p>
+
+            <div className="mt-auto">
+              {/* <p 
+                className="text-xl font-serif mb-8" 
+                style={{ color: "var(--text-primary)" }}
+              >
+                Stay connected and let the good work begin.
+              </p> */}
+              
+              <button
+                onClick={handleCopyEmail}
+                className="inline-flex items-center justify-center bg-white font-medium px-8 py-4 mb-6 hover:bg-gray-200 transition-colors cursor-pointer rounded-lg"
+                style={{ color: "#000" }}
+              >
+                {copied ? "Copied to clipboard!" : "office@vision-it.at"}
+              </button>
+              
+              {/* Social links */}
+              <div className="flex flex-row gap-6">
+                {social_media.map(({ name, icon, url }, index) => (
+                  <a
+                    href={url}
+                    key={index}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group"
+                    title={name}
+                  >
+                    <Image 
+                      src={icon} 
+                      alt={name} 
+                      width={24} 
+                      height={24} 
+                      className="brightness-0 invert opacity-70 group-hover:opacity-100 transition-opacity" 
+                    />
+                  </a>
+                ))}
+              </div>
             </div>
-            <div className="text-2xl lg:text-4xl mt-4" style={{ color: "var(--text-primary)" }}>{fullname}</div>
           </div>
 
-          <p className="text-lg lg:text-xl whitespace-pre-line max-w-3xl" style={{ color: "var(--text-secondary)" }}>{description}</p>
-
-          {/* Social links */}
-          <div className="flex flex-row gap-4 mt-4">
-            {social_media.map(({ name, icon, url }, index) => (
-              <a
-                href={url}
-                key={index}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium rounded-lg transition-all duration-200 hover:scale-105"
-                style={{ background: "var(--bg-surface)", border: "1px solid var(--border)", color: "var(--text-secondary)" }}
-              >
-                {name}
-                <Image src={icon} alt={name} width={16} height={16} className="invert opacity-70" />
-              </a>
-            ))}
+          {/* Right Column (Image) */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-md aspect-3/4 overflow-hidden">
+              <Image
+                src="/images/lena-zy-about-me.jpg"
+                alt={fullname}
+                fill
+                className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -7,6 +7,7 @@ import { FormEvent } from "react";
 import ServiceSection from "./components/ServiceSection";
 import PackageSection from "./components/PackageSection";
 import ToggleButton from "./components/ToggleButton";
+import TitleHeader from "@/components/TitleHeader";
 
 interface ContactViewProps {
     title: string;
@@ -97,22 +98,14 @@ export default function ContactView({ title,
         className="relative section-padding"
         style={{ borderTop: "1px solid var(--border)" }}
     >
-        <div className="absolute inset-0 pointer-events-none">
+        {/* <div className="absolute inset-0 pointer-events-none">
           <div className="glow-blue" style={{ position: "absolute", bottom: 0, right: "-10%" }} />
-        </div>
+        </div> */}
 
-        <div className="max-w-6xl mx-auto px-6 reveal-on-scroll">
-            <div className="text-center mb-12">
-                <h2 className="font-serif text-4xl md:text-5xl font-medium tracking-tight mb-4" style={{ color: "var(--text-primary)" }}>
-                    {title}
-                </h2>
-                <div className="accent-line mx-auto mb-8"></div>
-                <p className="text-lg whitespace-pre-line max-w-2xl mx-auto" style={{ color: "var(--text-secondary)" }}>
-                    {description}
-                </p>
-            </div>
+        <TitleHeader title={title} description={description} />
 
-            <div className="glass-elevated rounded-3xl p-8 md:p-10">
+        <div className="max-w-7xl mx-auto px-6 reveal-on-scroll">
+            <div className="glass-elevated rounded-sm p-8 md:p-10">
                 <h3 className="text-xl font-medium mb-8" style={{ color: "var(--text-primary)" }}>{btn_text}</h3>
 
                 {submitStatusType && (

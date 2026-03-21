@@ -33,7 +33,7 @@
     "view_more": "Meine Referenzen"
   },
   "service_section": {
-    "title": "Was ich mache",
+    "title": "Wie ich helfen kann",
     "description": "Gute Entwicklung beginnt vor der ersten Codezeile. Mit meinem entsprechenden Tech-Stack entwickle ich digitale Produkte mit durchdachten Konzepten, sauberer Architektur und wartbarem Code, der auch langfristig erweiterbar bleibt.",
     "services": [
       {
@@ -263,8 +263,7 @@
   },
   "contact_section": {
     "title": "Lass uns zusammenarbeiten.",
-    "description": "Du hast ein Projekt, eine Idee oder einfach eine Frage? Ich freue mich auf deine Nachricht – für ein kostenloses Erstgespräch, online oder bei einem Kaffee in Wien.",
-    "nameLabel": "Name*",
+"description": "Lass uns deine Ideen zum Leben erwecken!\nSchreib mir gerne für ein kostenloses Gespräch. Egal ob online oder bei einem Kaffee vor Ort. Wir schauen gemeinsam, wie dein Projekt Gestalt annimmt und welche Schritte dich deinem Ziel näherbringen.",    "nameLabel": "Name*",
     "namePlaceholder": "Vollständiger Name",
     "companyLabel": "Firma",
     "companyPlaceholder": "Dein Unternehmen",

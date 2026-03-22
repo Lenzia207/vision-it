@@ -2,7 +2,9 @@
 
 import { usePathname, useRouter } from "next/navigation";
 import { HomePageData } from "@/app/[locale]/home/sections/data/types/home-types";
-import { useState, useEffect, useCallback, useRef } from "react";import { checkSectionLocation, createScrollVisibilityHandler, setItemActive } from "./AppNavigation/navigation-service";
+import { useState, useEffect, useCallback } from "react";
+import { checkSectionLocation, navigate } from "./navigation-service";
+
 interface BottomNavigationProps {
   data: HomePageData;
   locale: string;
@@ -11,19 +13,14 @@ interface BottomNavigationProps {
 export default function BottomNavigation({ data, locale }: BottomNavigationProps) {
   const pathname = usePathname();
   const router = useRouter();
-  const [visible, setVisible] = useState(false);
- 
+  const [visible, setVisible] = useState(true);
+  const [lastY, setLastY] = useState(0);
   const [activeSection, setActiveSection] = useState<string>("");
   const isHomePage = pathname === `/${locale}` || pathname === `/${locale}/`;
 
   const navigateToSection = useCallback(
     (sectionId: string) => {
-      if (isHomePage) {
-        document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth", block: "start" });
-      } else {
-        sessionStorage.setItem("scrollTarget", sectionId);
-        router.push(`/${locale}`);
-      }
+      navigate(sectionId, locale, isHomePage);
     },
     [isHomePage, router, locale]
   );
@@ -32,9 +29,37 @@ export default function BottomNavigation({ data, locale }: BottomNavigationProps
   useEffect(() => {
     checkSectionLocation(isHomePage);
   }, [isHomePage]);
-  useEffect(() => createScrollVisibilityHandler(setVisible), []);
-  useEffect(() => setItemActive(data, setActiveSection), [data.main_navigation]);
 
+  useEffect(() => {
+    const onScroll = () => {
+      const y = window.scrollY;
+      setVisible(y < lastY || y < 80);
+      setLastY(y);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [lastY]);
+
+  useEffect(() => {
+    const ids = data.main_navigation
+      .map((item) => item.pageId.replace("#", ""))
+      .filter(Boolean);
+
+    const getActive = () => {
+      const threshold = window.innerHeight * 0.4;
+      let current = "";
+      for (const id of ids) {
+        const el = document.getElementById(id);
+        if (!el) continue;
+        if (el.getBoundingClientRect().top <= threshold) current = id;
+      }
+      setActiveSection(current);
+    };
+
+    window.addEventListener("scroll", getActive, { passive: true });
+    getActive();
+    return () => window.removeEventListener("scroll", getActive);
+  }, [data.main_navigation]);
 
   return (
     <div

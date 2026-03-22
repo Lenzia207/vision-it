@@ -1,10 +1,10 @@
 "use client";
 
-import { Link } from "@/app/i18n/routing";
-import { usePathname } from "next/navigation";
-import { SwitchLanguage } from "./LanguageSwitcher";
+import { usePathname, useRouter } from "next/navigation";
+import { SwitchLanguage } from "../LanguageSwitcher";
 import { HomePageData } from "@/app/[locale]/home/sections/data/types/home-types";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
+import { checkSectionLocation, createScrollVisibilityHandler, navigate, setItemActive } from "./navigation-service";
 
 interface MainNavigationProps {
   data: HomePageData;
@@ -13,35 +13,24 @@ interface MainNavigationProps {
 
 export default function MainNavigation({ data, locale }: MainNavigationProps) {
   const pathname = usePathname();
+  const router = useRouter();
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("");
+  const isHomePage = pathname === `/${locale}` || pathname === `/${locale}/`;
 
+  const navigateToSection = useCallback(
+    (sectionId: string) => {
+      navigate(sectionId, locale, isHomePage);
+    },
+    [isHomePage, router, locale]
+  );
+
+  // On home page load, check if we need to scroll to a section (cross-page nav)
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  useEffect(() => {
-    const ids = data.main_navigation
-      .map((item) => item.pageId.replace("#", ""))
-      .filter(Boolean);
-
-    const getActive = () => {
-      const threshold = window.innerHeight * 0.4;
-      let current = "";
-      for (const id of ids) {
-        const el = document.getElementById(id);
-        if (!el) continue;
-        if (el.getBoundingClientRect().top <= threshold) current = id;
-      }
-      setActiveSection(current);
-    };
-
-    window.addEventListener("scroll", getActive, { passive: true });
-    getActive();
-    return () => window.removeEventListener("scroll", getActive);
-  }, [data.main_navigation]);
+    checkSectionLocation(isHomePage);
+  }, [isHomePage]);
+  useEffect(() => createScrollVisibilityHandler(setScrolled), []);
+  useEffect(() => setItemActive(data, setActiveSection), [data.main_navigation]);
 
   return (
     <>
@@ -59,30 +48,26 @@ export default function MainNavigation({ data, locale }: MainNavigationProps) {
 
       {/* Floating Pill Nav — desktop only (mobile uses BottomNavigation) */}
       <nav
-        className={`hidden md:flex fixed z-40 top-11 left-1/2 -translate-x-1/2 items-center gap-1 p-1.5 mt-4 rounded-full bg-[rgba(26,29,39,0.75)] border border-white/10 backdrop-blur-xl transition-all duration-300 ${
-          scrolled ? "shadow-[0_8px_32px_rgba(0,0,0,0.4)]" : "shadow-none"
-        }`}
+        className={`hidden md:flex fixed z-40 top-11 left-1/2 -translate-x-1/2 items-center gap-1 p-1.5 mt-4 rounded-full bg-[rgba(26,29,39,0.75)] border border-white/10 backdrop-blur-xl transition-all duration-300 ${scrolled ? "shadow-[0_8px_32px_rgba(0,0,0,0.4)]" : "shadow-none"
+          }`}
       >
         {data.main_navigation.map((item, index) => {
-          const isHomePage = pathname === "/";
-          const linkHref = isHomePage ? item.pageId : `${item.page}${item.pageId}`;
           const isFirst = index === 0;
           const sectionId = item.pageId.replace("#", "");
           const isActive = sectionId === activeSection || (!activeSection && isFirst);
 
           return (
-            <Link
+            <button
               key={index}
-              href={linkHref}
-              locale={locale}
-              className={`text-sm font-medium rounded-full px-4 py-2 transition-all duration-300 ${
-                isActive
+              type="button"
+              className={`text-sm font-medium rounded-full px-4 py-2 transition-all duration-300 ${isActive
                   ? "text-white bg-(--accent-purple) shadow-[0_0_16px_rgba(139,92,246,0.4)]"
                   : "text-(--text-300) bg-transparent hover:text-(--text-100) hover:bg-(--bg-surface-3)"
-              }`}
+                }`}
+              onClick={() => navigateToSection(sectionId)}
             >
               {item.name}
-            </Link>
+            </button>
           );
         })}
       </nav>

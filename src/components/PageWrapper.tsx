@@ -1,8 +1,8 @@
-import MainNavigation from "./MainNavigation";
+import MainNavigation from "./AppNavigation/MainNavigation";
 import { ReactNode } from "react";
 import Footer from "../app/[locale]/home/sections/Footer";
 import ScrollRevealObserver from "@/components/ScrollRevealObserver";
-import BottomNavigation from "@/components/BottomNavigation";
+import BottomNavigation from "@/components/AppNavigation/BottomNavigation";
 import fetchHomePageData from "../app/[locale]/home/sections/data/home-page-data";
 
 interface PageWrapperProps {

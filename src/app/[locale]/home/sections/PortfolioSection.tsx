@@ -10,7 +10,7 @@ interface PortfolioSectionProps {
 }
 
 function getProjectType(tags: string[]): string {
-  if (tags.includes("PWA")) return "PWA App";
+  if (tags.includes("PWA")) return "PWA und mobile App";
   if (tags.includes("Flutter") || tags.includes("Dart")) return "Mobile App";
   return "Web Application";
 }
@@ -27,13 +27,7 @@ export default function PortfolioSection({ title, projects }: PortfolioSectionPr
       <div className="max-w-6xl mx-auto px-6">
         <TitleHeader title={title} tag="[ WORK_LOG ]" />
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(350px, 1fr))",
-            gap: "2rem",
-          }}
-        >
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(350px,1fr))] gap-8">
           {projects.map((project, index) => {
             const status = getProjectStatus(project.title);
             const type = getProjectType(project.tags);
@@ -50,8 +44,7 @@ export default function PortfolioSection({ title, projects }: PortfolioSectionPr
                     src={project.image || "/images/placeholder.png"}
                     alt={project.title}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    style={{ filter: "brightness(0.8) contrast(1.1)" }}
+                    className="object-cover transition-transform duration-500 group-hover:scale-105 brightness-80 contrast-110"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                   <div className="project-img-overlay" />
@@ -60,16 +53,14 @@ export default function PortfolioSection({ title, projects }: PortfolioSectionPr
                 <div className="project-content">
                   <div className="project-meta-row">
                     <span className="label-mono">{type}</span>
-                    <span
-                      className="label-mono"
-                      style={status.cyan ? { color: "var(--accent-cyan)" } : {}}
+                    {/* <span
+                    className={`label-mono ${status.cyan ? "text-(--accent-cyan)" : ""}`}
                     >
                       {status.label}
-                    </span>
+                    </span> */}
                   </div>
 
                   <h3 className="project-title">{project.title}</h3>
-
                   <div className="project-footer">
                     {project.tags.slice(0, 4).map((tag, tagIndex) => (
                       <span key={tagIndex} className="tag-micro">
@@ -77,6 +68,9 @@ export default function PortfolioSection({ title, projects }: PortfolioSectionPr
                       </span>
                     ))}
                   </div>
+                  <h4 className="project-subtitle">{project.description}</h4>
+
+                  
                 </div>
               </a>
             );

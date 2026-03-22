@@ -51,16 +51,17 @@ export default function HomeScreen({ data }: HomeScreenProps) {
       <section id="about" className="section-padding">
         <div className="max-w-6xl mx-auto px-6">
           <div className="dashboard-layout">
-            <TechStackSection
-              title={data.tech_stack_section.title}
-              stacks={data.tech_stack_section.stacks}
-            />
-            <AboutMeSection
+              <AboutMeSection
               title={data.about_me_section.title}
               description={data.about_me_section.description}
               social_media={data.about_me_section.social_media}
               fullname={data.about_me_section.name}
             />
+            <TechStackSection
+              title={data.tech_stack_section.title}
+              stacks={data.tech_stack_section.stacks}
+            />
+          
           </div>
         </div>
       </section>

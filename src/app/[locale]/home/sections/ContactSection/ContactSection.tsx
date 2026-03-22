@@ -22,7 +22,7 @@ export default function ContactSection({
         <span className="section-tag">[ INIT_SEQ ]</span>
 
         <h2
-          className="text-display-1"
+          className="lg:text-display-1 text-display-2 "
           style={{
             fontSize: "clamp(2.5rem, 5vw, 4rem)",
             marginBottom: "1rem",
@@ -34,12 +34,13 @@ export default function ContactSection({
         </h2>
 
         <p
+        className="max-w-7xl"
           style={{
             fontSize: "1.125rem",
             color: "var(--text-300)",
             marginBottom: "2.5rem",
             textAlign: "center",
-            maxWidth: "500px",
+         
           }}
         >
           {description}
@@ -65,12 +66,6 @@ export default function ContactSection({
           {btn_text}
         </a>
 
-        <div
-          className="label-mono"
-          style={{ marginTop: "6rem", opacity: 0.5 }}
-        >
-          © 2026 LENA ZYADEH // ALL SYSTEMS NOMINAL
-        </div>
       </div>
     </footer>
   );

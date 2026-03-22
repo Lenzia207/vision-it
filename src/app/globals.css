@@ -12,6 +12,12 @@
    ═══════════════════════════════════════════════════════════════════════ */
 
 :root {
+  /* Font variable fallbacks — Next.js injects the real values on <body>;
+     these ensure var(--font-space-mono) always resolves at :root level
+     so @theme --font-mono and all plain CSS rules work correctly. */
+  --font-jakarta:    'Plus Jakarta Sans', sans-serif;
+  --font-space-mono: 'Space Mono', monospace;
+
   --bg-base:      #0B0C10;
   --bg-surface-1: #12141A;
   --bg-surface-2: #1A1D27;
@@ -67,9 +73,14 @@ body {
   background: var(--bg-base);
   color: var(--text-200);
   font-family: var(--font-sans);
+  --font-mono: var(--font-space-mono);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+}
+
+p {
+  font-family:  var(--font-sans);
 }
 
 /* ─── Typography Utilities ──────────────────────────────────────────── */

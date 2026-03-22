@@ -1,5 +1,5 @@
 module.exports = {
-    // Twailwind colors that are fecthed dynamically from the API and used in the UI. We need to safelist them to prevent purging during production build. 
+    // Tailwind colors fetched dynamically and used in the UI — safelisted to prevent purging
     safelist: [
         'text-blue-400',
         'text-pink-400',
@@ -9,15 +9,12 @@ module.exports = {
         'text-zinc-400',
     ],
 
-    theme:{
-
+    theme: {
         extend: {
             fontFamily: {
-                sans: ['var(--font-urbanist)', 'sans-serif'],
-                serif: ['var(--font-playfair)', 'serif'],
-                prompt: ['var(--font-prompt)', 'sans-serif' ],
+                sans: ['var(--font-jakarta)', 'sans-serif'],
+                mono: ['var(--font-space-mono)', 'monospace'],
             },
-        },  
-    }
-
+        },
+    },
 }

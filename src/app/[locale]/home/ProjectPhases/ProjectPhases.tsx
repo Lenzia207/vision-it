@@ -76,7 +76,7 @@ export default function ProjectPhases({ title, phases }: ProjectPhasesProps) {
           <p className="label-mono text-(--accent-cyan) mb-3">
             {PHASE_LABELS[active]} // {phases[active]?.name}
           </p>
-          <p className="font-mono text-lg text-(--text-300) max-w-xl mx-auto leading-relaxed">
+          <p className="text-lg text-(--text-300) max-w-xl mx-auto leading-relaxed">
             {phases[active]?.description}
             {""}
             {/* {phases[active]?.details && (

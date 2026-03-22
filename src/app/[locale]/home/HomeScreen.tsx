@@ -48,6 +48,9 @@ export default function HomeScreen({ data }: HomeScreenProps) {
       />
 
       {/* Dashboard: Tech Stack + About Me */}
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="h-px bg-linear-to-r from-transparent via-(--border-light) to-transparent" />
+      </div>
       <section id="about" className="section-padding">
         <div className="max-w-6xl mx-auto px-6">
           <div className="dashboard-layout">

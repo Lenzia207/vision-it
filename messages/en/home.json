@@ -48,7 +48,7 @@
       },
        {
         "title": "Design to Code",
-        "description": "Have a finished design or Figma file? I translate it into a fast, responsive website with precision — component-based, well-structured, and without cutting corners on quality.",
+        "description": "Have a finished design or Figma file? I translate it into a fast, responsive website or mobile app with precision.",
         "icon_images": {
           "icon": "Layers",
           "icon_color": "#f472b6",
@@ -57,7 +57,7 @@
       },
       {
         "title": "Custom Software Development from Scratch",
-        "description": "No digital product yet, but a clear vision? I build websites and mobile apps end to end — design, development, and deployment included. Clean architecture, maintainable code, and a user experience that feels natural.",
+        "description": "No digital product yet, but a clear vision? I build websites and mobile apps from design and development to go-live. With clean architecture, maintainable and extendable code, and a user experience that feels natural.",
         "icon_images": {
           "icon": "Code2",
           "icon_color": "#60a5fa",
@@ -67,7 +67,7 @@
      
       {
         "title": "Feature Development & Integration",
-        "description": "New functionality for an existing codebase? I integrate into ongoing projects and deliver production-ready features — from forms, APIs, and authentication to dashboards, payment systems, and custom interactive elements.",
+        "description": "New features for an existing codebase? I integrate into ongoing projects and deliver production-ready features — from forms, APIs, and authentication to dashboards, payment systems, and interactive animations.",
         "icon_images": {
           "icon": "MousePointerClick",
           "icon_color": "#22d3ee",
@@ -76,7 +76,7 @@
       },
       {
         "title": "Website and App Redesign",
-        "description": "An outdated website or app costs more than it delivers. I transform existing projects into modern, high-performance experiences — improved load times, clearer structure, and a visual identity that still lands today.",
+        "description": "An outdated website or app costs more than it brings in. I revamp existing projects into individual, stylish designs that reflect your brand.",
         "icon_images": {
           "icon": "PenTool",
           "icon_color": "#fb923c",

@@ -115,7 +115,7 @@ export default function ServiceCard({ services }: ServiceCardProps) {
                 <h3 className="text-xl font-bold text-(--text-100)">
                   {service.title}
                 </h3>
-                <p className="text-sm leading-relaxed text-(--text-300)">
+                <p className="text-md leading-relaxed text-(--text-300)">
                   {service.description}
                 </p>
               </div>

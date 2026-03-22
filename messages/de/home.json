@@ -47,7 +47,7 @@
       },
         {
         "title": "Design zu Code",
-        "description": "Ein fertiges Design oder Figma-File ist vorhanden? Ich setze es pixel-genau in eine schnelle, responsive Website um – komponentenbasiert, strukturiert und ohne Abstriche bei der Qualität.",
+        "description": "Ein fertiges Design oder Figma-File ist vorhanden? Ich setze es pixel-genau in eine schnelle, responsive Webanwendung oder mobile App um.",
         "icon_images": {
           "icon": "Layers",
           "icon_color": "#f472b6",
@@ -56,7 +56,7 @@
       },
       {
         "title": "Individuelle Softwareentwicklung von Grund auf",
-        "description": "Noch kein digitales Produkt, aber eine klare Vorstellung? Ich entwickle Websites und mobile Apps von A bis Z – Design, Entwicklung und Deployment inklusive. Saubere Architektur, wartbarer Code und eine Nutzererfahrung, die wirklich funktioniert.",
+        "description": "Noch kein digitales Produkt, aber eine klare Vorstellung? Ich entwickle Websites und mobile Apps von Design und Entwicklung bis zum Go-Live. Mit sauberer Architektur, wartbarem und erweiterbarem Code und einer Nutzererfahrung, die sich natürlich anfühlt.",
         "icon_images": {
           "icon": "Code2",
           "icon_color": "#60a5fa",
@@ -66,7 +66,7 @@
     
       {
         "title": "Feature-Entwicklung & Integrationen",
-        "description": "Neue Funktionen für eine bestehende Codebase? Ich integriere mich in laufende Projekte und liefere Features, die produktionsreif sind – von Formularen, APIs und Authentifizierung bis hin zu Dashboards, Zahlungssystemen und interaktiven Animationen.",
+        "description": "Neue Funktionen für eine bestehende Codebase? Ich integriere mich in laufende Projekte und liefere Features, die produktionsreif sind. Beginnend bei Formularen, APIs und Authentifizierung bis hin zu Dashboards, Zahlungssystemen und interaktiven Animationen.",
         "icon_images": {
           "icon": "MousePointerClick",
           "icon_color": "#22d3ee",
@@ -75,7 +75,7 @@
       },
       {
         "title": "Website und App Redesign",
-        "description": "Eine veraltete Website oder App kostet mehr als sie bringt. Ich überarbeite bestehende Projekte in moderne, performante Erlebnisse – mit verbesserter Ladezeit, klarer Struktur und einer visuellen Identität, die heute noch überzeugt.",
+        "description": "Eine veraltete Website oder App kostet mehr als sie bringt. Ich überarbeite bestehende Projekte in individuelle, stilvolle Designs um, die deiner Marke wieder gerecht werden.",
         "icon_images": {
           "icon": "PenTool",
           "icon_color": "#fb923c",

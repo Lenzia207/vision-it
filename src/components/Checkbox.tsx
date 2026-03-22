@@ -15,13 +15,13 @@ export default function Checkbox({
                 checked={privacyAccepted}
                 onChange={onChange}
                 className="mt-1 w-4 h-4 rounded focus:ring-2"
-                style={{ accentColor: "var(--accent)" }}
+                style={{ accentColor: "var(--accent-purple)" }}
                 required
             />
             <label
                 htmlFor="privacy-policy"
                 className="text-sm cursor-pointer"
-                style={{ color: "var(--text-secondary)" }}
+                style={{ color: "var(--accent-purpley)" }}
             >
                 {message}
             </label>

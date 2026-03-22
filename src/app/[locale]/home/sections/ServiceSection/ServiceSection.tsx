@@ -1,6 +1,6 @@
 import TitleHeader from "@/components/TitleHeader";
-import { ServiceSectionType } from "./data/types/home-types";
-import ServiceCard from "./ServiceSection/ServiceCard";
+import { ServiceSectionType } from "../data/types/home-types";
+import ServiceCard from "./ServiceCard";
 import AppButton from "@/components/AppButton";
 
 interface ServiceSectionProps {

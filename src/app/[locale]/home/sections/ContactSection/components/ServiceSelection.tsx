@@ -1,7 +1,7 @@
 
 import type { ServiceSectionType } from "../../data/types/home-types";
 
-interface ServiceSectionProps {
+interface ServiceSelectionProps {
     serviceLabel: string;
     services: ServiceSectionType["services"];
     selectedServices: string[];
@@ -9,7 +9,7 @@ interface ServiceSectionProps {
 
 }
 
-export default function ServiceSection({ serviceLabel, services, selectedServices, toggleService }: ServiceSectionProps) {
+export default function ServiceSelection({ serviceLabel, services, selectedServices, toggleService }: ServiceSelectionProps) {
     return (
         <div className="mt-1 pl-1 space-y-2.5">
            

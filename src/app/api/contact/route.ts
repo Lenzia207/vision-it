@@ -28,9 +28,10 @@ export async function POST(request: Request) {
     privacyAccepted?: unknown;
     interests?: unknown;
     selectedPackage?: unknown;
+    selectedServices?: unknown;
   };
 
-  const { name, company, email, message, locale, privacyAccepted, interests, selectedPackage } = payload;
+  const { name, company, email, message, locale, privacyAccepted, interests, selectedPackage, selectedServices } = payload;
   if (!name || !email || !message || typeof name !== 'string' || typeof email !== 'string' || typeof message !== 'string') {
     return NextResponse.json({ success: false, error: 'Invalid  input' }, { status: 400 });
   }
@@ -73,6 +74,7 @@ export async function POST(request: Request) {
       message,
       interests: Array.isArray(interests) ? interests.filter((i): i is string => typeof i === 'string') : undefined,
       selectedPackage: typeof selectedPackage === 'string' ? selectedPackage : null,
+      selectedServices: Array.isArray(selectedServices) ? selectedServices.filter((s): s is string => typeof s === 'string') : undefined,
     };
     const ownerEmail = getOwnerNotificationEmail(contactData);
     const customerEmail = getCustomerConfirmationEmail(contactData, typeof locale === 'string' ? locale : 'de');

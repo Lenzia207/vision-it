@@ -5,10 +5,11 @@ interface ContactData {
   message: string;
   interests?: string[];
   selectedPackage?: string | null;
+  selectedServices?: string[];
 }
 
 export function getOwnerNotificationEmail(data: ContactData) {
-  const { name, company, email, message, interests, selectedPackage } = data;
+  const { name, company, email, message, interests, selectedPackage, selectedServices } = data;
 
   const interestHtml = interests && interests.length > 0
     ? `<p><strong>Interesse:</strong> ${interests.join(', ')}${
@@ -16,9 +17,17 @@ export function getOwnerNotificationEmail(data: ContactData) {
       }</p>`
     : '';
 
+  const servicesHtml = selectedServices && selectedServices.length > 0
+    ? `<p><strong>Ausgewählte Services:</strong> ${selectedServices.join(', ')}</p>`
+    : '';
+
+  const servicesText = selectedServices && selectedServices.length > 0
+    ? `Ausgewählte Services: ${selectedServices.join(', ')}\n`
+    : '';
+
   return {
     subject: `Nachricht von ${name} über vision-it.at`,
-    text: `Name: ${name}\nCompany: ${company || 'N/A'}\nEmail: ${email}\n${interests?.length ? `Interesse: ${interests.join(', ')}${selectedPackage ? ` → Paket: ${selectedPackage}` : ''}\n` : ''}\nMessage:\n${message}`,
+    text: `Name: ${name}\nCompany: ${company || 'N/A'}\nEmail: ${email}\n${interests?.length ? `Interesse: ${interests.join(', ')}${selectedPackage ? ` → Paket: ${selectedPackage}` : ''}\n` : ''}${servicesText}\nMessage:\n${message}`,
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #2563eb;">Neue Nachricht vom Kontaktformular VisionIT</h2>
@@ -27,6 +36,7 @@ export function getOwnerNotificationEmail(data: ContactData) {
           <p><strong>Company:</strong> ${company || 'N/A'}</p>
           <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
           ${interestHtml}
+          ${servicesHtml}
         </div>
         <div style="margin-top: 20px;">
           <h3>Nachricht:</h3>

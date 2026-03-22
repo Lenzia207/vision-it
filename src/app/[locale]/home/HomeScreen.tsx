@@ -1,5 +1,5 @@
 import HeroSection from "./sections/HeroSection/HeroSection";
-import ServiceSection from "./sections/ServiceSection";
+import ServiceSection from "./sections/ServiceSection/ServiceSection";
 import PortfolioSection from "./sections/PortfolioSection";
 import TechStackSection from "./sections/TechStackSection";
 import AboutMeSection from "./sections/AboutMeSection";
@@ -12,7 +12,7 @@ interface HomeScreenProps {
   locale: string;
 }
 
-export default function HomeScreen({ data }: HomeScreenProps) {
+export default function HomeScreen({ data, locale }: HomeScreenProps) {
   return (
     <>
       {/* Hero Section */}
@@ -71,9 +71,10 @@ export default function HomeScreen({ data }: HomeScreenProps) {
 
       {/* Contact / Footer */}
       <ContactSection
-        title={data.contact_section.title}
-        description={data.contact_section.description}
-        btn_text={data.contact_section.btn_text}
+        contactData={data.contact_section}
+        services={data.service_section.services}
+        packages={data.price_packages_section.packages}
+        locale={locale}
       />
     </>
   );

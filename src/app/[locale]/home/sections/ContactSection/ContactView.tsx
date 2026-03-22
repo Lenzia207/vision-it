@@ -4,8 +4,7 @@ import { Send } from "lucide-react";
 import { PricePackage } from "../data/types/home-types";
 import type { ServiceSectionType } from "../data/types/home-types";
 import { FormEvent } from "react";
-import ServiceSection from "./components/ServiceSection";
-import PackageSection from "./components/PackageSection";
+import ServiceSelection from "./components/ServiceSelection";
 import ToggleButton from "./components/ToggleButton";
 import TitleHeader from "@/components/TitleHeader";
 
@@ -176,7 +175,7 @@ export default function ContactView({ title,
 
                         {/* Service sub-selection — visible only when Website is checked */}
                         {interests.website && (
-                            <ServiceSection
+                            <ServiceSelection
                                 serviceLabel={serviceLabel}
                                 services={services}
                                 selectedServices={selectedServices}
@@ -222,8 +221,8 @@ export default function ContactView({ title,
                     <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-full py-4 mt-4 text-white font-medium rounded-xl transition-all transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
-                        style={{ background: "var(--accent)", boxShadow: "0 0 24px var(--accent-glow)" }}
+                        className="w-full btn btn-primary py-4 mt-4 text-white font-medium rounded-xl transition-all transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                   
                     >
                         {isSubmitting ? textSending : btn_text}
                         <Send className="w-4 h-4" />

@@ -1,72 +1,132 @@
+"use client";
+
+import { useState, FormEvent } from "react";
+import ContactView from "./ContactView";
+import { ContactSection as ContactSectionType, PricePackage, ServiceSectionType } from "../data/types/home-types";
+
 interface ContactSectionProps {
-  title: string;
-  description: string;
-  btn_text: string;
+  contactData: ContactSectionType;
+  services: ServiceSectionType["services"];
+  packages: PricePackage[];
+  locale: string;
 }
 
-export default function ContactSection({
-  title,
-  description,
-  btn_text,
-}: ContactSectionProps) {
+interface FormData {
+  name: string;
+  company: string;
+  email: string;
+  message: string;
+}
+
+const initialForm: FormData = { name: "", company: "", email: "", message: "" };
+
+export default function ContactSection({ contactData, services, packages, locale }: ContactSectionProps) {
+  const [formData, setFormData] = useState<FormData>(initialForm);
+  const [interests, setInterests] = useState({ website: false, mobileApp: false, general: false });
+  const [selectedPackage, setSelectedPackage] = useState<string | null>(null);
+  const [selectedServices, setSelectedServices] = useState<string[]>([]);
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null);
+  const [submitMessage, setSubmitMessage] = useState("");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const toggleInterest = (key: "website" | "mobileApp" | "general") => {
+    setInterests((prev) => ({ ...prev, [key]: !prev[key] }));
+  };
+
+  const toggleService = (name: string) => {
+    setSelectedServices((prev) =>
+      prev.includes(name) ? prev.filter((s) => s !== name) : [...prev, name]
+    );
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    const activeInterests = Object.entries(interests)
+      .filter(([, v]) => v)
+      .map(([k]) => k);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...formData,
+          locale,
+          privacyAccepted,
+          interests: activeInterests,
+          selectedPackage,
+          selectedServices,
+        }),
+      });
+      const json = await res.json();
+      if (json.success) {
+        setSubmitStatus("success");
+        setSubmitMessage(locale === "de" ? "Danke! Ich melde mich bald bei dir." : "Thanks! I'll get back to you soon.");
+        setFormData(initialForm);
+        setInterests({ website: false, mobileApp: false, general: false });
+        setSelectedPackage(null);
+        setSelectedServices([]);
+        setPrivacyAccepted(false);
+      } else {
+        setSubmitStatus("error");
+        setSubmitMessage(locale === "de" ? "Etwas ist schiefgelaufen. Bitte versuche es erneut." : "Something went wrong. Please try again.");
+      }
+    } catch {
+      setSubmitStatus("error");
+      setSubmitMessage(locale === "de" ? "Etwas ist schiefgelaufen. Bitte versuche es erneut." : "Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
-    <footer id="contact" className="footer-cta">
-      <div
-        className="max-w-6xl mx-auto px-6"
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        <span className="section-tag">[ INIT_SEQ ]</span>
-
-        <h2
-          className="lg:text-display-1 text-display-2 "
-          style={{
-            fontSize: "clamp(2.5rem, 5vw, 4rem)",
-            marginBottom: "1rem",
-            marginTop: "1rem",
-            textAlign: "center",
-          }}
-        >
-          {title}
-        </h2>
-
-        <p
-        className="max-w-7xl"
-          style={{
-            fontSize: "1.125rem",
-            color: "var(--text-300)",
-            marginBottom: "2.5rem",
-            textAlign: "center",
-         
-          }}
-        >
-          {description}
-        </p>
-
-        <a
-          href="mailto:office@vision-it.at"
-          className="btn btn-primary"
-          style={{ padding: "1rem 3rem", fontSize: "1.1rem" }}
-        >
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            style={{ marginRight: "10px" }}
-          >
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-            <polyline points="22,6 12,13 2,6" />
-          </svg>
-          {btn_text}
-        </a>
-
-      </div>
-    </footer>
+    <ContactView
+      title={contactData.title}
+      description={contactData.description}
+      submitStatusType={submitStatus}
+      submitStatusMessage={submitMessage}
+      handleSubmit={handleSubmit}
+      nameLabel={contactData.nameLabel}
+      namePlaceholder={contactData.namePlaceholder}
+      formDataName={formData.name}
+      companyLabel={contactData.companyLabel}
+      companyPlaceholder={contactData.companyPlaceholder}
+      formDataCompany={formData.company}
+      emailLabel={contactData.emailLabel}
+      emailPlaceholder={contactData.emailPlaceholder}
+      formDataEmail={formData.email}
+      messageLabel={contactData.messageLabel}
+      messagePlaceholder={contactData.messagePlaceholder}
+      formDataMessage={formData.message}
+      handleChange={handleChange}
+      isSubmitting={isSubmitting}
+      privacyAccepted={privacyAccepted}
+      setPrivacyAccepted={setPrivacyAccepted}
+      interests={interests}
+      toggleInterest={toggleInterest}
+      selectedPackage={selectedPackage}
+      setSelectedPackage={setSelectedPackage}
+      btn_text={contactData.btn_text}
+      interestLabel={contactData.interestLabel}
+      interestWebsite={contactData.interestWebsite}
+      interestMobileApp={contactData.interestMobileApp}
+      interestGeneral={contactData.interestGeneral}
+      packageLabel={contactData.packageLabel}
+      packages={packages}
+      serviceLabel={contactData.serviceLabel}
+      services={services}
+      selectedServices={selectedServices}
+      toggleService={toggleService}
+      textPrivacyPolicy={locale === "de" ? "Ich akzeptiere die Datenschutzerklärung" : "I accept the privacy policy"}
+      textSending={locale === "de" ? "Wird gesendet..." : "Sending..."}
+    />
   );
 }

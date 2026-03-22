@@ -41,7 +41,7 @@
         "description": "Ein laufendes Projekt und Bedarf nach Unterstützung? Nach einer kurzen Übergabe steige ich ein, arbeite eigenständig und stelle termintreu einen sauberen Pull Request.",
         "icon_images": {
           "icon": "Users",
-          "icon_color": "violet-400",
+          "icon_color": "#a78bfa",
           "icon_animation": "/animations/team-anim.json"
         }
       },
@@ -50,7 +50,7 @@
         "description": "Ein fertiges Design oder Figma-File ist vorhanden? Ich setze es pixel-genau in eine schnelle, responsive Website um – komponentenbasiert, strukturiert und ohne Abstriche bei der Qualität.",
         "icon_images": {
           "icon": "Layers",
-          "icon_color": "pink-400",
+          "icon_color": "#f472b6",
           "icon_animation": "/animations/layer-anim.json"
         }
       },
@@ -59,7 +59,7 @@
         "description": "Noch kein digitales Produkt, aber eine klare Vorstellung? Ich entwickle Websites und mobile Apps von A bis Z – Design, Entwicklung und Deployment inklusive. Saubere Architektur, wartbarer Code und eine Nutzererfahrung, die wirklich funktioniert.",
         "icon_images": {
           "icon": "Code2",
-          "icon_color": "blue-400",
+          "icon_color": "#60a5fa",
           "icon_animation": "/animations/code-anim.json"
         }
       },
@@ -69,7 +69,7 @@
         "description": "Neue Funktionen für eine bestehende Codebase? Ich integriere mich in laufende Projekte und liefere Features, die produktionsreif sind – von Formularen, APIs und Authentifizierung bis hin zu Dashboards, Zahlungssystemen und interaktiven Animationen.",
         "icon_images": {
           "icon": "MousePointerClick",
-          "icon_color": "cyan-400",
+          "icon_color": "#22d3ee",
           "icon_animation": "/animations/click-anim.json"
         }
       },
@@ -78,7 +78,7 @@
         "description": "Eine veraltete Website oder App kostet mehr als sie bringt. Ich überarbeite bestehende Projekte in moderne, performante Erlebnisse – mit verbesserter Ladezeit, klarer Struktur und einer visuellen Identität, die heute noch überzeugt.",
         "icon_images": {
           "icon": "PenTool",
-          "icon_color": "orange-400",
+          "icon_color": "#fb923c",
           "icon_animation": "/animations/pentool-anim.json"
         }
       }

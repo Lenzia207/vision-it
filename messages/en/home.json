@@ -42,7 +42,7 @@
         "description": "An ongoing project and need for support? After a brief handover, I jump in, work independently, and deliver a clean pull request on time.",
         "icon_images": {
           "icon": "Users",
-          "icon_color": "violet-400",
+          "icon_color": "#a78bfa",
           "icon_animation": "/animations/team-anim.json"
         }
       },
@@ -51,7 +51,7 @@
         "description": "Have a finished design or Figma file? I translate it into a fast, responsive website with precision — component-based, well-structured, and without cutting corners on quality.",
         "icon_images": {
           "icon": "Layers",
-          "icon_color": "pink-400",
+          "icon_color": "#f472b6",
           "icon_animation": "/animations/layer-anim.json"
         }
       },
@@ -60,7 +60,7 @@
         "description": "No digital product yet, but a clear vision? I build websites and mobile apps end to end — design, development, and deployment included. Clean architecture, maintainable code, and a user experience that feels natural.",
         "icon_images": {
           "icon": "Code2",
-          "icon_color": "blue-400",
+          "icon_color": "#60a5fa",
           "icon_animation": "/animations/code-anim.json"
         }
       },
@@ -70,7 +70,7 @@
         "description": "New functionality for an existing codebase? I integrate into ongoing projects and deliver production-ready features — from forms, APIs, and authentication to dashboards, payment systems, and custom interactive elements.",
         "icon_images": {
           "icon": "MousePointerClick",
-          "icon_color": "cyan-400",
+          "icon_color": "#22d3ee",
           "icon_animation": "/animations/click-anim.json"
         }
       },
@@ -79,7 +79,7 @@
         "description": "An outdated website or app costs more than it delivers. I transform existing projects into modern, high-performance experiences — improved load times, clearer structure, and a visual identity that still lands today.",
         "icon_images": {
           "icon": "PenTool",
-          "icon_color": "orange-400",
+          "icon_color": "#fb923c",
           "icon_animation": "/animations/pentool-anim.json"
         }
       }

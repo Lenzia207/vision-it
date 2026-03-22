@@ -5,6 +5,7 @@ interface IconLucideProps {
   iconName: string;
   className?: string;
   size?: number;
+  style?: React.CSSProperties;
 }
 
 type LucideIcon = React.ComponentType<
@@ -15,6 +16,7 @@ export default function IconLucide({
   iconName,
   className,
   size,
+  style,
 }: IconLucideProps) {
   // Convert kebab-case or snake_case to PascalCase
   const formatIconName = (name: string): string => {
@@ -35,8 +37,8 @@ export default function IconLucide({
       `Icon "${iconName}" (${formattedName}) not found. Using default icon.`
     );
     const DefaultIcon: LucideIcon = LucideIcons.HelpCircle;
-    return <DefaultIcon className={className} size={size} />;
+    return <DefaultIcon className={className} size={size} style={style} />;
   }
 
-  return <IconComponent className={className} size={size} />;
+  return <IconComponent className={className} size={size} style={style} />;
 }

@@ -31,7 +31,7 @@ export default function HeroSection({
             {/* Status pill */}
             <div className="pill pill-accent animate-enter flex items-center gap-2">
               <span className="status-dot" />
-              Freelance Developer
+              Freelance Developer für Web &amp; Mobile Apps
             </div>
 
             {/* Headline */}

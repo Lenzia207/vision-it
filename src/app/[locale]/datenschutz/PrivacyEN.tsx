@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import BackgroundEffect from "@/components/BackgroundEffect";
-import HeaderSimple from "@/components/HeaderSimple";
+import TitleHeader from "@/components/TitleHeader";
 
 export const metadata: Metadata = {
   title: "Privacy Policy — VisionIT",
@@ -9,24 +9,24 @@ export const metadata: Metadata = {
 
 export default function PrivacyEN() {
   return (
-    <main className="relative min-h-screen">
+    <div className="relative min-h-screen overflow-hidden">
       <BackgroundEffect />
 
-      <div className="relative z-10 container mx-auto px-6 py-24 md:py-32 max-w-4xl">
-        <HeaderSimple title="Privacy Policy" />
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 pt-24 md:pt-32 pb-16 max-w-4xl">
+        <TitleHeader title="Privacy Policy" />
 
-        <div className="space-y-8 text-lg leading-relaxed max-w-2xl mx-auto" style={{ color: "var(--text-secondary)" }}>
-          <h3 className="text-2xl font-bold" style={{ color: "var(--text-primary)" }}>Data Controler</h3>
+        <div className="space-y-6 text-base md:text-lg leading-relaxed max-w-2xl mx-auto text-(--text-300)">
+          <h3 className="text-xl md:text-2xl font-bold text-(--text-100)">Data Controller</h3>
 
           <p>Lena Zyadeh, BSc.</p>
 
-          <h3 className="text-2xl font-bold" style={{ color: "var(--text-primary)" }}>Contact</h3>
+          <h3 className="text-xl md:text-2xl font-bold text-(--text-100)">Contact</h3>
           <p>
             For privacy inquiries please contact:{" "}
             <strong>office@vision-it.at</strong>.
           </p>
 
-          <h3 className="text-2xl font-bold" style={{ color: "var(--text-primary)" }}>What data we process</h3>
+          <h3 className="text-xl md:text-2xl font-bold text-(--text-100)">What data we process</h3>
           <p>
             We only process data you provide directly (e.g. name, email address
             and message via the contact form). Technical data (e.g. IP address,
@@ -34,7 +34,7 @@ export default function PrivacyEN() {
             and security reasons.
           </p>
 
-          <h3 className="text-2xl font-bold" style={{ color: "var(--text-primary)" }}>Purposes and legal bases</h3>
+          <h3 className="text-xl md:text-2xl font-bold text-(--text-100)">Purposes and legal bases</h3>
           <ul>
             <li>
               Contact handling: processing necessary to handle and respond to
@@ -46,13 +46,13 @@ export default function PrivacyEN() {
             </li>
           </ul>
 
-          <h3 className="text-2xl font-bold" style={{ color: "var(--text-primary)" }}>No analytics / tracking</h3>
+          <h3 className="text-xl md:text-2xl font-bold text-(--text-100)">No analytics / tracking</h3>
           <p>
             We do not use analytics or tracking services. There is no profiling
             or marketing tracking on this site.
           </p>
 
-          <h3 className="text-2xl font-bold" style={{ color: "var(--text-primary)" }}>Contact form / Email</h3>
+          <h3 className="text-xl md:text-2xl font-bold text-(--text-100)">Contact form / Email</h3>
           <p>
             When you submit the contact form, the message is sent by email to{" "}
             <strong>office@genzy.dev</strong>. The email service provider
@@ -61,46 +61,46 @@ export default function PrivacyEN() {
             necessary to respond to your request.
           </p>
 
-          <h3 className="text-2xl font-bold" style={{ color: "var(--text-primary)" }}>External links</h3>
+          <h3 className="text-xl md:text-2xl font-bold text-(--text-100)">External links</h3>
           <p>
             The site may contain links to external websites. We are not
             responsible for the privacy practices or content of those sites;
             visiting them may involve data transfer to third parties.
           </p>
 
-          <h3 className="text-2xl font-bold" style={{ color: "var(--text-primary)" }}>Retention</h3>
+          <h3 className="text-xl md:text-2xl font-bold text-(--text-100)">Retention</h3>
           <p>
             Personal data is retained only as long as necessary to fulfil the
             purpose or to comply with legal obligations.
           </p>
 
-          <h3 className="text-2xl font-bold" style={{ color: "var(--text-primary)" }}>Recipients</h3>
+          <h3 className="text-xl md:text-2xl font-bold text-(--text-100)">Recipients</h3>
           <p>
             Service providers (hosting, email) may process data as processors.
             Where applicable, processors are contractually bound to protect
             data.
           </p>
 
-          <h3 className="text-2xl font-bold" style={{ color: "var(--text-primary)" }}>Your rights</h3>
+          <h3 className="text-xl md:text-2xl font-bold text-(--text-100)">Your rights</h3>
           <p>
             You have the right to access, rectify, erase, restrict processing,
             data portability and to object. To exercise these rights contact{" "}
             <strong>hello@genzy.com</strong>.
           </p>
 
-          <h3 className="text-2xl font-bold" style={{ color: "var(--text-primary)" }}>Withdrawal &amp; complaints</h3>
+          <h3 className="text-xl md:text-2xl font-bold text-(--text-100)">Withdrawal &amp; complaints</h3>
           <p>
             You may withdraw any consent at any time. If you consider that data
             processing violates GDPR you may complain to a supervisory
             authority.
           </p>
 
-          <h3 className="text-2xl font-bold" style={{ color: "var(--text-primary)" }}>Security</h3>
+          <h3 className="text-xl md:text-2xl font-bold text-(--text-100)">Security</h3>
           <p>
             We implement appropriate technical and organisational measures to
             protect personal data, but absolute security cannot be guaranteed.
           </p>
-          <h3 className="text-2xl font-bold" style={{ color: "var(--text-primary)" }}>Google Fonts</h3>
+          <h3 className="text-xl md:text-2xl font-bold text-(--text-100)">Google Fonts</h3>
           <p>
             This website uses the Google Fonts <em>Urbanist</em> and
             <em> Playfair Display</em>. When using Next.js font optimization
@@ -123,6 +123,6 @@ export default function PrivacyEN() {
           </p>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

@@ -1,7 +1,7 @@
 
 import type { Metadata } from "next";
 import BackgroundEffect from "@/components/BackgroundEffect";
-import HeaderSimple from "@/components/HeaderSimple";
+import TitleHeader from "@/components/TitleHeader";
 
 export const metadata: Metadata = {
     title: "Impressum — VisionIT",
@@ -10,21 +10,19 @@ export const metadata: Metadata = {
 
 export default function ImprintDE() {
     return (
-        <main className="relative min-h-screen">
-            {/* Background Effect */}
+        <div className="relative min-h-screen overflow-hidden">
             <BackgroundEffect />
 
-            {/* Content Container */}
-            <div className="relative z-10 container mx-auto px-6 py-24 md:py-32 max-w-4xl">
+            <div className="relative z-10 container mx-auto px-4 sm:px-6 pt-24 md:pt-32 pb-16 max-w-4xl">
 
                 {/* Header */}
-                <HeaderSimple title="Impressum" />
+                <TitleHeader title="Impressum" />
 
                 {/* Imprint Details */}
-                <div className="space-y-8 text-lg leading-relaxed max-w-2xl mx-auto" style={{ color: "var(--text-secondary)" }}>
+                <div className="space-y-6 text-base md:text-lg leading-relaxed max-w-2xl mx-auto text-(--text-300)">
 
                     <div className="space-y-1">
-                        <p className="text-xl font-medium" style={{ color: "var(--text-primary)" }}>Lena Zyadeh, BSc.</p>
+                        <p className="text-xl font-medium text-(--text-100)">Lena Zyadeh, BSc.</p>
                         <p>Softwareentwicklung für Webseiten und Applikationen</p>
                     </div>
 
@@ -36,7 +34,7 @@ export default function ImprintDE() {
 
                     <div className="space-y-1">
                         {/* <p><span className="text-zinc-500">Tel:</span> +43 6765700757</p> */}
-                        <p><span style={{ color: "var(--text-muted)" }}>E-Mail:</span> <a href="mailto:office@vision-it.at" className="text-blue-600 hover:text-blue-500 transition-colors">office@vision-it.at</a></p>
+                        <p><span className="text-(--text-300)">E-Mail:</span> <a href="mailto:office@vision-it.at" className="text-(--accent-cyan) hover:underline transition-colors">office@vision-it.at</a></p>
                     </div>
 
                     <div className="pt-4 space-y-4">
@@ -51,11 +49,11 @@ export default function ImprintDE() {
                         </p> */}
 
                         <p>
-                            <span className="block text-sm uppercase tracking-wider mb-1" style={{ color: "var(--text-muted)" }}>Gewerbeordnung</span>
+                            <span className="block text-sm uppercase tracking-wider mb-1 text-(--text-300)">Gewerbeordnung</span>
                             EPU                        </p>
 
                         <p>
-                            <span className="block text-sm uppercase tracking-wider mb-1" style={{ color: "var(--text-muted)" }}>Aufsichtsbehörde</span>
+                            <span className="block text-sm uppercase tracking-wider mb-1 text-(--text-300)">Aufsichtsbehörde</span>
                             Bezirkshauptmannschaft Wien
                         </p>
 
@@ -67,6 +65,6 @@ export default function ImprintDE() {
 
                 </div>
             </div>
-        </main>
+        </div>
     );
 }

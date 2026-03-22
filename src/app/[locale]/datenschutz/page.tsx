@@ -12,7 +12,6 @@ export default async function Imprint(props: LocaleParams) {
   const { locale } = await props.params;
 
     return (
-
       <PageWrapper
       locale={locale}
       pageContent={locale === "de" ? <PrivacyDE /> : <PrivacyEN />}

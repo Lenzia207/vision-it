@@ -64,14 +64,11 @@ export default function MainNavigation({ data, locale }: MainNavigationProps) {
         }`}
       >
         {data.main_navigation.map((item, index) => {
-          const isHomePage =
-            pathname === "/" || pathname === "/en" || pathname === "/de";
-          const linkHref = isHomePage
-            ? `${item.pageId}`
-            : (`/${item.pageId || item.page}` as string);
-          const isLast = index === data.main_navigation.length - 1;
+          const isHomePage = pathname === "/";
+          const linkHref = isHomePage ? item.pageId : `${item.page}${item.pageId}`;
+          const isFirst = index === 0;
           const sectionId = item.pageId.replace("#", "");
-          const isActive = sectionId === activeSection || (!activeSection && isLast);
+          const isActive = sectionId === activeSection || (!activeSection && isFirst);
 
           return (
             <Link

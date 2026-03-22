@@ -1,14 +1,16 @@
 "use client";
 
-import { Link } from "@/app/i18n/routing";
+import { Link, usePathname } from "@/app/i18n/routing";
 import { HomePageData } from "@/app/[locale]/home/sections/data/types/home-types";
 import { useState, useEffect } from "react";
 
 interface BottomNavigationProps {
   data: HomePageData;
+  locale: string;
 }
 
-export default function BottomNavigation({ data }: BottomNavigationProps) {
+export default function BottomNavigation({ data, locale }: BottomNavigationProps) {
+  const pathname = usePathname();
   const [visible, setVisible] = useState(true);
   const [lastY, setLastY] = useState(0);
   const [activeSection, setActiveSection] = useState<string>("");
@@ -52,13 +54,16 @@ export default function BottomNavigation({ data }: BottomNavigationProps) {
     >
       <nav className="flex items-center gap-1 p-1.5 rounded-full bg-[rgba(26,29,39,0.9)] border border-white/10 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
         {data.main_navigation.map((item, index) => {
-          const isLast = index === data.main_navigation.length - 1;
+          const isFirst = index === 0;
           const sectionId = item.pageId.replace("#", "");
-          const isActive = sectionId === activeSection || (!activeSection && isLast);
+          const isActive = sectionId === activeSection || (!activeSection && isFirst);
+          const isHomePage = pathname === "/";
+          const linkHref = isHomePage ? item.pageId : `${item.page}${item.pageId}`;
           return (
             <Link
               key={index}
-              href={item.pageId}
+              href={linkHref as string}
+              locale={locale}
               className={`inline-flex items-center justify-center px-3 py-1.5 rounded-full text-[0.78rem] font-semibold whitespace-nowrap no-underline transition-all duration-200 ${
                 isActive
                   ? "text-white bg-(--accent-purple) shadow-[0_0_12px_rgba(139,92,246,0.4)]"

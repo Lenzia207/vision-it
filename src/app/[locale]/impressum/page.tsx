@@ -11,9 +11,8 @@ export function generateStaticParams() {
 }
 export default async function Imprint(props: LocaleParams) {
   const { locale } = await props.params;
-  
-  console.log(locale);
-    return (
+
+  return (
 
       <PageWrapper
       locale={locale}

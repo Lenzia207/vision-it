@@ -22,7 +22,7 @@ export default async function PageWrapper({
       {pageContent}
       <Footer locale={locale} />
       {/* Mobile View */}
-      <BottomNavigation data={data} />
+      <BottomNavigation data={data} locale={locale} />
     </main>
   );
 }

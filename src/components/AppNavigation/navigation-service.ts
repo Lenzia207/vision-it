@@ -62,8 +62,9 @@ export const setItemActive = (data: HomePageData, setActiveSection: React.Dispat
             if (el.getBoundingClientRect().top <= threshold) current = id;
         }
         setActiveSection(current);
-        window.addEventListener("scroll", getActive, { passive: true });
-        getActive();
-        return () => window.removeEventListener("scroll", getActive);
-    }
-}
+    };
+
+    window.addEventListener("scroll", getActive, { passive: true });
+    getActive();
+    return () => window.removeEventListener("scroll", getActive);
+};

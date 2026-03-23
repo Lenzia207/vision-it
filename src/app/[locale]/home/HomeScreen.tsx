@@ -6,6 +6,7 @@ import AboutMeSection from "./sections/AboutMeSection";
 import ContactSection from "./sections/ContactSection/ContactSection";
 import { HomePageData } from "./sections/data/types/home-types";
 import ProjectPhases from "./ProjectPhases/ProjectPhases";
+import TitleHeader from "@/components/TitleHeader";
 
 interface HomeScreenProps {
   data: HomePageData;
@@ -52,6 +53,7 @@ export default function HomeScreen({ data, locale }: HomeScreenProps) {
         <div className="h-px bg-linear-to-r from-transparent via-(--border-light) to-transparent" />
       </div>
       <section id="about" className="section-padding">
+        <TitleHeader title="Me Myself and I" tag="[ WHOAMI ]" />
         <div className="max-w-6xl mx-auto px-6">
           <div className="dashboard-layout">
               <AboutMeSection

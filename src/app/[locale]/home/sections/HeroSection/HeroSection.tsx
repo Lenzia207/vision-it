@@ -18,7 +18,7 @@ export default function HeroSection({
   viewMore,
 }: HeroSectionProps) {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-28">
+    <section className="relative min-h-screen flex items-center overflow-hidden lg:pt-28">
       <BackgroundEffect />
       {/* Background Grid overlay */}
       <GridOverlay />

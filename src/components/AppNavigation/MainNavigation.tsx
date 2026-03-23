@@ -52,9 +52,8 @@ export default function MainNavigation({ data, locale }: MainNavigationProps) {
           }`}
       >
         {data.main_navigation.map((item, index) => {
-          const isFirst = index === 0;
           const sectionId = item.pageId.replace("#", "");
-          const isActive = sectionId === activeSection || (!activeSection && isFirst);
+          const isActive = sectionId === activeSection;
 
           return (
             <button

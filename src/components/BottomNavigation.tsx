@@ -45,9 +45,8 @@ export default function BottomNavigation({ data, locale }: BottomNavigationProps
     >
       <nav className="flex items-center gap-1 p-1.5 rounded-full bg-[rgba(26,29,39,0.9)] border border-white/10 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
         {data.main_navigation.map((item, index) => {
-          const isFirst = index === 0;
           const sectionId = item.pageId.replace("#", "");
-          const isActive = sectionId === activeSection || (!activeSection && isFirst);
+          const isActive = sectionId === activeSection;
 
           return (
             <button

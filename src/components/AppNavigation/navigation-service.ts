@@ -1,12 +1,11 @@
 import { HomePageData } from "@/app/[locale]/home/sections/data/types/home-types";
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
-import router from "next/router";
 
 export const navigate = (
     sectionId: string,
     locale: string,
     isHomePage: boolean,
-
+    router: AppRouterInstance,
 ) => {
     if (isHomePage) {
         document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -46,15 +45,12 @@ export const createScrollVisibilityHandler = (
 };
 
 export const setItemActive = (data: HomePageData, setActiveSection: React.Dispatch<React.SetStateAction<string>>) => {
-
-
-
     const ids = data.main_navigation
         .map((item) => item.pageId.replace("#", ""))
         .filter(Boolean);
 
     const getActive = () => {
-        const threshold = window.innerHeight * 0.4;
+        const threshold = window.innerHeight * 0.4; // 40% from top
         let current = "";
         for (const id of ids) {
             const el = document.getElementById(id);

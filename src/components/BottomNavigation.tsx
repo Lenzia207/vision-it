@@ -2,9 +2,8 @@
 
 import { usePathname, useRouter } from "next/navigation";
 import { HomePageData } from "@/app/[locale]/home/sections/data/types/home-types";
-import { useState, useEffect, useCallback } from "react";
-import { checkSectionLocation, navigate } from "./navigation-service";
-
+import { useState, useEffect, useCallback, useRef } from "react";
+import { checkSectionLocation, createScrollVisibilityHandler, setItemActive } from "./AppNavigation/navigation-service";
 interface BottomNavigationProps {
   data: HomePageData;
   locale: string;
@@ -13,14 +12,19 @@ interface BottomNavigationProps {
 export default function BottomNavigation({ data, locale }: BottomNavigationProps) {
   const pathname = usePathname();
   const router = useRouter();
-  const [visible, setVisible] = useState(true);
-  const [lastY, setLastY] = useState(0);
+  const [visible, setVisible] = useState(false);
+ 
   const [activeSection, setActiveSection] = useState<string>("");
   const isHomePage = pathname === `/${locale}` || pathname === `/${locale}/`;
 
   const navigateToSection = useCallback(
     (sectionId: string) => {
-      navigate(sectionId, locale, isHomePage, router);
+      if (isHomePage) {
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        sessionStorage.setItem("scrollTarget", sectionId);
+        router.push(`/${locale}`);
+      }
     },
     [isHomePage, router, locale]
   );
@@ -29,37 +33,9 @@ export default function BottomNavigation({ data, locale }: BottomNavigationProps
   useEffect(() => {
     checkSectionLocation(isHomePage);
   }, [isHomePage]);
+  useEffect(() => createScrollVisibilityHandler(setVisible), []);
+  useEffect(() => setItemActive(data, setActiveSection), [data.main_navigation]);
 
-  useEffect(() => {
-    const onScroll = () => {
-      const y = window.scrollY;
-      setVisible(y < lastY || y < 80);
-      setLastY(y);
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [lastY]);
-
-  useEffect(() => {
-    const ids = data.main_navigation
-      .map((item) => item.pageId.replace("#", ""))
-      .filter(Boolean);
-
-    const getActive = () => {
-      const threshold = window.innerHeight * 0.4;
-      let current = "";
-      for (const id of ids) {
-        const el = document.getElementById(id);
-        if (!el) continue;
-        if (el.getBoundingClientRect().top <= threshold) current = id;
-      }
-      setActiveSection(current);
-    };
-
-    window.addEventListener("scroll", getActive, { passive: true });
-    getActive();
-    return () => window.removeEventListener("scroll", getActive);
-  }, [data.main_navigation]);
 
   return (
     <div
@@ -67,7 +43,7 @@ export default function BottomNavigation({ data, locale }: BottomNavigationProps
         visible ? "translate-y-0 opacity-100" : "translate-y-[120%] opacity-0"
       }`}
     >
-      <nav className="flex items-center gap-0 p-1 rounded-full bg-[rgba(26,29,39,0.9)] border border-white/10 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
+      <nav className="flex items-center gap-1 p-1.5 rounded-full bg-[rgba(26,29,39,0.9)] border border-white/10 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
         {data.main_navigation.map((item, index) => {
           const isFirst = index === 0;
           const sectionId = item.pageId.replace("#", "");

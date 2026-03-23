@@ -20,7 +20,7 @@ export default function MainNavigation({ data, locale }: MainNavigationProps) {
 
   const navigateToSection = useCallback(
     (sectionId: string) => {
-      navigate(sectionId, locale, isHomePage);
+      navigate(sectionId, locale, isHomePage, router);
     },
     [isHomePage, router, locale]
   );

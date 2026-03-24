@@ -1,20 +1,6 @@
 import { NextIntlClientProvider } from "next-intl";
-import { Plus_Jakarta_Sans, Space_Mono } from "next/font/google";
 import Script from "next/script";
-
-const jakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  variable: "--font-jakarta",
-  display: "swap",
-  weight: ["300", "400", "500", "600", "700", "800"],
-});
-
-const spaceMono = Space_Mono({
-  subsets: ["latin"],
-  variable: "--font-space-mono",
-  display: "swap",
-  weight: ["400", "700"],
-});
+import { HtmlLang } from "@/components/HtmlLang";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -62,19 +48,15 @@ export default async function LocaleLayout({
   const { locale } = await params;
 
   return (
-    <html lang={locale} className="scroll-smooth">
-      <head>
-        <Script
-          id="json-ld-org"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </head>
-      <body
-        className={`${jakarta.variable} ${spaceMono.variable} font-sans antialiased grain-overlay`}
-      >
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
-      </body>
-    </html>
+    <>
+      {/* Set the correct lang attribute on <html> per locale */}
+      <HtmlLang locale={locale} />
+      <Script
+        id="json-ld-org"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <NextIntlClientProvider>{children}</NextIntlClientProvider>
+    </>
   );
 }

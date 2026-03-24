@@ -1,5 +1,20 @@
 import type { Metadata } from "next";
+import { Plus_Jakarta_Sans, Space_Mono } from "next/font/google";
 import "./globals.css";
+
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-jakarta",
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700", "800"],
+});
+
+const spaceMono = Space_Mono({
+  subsets: ["latin"],
+  variable: "--font-space-mono",
+  display: "swap",
+  weight: ["400", "700"],
+});
 
 export const metadata: Metadata = {
   title: {
@@ -33,7 +48,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // html/body/lang are rendered in src/app/[locale]/layout.tsx
-  // so Google gets the correct language per locale
-  return <>{children}</>;
+  return (
+    // suppressHydrationWarning: the locale layout sets lang via a client
+    // component after hydration; suppress the mismatch warning on <html>.
+    <html className="scroll-smooth" suppressHydrationWarning>
+      <body
+        className={`${jakarta.variable} ${spaceMono.variable} font-sans antialiased grain-overlay`}
+      >
+        {children}
+      </body>
+    </html>
+  );
 }

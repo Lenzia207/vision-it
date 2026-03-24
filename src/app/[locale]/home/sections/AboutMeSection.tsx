@@ -25,13 +25,12 @@ export default function AboutMeSection({
   return (
     <div className="glass-panel p-12">
       {/* Avatar */}
-      <div className="w-20 h-20 rounded-full bg-(--bg-surface-3)  mb-6 overflow-hidden shrink-0">
+      <div className="relative w-20 h-20 rounded-full bg-(--bg-surface-3) mb-6 overflow-hidden shrink-0">
         <Image
           src="/images/lena-zy-about-me.jpg"
           alt={fullname}
-          width={80}
-          height={80}
-          className="object-cover "
+          fill
+          className="object-cover"
         />
       </div>
 

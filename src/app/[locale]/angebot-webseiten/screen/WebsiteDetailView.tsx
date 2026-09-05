@@ -19,6 +19,9 @@ export default function WebsiteDetailView({ websitePage, area, locale }: Website
       servicesTitle={websitePage.servicesTitle}
       servicesDescription={websitePage.servicesDescription}
       services={websitePage.services}
+      audience={websitePage.audience}
+      pricing={websitePage.pricing}
+      faq={websitePage.faq}
       processLabel={area.processLabel}
       ctaLabel={websitePage.ctaLabel}
       process={area.process}

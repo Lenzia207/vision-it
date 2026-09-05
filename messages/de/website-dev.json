@@ -5,6 +5,23 @@
         "servicesTitle": "Alle Leistungen auf einen Blick",
         "servicesDescription": "Umfassende Lösungen für Ihren Erfolg.",
         "ctaLabel": "Angebot anfordern",
+        "audience": {
+            "tag": "Für wen ist das geeignet?",
+            "title": "Du brauchst eine neue Website, wenn dein aktueller Auftritt nicht mehr zu deinem Unternehmen passt.",
+            "description": "Oder wenn er technisch veraltet ist – oder zwar gut aussieht, aber kaum Anfragen bringt. Typische Ausgangssituationen und was wir daraus machen:",
+            "situationLabel": "Ausgangssituation",
+            "solutionLabel": "Deine Lösung",
+            "rows": [
+                { "situation": "Neue Selbstständigkeit", "solution": "professionelle neue Website" },
+                { "situation": "Bestehende Website veraltet", "solution": "Redesign" },
+                { "situation": "Figma-Design vorhanden", "solution": "Design-to-Code" },
+                { "situation": "Website zu langsam", "solution": "technischer Neuaufbau" },
+                { "situation": "Website wird nicht gefunden", "solution": "SEO + technische Optimierung" },
+                { "situation": "Individuelle Funktion nötig", "solution": "Custom Development" }
+            ],
+            "ctaText": "Nichts davon trifft genau zu? Dann klären wir in 15 Minuten, was dein Auftritt wirklich braucht.",
+            "ctaLabel": "Jetzt anfragen"
+        },
         "services": [
             {
                 "icon": "building-2",
@@ -36,6 +53,74 @@
                 "title": "Custom Web-Entwicklung",
                 "description": "Maßgeschneiderte Webanwendungen für komplexe Geschäftsprozesse. Next.js, React, API-Integration."
             }
-        ]
+        ],
+        "pricing": {
+            "factorsTag": "Preisgestaltung",
+            "factorsTitle": "Was den Preis einer Website beeinflusst",
+            "factorsDescription": "Keine Website ist wie die andere. Diese Faktoren entscheiden, wie umfangreich ein Projekt wird – und damit, was es kostet.",
+            "factors": [
+                { "title": "Anzahl der Seiten", "description": "Jede zusätzliche Seite bedeutet Layout, Inhalte und Testing." },
+                { "title": "Individuelles Design", "description": "Angepasste Vorlage oder ein Design komplett auf deine Marke." },
+                { "title": "CMS", "description": "Willst du Inhalte selbst pflegen, braucht es eine Redaktionsoberfläche." },
+                { "title": "Formulare", "description": "Vom einfachen Kontaktformular bis zur mehrstufigen Abfrage." },
+                { "title": "Buchungssysteme", "description": "Termine, Verfügbarkeiten, Kalender- und Zahlungsanbindung." },
+                { "title": "Mehrsprachigkeit", "description": "Jede Sprache bringt eigene Inhalte, URLs und Pflegeaufwand." },
+                { "title": "Shop", "description": "Produkte, Zahlungsarten, Versand, Steuern und Rechtstexte." },
+                { "title": "SEO", "description": "Technische Basis, Seitenstruktur, Inhalte und Messbarkeit." },
+                { "title": "Individuelle Funktionen", "description": "Schnittstellen, Rechner, Portale, Automatisierungen." }
+            ],
+            "note": "Die tatsächlichen Kosten hängen von Seitenumfang, Design, Funktionen, Integrationen und Content ab. Nach dem Erstgespräch erhältst du ein transparentes Angebot.",
+            "packagesTag": "Pakete",
+            "packagesTitle": "Drei Ausgangspunkte",
+            "packages": [
+                {
+                    "name": "Starter",
+                    "tagline": "Für den ersten professionellen Auftritt.",
+                    "pricePrefix": "ab",
+                    "price": "1.490 €",
+                    "features": ["Bis zu 5 Seiten", "Design auf Basis deiner Marke", "Kontaktformular", "Technische SEO-Basis", "Mobil optimiert"],
+                    "ctaLabel": "Anfrage senden",
+                    "ctaVariant": "secondary"
+                },
+                {
+                    "name": "Business",
+                    "tagline": "Für Unternehmen, die über die Website Anfragen gewinnen wollen.",
+                    "pricePrefix": "ab",
+                    "price": "3.900 €",
+                    "features": ["Bis zu 12 Seiten", "Individuelles Design", "CMS zur eigenen Pflege", "Mehrere Formulare", "SEO-Optimierung und Analytics", "Performance-Optimierung"],
+                    "ctaLabel": "Anfrage senden",
+                    "ctaVariant": "primary",
+                    "badge": "Häufig gewählt",
+                    "highlighted": true
+                },
+                {
+                    "name": "Individuell",
+                    "tagline": "Für Shop, Buchung oder eigene Funktionen.",
+                    "price": "Preis nach Erstgespräch",
+                    "features": ["Shop oder Buchungssystem", "Mehrsprachigkeit", "Individuelle Funktionen und Schnittstellen", "Design-to-Code aus Figma", "Laufende Betreuung"],
+                    "ctaLabel": "Erstgespräch buchen",
+                    "ctaVariant": "secondary"
+                }
+            ]
+        },
+        "faq": {
+            "tag": "FAQ",
+            "title": "Häufige Fragen",
+            "description": "Alles, was vor einem Projekt meistens noch offen ist. Fehlt etwas, frag einfach direkt.",
+            "items": [
+                { "question": "Was kostet eine professionelle Website?", "answer": "Kompakte Websites starten bei etwa 1.500 €, umfangreichere Projekte mit CMS, Shop oder eigenen Funktionen liegen darüber. Den Preis bestimmen Seitenumfang, Design, Funktionen, Integrationen und Content. Nach dem Erstgespräch bekommst du ein transparentes Angebot." },
+                { "question": "Wie lange dauert die Erstellung einer Website?", "answer": "Je nach Umfang 1 bis 8 Wochen. Eine kompakte Website ist in ein bis zwei Wochen online, größere Projekte mit CMS, Mehrsprachigkeit oder Shop brauchen länger. Der größte Zeitfaktor ist meist, wie schnell die Inhalte vorliegen." },
+                { "question": "Kann ich Inhalte später selbst ändern?", "answer": "Ja, wenn du das möchtest. Auf Wunsch bekommst du ein CMS, in dem du Texte, Bilder, Beiträge und ganze Seiten selbst pflegen kannst. Was editierbar ist, legen wir vorher gemeinsam fest. Ohne CMS übernehme ich Änderungen auf Anfrage." },
+                { "question": "Ist SEO bei der Website enthalten?", "answer": "Die technische Basis ist immer enthalten: saubere Seitenstruktur, schnelle Ladezeiten, Meta-Daten, Sitemap und mobile Optimierung. Laufendes SEO mit Keyword-Recherche, Inhalten und Monitoring ist ein fortlaufendes Thema und lässt sich zusätzlich buchen." },
+                { "question": "Erstellst du auch das Webdesign?", "answer": "Ja. Das Design entsteht in Figma, du siehst es vor der Umsetzung und gibst Feedback. Entwickelt wird erst nach deiner Freigabe." },
+                { "question": "Kannst du ein vorhandenes Design umsetzen?", "answer": "Ja, Design-to-Code ist ein eigener Leistungsbereich. Du lieferst dein Figma-Design oder eine andere Vorlage, ich setze es pixelgenau, performant und responsive um." },
+                { "question": "Überarbeitest du bestehende Websites?", "answer": "Ja. Vom Redesign auf bestehender Basis bis zum vollständigen Neuaufbau. Bei einer Migration übernehme ich Inhalte, URL-Struktur und Redirects, damit bestehende Rankings erhalten bleiben." },
+                { "question": "Welche Technologien verwendest du?", "answer": "In der Regel Next.js und React mit TypeScript, gehostet auf modernen Plattformen wie Vercel. Für redaktionelle Inhalte kommt ein Headless CMS dazu. Die Auswahl richtet sich nach dem Projekt, nicht umgekehrt." },
+                { "question": "Ist die Website mobil optimiert?", "answer": "Ja. Jede Website wird responsive gebaut und auf Smartphone, Tablet und Desktop getestet. Mobile Darstellung und Ladezeit sind Teil der Abnahme." },
+                { "question": "Unterstützt du nach dem Launch weiter?", "answer": "Ja. Wartung, Updates, Monitoring und Weiterentwicklung kannst du laufend oder bei Bedarf dazubuchen. Du bleibst nach dem Launch nicht allein." }
+            ],
+            "noteText": "Deine Frage war nicht dabei? Schreib sie mir – du bekommst eine klare Antwort, kein Verkaufsgespräch.",
+            "noteCta": "Frage stellen"
+        }
     }
 }

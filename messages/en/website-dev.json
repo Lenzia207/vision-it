@@ -5,6 +5,23 @@
         "servicesTitle": "Our Services",
         "servicesDescription": "Comprehensive solutions for your success.",
         "ctaLabel": "Request an Offer",
+        "audience": {
+            "tag": "Who is this for?",
+            "title": "You need a new website when your current presence no longer matches your business.",
+            "description": "Or when it's technically outdated – or looks fine but barely brings in any inquiries. Typical starting situations and what we make of them:",
+            "situationLabel": "Starting situation",
+            "solutionLabel": "Your solution",
+            "rows": [
+                { "situation": "New self-employment", "solution": "professional new website" },
+                { "situation": "Existing website outdated", "solution": "redesign" },
+                { "situation": "Figma design available", "solution": "design-to-code" },
+                { "situation": "Website too slow", "solution": "technical rebuild" },
+                { "situation": "Website not found", "solution": "SEO + technical optimization" },
+                { "situation": "Custom feature needed", "solution": "custom development" }
+            ],
+            "ctaText": "None of these quite fit? Let's clarify in 15 minutes what your presence actually needs.",
+            "ctaLabel": "Get in touch"
+        },
         "services": [
             {
                 "icon": "building-2",
@@ -36,6 +53,74 @@
                 "title": "Custom Web Development",
                 "description": "Tailored web applications for complex business processes. Next.js, React, API integration."
             }
-        ]
+        ],
+        "pricing": {
+            "factorsTag": "Pricing",
+            "factorsTitle": "What influences the price of a website",
+            "factorsDescription": "No website is like any other. These factors decide how extensive a project becomes – and with it, what it costs.",
+            "factors": [
+                { "title": "Number of pages", "description": "Every additional page means layout, content and testing." },
+                { "title": "Custom design", "description": "An adapted template, or a design built entirely around your brand." },
+                { "title": "CMS", "description": "If you want to maintain content yourself, you need an editing interface." },
+                { "title": "Forms", "description": "From a simple contact form to a multi-step inquiry." },
+                { "title": "Booking systems", "description": "Appointments, availability, calendar and payment integration." },
+                { "title": "Multilingual support", "description": "Every language brings its own content, URLs and upkeep." },
+                { "title": "Shop", "description": "Products, payment methods, shipping, taxes and legal texts." },
+                { "title": "SEO", "description": "Technical foundation, site structure, content and measurability." },
+                { "title": "Custom features", "description": "Integrations, calculators, portals, automations." }
+            ],
+            "note": "The actual cost depends on page count, design, features, integrations and content. After the initial consultation you'll receive a transparent quote.",
+            "packagesTag": "Packages",
+            "packagesTitle": "Three starting points",
+            "packages": [
+                {
+                    "name": "Starter",
+                    "tagline": "For your first professional presence.",
+                    "pricePrefix": "from",
+                    "price": "€1,490",
+                    "features": ["Up to 5 pages", "Design based on your brand", "Contact form", "Technical SEO foundation", "Mobile optimized"],
+                    "ctaLabel": "Send inquiry",
+                    "ctaVariant": "secondary"
+                },
+                {
+                    "name": "Business",
+                    "tagline": "For businesses that want to win leads through their website.",
+                    "pricePrefix": "from",
+                    "price": "€3,900",
+                    "features": ["Up to 12 pages", "Custom design", "CMS for self-editing", "Multiple forms", "SEO optimization and analytics", "Performance optimization"],
+                    "ctaLabel": "Send inquiry",
+                    "ctaVariant": "primary",
+                    "badge": "Most chosen",
+                    "highlighted": true
+                },
+                {
+                    "name": "Custom",
+                    "tagline": "For shop, booking, or your own features.",
+                    "price": "Price after consultation",
+                    "features": ["Shop or booking system", "Multilingual support", "Custom features and integrations", "Design-to-code from Figma", "Ongoing support"],
+                    "ctaLabel": "Book a consultation",
+                    "ctaVariant": "secondary"
+                }
+            ]
+        },
+        "faq": {
+            "tag": "FAQ",
+            "title": "Frequently asked questions",
+            "description": "Everything that's usually still open before a project. If something's missing, just ask directly.",
+            "items": [
+                { "question": "What does a professional website cost?", "answer": "Compact websites start at around €1,500; more extensive projects with a CMS, shop, or custom features cost more. Price is determined by page count, design, features, integrations and content. After the initial consultation you'll receive a transparent quote." },
+                { "question": "How long does building a website take?", "answer": "Depending on scope, 1 to 8 weeks. A compact website is live in one to two weeks; larger projects with a CMS, multiple languages, or a shop take longer. The biggest time factor is usually how quickly the content is ready." },
+                { "question": "Can I edit content myself later?", "answer": "Yes, if you'd like. On request you get a CMS where you can maintain text, images, posts and entire pages yourself. We agree beforehand on what's editable. Without a CMS, I handle changes on request." },
+                { "question": "Is SEO included with the website?", "answer": "The technical foundation is always included: clean site structure, fast load times, meta data, sitemap and mobile optimization. Ongoing SEO with keyword research, content and monitoring is a continuous effort and can be booked separately." },
+                { "question": "Do you also do the web design?", "answer": "Yes. The design is created in Figma, you see it before development and give feedback. Development only starts after your approval." },
+                { "question": "Can you implement an existing design?", "answer": "Yes, design-to-code is its own service. You provide your Figma design or another template, and I implement it pixel-perfect, performant and responsive." },
+                { "question": "Do you rework existing websites?", "answer": "Yes. From a redesign on the existing base to a full rebuild. During a migration I handle content, URL structure and redirects so existing rankings are preserved." },
+                { "question": "What technologies do you use?", "answer": "Typically Next.js and React with TypeScript, hosted on modern platforms like Vercel. A headless CMS is added for editorial content. The choice follows the project, not the other way around." },
+                { "question": "Is the website mobile optimized?", "answer": "Yes. Every website is built responsively and tested on smartphone, tablet and desktop. Mobile display and load time are part of the acceptance check." },
+                { "question": "Do you provide support after launch?", "answer": "Yes. Maintenance, updates, monitoring and further development can be booked on an ongoing or as-needed basis. You're not left alone after launch." }
+            ],
+            "noteText": "Your question wasn't there? Send it to me – you'll get a clear answer, not a sales pitch.",
+            "noteCta": "Ask a question"
+        }
     }
 }

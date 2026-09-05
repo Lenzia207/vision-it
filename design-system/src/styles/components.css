@@ -1,0 +1,372 @@
+/* =======================================================================
+   VisionIT Design System - component styles
+   ======================================================================= */
+
+/* ─── Button ────────────────────────────────────────────────────────── */
+
+.vids-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.8rem;
+  font-family: var(--vids-font-mono);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.vids-btn-primary {
+  background: var(--vids-lime);
+  color: var(--vids-teal);
+  border: none;
+}
+
+.vids-btn-primary:hover {
+  background: var(--vids-lime-hover);
+  transform: translateY(-2px);
+}
+
+.vids-btn-secondary {
+  background: transparent;
+  color: var(--vids-text-100);
+  border: 2px solid var(--vids-text-100);
+}
+
+.vids-btn-secondary:hover {
+  background: var(--vids-text-100);
+  color: var(--vids-bg-base);
+}
+
+/* ─── Pill ──────────────────────────────────────────────────────────── */
+
+.vids-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+  background: var(--vids-bg-surface-2);
+  border: 1px solid var(--vids-border-light);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--vids-text-200);
+  white-space: nowrap;
+}
+
+.vids-pill-accent {
+  background: var(--vids-accent-glow);
+  border-color: var(--vids-border-accent);
+  color: var(--vids-text-100);
+}
+
+/* ─── Badge ─────────────────────────────────────────────────────────── */
+
+.vids-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: var(--vids-accent-glow);
+  color: var(--vids-text-100);
+  border: 1px solid var(--vids-border-accent);
+}
+
+.vids-badge-outline {
+  background: transparent;
+  color: var(--vids-text-300);
+  border: 1px solid var(--vids-border-light);
+}
+
+/* ─── Card ──────────────────────────────────────────────────────────── */
+
+.vids-card {
+  border-radius: 3px;
+}
+
+.vids-card-glass {
+  background: var(--vids-bg-surface-1);
+  border: 1px solid var(--vids-border-faint);
+  padding: 1.5rem;
+}
+
+.vids-card-dark {
+  background: var(--vids-bg-base);
+  border: 2px solid var(--vids-text-100);
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.vids-card-dark:hover {
+  transform: translateY(-4px);
+}
+
+/* ─── Service Card ──────────────────────────────────────────────────── */
+
+.vids-service-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.75rem;
+  border-radius: 3px;
+  background: var(--vids-bg-surface-1);
+  border: 1px solid var(--vids-border-faint);
+  transition: transform 0.35s var(--vids-ease-out-expo), border-color 0.35s var(--vids-ease-out-expo),
+    box-shadow 0.35s var(--vids-ease-out-expo);
+}
+
+.vids-service-card:hover,
+.vids-service-card.is-active {
+  border-color: var(--vids-border-accent);
+  box-shadow: 0 20px 45px -24px rgba(2, 70, 75, 0.35);
+  transform: translateY(-6px);
+}
+
+.vids-service-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(2, 70, 75, 0.18);
+  color: var(--vids-teal);
+  margin-bottom: 1.5rem;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.vids-service-card:hover .vids-service-card-icon,
+.vids-service-card.is-active .vids-service-card-icon {
+  background: var(--vids-lime);
+  color: var(--vids-teal);
+  transform: translateY(-2px);
+}
+
+.vids-service-card-title {
+  font-family: var(--vids-font-mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--vids-text-100);
+  margin-bottom: 0.6rem;
+}
+
+.vids-service-card-desc {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--vids-text-300);
+}
+
+.vids-service-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  font-family: var(--vids-font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--vids-teal);
+  text-decoration: none;
+}
+
+/* ─── Project Card ──────────────────────────────────────────────────── */
+
+.vids-project-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--vids-bg-surface-2);
+  border: 2px solid var(--vids-bg-surface-2);
+  text-decoration: none;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.vids-project-card:hover {
+  border-color: var(--vids-lime);
+  transform: translateY(-4px);
+}
+
+.vids-project-img-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--vids-bg-surface-3);
+}
+
+.vids-project-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vids-project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem;
+}
+
+.vids-project-title {
+  font-family: var(--vids-font-mono);
+  font-size: 1.12rem;
+  font-weight: 500;
+  color: var(--vids-text-100);
+  line-height: 1.25;
+}
+
+.vids-project-subtitle {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--vids-text-300);
+  line-height: 1.6;
+}
+
+.vids-project-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.vids-tag-micro {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--vids-text-300);
+  border: 1px solid var(--vids-border-light);
+  padding: 0.25rem 0.6rem;
+}
+
+/* ─── Form inputs ───────────────────────────────────────────────────── */
+
+.vids-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.vids-field-label {
+  font-family: var(--vids-font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--vids-text-300);
+}
+
+.vids-input,
+.vids-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #ffffff;
+  border: 2px solid #dce3e2;
+  border-radius: 2px;
+  color: var(--vids-teal);
+  font-family: var(--vids-font-sans);
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease;
+}
+
+.vids-input:focus,
+.vids-textarea:focus {
+  border-color: var(--vids-lime);
+  outline: none;
+}
+
+.vids-input::placeholder,
+.vids-textarea::placeholder {
+  color: #7e9694;
+}
+
+.vids-textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.vids-checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.vids-checkbox-row input[type="checkbox"] {
+  margin-top: 0.2rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--vids-lime);
+}
+
+.vids-checkbox-label {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--vids-text-300);
+}
+
+/* ─── Radio group (pill select) ─────────────────────────────────────── */
+
+.vids-radio-group {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.vids-radio-option {
+  padding: 0.5rem 1.1rem;
+  border-radius: 9999px;
+  border: 1px solid var(--vids-border-light);
+  background: transparent;
+  color: var(--vids-text-300);
+  font-family: var(--vids-font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.vids-radio-option.is-selected {
+  background: var(--vids-lime);
+  border-color: var(--vids-lime);
+  color: var(--vids-teal);
+}
+
+/* ─── Section heading ───────────────────────────────────────────────── */
+
+.vids-section-heading-tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--vids-font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--vids-teal-hover);
+  margin-bottom: 0.75rem;
+}
+
+.vids-section-heading-title {
+  font-family: var(--vids-font-mono);
+  font-size: clamp(1.9rem, 4.4vw, 3.2rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--vids-text-100);
+  margin: 0;
+}
+
+.vids-section-heading-desc {
+  margin-top: 0.9rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--vids-text-300);
+  max-width: 42rem;
+}

@@ -29,9 +29,8 @@
   },
   "angebot_section": {
     "title": "Mein Angebot im Überblick",
-    "description": "Gute Entwicklung beginnt vor der ersten Codezeile. Mit meinem entsprechenden Tech-Stack entwickle ich digitale Produkte mit durchdachten Konzepten, sauberer Architektur und wartbarem Code, der auch langfristig erweiterbar bleibt. Pro Bereich siehst du die Leistungen und den passenden Projektablauf.",
+    "description": "Gute Entwicklung beginnt vor der ersten Codezeile. Mit meinem entsprechenden Tech-Stack entwickle ich digitale Produkte mit durchdachten Konzepten, sauberer Architektur und wartbarem Code, der auch langfristig erweiterbar bleibt. Inkludiert sind auch die Grundvorraussetzung jeder Plattform: Suchmaschinenoptimierung, Performance-Optimierung und Barrierefreiheit.",
     "areas": [
-   
     {
       "id": "webseiten",
       "badge": "Bereich 02",

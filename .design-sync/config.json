@@ -1,0 +1,11 @@
+{
+  "projectId": "e7f11472-2a7b-4da9-b4be-7e1331e9a7d5",
+  "shape": "package",
+  "pkg": "@visionit/design-system",
+  "globalName": "VisionITDS",
+  "cssEntry": "dist/styles.css",
+  "overrides": {
+    "TextInput": { "cardMode": "column" }
+  },
+  "readmeHeader": ".design-sync/conventions.md"
+}

@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+/* =======================================================================
+   VisionIT Design System - tokens
+   Palette: white + deep teal (#02464B) + lime (#BEE600).
+   Fonts: Manrope (body), Space Grotesk (headings / mono labels).
+
+   `.vids-section-dark` and `.vids-section-lime` are local token scopes:
+   they redefine the same --vids-bg-*, --vids-text-*, and --vids-border-*
+   variable names as :root, so any component reading e.g.
+   var(--vids-text-300) adapts automatically to on-dark / on-lime
+   backgrounds just by being rendered inside one of those wrappers.
+   ======================================================================= */
+
+:root {
+  --vids-font-sans: "Manrope", sans-serif;
+  --vids-font-mono: "Space Grotesk", sans-serif;
+
+  --vids-teal: #02464b;
+  --vids-teal-hover: #046b72;
+  --vids-teal-2: #0a5257;
+  --vids-lime: #bee600;
+  --vids-lime-hover: #d2f53a;
+
+  --vids-bg-base: #ffffff;
+  --vids-bg-surface-1: #f2f6f5;
+  --vids-bg-surface-2: #f2f6f5;
+  --vids-bg-surface-3: #e7efee;
+  --vids-bg-glass: rgba(242, 246, 245, 0.75);
+
+  --vids-accent-glow: rgba(190, 230, 0, 0.35);
+
+  --vids-text-100: #02464b;
+  --vids-text-200: #073f44;
+  --vids-text-300: #3c575a;
+  --vids-text-400: #7e9694;
+
+  --vids-border-faint: rgba(2, 70, 75, 0.08);
+  --vids-border-light: rgba(2, 70, 75, 0.16);
+  --vids-border-accent: rgba(190, 230, 0, 0.6);
+
+  --vids-ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vids-section-dark {
+  --vids-bg-base: var(--vids-teal);
+  --vids-bg-surface-1: var(--vids-teal-2);
+  --vids-bg-surface-2: var(--vids-teal-2);
+  --vids-bg-surface-3: #123f43;
+  --vids-bg-glass: rgba(10, 82, 87, 0.6);
+
+  --vids-text-100: #ffffff;
+  --vids-text-200: #eaf3f2;
+  --vids-text-300: #c7d9d8;
+  --vids-text-400: #7e9694;
+
+  --vids-border-faint: rgba(255, 255, 255, 0.08);
+  --vids-border-light: rgba(255, 255, 255, 0.14);
+
+  background: var(--vids-teal);
+  color: var(--vids-text-100);
+}
+
+.vids-section-lime {
+  --vids-bg-base: var(--vids-lime);
+
+  --vids-text-100: var(--vids-teal);
+  --vids-text-200: var(--vids-teal);
+  --vids-text-300: #2c4a22;
+  --vids-text-400: #3f5a2e;
+
+  --vids-border-faint: rgba(2, 70, 75, 0.14);
+  --vids-border-light: rgba(2, 70, 75, 0.22);
+
+  background: var(--vids-lime);
+  color: var(--vids-teal);
+}

@@ -177,6 +177,13 @@ export interface AngebotSeoFaqData {
   noteCta: string;
 }
 
+export interface AngebotSeoGeoFinalCtaData {
+  title: string;
+  description: string;
+  ctaLabel: string;
+  href: string;
+}
+
 export interface AngebotSeoGeoData {
   title: string;
   description: string;
@@ -193,5 +200,6 @@ export interface AngebotSeoGeoData {
   monitoring: AngebotSeoGeoMonitoringData;
   geo: AngebotSeoGeoGeoData;
   faq: AngebotSeoFaqData;
+  finalCta: AngebotSeoGeoFinalCtaData;
   ctaLabel: string;
 }

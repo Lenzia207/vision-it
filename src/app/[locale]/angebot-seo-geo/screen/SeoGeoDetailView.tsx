@@ -22,6 +22,7 @@ export default function SeoGeoDetailView({ seoGeoPage, area, locale }: SeoGeoDet
       collaboration={seoGeoPage.collaboration}
       monitoring={seoGeoPage.monitoring}
       geo={seoGeoPage.geo}
+      finalCta={seoGeoPage.finalCta}
       servicesTitle={seoGeoPage.servicesTitle}
       servicesDescription={seoGeoPage.servicesDescription}
       // services={area.services}

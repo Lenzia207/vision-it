@@ -294,19 +294,26 @@
             "title": "Häufige Fragen",
             "description": "Alles, was du über SEO und GEO wissen musst. Hier findest du Antworten auf die häufigsten Fragen zu unseren Dienstleistungen.",
             "items": [
-                { "question": "Wie lange dauert es, bis SEO wirkt?", "answer": "SEO ist ein langfristiger Prozess. Erste Ergebnisse sind in der Regel nach 3 bis 6 Monaten sichtbar, abhängig von Wettbewerb, Branche und Ausgangssituation." },
-                { "question": "Kann man Platz 1 bei Google garantieren?", "answer": "Nein, eine Platzierung auf Platz 1 kann nicht garantiert werden. SEO hängt von vielen Faktoren ab, einschließlich Wettbewerb, Branche, Suchvolumen und Algorithmusänderungen." },
-                { "question": "Was kostet SEO?", "answer": "Die Kosten für SEO hängen von Umfang, Wettbewerb und Zielen ab. Klassisch nach monatlichem Aufwand. Nach einer Analyse und einem Erstgespräch erhältst du ein transparentes Angebot." },
+                { "question": "Was ist ein SEO-Audit?", "answer": "Ein SEO-Audit ist eine strukturierte Bestandsaufnahme der Website. Dabei werden technische, inhaltliche und strategische Faktoren geprüft, die Einfluss auf Crawling, Indexierung und organische Sichtbarkeit haben können." },
+                { "question": "Wie lange dauert es, bis SEO Ergebnisse zeigt?", "answer": "SEO ist normalerweise keine kurzfristige Maßnahme. Technische Verbesserungen können teilweise relativ schnell sichtbar werden, während neue Rankings und nachhaltiges organisches Wachstum häufig mehrere Monate benötigen." },
+                { "question": "Kann man Platz 1 bei Google garantieren?", "answer": "Nein. Seriöse SEO-Beratung kann keine bestimmte Position garantieren. Ziel ist es, technische Probleme zu beseitigen, Relevanz aufzubauen und die Voraussetzungen für nachhaltige organische Sichtbarkeit systematisch zu verbessern." },
+                { "question": "Muss ich nach dem Audit eine laufende Betreuung buchen?", "answer": "Nein. Nach dem SEO & GEO Start erhältst du die Findings und eine priorisierte Roadmap. Diese kann intern umgesetzt werden oder VisionIT übernimmt auf Wunsch die weitere Betreuung." },
                 { "question": "Brauche ich laufende SEO-Betreuung?", "answer": "Ja, laufende SEO-Betreuung ist empfehlenswert, um die Sichtbarkeit und Rankings kontinuierlich zu verbessern und auf Änderungen im Algorithmus reagieren zu können." },
-                { "question": "Was ist ein SEO-Audit?", "answer": "Ein SEO-Audit ist eine umfassende Analyse deiner Website, um Stärken, Schwächen und Optimierungspotenziale zu identifizieren. Es umfasst technische Aspekte, On-Page- und Off-Page-Faktoren sowie die Wettbewerbsanalyse." },
-                { "question": "Was ist technisches SEO?", "answer": "Technisches SEO umfasst alle Maßnahmen, die die technische Grundlage einer Website betreffen, um deren Sichtbarkeit in Suchmaschinen zu verbessern. Dazu gehören Aspekte wie Seitenstruktur, Ladezeiten, mobile Optimierung, Indexierung und Crawling." },
-                { "question": "Was ist Local SEO?", "answer": "Local SEO umfasst alle Maßnahmen, die darauf abzielen, die Sichtbarkeit eines Unternehmens in lokalen Suchergebnissen zu erhöhen. Dazu gehören die Optimierung des Google Business Profils, konsistente Standortdaten, lokale Keywords und Bewertungen." },
-                { "question": "Was ist GEO?", "answer": "GEO umfasst alle Maßnahmen, die darauf abzielen, die Sichtbarkeit eines Unternehmens in geografisch relevanten Suchergebnissen zu erhöhen. Dazu gehören die Optimierung von Inhalten und Quellen für KI-Suchsysteme sowie die Sicherstellung konsistenter Standortdaten." },
-                { "question": "Was ist der Unterschied zwischen SEO und Google Ads?", "answer": "SEO (Suchmaschinenoptimierung) zielt darauf ab, die organische Sichtbarkeit einer Website in den Suchergebnissen zu erhöhen, während Google Ads bezahlte Anzeigen sind, die über den Suchergebnissen erscheinen. SEO ist langfristig und nachhaltig, Google Ads liefert sofortige Ergebnisse, erfordert jedoch ein Budget." },
-                { "question": "Kann eine bestehende Website optimiert werden?", "answer": "Ja, eine bestehende Website kann optimiert werden. Dies umfasst technische Verbesserungen, On-Page- und Off-Page-Optimierungen sowie die Anpassung von Inhalten und Keywords, um die Sichtbarkeit und das Ranking in den Suchergebnissen zu verbessern." }
+                { "question": "Was ist der Unterschied zwischen einem Audit und laufender SEO-Betreuung?", "answer": "Der Audit zeigt den aktuellen Zustand, identifiziert Potenziale und definiert die nächsten Schritte. Bei einer laufenden Betreuung werden diese Maßnahmen umgesetzt, ausgewertet und kontinuierlich weiterentwickelt." },
+                { "question": "Was ist technisches SEO?", "answer": "Technisches SEO beschäftigt sich unter anderem mit Crawling, Indexierung, Ladezeiten, Redirects, Canonicals, Sitemap, strukturierten Daten und der technischen Architektur einer Website." },
+                { "question": "Was ist Local SEO?", "answer": "Local SEO verbessert die Sichtbarkeit bei lokalen Suchanfragen, etwa über Google Business Profile, Standortsignale, lokale Keywords und konsistente Unternehmensinformationen." },
+                { "question": "Was ist GEO?", "answer": "GEO steht für Generative Engine Optimization. Dabei geht es darum, Inhalte zusätzlich so aufzubereiten, dass Unternehmen, Informationen und Expertise auch von KI-basierten Such- und Antwortsystemen möglichst eindeutig verstanden werden können." },
+                { "question": "Kann eine bestehende Website optimiert werden?", "answer": "Ja. Ein Großteil der SEO-Arbeit findet auf bestehenden Websites statt. Dabei wird geprüft, welche technischen und inhaltlichen Grundlagen bereits vorhanden sind und wo konkrete Verbesserungen sinnvoll sind." },       
+                { "question": "Was ist der Unterschied zwischen SEO und Google Ads?", "answer": "SEO (Suchmaschinenoptimierung) zielt darauf ab, die organische Sichtbarkeit einer Website in den Suchergebnissen zu erhöhen, während Google Ads bezahlte Anzeigen sind, die über den Suchergebnissen erscheinen. SEO ist langfristig und nachhaltig, Google Ads liefert sofortige Ergebnisse, erfordert jedoch ein Budget." }
             ],
             "noteText": "Deine Frage war nicht dabei? Schreib sie mir – du bekommst eine klare Antwort, kein Verkaufsgespräch.",
             "noteCta": "Frage stellen"
+        },
+        "finalCta": {
+            "title": "Finden wir heraus, wo deine größten SEO-Potenziale liegen.",
+            "description": "Im ersten Gespräch klären wir kurz deine Website, Ziele und aktuelle Situation. Danach lässt sich einschätzen, ob ein SEO & GEO Audit oder eine laufende Betreuung sinnvoller ist.",
+            "ctaLabel": "SEO & GEO Analyse anfragen",
+            "href": "/#contact"
         }
     }
 }

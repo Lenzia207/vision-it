@@ -307,6 +307,12 @@
             ],
             "noteText": "Didn't find your question? Send it to me – you'll get a clear answer, not a sales pitch.",
             "noteCta": "Ask a question"
+        },
+        "finalCta": {
+            "title": "Let's find out where your biggest SEO potential lies.",
+            "description": "In the first conversation, we'll quickly clarify your website, goals and current situation. From there, we can assess whether an SEO & GEO audit or ongoing support makes more sense.",
+            "ctaLabel": "Request a SEO & GEO Analysis",
+            "href": "/#contact"
         }
     }
 }

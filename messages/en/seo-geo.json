@@ -1,0 +1,312 @@
+{
+    "angebot_seo_geo_data": {
+        "title": "SEO Consulting in Vienna for Sustainable Visibility",
+        "description": "We offer professional SEO and GEO services to increase your business's visibility in Vienna. Optimize your website for search engines and local search queries.",
+        "servicesTitle": "Our Services",
+        "servicesDescription": "Comprehensive solutions for your success.",
+        "ctaLabel": "Request an offer",
+        "hero": {
+            "tag": "SEO · GEO · Technical Optimization",
+            "title": "SEO Consulting in Vienna for Sustainable Visibility",
+            "description": "Technical SEO, content, local SEO and GEO – analyzed, prioritized and implemented step by step, based on data.",
+            "primaryCtaLabel": "Request a SEO & GEO Analysis",
+            "secondaryCtaLabel": "View Services",
+            "processLabel": "The Process",
+            "processSteps": ["Audit", "Analysis", "Findings", "Prioritization", "Roadmap", "Implementation", "Monitoring"]
+        },
+        "situation": {
+            "tag": "Starting Point",
+            "title": "Why can't people find my website?",
+            "paragraphs": [
+                "A website can work perfectly on a technical level and still barely be found on Google. Missing indexing, technical errors, unclear page structures, wrong keywords or missing content can all slow down visibility.",
+                "That's why SEO doesn't start with individual meta tags or blog posts, but with a structured assessment."
+            ],
+            "problems": [
+                "Rankings are stagnating",
+                "Important pages aren't being indexed",
+                "Organic inquiries stay away",
+                "Unclear which keywords are relevant",
+                "Google Business Profile brings little visibility",
+                "There is no clear SEO strategy"
+            ],
+            "note": "This is exactly where the SEO & GEO audit begins."
+        },
+        "audit": {
+            "tag": "Step 01 — Audit",
+            "title": "What does the SEO & GEO audit check?",
+            "description": "The audit doesn't just look at individual errors, but at the technical, content and strategic starting point of the entire website.",
+            "categories": [
+                {
+                    "title": "Technical SEO",
+                    "description": "Can Google fully crawl, understand and index the website? This is where the problems that hold everything else back become visible.",
+                    "tags": ["Crawling", "Indexing", "Redirects", "Canonicals", "Sitemap", "robots.txt", "hreflang", "Core Web Vitals", "Structured Data"]
+                },
+                {
+                    "title": "OnPage SEO",
+                    "description": "Do content, structure and search intent align? We check whether every page has a clear job to do.",
+                    "tags": ["Title & Meta Description", "Heading Structure", "Page Structure", "Internal Linking", "Content", "Search Intent", "Information Architecture"]
+                },
+                {
+                    "title": "Keywords & Competition",
+                    "description": "Which search queries is the website relevant for today, and where is there untapped potential compared to the competition?",
+                    "tags": ["Existing Rankings", "Keyword Potential", "Search Intent", "Competitors", "Content Gaps", "Keyword Mapping"]
+                },
+                {
+                    "title": "Local SEO",
+                    "description": "How visible is the business in local search queries in Vienna and the surrounding area?",
+                    "tags": ["Google Business Profile", "Local Keywords", "Location Signals", "Business Data", "Reviews", "Local Rankings"]
+                },
+                {
+                    "title": "GEO / AI Visibility",
+                    "description": "Is content prepared in a way that lets AI-based search and answer systems clearly attribute the business and its expertise?",
+                    "tags": ["Entity Signals", "Structured Content", "Citable Information", "Schema.org", "Authoritative Sources", "AI Readability"],
+                    "highlighted": true
+                },
+                {
+                    "title": "Tracking & Data",
+                    "description": "Can what SEO actually achieves even be measured? Without clean data, every optimization stays a guess.",
+                    "tags": ["Google Search Console", "GA4", "Google Tag Manager", "Rankings", "Conversions", "Measurability"]
+                }
+            ]
+        },
+        "findings": {
+            "tag": "Step 02 — Analysis & Findings",
+            "title": "Not a list of errors. Clear findings.",
+            "description": "An audit doesn't help much if all that's left afterward is a long list of technical errors. That's why the results are analyzed, consolidated and documented in a way that's easy to understand.",
+            "questionsTitle": "Every finding answers five questions",
+            "questions": [
+                "What was found?",
+                "Why is it relevant?",
+                "What impact can it have?",
+                "How should it be fixed?",
+                "How urgent is the fix?"
+            ],
+            "example": {
+                "badgeLabel": "Example Finding",
+                "badgeSubtitle": "How the documentation is structured",
+                "title": "Important service pages aren't linked internally.",
+                "stats": [
+                    { "label": "Impact", "value": "High" },
+                    { "label": "Priority", "value": "P1" }
+                ],
+                "recommendationLabel": "Recommendation",
+                "recommendation": "Build internal links from relevant topic areas."
+            }
+        },
+        "prioritization": {
+            "tag": "Step 03 — Prioritization",
+            "title": "Not everything needs to happen at once.",
+            "description": "All findings are prioritized by urgency, SEO impact and implementation effort. This creates a clear order instead of a messy to-do list.",
+            "tabs": [
+                {
+                    "code": "P0",
+                    "label": "Critical",
+                    "description": "Issues that affect crawling, indexing or technical accessibility.",
+                    "items": ["Pages not indexable", "Technical blockers", "Incorrect redirects", "Serious canonical issues"]
+                },
+                {
+                    "code": "P1",
+                    "label": "High Impact",
+                    "description": "Measures highly relevant for rankings and important landing pages.",
+                    "items": ["Missing landing pages", "Incorrect keyword mapping", "Weak page structure", "Core on-page issues"]
+                },
+                {
+                    "code": "P2",
+                    "label": "Growth",
+                    "description": "Measures for additional visibility and reach.",
+                    "items": ["Content expansion", "Local SEO", "New keyword clusters", "GEO optimizations"]
+                },
+                {
+                    "code": "P3",
+                    "label": "Optimization",
+                    "description": "Ongoing improvements, tests and monitoring.",
+                    "items": ["CTR optimization", "Refining internal linking", "Updating existing content", "New opportunities from Search Console data"]
+                }
+            ],
+            "footnote": "The order results from your website's actual findings, not from a fixed standard package."
+        },
+        "roadmap": {
+            "tag": "Step 04 — Roadmap",
+            "title": "Findings become a concrete SEO roadmap.",
+            "description": "After the audit and analysis, it's clear what should be improved. The roadmap translates these findings into concrete next steps.",
+            "phases": [
+                {
+                    "phaseLabel": "Phase 1",
+                    "navLabel": "Technical Foundation",
+                    "title": "Technical Foundation",
+                    "items": ["Crawling", "Indexing", "Technical errors", "Tracking"]
+                },
+                {
+                    "phaseLabel": "Phase 2",
+                    "navLabel": "Relevance & Structure",
+                    "title": "Relevance & Page Structure",
+                    "items": ["Keyword mapping", "Money pages", "Internal linking", "On-page optimization"]
+                },
+                {
+                    "phaseLabel": "Phase 3",
+                    "navLabel": "Growth",
+                    "title": "Growth",
+                    "items": ["New content", "Local SEO", "Content clusters", "GEO"]
+                },
+                {
+                    "phaseLabel": "Phase 4",
+                    "navLabel": "Optimization",
+                    "title": "Optimization",
+                    "items": ["Monitoring rankings", "Analyzing data", "Improving existing content", "Evolving the roadmap"]
+                }
+            ],
+            "note": "After the audit, it's not just clear what should be improved, but also what happens next."
+        },
+        "monitoring": {
+            "tag": "Step 05 — Implementation & Monitoring",
+            "title": "SEO doesn't end with implementation.",
+            "description": "After the first measures, the real observation begins. Rankings, clicks, indexing and conversions show which changes are working and where further potential is emerging.",
+            "cycleTitle": "The monthly work cycle",
+            "cycleSubtitle": "Repeats every month",
+            "cycleSteps": [
+                { "label": "Week 1", "index": "01", "title": "Implement", "description": "The next measures from the roadmap are implemented – technical, content-related or local." },
+                { "label": "Ongoing", "index": "02", "title": "Measure", "description": "Rankings, clicks, indexing and conversions are tracked via Search Console and GA4." },
+                { "label": "End of month", "index": "03", "title": "Evaluate", "description": "What has changed, what has worked, and what new opportunities does the data show?" },
+                { "label": "Handover", "index": "04", "title": "Re-prioritize", "description": "The roadmap is updated. The next month starts with the measures that bring the most value right now.", "highlighted": true }
+            ],
+            "cycleNote": "Step 04 kicks off the next cycle – with updated data and a freshly sorted roadmap.",
+            "monthsTitle": "How this builds up over the months",
+            "monthsSubtitle": "Every cycle builds on the previous one",
+            "months": [
+                { "label": "Month 1", "progress": 25, "description": "Technical foundation and tracking. The first measurements become reliable at all.", "tags": ["P0"] },
+                { "label": "Month 2", "progress": 50, "description": "Relevance and page structure. The evaluation from month 1 determines the order.", "tags": ["P0", "P1"] },
+                { "label": "Month 3", "progress": 75, "description": "Growth: content, local SEO and GEO. The first effects of earlier measures become visible.", "tags": ["P1", "P2"] },
+                { "label": "From month 4", "progress": 100, "description": "The cycle continues: optimize, test, refine and pick up new opportunities from the data.", "tags": ["P2", "P3"], "highlighted": true }
+            ],
+            "monthsNote": "The bars show how far the roadmap has been worked through, not guaranteed results. How quickly rankings change depends on the website, competition and search market.",
+            "metricsLabel": "What's monitored in every cycle",
+            "metrics": ["Rankings", "Impressions", "Clicks", "Organic traffic", "Conversions", "Indexing", "Local visibility"],
+            "metricsAccent": "GEO / AI visibility",
+            "metricsNote": "Not an overloaded dashboard, but the metrics decisions can actually be based on."
+        },
+        "geo": {
+            "tag": "GEO",
+            "title": "SEO for Google. GEO for the next generation of search.",
+            "description": "Classic SEO remains the foundation. GEO additionally considers how content can be structured, made understandable and made citable for AI-based search and answer systems.",
+            "note": "GEO doesn't replace SEO and doesn't guarantee placement in AI answers. It makes sure information about your business is clear and reliable.",
+            "signals": [
+                "Clear business and entity signals",
+                "Structured data",
+                "Clear expertise",
+                "Understandable content structure",
+                "Reliable sources",
+                "Citable facts and statements",
+                "Consistent business information"
+            ]
+        },
+        "collaboration": {
+            "tag": "Collaboration",
+            "title": "Two ways to get started with SEO",
+            "description": "Get a one-off analysis and implement the roadmap yourself – or implement the measures together with us. The audit is included in both models.",
+            "plans": [
+                {
+                    "name": "SEO & GEO Start",
+                    "badgeLabel": "One-off",
+                    "badgeVariant": "outline",
+                    "description": "The professional starting point for businesses that want to know where they stand and which SEO measures are actually worth pursuing.",
+                    "price": "Price on request",
+                    "features": [
+                        "Technical SEO audit",
+                        "On-page analysis",
+                        "Keyword & competitor analysis",
+                        "Local SEO check",
+                        "GEO assessment",
+                        "Tracking check",
+                        "Documented findings",
+                        "Prioritization by P0–P3",
+                        "Concrete roadmap",
+                        "Wrap-up call and handover"
+                    ],
+                    "ctaLabel": "Request SEO analysis",
+                    "ctaVariant": "secondary",
+                    "footnote": "After the handover, the roadmap can be implemented in-house, or VisionIT can take over implementation."
+                },
+                {
+                    "name": "SEO & GEO Growth",
+                    "badgeLabel": "3 months",
+                    "badgeVariant": "solid",
+                    "description": "For businesses that don't just want an analysis of what needs to improve, but want to implement the measures together with VisionIT.",
+                    "price": "Price on request",
+                    "includedNote": "Everything from SEO & GEO Start is included – no second audit.",
+                    "features": [
+                        "Technical implementation",
+                        "On-page optimization",
+                        "Optimization of key landing pages",
+                        "Internal linking",
+                        "Local SEO",
+                        "Content optimization",
+                        "GEO measures",
+                        "Monitoring and reporting",
+                        "Ongoing prioritization"
+                    ],
+                    "ctaLabel": "Request SEO support",
+                    "ctaVariant": "primary",
+                    "highlighted": true
+                }
+            ],
+            "growthLabel": "Growth over time",
+            "growthMonths": [
+                { "label": "Month 1", "description": "Audit, analysis and roadmap" },
+                { "label": "Month 2", "description": "Implementing the P0 and P1 measures" },
+                { "label": "Month 3", "description": "Further optimization, monitoring and next growth measures" }
+            ],
+            "growthNote": "Optionally continues monthly after that."
+        },
+        "services": [
+            {
+                "icon": "building-2",
+                "title": "Technical SEO: Core Web Vitals, Indexing, Crawling",
+                "description": "Optimizing the technical aspects of your website to improve performance and visibility in search engines. We take care of Core Web Vitals, indexing and crawling."
+            },
+            {
+                "icon": "code-2",
+                "title": "Keyword and Competitor Research",
+                "description": "Analysis and optimization of keywords as well as competitor research to increase your website's visibility in search engines and generate targeted traffic."
+            },
+            {
+                "icon": "shopping-cart",
+                "title": "On-Page Optimization: Page Structure, Meta Tags, Internal Linking",
+                "description": "Optimizing your website's content and structure to increase relevance for search engines and improve the user experience. We take care of page structure, meta tags and internal linking."
+            },
+            {
+                "icon": "zap",
+                "title": "Structured Data (Schema.org) for Rich Results",
+                "description": "Implementing structured data according to Schema.org to achieve rich results in search results and increase your website's visibility."
+            },
+            {
+                "icon": "sparkles",
+                "title": "Local SEO: Google Business Profile and Consistent Location Data",
+                "description": "Optimizing your Google Business Profile and ensuring consistent location data to increase your business's local visibility and reach more customers in your region."
+            },
+            {
+                "icon": "shield",
+                "title": "GEO: Preparing Content and Sources for Answers in AI Search Systems",
+                "description": "Preparing content and sources to optimize answers in AI search systems and increase your business's visibility in these systems."
+            }
+        ],
+         "faq": {
+            "tag": "FAQ",
+            "title": "Frequently Asked Questions",
+            "description": "Everything you need to know about SEO and GEO. Here you'll find answers to the most common questions about our services.",
+            "items": [
+                { "question": "How long does it take for SEO to work?", "answer": "SEO is a long-term process. Initial results are usually visible after 3 to 6 months, depending on competition, industry and starting point." },
+                { "question": "Can you guarantee position 1 on Google?", "answer": "No, a position 1 ranking cannot be guaranteed. SEO depends on many factors, including competition, industry, search volume and algorithm changes." },
+                { "question": "What does SEO cost?", "answer": "The cost of SEO depends on scope, competition and goals. Typically billed by monthly effort. After an analysis and an initial conversation, you'll receive a transparent quote." },
+                { "question": "Do I need ongoing SEO support?", "answer": "Yes, ongoing SEO support is recommended to continuously improve visibility and rankings and to be able to react to algorithm changes." },
+                { "question": "What is an SEO audit?", "answer": "An SEO audit is a comprehensive analysis of your website to identify strengths, weaknesses and optimization potential. It covers technical aspects, on-page and off-page factors as well as competitor analysis." },
+                { "question": "What is technical SEO?", "answer": "Technical SEO includes all measures that affect the technical foundation of a website in order to improve its visibility in search engines. This includes aspects such as page structure, load times, mobile optimization, indexing and crawling." },
+                { "question": "What is local SEO?", "answer": "Local SEO includes all measures aimed at increasing a business's visibility in local search results. This includes optimizing the Google Business Profile, consistent location data, local keywords and reviews." },
+                { "question": "What is GEO?", "answer": "GEO includes all measures aimed at increasing a business's visibility in generative AI search results. This includes optimizing content and sources for AI search systems as well as ensuring consistent location data." },
+                { "question": "What is the difference between SEO and Google Ads?", "answer": "SEO (search engine optimization) aims to increase a website's organic visibility in search results, while Google Ads are paid ads that appear above the search results. SEO is long-term and sustainable, Google Ads delivers immediate results but requires a budget." },
+                { "question": "Can an existing website be optimized?", "answer": "Yes, an existing website can be optimized. This includes technical improvements, on-page and off-page optimizations as well as adjusting content and keywords to improve visibility and ranking in search results." }
+            ],
+            "noteText": "Didn't find your question? Send it to me – you'll get a clear answer, not a sales pitch.",
+            "noteCta": "Ask a question"
+        }
+    }
+}

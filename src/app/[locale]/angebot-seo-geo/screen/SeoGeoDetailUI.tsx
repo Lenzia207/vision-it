@@ -1,27 +1,60 @@
-import TitleHeader from "@/components/TitleHeader";
 import { AngebotProcessStep } from "../../home/sections/data/types/home-types";
+import SeoGeoFaqSection from "../sections/SeoGeoFaqSection";
+import SeoGeoHeroSection from "../sections/SeoGeoHeroSection";
+import SeoGeoSituationSection from "../sections/SeoGeoSituationSection";
+import SeoGeoAuditSection from "../sections/SeoGeoAuditSection";
+import SeoGeoFindingsSection from "../sections/SeoGeoFindingsSection";
+import SeoGeoPrioritizationSection from "../sections/SeoGeoPrioritizationSection";
+import SeoGeoRoadmapSection from "../sections/SeoGeoRoadmapSection";
+import SeoGeoCollaborationSection from "../sections/SeoGeoCollaborationSection";
+import SeoGeoMonitoringSection from "../sections/SeoGeoMonitoringSection";
+import SeoGeoGeoSection from "../sections/SeoGeoGeoSection";
+import { AngebotSeoFaqData, AngebotSeoGeoAuditData, AngebotSeoGeoCollaborationData, AngebotSeoGeoFindingsData, AngebotSeoGeoGeoData, AngebotSeoGeoHeroData, AngebotSeoGeoMonitoringData, AngebotSeoGeoPrioritizationData, AngebotSeoGeoRoadmapData, AngebotSeoGeoSituationData } from "../data/seo-geo-types";
 
 
 interface SeoGeoDetailUIProps {
-  badge: string;
-  title: string;
-  description: string;
+  hero: AngebotSeoGeoHeroData;
+  situation: AngebotSeoGeoSituationData;
+  audit: AngebotSeoGeoAuditData;
+  findings: AngebotSeoGeoFindingsData;
+  prioritization: AngebotSeoGeoPrioritizationData;
+  roadmap: AngebotSeoGeoRoadmapData;
+  collaboration: AngebotSeoGeoCollaborationData;
+  monitoring: AngebotSeoGeoMonitoringData;
+  geo: AngebotSeoGeoGeoData;
   servicesTitle: string;
   servicesDescription?: string;
   processLabel: string;
   ctaLabel: string;
   // services: AngebotWebsiteService[];
+  faq: AngebotSeoFaqData;
   process: AngebotProcessStep[];
   locale: string;
 }
 
-export default function SeoGeoDetailUI({ badge, title, description, servicesTitle, servicesDescription, processLabel, ctaLabel, // services,
- process, locale }: SeoGeoDetailUIProps) {
+export default function SeoGeoDetailUI({ hero, situation, audit, findings, prioritization, roadmap, collaboration, monitoring, geo, faq, servicesTitle, servicesDescription, processLabel, ctaLabel, // services,
+  process, locale }: SeoGeoDetailUIProps) {
   return (
     <>
-      <section className="section-dark relative section-padding" style={{ paddingTop: "8rem" }}>
-        <TitleHeader as="h1" variant="badge" badge={badge} title={title} description={description} />
-      </section>
+      <SeoGeoHeroSection hero={hero} />
+
+      <SeoGeoSituationSection situation={situation} />
+
+      <SeoGeoAuditSection audit={audit} />
+
+      <SeoGeoFindingsSection findings={findings} />
+
+      <SeoGeoPrioritizationSection prioritization={prioritization} />
+
+      <SeoGeoRoadmapSection roadmap={roadmap} />
+
+      <SeoGeoMonitoringSection monitoring={monitoring} />
+
+      <SeoGeoGeoSection geo={geo} />
+
+      <SeoGeoCollaborationSection collaboration={collaboration} locale={locale} />
+
+      <SeoGeoFaqSection faq={faq} locale={locale} />
 
       {/* <WebsiteServiceSection servicesTitle={servicesTitle} servicesDescription={servicesDescription} services={services} ctaLabel={ctaLabel} locale={locale} /> */}
       {/* Website Pakete in white BG */}

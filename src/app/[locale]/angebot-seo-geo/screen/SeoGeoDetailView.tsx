@@ -12,13 +12,20 @@ interface SeoGeoDetailViewProps {
 
 export default function SeoGeoDetailView({ seoGeoPage, area, locale }: SeoGeoDetailViewProps) {
   return (
-    <SeoGeoDetailUI  
-      badge={area.badge}
-      title={seoGeoPage.title}
-      description={seoGeoPage.description}
+    <SeoGeoDetailUI
+      hero={seoGeoPage.hero}
+      situation={seoGeoPage.situation}
+      audit={seoGeoPage.audit}
+      findings={seoGeoPage.findings}
+      prioritization={seoGeoPage.prioritization}
+      roadmap={seoGeoPage.roadmap}
+      collaboration={seoGeoPage.collaboration}
+      monitoring={seoGeoPage.monitoring}
+      geo={seoGeoPage.geo}
       servicesTitle={seoGeoPage.servicesTitle}
       servicesDescription={seoGeoPage.servicesDescription}
       // services={area.services}
+      faq={seoGeoPage.faq}
       processLabel={area.processLabel}
       ctaLabel={seoGeoPage.ctaLabel}
       process={area.process}

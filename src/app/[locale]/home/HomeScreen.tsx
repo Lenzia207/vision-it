@@ -42,14 +42,7 @@ export default function HomeScreen({ data, locale }: HomeScreenProps) {
         locale={locale}
       />
 
-      {/* Pricing */}
-      {/* <PricePackages
-        title={data.price_packages_section.title}
-        btnText={data.price_packages_section.btnText}
-        packages={data.price_packages_section.packages}
-      /> */}
-
-      {/* Portfolio Section */}
+          {/* Portfolio Section */}
       {/* <PortfolioSection
         title={data.portfolio_section.title}
         description={data.portfolio_section.description}
@@ -57,25 +50,7 @@ export default function HomeScreen({ data, locale }: HomeScreenProps) {
         projects={data.portfolio_section.projects}
       /> */}
 
-      {/* Dashboard: Tech Stack + About Me */}
-      {/* <section id="about" className="section-padding">
-        <TitleHeader title={data.about_me_section.title} tag="ÜBER MICH" />
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="dashboard-layout">
-              <AboutMeSection
-              title={data.about_me_section.title}
-              description={data.about_me_section.description}
-              social_media={data.about_me_section.social_media}
-              fullname={data.about_me_section.name}
-            />
-            <TechStackSection
-              title={data.tech_stack_section.title}
-              stacks={data.tech_stack_section.stacks}
-            />
 
-          </div>
-        </div>
-      </section> */}
 
       {/* Contact / Footer */}
       <ContactSection

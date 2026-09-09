@@ -7,8 +7,8 @@
         "ctaLabel": "Angebot anfordern",
         "audience": {
             "tag": "Für wen ist das geeignet?",
-            "title": "Du brauchst eine neue Website, wenn dein aktueller Auftritt nicht mehr zu deinem Unternehmen passt.",
-            "description": "Oder wenn er technisch veraltet ist – oder zwar gut aussieht, aber kaum Anfragen bringt. Typische Ausgangssituationen und was wir daraus machen:",
+            "title": "Dein Auftritt im im World Wide Web",
+            "description": "Es gibt viele Gründe, warum eine neue Website sinnvoll sein kann. Deshalb ist es wichtig, zu überlegen, ob deine aktuelle Website noch den Anforderungen entspricht. Typische Ausgangssituationen und was wir daraus machen:",
             "situationLabel": "Ausgangssituation",
             "solutionLabel": "Deine Lösung",
             "rows": [
@@ -77,7 +77,7 @@
                     "name": "Starter",
                     "tagline": "Für den ersten professionellen Auftritt.",
                     "pricePrefix": "ab",
-                    "price": "1.490 €",
+                    "price": "990 €",
                     "features": ["Bis zu 5 Seiten", "Design auf Basis deiner Marke", "Kontaktformular", "Technische SEO-Basis", "Mobil optimiert"],
                     "ctaLabel": "Anfrage senden",
                     "ctaVariant": "secondary"
@@ -86,7 +86,7 @@
                     "name": "Business",
                     "tagline": "Für Unternehmen, die über die Website Anfragen gewinnen wollen.",
                     "pricePrefix": "ab",
-                    "price": "3.900 €",
+                    "price": "2.900 €",
                     "features": ["Bis zu 12 Seiten", "Individuelles Design", "CMS zur eigenen Pflege", "Mehrere Formulare", "SEO-Optimierung und Analytics", "Performance-Optimierung"],
                     "ctaLabel": "Anfrage senden",
                     "ctaVariant": "primary",

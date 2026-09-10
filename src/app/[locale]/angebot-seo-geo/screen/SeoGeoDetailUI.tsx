@@ -6,11 +6,11 @@ import SeoGeoAuditSection from "../sections/SeoGeoAuditSection";
 import SeoGeoFindingsSection from "../sections/SeoGeoFindingsSection";
 import SeoGeoPrioritizationSection from "../sections/SeoGeoPrioritizationSection";
 import SeoGeoRoadmapSection from "../sections/SeoGeoRoadmapSection";
-import SeoGeoCollaborationSection from "../sections/SeoGeoCollaborationSection";
 import SeoGeoMonitoringSection from "../sections/SeoGeoMonitoringSection";
 import SeoGeoGeoSection from "../sections/SeoGeoGeoSection";
 import SeoGeoFinalCtaSection from "../sections/SeoGeoFinalCtaSection";
 import { AngebotSeoFaqData, AngebotSeoGeoAuditData, AngebotSeoGeoCollaborationData, AngebotSeoGeoFindingsData, AngebotSeoGeoFinalCtaData, AngebotSeoGeoGeoData, AngebotSeoGeoHeroData, AngebotSeoGeoMonitoringData, AngebotSeoGeoPrioritizationData, AngebotSeoGeoRoadmapData, AngebotSeoGeoSituationData } from "../data/seo-geo-types";
+import SeoGeoOfferSection from "../sections/SeoGeoCollaborationSection";
 
 
 interface SeoGeoDetailUIProps {
@@ -20,7 +20,7 @@ interface SeoGeoDetailUIProps {
   findings: AngebotSeoGeoFindingsData;
   prioritization: AngebotSeoGeoPrioritizationData;
   roadmap: AngebotSeoGeoRoadmapData;
-  collaboration: AngebotSeoGeoCollaborationData;
+  pricingScheme: AngebotSeoGeoCollaborationData;
   monitoring: AngebotSeoGeoMonitoringData;
   geo: AngebotSeoGeoGeoData;
   finalCta: AngebotSeoGeoFinalCtaData;
@@ -34,8 +34,7 @@ interface SeoGeoDetailUIProps {
   locale: string;
 }
 
-export default function SeoGeoDetailUI({ hero, situation, audit, findings, prioritization, roadmap, collaboration, monitoring, geo, finalCta, faq, servicesTitle, servicesDescription, processLabel, ctaLabel, // services,
-  process, locale }: SeoGeoDetailUIProps) {
+export default function SeoGeoDetailUI({ hero, situation, audit, findings, prioritization, roadmap, pricingScheme, monitoring, geo, finalCta, faq, locale }: SeoGeoDetailUIProps) {
   return (
     <>
       <SeoGeoHeroSection hero={hero} />
@@ -43,6 +42,7 @@ export default function SeoGeoDetailUI({ hero, situation, audit, findings, prior
       <SeoGeoSituationSection situation={situation} />
 
       <SeoGeoAuditSection audit={audit} />
+
       <SeoGeoFinalCtaSection finalCta={finalCta} locale={locale} />
 
       <SeoGeoFindingsSection findings={findings} />
@@ -55,20 +55,9 @@ export default function SeoGeoDetailUI({ hero, situation, audit, findings, prior
 
       <SeoGeoGeoSection geo={geo} />
 
-      <SeoGeoCollaborationSection collaboration={collaboration} locale={locale} />
+      <SeoGeoOfferSection pricingScheme={pricingScheme} locale={locale} />
 
       <SeoGeoFaqSection faq={faq} locale={locale} />
-
-
-      {/* <WebsiteServiceSection servicesTitle={servicesTitle} servicesDescription={servicesDescription} services={services} ctaLabel={ctaLabel} locale={locale} /> */}
-      {/* Website Pakete in white BG */}
-
-      {/* <Link href="/#contact" locale={locale} className="btn btn-primary">
-            {linkLabel}
-          </Link> */}
-
-
-      {/* <WebsiteProcessSection processLabel={processLabel} process={process} /> */}
     </>
   );
 }

@@ -1,18 +1,18 @@
 import { Link } from "@/app/i18n/routing";
 import { AngebotSeoGeoCollaborationData } from "../data/seo-geo-types";
 
-interface SeoGeoCollaborationSectionProps {
-  collaboration: AngebotSeoGeoCollaborationData;
+interface SeoGeoOfferSectionProps {
+  pricingScheme: AngebotSeoGeoCollaborationData;
   locale: string;
 }
 
 const GROWTH_BORDER_OPACITIES = [1, 0.6, 0.3];
 
-export default function SeoGeoCollaborationSection({ collaboration, locale }: SeoGeoCollaborationSectionProps) {
-  const { tag, title, description, plans, growthLabel, growthMonths, growthNote } = collaboration;
+export default function SeoGeoOfferSection({ pricingScheme, locale }: SeoGeoOfferSectionProps) {
+  const { tag, title, description, plans, growthLabel, growthMonths, growthNote } = pricingScheme;
 
   return (
-    <section className="section-padding" style={{ background: "var(--bg-surface-1)" }}>
+    <section id="preisModelle" className="section-padding" style={{ background: "var(--bg-surface-1)" }}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col gap-12">
         <div className="max-w-2xl flex flex-col gap-5 reveal-on-scroll">
           <span className="label-mono">{tag}</span>
@@ -34,6 +34,17 @@ export default function SeoGeoCollaborationSection({ collaboration, locale }: Se
               <div className="price-package-amount-row">
                 <span className="price-package-price-custom">{plan.price}</span>
               </div>
+
+              {plan.priceTiers && (
+                <ul className="plan-price-tiers">
+                  {plan.priceTiers.map((tier) => (
+                    <li key={tier.label} className="plan-price-tier">
+                      <span className="plan-price-tier-label">{tier.label}</span>
+                      <span className="plan-price-tier-price">{tier.price}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
 
               {plan.includedNote && (
                 <div className="plan-included-note">

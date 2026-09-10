@@ -16,7 +16,7 @@ export default function SeoGeoHeroSection({ hero }: SeoGeoHeroSectionProps) {
           <p className="text-lg max-w-xl" style={{ color: "var(--text-300)" }}>{description}</p>
 
           <div className="flex flex-wrap gap-4 mt-2">
-            <a href="#contact" className="btn btn-primary">{primaryCtaLabel}</a>
+            <a href="#preisModelle" className="btn btn-primary">{primaryCtaLabel}</a>
             <a href="#leistungen" className="btn btn-secondary">{secondaryCtaLabel}</a>
           </div>
         </div>

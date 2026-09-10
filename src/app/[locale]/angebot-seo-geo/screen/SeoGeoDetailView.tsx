@@ -19,7 +19,7 @@ export default function SeoGeoDetailView({ seoGeoPage, area, locale }: SeoGeoDet
       findings={seoGeoPage.findings}
       prioritization={seoGeoPage.prioritization}
       roadmap={seoGeoPage.roadmap}
-      collaboration={seoGeoPage.collaboration}
+      pricingScheme={seoGeoPage.pricingScheme}
       monitoring={seoGeoPage.monitoring}
       geo={seoGeoPage.geo}
       finalCta={seoGeoPage.finalCta}

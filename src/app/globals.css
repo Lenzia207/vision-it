@@ -568,7 +568,7 @@ h1, h2, h3, h4 {
   font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 700;
-  color: var(--lime-hover);
+  color: var(--text-400);
 }
 
 .audit-card.is-highlighted .audit-index {
@@ -638,7 +638,7 @@ h1, h2, h3, h4 {
   font-family: var(--font-mono);
   font-size: 0.78rem;
   font-weight: 700;
-  color: var(--lime-hover);
+  color: var(--text-400);
 }
 
 .finding-card {
@@ -999,7 +999,7 @@ h1, h2, h3, h4 {
   font-family: var(--font-mono);
   font-size: 0.78rem;
   font-weight: 700;
-  color: var(--lime-hover);
+  color: var(--text-400);
 }
 
 .cycle-card.is-highlighted .cycle-card-index {
@@ -1132,6 +1132,36 @@ h1, h2, h3, h4 {
   font-weight: 500;
   line-height: 1.4;
   color: var(--text-100);
+}
+
+.plan-price-tiers {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 14px 18px;
+  list-style: none;
+  background: var(--bg-surface-1);
+  border: 1px solid var(--border-faint);
+}
+
+.plan-price-tier {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.88rem;
+}
+
+.plan-price-tier-label {
+  color: var(--text-300);
+}
+
+.plan-price-tier-price {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--text-100);
+  white-space: nowrap;
 }
 
 .plan-footnote {
@@ -1333,7 +1363,7 @@ h1, h2, h3, h4 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .price-package-card {

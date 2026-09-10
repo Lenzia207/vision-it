@@ -199,17 +199,22 @@
                 "Konsistente Unternehmensinformationen"
             ]
         },
-        "collaboration": {
-            "tag": "Zusammenarbeit",
+        "pricingScheme": {
+            "tag": "Mein Angebot",
             "title": "Zwei Wege, mit SEO zu starten",
             "description": "Einmalig analysieren und die Roadmap selbst umsetzen – oder die Maßnahmen gemeinsam umsetzen. Der Audit ist in beiden Modellen enthalten.",
             "plans": [
                 {
-                    "name": "SEO & GEO Start",
+                    "name": "SEO Start",
                     "badgeLabel": "Einmalig",
                     "badgeVariant": "outline",
                     "description": "Der professionelle Ausgangspunkt für Unternehmen, die wissen möchten, wo sie stehen und welche SEO-Maßnahmen wirklich sinnvoll sind.",
-                    "price": "Preis auf Anfrage",
+                    "price": "ab 850 €",
+                    "priceTiers": [
+                        { "label": "Bis 10 Seiten: ", "price": "850 €" },
+                        { "label": "11–30 Seiten: ", "price": "1.150 €" },
+                        { "label": "Über 30 Seiten: ", "price": "auf Anfrage" }
+                    ],
                     "features": [
                         "Technischer SEO-Audit",
                         "OnPage-Analyse",
@@ -227,11 +232,16 @@
                     "footnote": "Nach der Übergabe kann die Roadmap intern umgesetzt werden oder VisionIT übernimmt anschließend die Umsetzung."
                 },
                 {
-                    "name": "SEO & GEO Growth",
+                    "name": "SEO Growth",
                     "badgeLabel": "3 Monate",
                     "badgeVariant": "solid",
                     "description": "Für Unternehmen, die nicht nur analysieren möchten, was verbessert werden muss, sondern die Maßnahmen gemeinsam mit VisionIT umsetzen wollen.",
-                    "price": "Preis auf Anfrage",
+                    "price": "ab 650 €",
+                    "priceTiers": [
+                        { "label": "Bis 10 Seiten: ", "price": "650 € / Monat" },
+                        { "label": "11–30 Seiten: ", "price": "950 € / Monat" },
+                        { "label": "Über 30 Seiten: ", "price": "auf Anfrage" }
+                    ],
                     "includedNote": "Alles aus SEO & GEO Start ist enthalten – kein zweiter Audit.",
                     "features": [
                         "Technische Umsetzung",
@@ -246,7 +256,8 @@
                     ],
                     "ctaLabel": "SEO Betreuung anfragen",
                     "ctaVariant": "primary",
-                    "highlighted": true
+                    "highlighted": true,
+                    "footnote": "Nach den ersten 3 Monaten liegt der Fokus auf Monitoring und laufender Anpassung – der monatliche Preis reduziert sich entsprechend."
                 }
             ],
             "growthLabel": "Growth im Verlauf",
@@ -255,7 +266,7 @@
                 { "label": "Monat 2", "description": "Umsetzung der Maßnahmen aus P0 und P1" },
                 { "label": "Monat 3", "description": "Weitere Optimierung, Monitoring und nächste Wachstumsmaßnahmen" }
             ],
-            "growthNote": "Danach optional monatlich weiterführbar."
+            "growthNote": "Danach optional monatlich weiterführbar – zu einem reduzierten Preis, da der Schwerpunkt auf Monitoring und Anpassung liegt."
         },
         "services": [
             {

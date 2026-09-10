@@ -199,8 +199,8 @@
                 "Consistent business information"
             ]
         },
-        "collaboration": {
-            "tag": "Collaboration",
+        "pricingScheme": {
+            "tag": "My Offer",
             "title": "Two ways to get started with SEO",
             "description": "Get a one-off analysis and implement the roadmap yourself – or implement the measures together with us. The audit is included in both models.",
             "plans": [

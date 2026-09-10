@@ -126,12 +126,18 @@ export interface AngebotSeoGeoMonitoringData {
   metricsNote: string;
 }
 
+export interface AngebotSeoGeoPriceTier {
+  label: string;
+  price: string;
+}
+
 export interface AngebotSeoGeoPricePlan {
   name: string;
   badgeLabel: string;
   badgeVariant: "solid" | "outline";
   description: string;
   price: string;
+  priceTiers?: AngebotSeoGeoPriceTier[];
   includedNote?: string;
   features: string[];
   ctaLabel: string;
@@ -196,7 +202,7 @@ export interface AngebotSeoGeoData {
   findings: AngebotSeoGeoFindingsData;
   prioritization: AngebotSeoGeoPrioritizationData;
   roadmap: AngebotSeoGeoRoadmapData;
-  collaboration: AngebotSeoGeoCollaborationData;
+  pricingScheme: AngebotSeoGeoCollaborationData;
   monitoring: AngebotSeoGeoMonitoringData;
   geo: AngebotSeoGeoGeoData;
   faq: AngebotSeoFaqData;

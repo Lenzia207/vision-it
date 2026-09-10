@@ -9,14 +9,14 @@
       "page": "/",
       "name": "Angebot",
       "pageId": "#services",
+      "submenuDescription": "Vier Leistungsbereiche. Jeder mit eigenem Ablauf, Umfang und Preisrahmen.",
       "submenu": [
-        { "name": "Agenturen", "pageId": "#agenturen" },
-        { "name": "Webseiten", "pageId": "#webseiten" },
-        { "name": "Mobile Apps", "pageId": "#mobile-apps" },
-        { "name": "SEO und GEO", "pageId": "#seo-geo" }
+        { "name": "Webseiten", "pageId": "#webseiten", "description": "Neubau, Redesign, Design-to-Code" },
+        { "name": "SEO und GEO", "pageId": "#seo-geo", "description": "Audit, Roadmap, Monitoring, GEO" },
+        { "name": "Mobile Apps", "pageId": "#mobile-apps", "description": "iOS und Android, React Native" },
+        { "name": "Agenturen", "pageId": "#agenturen", "description": "Umsetzung als externer Entwickler" }
       ]
     },
-
     {
       "page": "/",
       "name": "Kontakt",

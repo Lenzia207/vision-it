@@ -29,6 +29,7 @@ export interface PricePackagesSection {
 export interface MainNavigationSubItem {
   name: string;
   pageId: string;
+  description?: string;
 }
 
 export interface MainNavigation {
@@ -36,6 +37,7 @@ export interface MainNavigation {
   page: string;
   pageId: string;
   submenu?: MainNavigationSubItem[];
+  submenuDescription?: string;
 }
 
 export interface HeroStat {

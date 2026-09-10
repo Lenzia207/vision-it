@@ -1042,7 +1042,7 @@ h1, h2, h3, h4 {
 .cycle-note-icon {
   font-family: var(--font-mono);
   font-size: 1.1rem;
-  color: var(--lime-hover);
+  color: var(--text-400);
 }
 
 .cycle-note p {

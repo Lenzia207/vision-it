@@ -9,11 +9,12 @@
       "page": "/",
       "name": "Services",
       "pageId": "#services",
+      "submenuDescription": "Four service areas. Each with its own process, scope, and pricing.",
       "submenu": [
-        { "name": "Agencies", "pageId": "#agenturen" },
-        { "name": "Websites", "pageId": "#webseiten" },
-        { "name": "Mobile Apps", "pageId": "#mobile-apps" },
-        { "name": "SEO and GEO", "pageId": "#seo-geo" }
+        { "name": "Websites", "pageId": "#webseiten", "description": "New build, redesign, design-to-code" },
+        { "name": "SEO and GEO", "pageId": "#seo-geo", "description": "Audit, roadmap, monitoring, GEO" },
+        { "name": "Mobile Apps", "pageId": "#mobile-apps", "description": "iOS and Android, React Native" },
+        { "name": "Agencies", "pageId": "#agenturen", "description": "Delivery as an external developer" }
       ]
     },
 

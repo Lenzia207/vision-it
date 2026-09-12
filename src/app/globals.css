@@ -212,6 +212,8 @@ h1, h2, h3, h4 {
   background: var(--accent-purple-glow);
   border-color: var(--border-accent);
   color: var(--text-100);
+  border-radius: 9999px;
+  padding: 0.4rem 1rem;
 }
 
 /* ─── Buttons ───────────────────────────────────────────────────────── */

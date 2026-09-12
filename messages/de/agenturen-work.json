@@ -1,31 +1,158 @@
 {
-    "angebot_agenturen_data": {
-        "title": "Zusammenarbeit mit Agenturen Worldwide",
-        "description": "Wir bieten professionelle Webentwicklung, Webdesign und maßgeschneiderte Lösungen für Agenturen weltweit. Lassen Sie uns gemeinsam Ihre Projekte umsetzen.",
-        "servicesTitle": "Unsere Leistungen",
-        "servicesDescription": "Umfassende Lösungen für Ihren Erfolg.",
-        "ctaLabel": "Angebot anfordern",
-        "services": [
-            {
-                "icon": "building-2",
-                "title": "Entwicklung als Erweiterung deines Teams",
-                "description": "Entwicklung maßgeschneiderter Weblösungen von Grund auf, um die Leistung und Sichtbarkeit Ihres Unternehmens weltweit zu erhöhen. Wir kümmern uns um iOS- und Android-Optimierung."
-            },
-            {
-                "icon": "code-2",
-                "title": "Design zu Code – pixel-genaue Umsetzung bestehender Figma-Files",
-                "description": "Entwicklung und Integration von Funktionen, um die Leistung und Sichtbarkeit Ihrer Weblösungen zu erhöhen und gezielten Traffic zu generieren."
-            },
-            {
-                "icon": "shopping-cart",
-                "title": "Feature-Entwicklung & Integrationen in laufenden Projekten",
-                "description": "Umsetzung von Designvorlagen in funktionierenden Code, um die Benutzererfahrung zu verbessern und die Leistung Ihrer Weblösungen zu optimieren."
-            },
-            {
-                "icon": "zap",
-                "title":  "Sauberer, dokumentierter Pull Request und termintreue Übergabe",
-                "description": "Überarbeitung und Verbesserung des Designs Ihrer Weblösungen, um die Benutzererfahrung zu optimieren und die Leistung Ihrer Weblösungen zu steigern."
-            }
-        ]
+  "angebot_agenturen_data": {
+    "hero": {
+      "eyebrow": "Development Support · Web · App",
+      "title": "Flexible Entwicklungsunterstützung für Agenturen",
+      "description": "Unterstützung bei Kapazitätsengpässen, laufenden Projekten oder einzelnen Features – von React und Next.js bis Flutter. Strukturiert, eigenständig und integrierbar in bestehende Workflows.",
+      "ctaLabel": "Projekt besprechen",
+      "secondaryCtaLabel": "Tech Stack ansehen"
+    },
+    "useCases": {
+      "label": "Wann macht die Zusammenarbeit Sinn?",
+      "title": "Wenn intern gerade Kapazität fehlt",
+      "description": "Nicht jedes Projekt braucht dauerhaft zusätzliche Mitarbeiter. Manchmal fehlt für einige Wochen, einzelne Features oder eine bestimmte Projektphase einfach zusätzliche Entwicklungskapazität.",
+      "items": [
+        { "step": "01", "title": "Projektspitze", "description": "Ein Launch rückt näher und intern fehlen Entwicklungsressourcen." },
+        { "step": "02", "title": "Einzelne Features", "description": "Ein klar abgegrenztes Feature soll umgesetzt werden, ohne dauerhaft Personal aufzustocken." },
+        { "step": "03", "title": "Bestehende Codebase", "description": "Ein laufendes Produkt braucht Unterstützung bei Bugfixes, Integrationen oder Weiterentwicklung." },
+        { "step": "04", "title": "Design-to-Code", "description": "Figma ist fertig, aber für die saubere technische Umsetzung fehlt Kapazität." },
+        { "step": "05", "title": "App-Entwicklung", "description": "Das bestehende Team braucht Unterstützung bei Flutter oder Mobile Features." },
+        { "step": "06", "title": "Temporäre Verstärkung", "description": "Unterstützung für einige Wochen oder definierte Projektphasen." }
+      ]
+    },
+    "services": {
+      "label": "Leistungen",
+      "title": "Development Support für bestehende und neue Projekte",
+      "description": "",
+      "items": [
+        { "icon": "code", "title": "Frontend Development", "description": "React, Next.js, TypeScript, responsive Interfaces und bestehende Komponentenstrukturen." },
+        { "icon": "smartphone", "title": "Mobile Development", "description": "Flutter und Dart für bestehende oder neue Cross-Platform-Anwendungen." },
+        { "icon": "layers", "title": "Feature Development", "description": "Neue Funktionen innerhalb bestehender Produkte und Codebases." },
+        { "icon": "figma", "title": "Design-to-Code", "description": "Umsetzung bestehender Figma-Designs mit Fokus auf saubere, responsive und möglichst detailgetreue Umsetzung." },
+        { "icon": "plug", "title": "Integrationen", "description": "APIs, externe Services und bestehende Systemlandschaften." },
+        { "icon": "bug", "title": "Bugfixing & Weiterentwicklung", "description": "Analyse und Behebung bestehender Probleme sowie schrittweise Produktverbesserung." }
+      ]
+    },
+    "workflow": {
+      "label": "Integration in bestehende Workflows",
+      "title": "Kein neues System. Ich arbeite in eurem.",
+      "description": "Agenturprojekte haben bereits Prozesse, Tools und technische Entscheidungen. Mein Ziel ist nicht, diese neu zu erfinden, sondern mich möglichst reibungslos in bestehende Abläufe einzufügen.",
+      "toolsLabel": "Je nach Projekt zum Beispiel",
+      "tools": [
+        "GitHub",
+        "GitLab",
+        "Pull Requests",
+        "Code Reviews",
+        "Tickets",
+        "Figma",
+        "Slack",
+        "Microsoft Teams",
+        "bestehende CI/CD-Prozesse",
+        "agile Workflows",
+        "bestehende Coding Conventions",
+        "Definition of Done"
+      ],
+      "toolsNote": "Nicht jedes Projekt nutzt all diese Tools. Entscheidend ist, dass die Zusammenarbeit in dem Setup läuft, das bei euch schon etabliert ist.",
+      "statement": "Bestehende Architektur und Coding Conventions werden respektiert. Änderungen sollen für das vorhandene Team nachvollziehbar und wartbar bleiben."
+    },
+    "experience": {
+      "label": "Hintergrund",
+      "title": "Agenturerfahrung aus der Praxis",
+      "paragraphs": [
+        "Bevor ich mich selbstständig gemacht habe, war ich zwei Jahre in einer Wiener Digitalagentur als Entwicklerin tätig. Dort habe ich an produktiven Web- und App-Projekten gearbeitet – darunter Anwendungen mit Hunderttausenden aktiven Nutzern.",
+        "Dadurch kenne ich nicht nur die technische Seite, sondern auch die Realität von Agenturprojekten: bestehende Codebases, Deadlines, Reviews, Kundenfeedback, wechselnde Anforderungen und Zusammenarbeit im Entwicklungsteam."
+      ],
+      "facts": [
+        { "value": "2 Jahre", "label": "Agenturerfahrung" },
+        { "value": "Web & App", "label": "beide Plattformen" },
+        { "value": "Produktive Systeme", "label": "im laufenden Betrieb" },
+        { "value": "Teamarbeit", "label": "im Entwicklungsteam" },
+        { "value": "Code Reviews", "label": "als Teil des Ablaufs" },
+        { "value": "Bestehende Codebases", "label": "Einarbeitung inklusive" }
+      ]
+    },
+    "projects": {
+      "label": "Projekterfahrung",
+      "title": "Projekterfahrung aus meiner Agenturtätigkeit",
+      "items": [
+        {
+          "title": "Aktionsfinder App & PWA",
+          "role": "Mitarbeit im Entwicklungsteam bei Marqably",
+          "description": "Mitarbeit an einer produktiven App und PWA mit Feature-Entwicklung, Bugfixes und Design-Updates innerhalb einer bestehenden Codebase.",
+          "image": "/images/portfolio/aktionsfinder.jpg",
+          "tags": ["Flutter", "Dart", "PWA", "Feature Development", "Bugfixing", "Design Updates"]
+        },
+        {
+          "title": "Tiroler Tageszeitung App",
+          "role": "Mitarbeit im Entwicklungsteam bei Marqably",
+          "description": "Kontinuierliche Weiterentwicklung einer News-App mit Hunderttausenden aktiven Nutzern. Arbeit an Bugfixes, neuen Features, Dark Mode und laufenden Design-Updates.",
+          "image": "/images/portfolio/tt.jpg",
+          "tags": ["Flutter", "Dart", "Feature Development", "Bugfixing", "Dark Mode", "Design Updates"]
+        }
+      ]
+    },
+    "process": {
+      "label": "So läuft die Zusammenarbeit",
+      "title": "Strukturiert vom Briefing bis zur Übergabe",
+      "items": [
+        { "step": "01", "title": "Anfrage", "description": "Kurzer Austausch zu Projekt, Tech Stack, Umfang, Timing und benötigter Unterstützung." },
+        { "step": "02", "title": "Onboarding", "description": "Zugänge, bestehende Codebase, Projektstruktur, Tickets und Definition of Done." },
+        { "step": "03", "title": "Umsetzung", "description": "Eigenständige Bearbeitung der vereinbarten Tasks mit regelmäßiger Abstimmung." },
+        { "step": "04", "title": "Review", "description": "Saubere Pull Requests, nachvollziehbare Änderungen und Anpassungen aus dem Code Review." },
+        { "step": "05", "title": "Übergabe", "description": "Dokumentation und saubere Übergabe der umgesetzten Features." }
+      ]
+    },
+    "models": {
+      "label": "Zusammenarbeitsmodelle",
+      "title": "Flexible Zusammenarbeit je nach Projekt",
+      "items": [
+        { "step": "Modell 01", "title": "Stundenweise", "description": "Für kleinere Tasks, Bugfixes oder punktuelle Unterstützung.", "rate": "Stundensatz auf Anfrage" },
+        { "step": "Modell 02", "title": "Kontingent / Tageweise", "description": "Für regelmäßige Unterstützung während einer Projektphase oder bei temporären Kapazitätsengpässen.", "rate": "Tagessatz oder Kontingent auf Anfrage" },
+        { "step": "Modell 03", "title": "Projektbezogen", "description": "Für klar abgegrenzte Features, Integrationen oder Umsetzungen.", "rate": "Aufwand nach Briefing" }
+      ],
+      "note": "Längerfristige Zusammenarbeit ist nach Absprache ebenfalls möglich.",
+      "ctaLabel": "Zusammenarbeit anfragen"
+    },
+    "expectations": {
+      "label": "Was ihr von mir erwarten könnt",
+      "title": "Zusammenarbeit, die sich in bestehende Teams einfügt",
+      "items": [
+        { "title": "Eigenständiges Arbeiten", "description": "Nach einem sauberen Briefing kann ich definierte Tasks eigenständig bearbeiten." },
+        { "title": "Saubere Übergabe", "description": "Pull Requests und Änderungen sollen für das bestehende Team nachvollziehbar bleiben." },
+        { "title": "Designverständnis", "description": "Durch meinen Hintergrund in Mediengestaltung kann ich Designs nicht nur technisch, sondern auch visuell beurteilen." },
+        { "title": "Klare Kommunikation", "description": "Fragen und Blocker werden früh kommuniziert statt kurz vor der Deadline." },
+        { "title": "Bestehende Strukturen respektieren", "description": "Ich passe mich an bestehende Architektur und Coding Conventions an, statt ungefragt komplette Strukturen umzubauen." }
+      ]
+    },
+    "techStack": {
+      "label": "Tech Stack",
+      "title": "Technologien und Frameworks",
+      "note": "Der konkrete Stack richtet sich nach dem bestehenden Projekt. Bei bestehenden Codebases arbeite ich innerhalb der vorhandenen technischen Architektur.",
+      "categories": [
+        { "category": "Frontend & Web", "items": ["React", "Next.js", "TypeScript", "Tailwind CSS"] },
+        { "category": "Mobile", "items": ["Flutter", "Dart", "Riverpod"] },
+        { "category": "Backend & Cloud", "items": ["Node.js", "Firebase", "Serverpod"] }
+      ]
+    },
+    "faq": {
+      "label": "FAQ",
+      "title": "Häufige Fragen zur Zusammenarbeit",
+      "items": [
+        { "question": "Kannst du dich in eine bestehende Codebase einarbeiten?", "answer": "Ja. Die Unterstützung kann ausdrücklich innerhalb bestehender Projekte stattfinden. Zu Beginn klären wir Architektur, Coding Conventions, vorhandene Dokumentation und Definition of Done." },
+        { "question": "Übernimmst du auch einzelne Features?", "answer": "Ja. Die Zusammenarbeit muss kein vollständiges Projekt umfassen. Auch klar abgegrenzte Features, Integrationen, Bugfixes oder Design-to-Code-Tasks sind möglich." },
+        { "question": "Arbeitest du direkt mit unserem Entwicklerteam?", "answer": "Ja. Ich kann mich in bestehende Entwicklungsprozesse integrieren und beispielsweise mit Tickets, Git, Pull Requests und Code Reviews arbeiten." },
+        { "question": "Kannst du vorhandene Figma-Designs umsetzen?", "answer": "Ja. Design-to-Code gehört zu meinem Angebot. Bestehende Designs können responsiv und komponentenbasiert in die vorhandene Anwendung integriert werden." },
+        { "question": "Welche Technologien deckst du ab?", "answer": "Mein Schwerpunkt liegt auf React, Next.js, TypeScript sowie Flutter und Dart. Je nach Projekt arbeite ich außerdem mit bestehenden APIs, Backend-Services und Cloud-Lösungen." },
+        { "question": "Ist auch kurzfristige Unterstützung möglich?", "answer": "Je nach aktueller Auslastung ja. Umfang, Zeitraum und benötigte Kapazität klären wir am besten direkt zu Beginn." },
+        { "question": "Wie wird abgerechnet?", "answer": "Je nach Umfang kann die Zusammenarbeit stundenweise, über ein vereinbartes Kontingent oder projektbezogen erfolgen." },
+        { "question": "Ist eine Zusammenarbeit im Hintergrund / White Label möglich?", "answer": "Eine Zusammenarbeit im Hintergrund bzw. als Teil des bestehenden Projektteams ist nach Absprache möglich." }
+      ]
+    },
+    "finalCta": {
+      "title": "Fehlt gerade Development-Kapazität?",
+      "description": "Schick mir kurz Tech Stack, Projektumfang und gewünschten Zeitraum. Dann können wir schnell klären, ob und wie ich euer Team unterstützen kann.",
+      "ctaLabel": "Verfügbarkeit anfragen",
+      "note": "Auch einzelne Features, Bugfixes oder kurzfristige Projektphasen sind möglich."
     }
+  }
 }

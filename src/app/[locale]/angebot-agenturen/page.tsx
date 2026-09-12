@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import PageWrapper from "@/components/PageWrapper";
-import fetchHomePageData from "../home/sections/data/home-page-data";
 import { LocaleParams } from "@/app/i18n/local-params";
 import { agenturenDetailUrl, baseUrl } from "@/app/configs/configs";
 import AgenturenDetailView from "./screen/AgenturenDetailView";
@@ -64,14 +63,12 @@ export async function generateMetadata({ params }: LocaleParams): Promise<Metada
 
 export default async function AngebotAgenturenPage(props: LocaleParams) {
   const { locale } = await props.params;
-  const data = await fetchHomePageData(locale);
-  const area = data.angebot_section.areas.find((a) => a.id === "agenturen")!;
   const agenturenPageData = await fetchAgenturenPageData(locale);
 
   return (
     <PageWrapper
       locale={locale}
-      pageContent={<AgenturenDetailView agenturenPage={agenturenPageData} area={area} locale={locale} />}
+      pageContent={<AgenturenDetailView agenturenPage={agenturenPageData} />}
     />
   );
 }

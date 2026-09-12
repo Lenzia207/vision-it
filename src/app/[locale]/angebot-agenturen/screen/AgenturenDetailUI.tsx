@@ -1,38 +1,47 @@
+import { AngebotAgenturenData } from "../data/agenturen-types";
+import AgenturenHeroSection from "../sections/AgenturenHeroSection";
+import AgenturenUseCasesSection from "../sections/AgenturenUseCasesSection";
+import AgenturenServicesSection from "../sections/AgenturenServicesSection";
+import AgenturenWorkflowSection from "../sections/AgenturenWorkflowSection";
+import AgenturenExperienceSection from "../sections/AgenturenExperienceSection";
+import AgenturenProjectsSection from "../sections/AgenturenProjectsSection";
+import AgenturenProcessSection from "../sections/AgenturenProcessSection";
+import AgenturenModelsSection from "../sections/AgenturenModelsSection";
+import AgenturenExpectationsSection from "../sections/AgenturenExpectationsSection";
+import AgenturenTechStackSection from "../sections/AgenturenTechStackSection";
+import AgenturenFaqSection from "../sections/AgenturenFaqSection";
+import AgenturenFinalCtaSection from "../sections/AgenturenFinalCtaSection";
 
-import TitleHeader from "@/components/TitleHeader";
-import { AngebotProcessStep } from "../../home/sections/data/types/home-types";
+type AgenturenDetailUIProps = AngebotAgenturenData;
 
-
-interface AgenturenDetailUIProps {
-  badge: string;
-  title: string;
-  description: string;
-  servicesTitle: string;
-  servicesDescription?: string;
-  processLabel: string;
-  ctaLabel: string;
-  // services: AngebotWebsiteService[];
-  process: AngebotProcessStep[];
-  locale: string;
-}
-
-export default function AgenturenDetailUI({ badge, title, description, servicesTitle, servicesDescription, processLabel, ctaLabel, // services,
- process, locale }: AgenturenDetailUIProps) {
+export default function AgenturenDetailUI({
+  hero,
+  useCases,
+  services,
+  workflow,
+  experience,
+  projects,
+  process,
+  models,
+  expectations,
+  techStack,
+  faq,
+  finalCta,
+}: AgenturenDetailUIProps) {
   return (
     <>
-      <section className="section-dark relative section-padding" style={{ paddingTop: "8rem" }}>
-        <TitleHeader as="h1" variant="badge" badge={badge} title={title} description={description} />
-      </section>
-
-      {/* <WebsiteServiceSection servicesTitle={servicesTitle} servicesDescription={servicesDescription} services={services} ctaLabel={ctaLabel} locale={locale} /> */}
-      {/* Website Pakete in white BG */}
-
-      {/* <Link href="/#contact" locale={locale} className="btn btn-primary">
-            {linkLabel}
-          </Link> */}
-
-
-      {/* <WebsiteProcessSection processLabel={processLabel} process={process} /> */}
+      <AgenturenHeroSection hero={hero} />
+      <AgenturenUseCasesSection useCases={useCases} />
+      <AgenturenServicesSection services={services} />
+      <AgenturenWorkflowSection workflow={workflow} />
+      <AgenturenExperienceSection experience={experience} />
+      <AgenturenProjectsSection projects={projects} />
+      <AgenturenProcessSection process={process} />
+      <AgenturenModelsSection models={models} />
+      <AgenturenExpectationsSection expectations={expectations} />
+      <AgenturenTechStackSection techStack={techStack} />
+      <AgenturenFaqSection faq={faq} />
+      <AgenturenFinalCtaSection finalCta={finalCta} />
     </>
   );
 }

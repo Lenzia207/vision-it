@@ -1,31 +1,194 @@
 {
-    "angebot_mobile_apps_data": {
-        "title": "Deine eigene Mobile App in Wien",
-        "description": "Wir bieten professionelle Mobile App-Entwicklung, um die Sichtbarkeit Ihres Unternehmens in Wien zu erhöhen. Optimieren Sie Ihre App für iOS und Android.",
-        "servicesTitle": "Unsere Leistungen",
-        "servicesDescription": "Umfassende Lösungen für Ihren Erfolg.",
-        "ctaLabel": "Angebot anfordern",
-        "services": [
-            {
-                "icon": "building-2",
-                "title": "Individuelle Softwareentwicklung von Grund auf",
-                "description": "Entwicklung maßgeschneiderter Mobile Apps von Grund auf, um die Leistung und Sichtbarkeit Ihres Unternehmens in Wien zu erhöhen. Wir kümmern uns um iOS- und Android-Optimierung."
-            },
-            {
-                "icon": "code-2",
-                "title": "Feature-Entwicklung & Integrationen",
-                "description": "Entwicklung und Integration von Funktionen, um die Leistung und Sichtbarkeit Ihrer Mobile App zu erhöhen und gezielten Traffic zu generieren."
-            },
-            {
-                "icon": "shopping-cart",
-                "title": "Design zu Code",
-                "description": "Umsetzung von Designvorlagen in funktionierenden Code, um die Benutzererfahrung zu verbessern und die Leistung Ihrer Mobile App zu optimieren."
-            },
-            {
-                "icon": "zap",
-                "title": "App Redesign",
-                "description": "Überarbeitung und Verbesserung des Designs Ihrer Mobile App, um die Benutzererfahrung zu optimieren und die Leistung Ihrer App zu steigern."
-            }
+  "angebot_mobile_apps_data": {
+    "hero": {
+      "eyebrow": "App Development · iOS · Android",
+      "title": "Mobile App Entwicklung in Wien für iOS & Android",
+      "description": "Von der ersten Idee bis zum Store-Release: individuelle Cross-Platform-Apps mit Flutter – durchdacht konzipiert, gestaltet und technisch sauber umgesetzt.",
+      "ctaLabel": "App-Projekt besprechen",
+      "secondaryCtaLabel": "Projekte ansehen"
+    },
+    "whenApp": {
+      "label": "Einsatzszenarien",
+      "title": "Wann lohnt sich eine eigene App?",
+      "description": "Eine App ist nicht automatisch für jedes digitale Vorhaben die beste Lösung. Sie wird besonders interessant, wenn Nutzer regelmäßig mit einem Produkt interagieren oder Funktionen benötigt werden, die über eine klassische Website hinausgehen.",
+      "items": [
+        { "step": "01", "title": "Regelmäßige Nutzung", "description": "Schneller Zugriff direkt vom Smartphone und eine stärker produktbezogene Nutzererfahrung." },
+        { "step": "02", "title": "Push Notifications", "description": "Nutzer gezielt über neue Inhalte, Erinnerungen oder relevante Ereignisse informieren." },
+        { "step": "03", "title": "Offline-Funktionalität", "description": "Bestimmte Funktionen und Daten auch ohne permanente Internetverbindung verfügbar machen." },
+        { "step": "04", "title": "Gerätefunktionen", "description": "Kamera, GPS oder andere Smartphone-Funktionen in das Produkt integrieren." },
+        { "step": "05", "title": "Benutzerkonten", "description": "Personalisierte Inhalte, individuelle Daten und wiederkehrende Nutzung ermöglichen." },
+        { "step": "06", "title": "Komplexe Workflows", "description": "Mobile Prozesse strukturieren, die über eine einfache Website hinausgehen." },
+        { "step": "07", "title": "App Store Präsenz", "description": "Ein digitales Produkt als eigenständige Anwendung über Apple App Store und Google Play verfügbar machen." }
+      ],
+      "note": "Wenn für ein Projekt eine Web-App oder responsive Website sinnvoller ist, sollte auch das Teil der Beratung sein. Ich empfehle nicht automatisch eine App, sondern den technisch und wirtschaftlich sinnvollsten Ansatz."
+    },
+    "appVsWebApp": {
+      "label": "Entscheidungshilfe",
+      "title": "Mobile App oder Web-App – was passt zum Projekt?",
+      "mobileApp": {
+        "title": "Mobile App",
+        "items": [
+          "Installation über App Store / Google Play",
+          "Push Notifications",
+          "guter Zugriff auf Gerätefunktionen",
+          "Offline-Funktionalität besser möglich",
+          "starke mobile Nutzererfahrung",
+          "Store-Release erforderlich"
         ]
+      },
+      "webApp": {
+        "title": "Web-App",
+        "items": [
+          "direkt über den Browser erreichbar",
+          "keine Installation notwendig",
+          "Updates können direkt ausgerollt werden",
+          "oft geringere Einstiegshürde",
+          "sinnvoll für browserbasierte Anwendungen und interne Tools"
+        ]
+      },
+      "note": "Welche Variante sinnvoller ist, hängt von Nutzerverhalten, benötigten Funktionen, Budget und langfristigen Produktzielen ab."
+    },
+    "services": {
+      "label": "Leistungen",
+      "title": "App-Entwicklung für neue und bestehende Produkte",
+      "items": [
+        { "title": "Individuelle App-Entwicklung", "description": "Apps, die auf das konkrete Produkt und die Anforderungen des Unternehmens zugeschnitten sind." },
+        { "title": "MVP-Entwicklung", "description": "Eine erste funktionierende Version eines Produkts, um Idee, Markt und Nutzung früh zu validieren." },
+        { "title": "Bestehende Apps weiterentwickeln", "description": "Neue Features, Bugfixes und technische Weiterentwicklung vorhandener Anwendungen.", "badgeLabel": "Häufig gefragt", "highlighted": true },
+        { "title": "Design-to-Code", "description": "Vorhandene Figma-Screens technisch sauber, responsiv und möglichst detailgetreu umsetzen." },
+        { "title": "App Redesign", "description": "Bestehende Benutzeroberflächen modernisieren und die UX gezielt verbessern." },
+        { "title": "Integrationen", "description": "APIs, Authentifizierung, Datenbanken, externe Dienste und Backend-Systeme anbinden." }
+      ]
+    },
+    "crossPlatform": {
+      "label": "Cross-Platform mit Flutter",
+      "title": "Eine Codebasis für iOS & Android",
+      "description": "Für viele App-Projekte arbeite ich mit Flutter. Damit können iOS- und Android-Anwendungen aus einer gemeinsamen Codebasis entwickelt werden.",
+      "items": [
+        { "title": "Gemeinsame Entwicklung", "description": "Weniger doppelte Arbeit für iOS und Android." },
+        { "title": "Konsistente Benutzeroberfläche", "description": "Design und Verhalten lassen sich plattformübergreifend kontrollieren." },
+        { "title": "Wartbarkeit", "description": "Neue Features und Änderungen müssen nicht vollständig getrennt entwickelt werden." },
+        { "title": "Performance", "description": "Flutter eignet sich auch für komplexere Interfaces und produktive Anwendungen." }
+      ],
+      "tools": ["Flutter", "Dart", "Riverpod", "Firebase", "Serverpod", "REST APIs", "App Store", "Google Play"]
+    },
+    "projects": {
+      "label": "Projekterfahrung",
+      "title": "App-Erfahrung aus eigenen und produktiven Projekten",
+      "featured": {
+        "badgeLabel": "Eigenständig konzipiert, designed und entwickelt",
+        "title": "Pictolog PDF",
+        "description": "Eine Offline-App zur Projektverwaltung und Berichtserstellung. Alle Daten werden lokal gespeichert. Nutzer können Fortschritte dokumentieren und Berichte direkt als PDF exportieren.",
+        "image": "/images/portfolio/pictolog.jpg",
+        "roleLabel": "Meine Rolle",
+        "roleItems": ["Konzeption", "UX / UI", "Entwicklung", "technische Architektur", "Release"],
+        "highlightsLabel": "Besonderheiten",
+        "highlightItems": ["Offline-Nutzung", "lokale Datenspeicherung", "PDF-Generierung", "Projektverwaltung"],
+        "tags": ["Flutter", "Dart"]
+      },
+      "items": [
+        {
+          "badgeLabel": "Projekterfahrung aus meiner Tätigkeit bei Marqably",
+          "title": "Aktionsfinder App & PWA",
+          "description": "Mitarbeit an einer produktiven App und PWA mit Feature-Entwicklung, Bugfixes und laufenden Design-Updates innerhalb einer bestehenden Codebase.",
+          "role": "Rolle: Mitarbeit im Entwicklungsteam bei Marqably",
+          "image": "/images/portfolio/aktionsfinder.jpg",
+          "tags": ["Flutter", "Dart", "PWA", "Feature Development", "Bugfixing", "Design Updates"]
+        },
+        {
+          "badgeLabel": "Mitarbeit im Entwicklungsteam bei Marqably",
+          "title": "Tiroler Tageszeitung App",
+          "description": "Kontinuierliche Weiterentwicklung einer News-App mit Hunderttausenden aktiven Nutzern. Arbeit an Bugfixes, Feature-Erweiterungen, Dark Mode und laufenden Design-Updates.",
+          "image": "/images/portfolio/tt.jpg",
+          "tags": ["Flutter", "Dart", "Feature Development", "Bugfixing", "Dark Mode", "Design Updates"]
+        }
+      ]
+    },
+    "process": {
+      "label": "Entwicklungsprozess",
+      "title": "Von der Idee bis zum Store-Release",
+      "items": [
+        { "step": "01", "title": "Erstgespräch", "description": "Idee, Zielgruppe, Funktionsumfang, Plattformen und Budget klären." },
+        { "step": "02", "title": "Konzept", "description": "User Flows, Features, Navigation und technische Anforderungen strukturieren. Dabei klären wir, welche Funktionen wirklich in Version 1 gehören und welche später ergänzt werden können." },
+        { "step": "03", "title": "UX & Design", "description": "Screens, Komponenten und Interaktionen definieren. Wenn bereits Figma-Designs vorhanden sind, können diese übernommen werden." },
+        { "step": "04", "title": "Entwicklung", "description": "Technische Umsetzung der App und regelmäßige Testversionen für frühes Feedback." },
+        { "step": "05", "title": "Testing", "description": "Funktionen, Geräte, Bildschirmgrößen und typische Nutzungsszenarien prüfen." },
+        { "step": "06", "title": "Store Release", "description": "Vorbereitung und Veröffentlichung für Apple App Store und Google Play." },
+        { "step": "07", "title": "Weiterentwicklung", "description": "Neue Features, Anpassungen und Wartung nach dem Launch." }
+      ]
+    },
+    "mvp": {
+      "label": "MVP-Ansatz",
+      "title": "Erst validieren, dann gezielt erweitern",
+      "description": "Bei neuen Produktideen muss nicht sofort jede geplante Funktion umgesetzt werden. Ein MVP konzentriert sich auf die wichtigsten Features, mit denen das Produkt erstmals real genutzt und getestet werden kann.",
+      "note": "Das Ziel ist nicht, möglichst wenig zu bauen, sondern zuerst die Funktionen umzusetzen, die für eine reale Nutzung entscheidend sind.",
+      "steps": [
+        { "step": "01", "label": "Idee" },
+        { "step": "02", "label": "Kernproblem definieren" },
+        { "step": "03", "label": "Must-have Features" },
+        { "step": "04", "label": "MVP entwickeln", "highlighted": true },
+        { "step": "05", "label": "echtes Nutzerfeedback" },
+        { "step": "06", "label": "Produkt gezielt erweitern" }
+      ]
+    },
+    "costs": {
+      "label": "Kostenfaktoren",
+      "title": "Was kostet die Entwicklung einer App?",
+      "description": "Die Kosten hängen stark von Funktionsumfang, Design, Backend, Benutzerkonten, Integrationen und Plattformanforderungen ab.",
+      "factors": [
+        { "title": "Umfang", "description": "Ein kleines MVP mit wenigen Kernfunktionen unterscheidet sich deutlich von einer umfangreichen Produktplattform." },
+        { "title": "Backend", "description": "Eine einfache API verursacht einen anderen Aufwand als ein eigenes Backend mit komplexer Geschäftslogik." },
+        { "title": "Benutzerkonten", "description": "Login, Rollen, Berechtigungen und personalisierte Inhalte erhöhen den Funktionsumfang." },
+        { "title": "Daten", "description": "Lokale Speicherung, Cloud-Synchronisierung oder komplexe Datenmodelle beeinflussen die Architektur." },
+        { "title": "Integrationen", "description": "Payment, Maps, externe APIs oder bestehende Unternehmenssysteme können zusätzliche Anforderungen schaffen." },
+        { "title": "Offline-Funktionalität", "description": "Lokale Daten und spätere Synchronisierung benötigen zusätzliche technische Logik." },
+        { "title": "Design", "description": "Vorhandenes Figma-Design oder vollständige Konzeption und Gestaltung." },
+        { "title": "Plattform & Release", "description": "iOS, Android sowie App-Store- und Play-Store-Anforderungen." }
+      ],
+      "note": "Nach einem Erstgespräch kann der Funktionsumfang strukturiert und eine realistische Aufwandsschätzung erstellt werden.",
+      "ctaLabel": "Projekt einschätzen lassen"
+    },
+    "afterLaunch": {
+      "label": "Nach dem Launch",
+      "title": "Der Store-Release ist nicht das Ende",
+      "paragraphs": [
+        "Apps entwickeln sich nach dem Launch weiter. Betriebssysteme ändern sich, Nutzerfeedback entsteht und neue Funktionen werden relevant.",
+        "Auch bestehende Apps können schrittweise weiterentwickelt werden – entweder projektbezogen oder über laufende Unterstützung."
+      ],
+      "items": ["Bugfixes", "neue Features", "OS-Kompatibilität", "Store-Anforderungen", "Analytics", "Nutzerfeedback", "technische Wartung"]
+    },
+    "techStack": {
+      "label": "Tech Stack",
+      "title": "Technologien und Plattformen",
+      "note": "Der konkrete technische Aufbau richtet sich nach Produkt, Anforderungen und bestehender Systemlandschaft.",
+      "categories": [
+        { "category": "Mobile", "items": ["Flutter", "Dart", "Riverpod"] },
+        { "category": "Backend & Cloud", "items": ["Firebase", "Serverpod", "Node.js", "REST APIs"] },
+        { "category": "Plattformen", "items": ["iOS", "Android", "Apple App Store", "Google Play"] }
+      ]
+    },
+    "faq": {
+      "label": "FAQ",
+      "title": "Häufige Fragen zur App-Entwicklung",
+      "items": [
+        { "question": "Was kostet die Entwicklung einer App?", "answer": "Die Kosten hängen stark vom Funktionsumfang, Design, Backend, Integrationen und den technischen Anforderungen ab. Nach einem Erstgespräch kann der benötigte Umfang strukturiert und eine realistische Aufwandsschätzung erstellt werden." },
+        { "question": "Wie lange dauert die Entwicklung einer App?", "answer": "Das hängt vom Umfang ab. Ein fokussiertes MVP kann deutlich schneller umgesetzt werden als eine komplexe Plattform mit Backend, Benutzerkonten und zahlreichen Integrationen. Zu Beginn wird deshalb ein realistischer Projektumfang und Zeitplan definiert." },
+        { "question": "Entwickelst du Apps für iOS und Android?", "answer": "Ja. Für viele Projekte arbeite ich mit Flutter und kann dadurch iOS- und Android-Anwendungen aus einer gemeinsamen Codebasis entwickeln." },
+        { "question": "Brauche ich zwei unterschiedliche Apps für iOS und Android?", "answer": "Nicht zwingend. Mit Cross-Platform-Technologien wie Flutter kann ein großer Teil der Anwendung gemeinsam entwickelt werden. Plattformabhängige Anpassungen können trotzdem notwendig sein." },
+        { "question": "Was ist Flutter?", "answer": "Flutter ist ein Framework für die Entwicklung von Anwendungen für mehrere Plattformen aus einer gemeinsamen Codebasis. Ich nutze Flutter insbesondere für iOS- und Android-Projekte." },
+        { "question": "Entwickelst du auch MVPs?", "answer": "Ja. Bei neuen Produktideen kann zunächst eine fokussierte erste Version mit den wichtigsten Funktionen entwickelt werden. Auf Basis echter Nutzung und Feedback kann das Produkt anschließend gezielt erweitert werden." },
+        { "question": "Kannst du bestehende Apps weiterentwickeln?", "answer": "Ja. Auch bestehende Anwendungen können durch neue Features, Bugfixes, Integrationen oder Design-Updates weiterentwickelt werden." },
+        { "question": "Kannst du vorhandene Figma-Designs umsetzen?", "answer": "Ja. Bestehende Figma-Screens können als Design-to-Code technisch umgesetzt und in eine vorhandene oder neue App integriert werden." },
+        { "question": "Unterstützt du beim App Store und Google Play Release?", "answer": "Ja. Die Veröffentlichung kann als Teil des Projekts berücksichtigt und technisch vorbereitet werden." },
+        { "question": "Brauche ich für meine Idee überhaupt eine App?", "answer": "Nicht zwingend. Je nach Nutzung, Funktionen und Budget kann auch eine responsive Website oder Web-App sinnvoller sein. Diese Entscheidung sollte vor Entwicklungsbeginn geklärt werden." },
+        { "question": "Kann eine App auch offline funktionieren?", "answer": "Ja. Je nach Anwendungsfall können Daten lokal gespeichert und bestimmte Funktionen auch ohne permanente Internetverbindung genutzt werden. Pictolog PDF ist beispielsweise als Offline-Anwendung konzipiert." }
+      ]
+    },
+    "finalCta": {
+      "title": "Du hast eine App-Idee oder möchtest eine bestehende App weiterentwickeln?",
+      "description": "Erzähl mir kurz, was die Anwendung können soll, wer sie nutzen wird und welche Funktionen bereits geplant sind. Gemeinsam können wir klären, welcher technische Ansatz sinnvoll ist.",
+      "primaryCtaLabel": "App-Projekt besprechen",
+      "secondaryCtaLabel": "Bestehende App weiterentwickeln"
     }
+  }
 }

@@ -1,38 +1,50 @@
+import { AngebotMobileAppsData } from "../data/mobile-apps-types";
+import MobileAppsHeroSection from "../sections/MobileAppsHeroSection";
+import MobileAppsWhenAppSection from "../sections/MobileAppsWhenAppSection";
+import MobileAppsAppVsWebAppSection from "../sections/MobileAppsAppVsWebAppSection";
+import MobileAppsServicesSection from "../sections/MobileAppsServicesSection";
+import MobileAppsCrossPlatformSection from "../sections/MobileAppsCrossPlatformSection";
+import MobileAppsProjectsSection from "../sections/MobileAppsProjectsSection";
+import MobileAppsProcessSection from "../sections/MobileAppsProcessSection";
+import MobileAppsMvpSection from "../sections/MobileAppsMvpSection";
+import MobileAppsCostsSection from "../sections/MobileAppsCostsSection";
+import MobileAppsAfterLaunchSection from "../sections/MobileAppsAfterLaunchSection";
+import MobileAppsTechStackSection from "../sections/MobileAppsTechStackSection";
+import MobileAppsFaqSection from "../sections/MobileAppsFaqSection";
+import MobileAppsFinalCtaSection from "../sections/MobileAppsFinalCtaSection";
 
-import TitleHeader from "@/components/TitleHeader";
-import { AngebotProcessStep } from "../../home/sections/data/types/home-types";
+type MobileAppsDetailUIProps = AngebotMobileAppsData;
 
-
-interface MobileAppsDetailUIProps {
-  badge: string;
-  title: string;
-  description: string;
-  servicesTitle: string;
-  servicesDescription?: string;
-  processLabel: string;
-  ctaLabel: string;
-  // services: AngebotWebsiteService[];
-  process: AngebotProcessStep[];
-  locale: string;
-}
-
-export default function MobileAppsDetailUI({ badge, title, description, servicesTitle, servicesDescription, processLabel, ctaLabel, // services,
- process, locale }: MobileAppsDetailUIProps) {
+export default function MobileAppsDetailUI({
+  hero,
+  whenApp,
+  appVsWebApp,
+  services,
+  crossPlatform,
+  projects,
+  process,
+  mvp,
+  costs,
+  afterLaunch,
+  techStack,
+  faq,
+  finalCta,
+}: MobileAppsDetailUIProps) {
   return (
     <>
-      <section className="section-dark relative section-padding" style={{ paddingTop: "8rem" }}>
-        <TitleHeader as="h1" variant="badge" badge={badge} title={title} description={description} />
-      </section>
-
-      {/* <WebsiteServiceSection servicesTitle={servicesTitle} servicesDescription={servicesDescription} services={services} ctaLabel={ctaLabel} locale={locale} /> */}
-      {/* Website Pakete in white BG */}
-
-      {/* <Link href="/#contact" locale={locale} className="btn btn-primary">
-            {linkLabel}
-          </Link> */}
-
-
-      {/* <WebsiteProcessSection processLabel={processLabel} process={process} /> */}
+      <MobileAppsHeroSection hero={hero} />
+      <MobileAppsWhenAppSection whenApp={whenApp} />
+      <MobileAppsAppVsWebAppSection appVsWebApp={appVsWebApp} />
+      <MobileAppsServicesSection services={services} />
+      <MobileAppsCrossPlatformSection crossPlatform={crossPlatform} />
+      <MobileAppsProjectsSection projects={projects} />
+      <MobileAppsProcessSection process={process} />
+      <MobileAppsMvpSection mvp={mvp} />
+      <MobileAppsCostsSection costs={costs} />
+      <MobileAppsAfterLaunchSection afterLaunch={afterLaunch} />
+      <MobileAppsTechStackSection techStack={techStack} />
+      <MobileAppsFaqSection faq={faq} />
+      <MobileAppsFinalCtaSection finalCta={finalCta} />
     </>
   );
 }

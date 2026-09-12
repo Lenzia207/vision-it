@@ -1,0 +1,35 @@
+import { AngebotMobileAppsWhenAppData } from "../data/mobile-apps-types";
+
+interface MobileAppsWhenAppSectionProps {
+  whenApp: AngebotMobileAppsWhenAppData;
+}
+
+export default function MobileAppsWhenAppSection({ whenApp }: MobileAppsWhenAppSectionProps) {
+  const { label, title, description, items, note } = whenApp;
+
+  return (
+    <section className="section-padding" style={{ background: "var(--bg-surface-1)" }}>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col gap-12">
+        <div className="max-w-2xl flex flex-col gap-5 reveal-on-scroll">
+          <span className="label-mono">{label}</span>
+          <h2 className="text-display-2">{title}</h2>
+          <p style={{ color: "var(--text-300)" }}>{description}</p>
+        </div>
+
+        <div className="audit-grid reveal-on-scroll">
+          {items.map((item) => (
+            <div key={item.step} className="audit-card">
+              <span className="audit-index">{item.step}</span>
+              <h3 className="audit-title">{item.title}</h3>
+              <p className="audit-desc">{item.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="price-note reveal-on-scroll">
+          <p style={{ fontFamily: "var(--font-mono)", fontWeight: 500 }}>{note}</p>
+        </div>
+      </div>
+    </section>
+  );
+}

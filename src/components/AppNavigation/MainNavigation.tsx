@@ -4,7 +4,7 @@ import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import { HomePageData, MainNavigation as MainNavigationItem } from "@/app/[locale]/home/sections/data/types/home-types";
 import { useEffect, useState, useCallback } from "react";
-import { checkSectionLocation, createScrollRotationHandler, createScrollVisibilityHandler, navigate, setItemActive } from "./navigation-service";
+import { checkSectionLocation,  createScrollVisibilityHandler, navigate, setItemActive } from "./navigation-service";
 
 interface MainNavigationProps {
   data: HomePageData;

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import PageWrapper from "@/components/PageWrapper";
-import fetchHomePageData from "../home/sections/data/home-page-data";
 import { LocaleParams } from "@/app/i18n/local-params";
 import { baseUrl, mobileAppDetailUrl } from "@/app/configs/configs";
 import MobileAppsDetailView from "./screen/MobileAppsDetailView";
@@ -64,14 +63,12 @@ export async function generateMetadata({ params }: LocaleParams): Promise<Metada
 
 export default async function MobileAppsDetailPage(props: LocaleParams) {
   const { locale } = await props.params;
-  const data = await fetchHomePageData(locale);
-  const area = data.angebot_section.areas.find((a) => a.id === "mobile-apps")!;
   const mobileAppsPageData = await fetchMobileAppsPageData(locale);
 
   return (
     <PageWrapper
       locale={locale}
-      pageContent={<MobileAppsDetailView area={area} locale={locale} mobileAppsPage={mobileAppsPageData} />}
+      pageContent={<MobileAppsDetailView mobileAppsPage={mobileAppsPageData} />}
     />
   );
 }

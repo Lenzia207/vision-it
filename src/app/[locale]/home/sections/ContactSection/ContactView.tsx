@@ -3,7 +3,6 @@ import LabelInput from "@/components/LabelInput";
 import { Send } from "lucide-react";
 import { PricePackage } from "../data/types/home-types";
 import { FormEvent } from "react";
-import ServiceSelection from "./components/ServiceSelection";
 import ToggleButton from "./components/ToggleButton";
 import TitleHeader from "@/components/TitleHeader";
 
@@ -31,23 +30,17 @@ interface ContactViewProps {
     setPrivacyAccepted: (accepted: boolean) => void;
     interests: {
         website: boolean;
-        mobileApp: boolean;
         general: boolean;
     };
-    toggleInterest: (interest: "website" | "mobileApp" | "general") => void;
+    toggleInterest: (interest: "website" | "general") => void;
     selectedPackage: string | null;
     setSelectedPackage: (pkgName: string | null) => void;
     btn_text: string;
     interestLabel: string;
     interestWebsite: string;
-    interestMobileApp: string;
     interestGeneral: string;
     packageLabel: string;
     packages: PricePackage[];
-    serviceLabel: string;
-    services: string[];
-    selectedServices: string[];
-    toggleService: (serviceName: string) => void;
     textPrivacyPolicy: string;
     textSending: string;
 }
@@ -80,14 +73,9 @@ export default function ContactView({ title,
     btn_text,
     interestLabel,
     interestWebsite,
-    interestMobileApp,
     interestGeneral,
     packageLabel,
     packages,
-    serviceLabel,
-    services,
-    selectedServices,
-    toggleService,
     textPrivacyPolicy,
     textSending,
 }: ContactViewProps) {
@@ -153,12 +141,6 @@ export default function ContactView({ title,
                                 isActive={interests.website}
                                 label={interestWebsite}
                             />
-                            {/* Mobile App toggle */}
-                            <ToggleButton
-                                onClick={() => toggleInterest("mobileApp")}
-                                isActive={interests.mobileApp}
-                                label={interestMobileApp}
-                            />
                             {/* General toggle */}
                             <ToggleButton
                                 onClick={() => toggleInterest("general")}
@@ -166,17 +148,6 @@ export default function ContactView({ title,
                                 label={interestGeneral}
                             />
                         </div>
-
-                        {/* Service sub-selection — visible only when Website is checked */}
-                        {interests.website && (
-                            <ServiceSelection
-                                serviceLabel={serviceLabel}
-                                services={services}
-                                selectedServices={selectedServices}
-                                toggleService={toggleService}
-                            />
-                        )}
-
 
                         {/* Package sub-selection — visible only when Website is checked */}
                         {/* {interests.website && (

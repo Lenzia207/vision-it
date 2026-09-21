@@ -314,9 +314,6 @@ export interface ContactSection {
   btn_text: string;
   interestLabel: string;
   interestWebsite: string;
-  interestMobileApp: string;
   interestGeneral: string;
   packageLabel: string;
-  serviceLabel: string;
-  serviceOptions: string[];
 }

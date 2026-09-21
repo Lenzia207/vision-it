@@ -7,15 +7,17 @@ import { AngebotArea } from "../data/types/home-types";
 interface AngebotCardProps {
   area: AngebotArea;
   locale: string;
+  index: number;
 }
 
-export default function AngebotCard({ area, locale }: AngebotCardProps) {
+export default function AngebotCard({ area, locale, index }: AngebotCardProps) {
   const [tab, setTab] = useState<"services" | "process">("services");
+  const areaNumber = String(index + 1).padStart(2, "0");
 
   return (
-    <div id={area.id} className="card-dark flex flex-col reveal-on-scroll">
+    <div id={area.id} className="card-dark flex flex-col reveal-on-scroll w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)]">
       <div className="p-6 bg-(--teal) text-white">
-        <div className="label-mono mb-2 text-(--lime)">{area.badge}</div>
+        <div className="label-mono mb-2 text-(--lime)">{area.badge} {areaNumber}</div>
         <h3 className="font-mono text-lg font-medium">{area.title}</h3>
       </div>
 

@@ -490,174 +490,98 @@
     "title": "Mein Angebot im Überblick",
     "description": "Gute Entwicklung beginnt vor der ersten Codezeile. Mit meinem entsprechenden Tech-Stack entwickle ich digitale Produkte mit durchdachten Konzepten, sauberer Architektur und wartbarem Code, der auch langfristig erweiterbar bleibt. Inkludiert sind auch die Grundvorraussetzung jeder Plattform: Suchmaschinenoptimierung, Performance-Optimierung und Barrierefreiheit.",
     "areas": [
-      {
-        "id": "webseiten",
-        "badge": "Bereich 02",
-        "title": "Webseiten",
-        "servicesLabel": "Leistungen",
-        "processLabel": "Projektablauf",
-        "linkLabel": "Mehr Infos",
-        "link": "angebot-webseiten",
-        "services": [
-          "Firmenwebsite erstellen lassen",
-          "Feature-Entwicklung & Integrationen",
-          "Webshop erstellen lassen",
-          "Landing Page erstellen lassen",
-          "Website Relaunch",
-          "Custom Web-Entwicklung"
-        ],
-        "process": [
-          {
-            "step": "01",
-            "title": "Anfrage",
-            "description": "Unverbindliches Erstgespräch zu Zielen, Umfang und Budget."
-          },
-          {
-            "step": "02",
-            "title": "Konzept",
-            "description": "Informationsarchitektur, User Flows und eine Roadmap mit realistischem Zeitplan."
-          },
-          {
-            "step": "03",
-            "title": "Design",
-            "description": "High-Fidelity-Mockups in Figma, Feedback in definierten Runden."
-          },
-          {
-            "step": "04",
-            "title": "Entwicklung",
-            "description": "Komponentenbasierte Umsetzung mit Next.js, getestet über Browser und Geräte."
-          },
-          {
-            "step": "05",
-            "title": "Launch",
-            "description": "Deployment, Domain-Einrichtung, SSL und Performance-Optimierung."
-          }
-        ]
-      },
-      {
-        "id": "seo-geo",
-        "badge": "Bereich 02",
-        "title": "SEO und GEO",
-        "servicesLabel": "Leistungen",
-        "processLabel": "Projektablauf",
-        "linkLabel": "Mehr Infos",
-        "link": "angebot-seo-geo",
-        "services": [
-          "Technisches SEO: Core Web Vitals, Indexierung, Crawling",
-          "Keyword- und Wettbewerbsrecherche",
-          "On-Page-Optimierung: Seitenstruktur, Meta-Tags, interne Verlinkung",
-          "Strukturierte Daten (Schema.org) für Rich Results",
-          "Lokales SEO: Google Business Profile und konsistente Standortdaten",
-          "GEO: Inhalte und Quellen für Antworten in KI-Suchsystemen aufbereiten",
-          "Monitoring und Reporting über Search Console und Rankings"
-        ],
-        "process": [
-          {
-            "step": "01",
-            "title": "Überblick",
-            "description": "Auseinandersetzung mit dem Projekt,dessen Ziele und Anforderungen."
-          },
-          {
-            "step": "02",
-            "title": "Audit",
-            "description": "Technische Analyse: Crawling, Indexierung und Core Web Vitals."
-          },
-          {
-            "step": "03",
-            "title": "Analyse",
-            "description": "Keyword- und Wettbewerbsrecherche entlang der Suchintentionen."
-          },
-          {
-            "step": "04",
-            "title": "Umsetzung",
-            "description": "Technisches SEO, Inhalte, Metadaten und strukturierte Daten."
-          },
-          {
-            "step": "05",
-            "title": "Monitoring",
-            "description": "Rankings, Search Console und Sichtbarkeit in KI-Antworten im Blick."
-          }
-        ]
-      },
-      {
-        "id": "mobile-apps",
-        "badge": "Bereich 03",
-        "title": "Mobile Apps",
-        "servicesLabel": "Leistungen",
-        "processLabel": "Projektablauf",
-        "linkLabel": "Mehr Infos",
-        "link": "angebot-mobile-apps",
-        "services": [
-          "Individuelle Softwareentwicklung von Grund auf",
-          "Feature-Entwicklung & Integrationen",
-          "Design zu Code",
-          "App Redesign"
-        ],
-        "process": [
-          {
-            "step": "01",
-            "title": "Anfrage",
-            "description": "Erstgespräch zu Plattformen, Funktionsumfang und Budget."
-          },
-          {
-            "step": "02",
-            "title": "Konzept",
-            "description": "User Flows, Navigationsstruktur und technische Architektur."
-          },
-          {
-            "step": "03",
-            "title": "Design",
-            "description": "Screens und Komponenten für iOS und Android, in definierten Feedback-Runden."
-          },
-          {
-            "step": "04",
-            "title": "Entwicklung",
-            "description": "Umsetzung in Flutter, mit Beta-Builds für frühes Feedback."
-          },
-          {
-            "step": "05",
-            "title": "Store-Release",
-            "description": "Einreichung im App Store und Play Store inklusive Store-Assets."
-          }
-        ]
-      },
-      {
-        "id": "agenturen",
-        "badge": "Bereich 04",
-        "title": "Zusammenarbeit mit Agenturen",
-        "servicesLabel": "Leistungen",
-        "processLabel": "Projektablauf",
-        "linkLabel": "Mehr Infos",
-        "link": "angebot-agenturen",
-        "services": [
-          "Entwicklung als Erweiterung deines Teams",
-          "Design zu Code – pixel-genaue Umsetzung bestehender Figma-Files",
-          "Feature-Entwicklung & Integrationen in laufenden Projekten",
-          "Sauberer, dokumentierter Pull Request und termintreue Übergabe"
-        ],
-        "process": [
-          {
-            "step": "01",
-            "title": "Anfrage",
-            "description": "Kurzes Briefing zu Projekt, Stack, Umfang und Zeitrahmen."
-          },
-          {
-            "step": "02",
-            "title": "Übergabe",
-            "description": "Zugänge, Walkthrough der Codebase und eine klare Definition of Done."
-          },
-          {
-            "step": "03",
-            "title": "Umsetzung",
-            "description": "Eigenständige Arbeit an den Tickets, mit regelmäßigen Updates."
-          },
-          {
-            "step": "04",
-            "title": "Review",
-            "description": "Sauberer Pull Request, dokumentiert und termintreu abgeliefert."
-          }
-        ]
-      }
+    {
+      "id": "webseiten",
+      "badge": "Bereich",
+      "title": "Webseiten",
+      "servicesLabel": "Leistungen",
+      "processLabel": "Projektablauf",
+      "linkLabel": "Mehr Infos",
+      "link": "angebot-webseiten",
+      "services": [
+        "Firmenwebsite erstellen lassen",
+        "Feature-Entwicklung & Integrationen",
+        "Webshop erstellen lassen",
+        "Landing Page erstellen lassen",
+        "Website Relaunch",
+        "Custom Web-Entwicklung"
+      ],
+      "process": [
+        { "step": "01", "title": "Anfrage", "description": "Unverbindliches Erstgespräch zu Zielen, Umfang und Budget." },
+        { "step": "02", "title": "Konzept", "description": "Informationsarchitektur, User Flows und eine Roadmap mit realistischem Zeitplan." },
+        { "step": "03", "title": "Design", "description": "High-Fidelity-Mockups in Figma, Feedback in definierten Runden." },
+        { "step": "04", "title": "Entwicklung", "description": "Komponentenbasierte Umsetzung mit Next.js, getestet über Browser und Geräte." },
+        { "step": "05", "title": "Launch", "description": "Deployment, Domain-Einrichtung, SSL und Performance-Optimierung." }
+      ]
+    },
+    {
+      "id": "seo-geo",
+      "badge": "Bereich",
+      "title": "SEO und GEO",
+      "servicesLabel": "Leistungen",
+      "processLabel": "Projektablauf",
+      "linkLabel": "Mehr Infos",
+      "link": "angebot-seo-geo",
+      "services": [
+        "Technisches SEO: Core Web Vitals, Indexierung, Crawling",
+        "Keyword- und Wettbewerbsrecherche",
+        "On-Page-Optimierung: Seitenstruktur, Meta-Tags, interne Verlinkung",
+        "Strukturierte Daten (Schema.org) für Rich Results",
+        "Lokales SEO: Google Business Profile und konsistente Standortdaten",
+        "GEO: Inhalte und Quellen für Antworten in KI-Suchsystemen aufbereiten",
+        "Monitoring und Reporting über Search Console und Rankings"
+      ],
+      "process": [
+        { "step": "01", "title": "Überblick", "description": "Auseinandersetzung mit dem Projekt,dessen Ziele und Anforderungen." },
+        { "step": "02", "title": "Audit", "description": "Technische Analyse: Crawling, Indexierung und Core Web Vitals." },
+        { "step": "03", "title": "Analyse", "description": "Keyword- und Wettbewerbsrecherche entlang der Suchintentionen." },
+        { "step": "04", "title": "Umsetzung", "description": "Technisches SEO, Inhalte, Metadaten und strukturierte Daten." },
+        { "step": "05", "title": "Monitoring", "description": "Rankings, Search Console und Sichtbarkeit in KI-Antworten im Blick." }
+      ]
+    },
+    {
+      "id": "mobile-apps",
+      "badge": "Bereich",
+      "title": "Mobile Apps",
+      "servicesLabel": "Leistungen",
+      "processLabel": "Projektablauf",
+      "linkLabel": "Mehr Infos",
+      "link": "angebot-mobile-apps",
+      "services": [
+        "Individuelle Softwareentwicklung von Grund auf",
+        "Feature-Entwicklung & Integrationen",
+        "Design zu Code",
+        "App Redesign"
+      ],
+      "process": [
+        { "step": "01", "title": "Anfrage", "description": "Erstgespräch zu Plattformen, Funktionsumfang und Budget." },
+        { "step": "02", "title": "Konzept", "description": "User Flows, Navigationsstruktur und technische Architektur." },
+        { "step": "03", "title": "Design", "description": "Screens und Komponenten für iOS und Android, in definierten Feedback-Runden." },
+        { "step": "04", "title": "Entwicklung", "description": "Umsetzung in Flutter, mit Beta-Builds für frühes Feedback." },
+        { "step": "05", "title": "Store-Release", "description": "Einreichung im App Store und Play Store inklusive Store-Assets." }
+      ]
+    },
+     {
+      "id": "agenturen",
+      "badge": "Bereich",
+      "title": "Zusammenarbeit mit Agenturen",
+      "servicesLabel": "Leistungen",
+      "processLabel": "Projektablauf",
+      "linkLabel": "Mehr Infos",
+      "link": "angebot-agenturen",
+      "services": [
+        "Entwicklung als Erweiterung deines Teams",
+        "Design zu Code – pixel-genaue Umsetzung bestehender Figma-Files",
+        "Feature-Entwicklung & Integrationen in laufenden Projekten",
+        "Sauberer, dokumentierter Pull Request und termintreue Übergabe"
+      ],
+      "process": [
+        { "step": "01", "title": "Anfrage", "description": "Kurzes Briefing zu Projekt, Stack, Umfang und Zeitrahmen." },
+        { "step": "02", "title": "Übergabe", "description": "Zugänge, Walkthrough der Codebase und eine klare Definition of Done." },
+        { "step": "03", "title": "Umsetzung", "description": "Eigenständige Arbeit an den Tickets, mit regelmäßigen Updates." },
+        { "step": "04", "title": "Review", "description": "Sauberer Pull Request, dokumentiert und termintreu abgeliefert." }
+      ]
+    }
     ]
   },
   "portfolio_section": {
@@ -742,28 +666,30 @@
     "title": "Technologien und Frameworks",
     "stacks": [
       {
-        "category": "Frontend & Web",
+        "category": "Webentwicklung",
         "items": [
-          "React",
-          "Next.js",
-          "TypeScript",
-          "Tailwind CSS"
+          "Webentwicklung",
+          "Individuelle Websites",
+          "Modernes Webdesign",
+          "Nutzerfreundlichkeit",
+          "Maßgeschneidert",
+          "Responsive Design",
+          "Ladegeschwindigkeit",
+          "Barrierefreiheit",
+          "Klare Struktur"
         ]
       },
       {
-        "category": "Mobile Architecture",
+        "category": "SEO & Sichtbarkeit",
         "items": [
-          "Flutter",
-          "Dart",
-          "Riverpod"
-        ]
-      },
-      {
-        "category": "Backend & Cloud",
-        "items": [
-          "Node.js",
-          "Firebase",
-          "Serverpod"
+          "Sichtbarkeit",
+          "Local SEO",
+          "Google Rankings",
+          "Suchmaschinenoptimierung",
+          "Reichweite",
+          "Conversion-Optimierung",
+          "Core Web Vitals",
+          "Regionale Auffindbarkeit"
         ]
       }
     ]
@@ -804,18 +730,8 @@
     "btn_text": "Nachricht senden",
     "interestLabel": "Worum geht es?",
     "interestWebsite": "Website",
-    "interestMobileApp": "Mobile App",
     "interestGeneral": "Allgemeine Anfrage",
-    "serviceLabel": "Leistungen wählen",
-    "packageLabel": "Oder ein Website-Paket auswählen",
-    "serviceOptions": [
-      "Firmenwebsite erstellen lassen",
-      "Feature-Entwicklung & Integrationen",
-      "Webshop erstellen lassen",
-      "Landing Page erstellen lassen",
-      "Website Relaunch",
-      "Custom Web-Entwicklung"
-    ]
+    "packageLabel": "Oder ein Website-Paket auswählen"
   },
   "price_packages_section": {
     "title": "Website-Pakete",

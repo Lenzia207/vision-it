@@ -6,7 +6,6 @@ import { ContactSection as ContactSectionType, PricePackage } from "../data/type
 
 interface ContactSectionProps {
   contactData: ContactSectionType;
-  services: string[];
   packages: PricePackage[];
   locale: string;
 }
@@ -20,11 +19,10 @@ interface FormData {
 
 const initialForm: FormData = { name: "", company: "", email: "", message: "" };
 
-export default function ContactSection({ contactData, services, packages, locale }: ContactSectionProps) {
+export default function ContactSection({ contactData, packages, locale }: ContactSectionProps) {
   const [formData, setFormData] = useState<FormData>(initialForm);
-  const [interests, setInterests] = useState({ website: false, mobileApp: false, general: false });
+  const [interests, setInterests] = useState({ website: false, general: false });
   const [selectedPackage, setSelectedPackage] = useState<string | null>(null);
-  const [selectedServices, setSelectedServices] = useState<string[]>([]);
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null);
@@ -34,14 +32,8 @@ export default function ContactSection({ contactData, services, packages, locale
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const toggleInterest = (key: "website" | "mobileApp" | "general") => {
+  const toggleInterest = (key: "website" | "general") => {
     setInterests((prev) => ({ ...prev, [key]: !prev[key] }));
-  };
-
-  const toggleService = (name: string) => {
-    setSelectedServices((prev) =>
-      prev.includes(name) ? prev.filter((s) => s !== name) : [...prev, name]
-    );
   };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -63,7 +55,6 @@ export default function ContactSection({ contactData, services, packages, locale
           privacyAccepted,
           interests: activeInterests,
           selectedPackage,
-          selectedServices,
         }),
       });
       const json = await res.json();
@@ -71,9 +62,8 @@ export default function ContactSection({ contactData, services, packages, locale
         setSubmitStatus("success");
         setSubmitMessage(locale === "de" ? "Danke! Ich melde mich bald bei dir." : "Thanks! I'll get back to you soon.");
         setFormData(initialForm);
-        setInterests({ website: false, mobileApp: false, general: false });
+        setInterests({ website: false, general: false });
         setSelectedPackage(null);
-        setSelectedServices([]);
         setPrivacyAccepted(false);
       } else {
         setSubmitStatus("error");
@@ -117,14 +107,9 @@ export default function ContactSection({ contactData, services, packages, locale
       btn_text={contactData.btn_text}
       interestLabel={contactData.interestLabel}
       interestWebsite={contactData.interestWebsite}
-      interestMobileApp={contactData.interestMobileApp}
       interestGeneral={contactData.interestGeneral}
       packageLabel={contactData.packageLabel}
       packages={packages}
-      serviceLabel={contactData.serviceLabel}
-      services={services}
-      selectedServices={selectedServices}
-      toggleService={toggleService}
       textPrivacyPolicy={locale === "de" ? "Ich akzeptiere die Datenschutzerklärung" : "I accept the privacy policy"}
       textSending={locale === "de" ? "Wird gesendet..." : "Sending..."}
     />

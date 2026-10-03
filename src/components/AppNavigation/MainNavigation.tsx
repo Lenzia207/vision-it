@@ -63,9 +63,9 @@ export default function MainNavigation({ data, locale }: MainNavigationProps) {
             href={`/${locale}#top`}
             aria-label={labels.home}
             onClick={(e) => handleNavigate(e, "#top")}
-            className="flex items-center px-3 py-1.5 bg-white"
+            className="flex items-center px-3 py-1.5 "
           >
-            <Image src="/images/logo-mark.svg" alt="VisionIT" width={31} height={28} className="block h-7 w-auto" priority />
+            <Image src="/images/visionit-logo.png" alt="VisionIT" width={31} height={28} className="block h-7 w-auto" priority />
           </a>
 
           <nav aria-label={labels.mainNav} className="hidden min-[1060px]:flex items-center gap-[30px] whitespace-nowrap">

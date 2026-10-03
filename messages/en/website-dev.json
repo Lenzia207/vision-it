@@ -77,7 +77,7 @@
                     "name": "Starter",
                     "tagline": "For your first professional presence.",
                     "pricePrefix": "from",
-                    "price": "€1,490",
+                    "price": "€790",
                     "features": ["Up to 5 pages", "Design based on your brand", "Contact form", "Technical SEO foundation", "Mobile optimized"],
                     "ctaLabel": "Send inquiry",
                     "ctaVariant": "secondary"
@@ -86,7 +86,7 @@
                     "name": "Business",
                     "tagline": "For businesses that want to win leads through their website.",
                     "pricePrefix": "from",
-                    "price": "€3,900",
+                    "price": "€2,900",
                     "features": ["Up to 12 pages", "Custom design", "CMS for self-editing", "Multiple forms", "SEO optimization and analytics", "Performance optimization"],
                     "ctaLabel": "Send inquiry",
                     "ctaVariant": "primary",

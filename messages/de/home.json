@@ -45,7 +45,7 @@
       "Sichtbar.",
       "Zukunftsfähig."
     ],
-    "text": "Ich entwickle digitale Lösungen, die mehr können als gut aussehen. Mit moderner Webentwicklung, Suchmaschinenoptimierung und KI-gestützter Analyse verbinde ich Technik, Gestaltung und Sichtbarkeit zu einem durchdachten Gesamtauftritt.",
+    "text": "Als Softwareentwickler arbeite ich an digitale Lösungen, die mehr können als gut aussehen. Mit moderner Webentwicklung, Suchmaschinenoptimierung mit KI-gestützter Analyse verbinde ich Technik, Gestaltung und Sichtbarkeit zu einem durchdachten Gesamtauftritt.",
     "primaryCta": {
       "label": "Leistungen entdecken",
       "pageId": "#leistungen"
@@ -89,7 +89,7 @@
       {
         "title": "SEO & GEO",
         "label": "SEO/GEO",
-        "text": "Auffindbar in Suchmaschinen, auf Google Maps und in KI-gestützten Antwortsystemen.",
+        "text": "Auffindbar in Suchmaschinen, auf Google Maps und in diversen KI-gestützten Antwortsystemen.",
         "satellites": [
           "Suchmaschine",
           "Google Maps",
@@ -253,8 +253,6 @@
       "label": "Das gesamte Rezept entdecken",
       "pageId": "#projekte"
     },
-    "statusProgress": "Komponenten",
-    "statusComplete": "Gesamtsystem",
     "items": [
       {
         "title": "Das Fundament",

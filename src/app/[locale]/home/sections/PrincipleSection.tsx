@@ -11,7 +11,7 @@ interface PrincipleSectionProps {
 const LIME = "#BEE600";
 const STEP_MS = 1000;
 // Ring label positions, innermost (Fundament) to outermost.
-const LABEL_TOPS = ["64%", "31%", "22%", "13%", "4%"];
+const LABEL_TOPS = ["50%", "31%", "22%", "13%", "4%"];
 // Concentric rings 1–3, outside-in: [inset %, size %]
 const RINGS: [number, number][] = [
   [13, 74],
@@ -78,7 +78,7 @@ export default function PrincipleSection({ data }: PrincipleSectionProps) {
             <h2 className="m-0 font-mono font-medium text-[clamp(1.9rem,4vw,3.2rem)] leading-[1.05] tracking-[-0.03em] text-white text-balance">
               {data.title}
             </h2>
-            <p className="m-0 max-w-[520px] text-[1.05rem] leading-[1.7] text-(--text-300) text-pretty">{data.text}</p>
+            <p className="m-0 max-w-[520px] text-[1.05rem] leading-[1.7] text-(--text-300) text-pretty lg:text-justify">{data.text}</p>
           </div>
 
           <ul
@@ -132,7 +132,7 @@ export default function PrincipleSection({ data }: PrincipleSectionProps) {
           className="reveal-on-scroll flex flex-col items-center gap-6"
           style={{ transitionDelay: "150ms" }}
         >
-          <div aria-hidden="true" className="relative w-full max-w-[540px] aspect-square">
+          <div aria-hidden="true" className="relative w-full max-w-[540px] aspect-square lg:block hidden">
             <div
               className="slow-spin absolute left-[4%] top-[4%] w-[92%] h-[92%] rounded-full"
               style={{
@@ -171,16 +171,7 @@ export default function PrincipleSection({ data }: PrincipleSectionProps) {
               </span>
             ))}
           </div>
-          <div
-            aria-live="polite"
-            className={`font-mono text-[0.8rem] font-semibold uppercase tracking-[0.14em] ${
-              complete ? "text-(--lime)" : "text-(--text-300)"
-            }`}
-          >
-            {complete
-              ? `${data.items.length} / ${data.items.length} · ${data.statusComplete}`
-              : `${active + 1} / ${data.items.length} ${data.statusProgress}`}
-          </div>
+       
         </div>
       </div>
     </section>

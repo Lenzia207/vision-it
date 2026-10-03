@@ -118,7 +118,6 @@ export interface PrincipleSection {
   title: string;
   text: string;
   cta: PageLink;
-  statusProgress: string;
   statusComplete: string;
   items: PrincipleItem[];
 }

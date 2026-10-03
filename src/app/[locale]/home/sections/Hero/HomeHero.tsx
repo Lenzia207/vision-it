@@ -15,7 +15,7 @@ export default function HomeHero({ data }: HomeHeroProps) {
       id="top"
       className="section-dark relative overflow-hidden min-h-svh flex flex-col justify-center pt-[clamp(104px,11vw,136px)] pb-[clamp(40px,5vw,64px)]"
     >
-      <div className="relative z-1 w-full max-w-[1280px] mx-auto px-[clamp(20px,5vw,64px)] flex flex-col gap-[clamp(24px,3vw,36px)]">
+      <div className="relative z-1 w-full max-w-7xl mx-auto px-[clamp(20px,5vw,64px)] flex flex-col gap-[clamp(24px,3vw,36px)]">
         <span
           className="hero-enter font-mono text-[0.78rem] font-medium uppercase tracking-[0.2em] text-(--lime)"
           style={{ animationDelay: enterDelay(0) }}
@@ -38,10 +38,10 @@ export default function HomeHero({ data }: HomeHeroProps) {
           </h1>
 
           <div
-            className="hero-enter flex flex-col gap-6 basis-[440px] shrink"
+            className="hero-enter flex flex-col gap-10 basis-[440px] shrink"
             style={{ animationDelay: enterDelay(2) }}
           >
-            <p className="m-0 text-[1.02rem] leading-[1.7] text-(--text-300) text-pretty">
+            <p className="m-0 text-[1.02rem] leading-[1.7] text-(--text-300) lg:text-justify">
               {data.text}
             </p>
             <div className="flex flex-wrap gap-3">

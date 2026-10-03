@@ -38,7 +38,7 @@ export default function AboutSection({ data }: AboutSectionProps) {
 
           <div className="reveal-on-scroll flex flex-col gap-3.5 max-w-[580px]" style={{ transitionDelay: "100ms" }}>
             {data.paragraphs.map((paragraph) => (
-              <p key={paragraph} className="m-0 text-base leading-[1.75] text-(--text-300) text-pretty">
+              <p key={paragraph} className="m-0 text-base leading-[1.75] text-(--text-300) text-justify">
                 {paragraph}
               </p>
             ))}

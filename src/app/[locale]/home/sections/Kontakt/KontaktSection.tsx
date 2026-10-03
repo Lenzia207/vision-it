@@ -19,7 +19,7 @@ export default function KontaktSection({ data, locale }: KontaktSectionProps) {
             {data.title}
           </h2>
           {data.paragraphs.map((paragraph) => (
-            <p key={paragraph} className="m-0 text-[1.05rem] leading-[1.7] text-(--text-300) text-pretty">
+            <p key={paragraph} className="m-0 text-[1.05rem] leading-[1.7] text-(--text-300) text-pretty lg:text-justify">
               {paragraph}
             </p>
           ))}

@@ -21,7 +21,7 @@ export default function InterplaySection({ data }: InterplaySectionProps) {
           <h2 className="m-0 font-mono font-medium text-[clamp(1.9rem,4vw,3.2rem)] leading-[1.05] tracking-[-0.03em] text-(--teal) text-balance">
             {data.title}
           </h2>
-          <p className="m-0 text-[1.05rem] leading-[1.75] text-(--text-300) text-pretty">{data.text}</p>
+          <p className="m-0 text-[1.05rem] leading-[1.75] text-(--text-300) lg:text-justify">{data.text}</p>
         </div>
 
         <div

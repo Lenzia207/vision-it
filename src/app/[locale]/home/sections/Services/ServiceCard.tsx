@@ -19,36 +19,38 @@ function ServiceGlyph({ kind }: { kind: string }) {
   if (kind === "seo") {
     return (
       <>
-        <span className="absolute inset-0 rounded-full border-[1.5px] border-dashed border-white/40" />
-        <span className="absolute inset-3 rounded-full border-2 border-white/60" />
-        <span className="absolute inset-[22px] rounded-full border-[5px] border-(--lime)" />
+        <span className="absolute inset-0 rounded-full border border-dashed border-white/35" />
+        <span className="absolute inset-2 rounded-full border-[1.5px] border-white/55" />
+        <span className="absolute inset-[15px] rounded-full border-4 border-(--lime)" />
       </>
     );
   }
   if (kind === "agency") {
     return (
       <>
-        <span className="absolute left-0 top-1 w-[38px] h-[38px] border-2 border-white/60" />
-        <span className="absolute left-[22px] top-6 w-[38px] h-[38px] bg-(--lime)" />
-        <span className="absolute left-[22px] top-6 w-4 h-[18px] bg-(--teal-2)" />
+        <span className="absolute left-0 top-0.5 w-[26px] h-[26px] border-[1.5px] border-white/55" />
+        <span className="absolute left-4 top-4 w-[26px] h-[26px] bg-(--lime)" />
+        <span className="absolute left-4 top-4 w-[11.5px] h-[13.5px] bg-(--teal)" />
       </>
     );
   }
   return (
     <>
-      <span className="absolute inset-x-0 top-1.5 bottom-2 border-2 border-white/55" />
-      <span className="absolute inset-x-0 top-1.5 h-3 border-b-2 border-white/55" />
-      <span className="absolute left-[9px] top-[26px] w-[18px] h-[18px] bg-(--lime)" />
-      <span className="absolute left-[33px] top-7 w-[22px] h-0.5 bg-white" />
-      <span className="absolute left-[33px] top-9 w-[15px] h-0.5 bg-white/55" />
+      <span className="absolute inset-x-0 top-1 bottom-1.5 border-[1.5px] border-white/45" />
+      <span className="absolute inset-x-0 top-1 h-[9px] border-b-[1.5px] border-white/45" />
+      <span className="absolute left-1.5 top-[18px] w-3 h-3 bg-(--lime)" />
+      <span className="absolute left-[23px] top-5 w-[15px] h-[1.5px] bg-white" />
+      <span className="absolute left-[23px] top-[26px] w-2.5 h-[1.5px] bg-white/45" />
     </>
   );
 }
 
 const tabClass = (selected: boolean) =>
-  `flex-1 min-h-10 border-0 cursor-pointer font-mono text-[0.68rem] font-semibold uppercase tracking-[0.14em] transition-colors duration-200 ${
-    selected ? "bg-(--lime) text-(--teal)" : "bg-(--teal-2) text-[#9DB3B2] hover:text-white"
+  `-mb-px pb-3 bg-transparent border-0 border-b-2 cursor-pointer font-mono text-[0.7rem] font-semibold uppercase tracking-[0.16em] transition-colors duration-200 hover:text-white ${
+    selected ? "border-(--lime) text-white" : "border-transparent text-[#9DB3B2]"
   }`;
+
+const numClass = "font-mono text-[0.72rem] font-semibold tracking-[0.08em] text-[#9DB3B2]";
 
 export default function ServiceCard({
   card,
@@ -65,64 +67,73 @@ export default function ServiceCard({
 
   return (
     <div className="reveal-on-scroll flex" style={{ transitionDelay: `${index * 120}ms` }}>
-      <article className="flex-1 flex flex-col bg-white border-2 border-(--teal) transition-[transform,box-shadow] duration-350 ease-(--ease-out-expo) hover:-translate-y-1.5 hover:shadow-[0_28px_48px_-30px_rgba(2,70,75,0.5)]">
-        <div className="flex justify-between items-end gap-4 min-h-[148px] px-6 pt-[26px] pb-6 bg-(--teal) text-white">
-          <div className="flex flex-col gap-2.5">
-            <span className="font-mono text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--lime)">
+      <article className="flex-1 flex flex-col bg-(--teal) shadow-[0_0_0_1px_rgba(255,255,255,0.14)] transition-colors duration-350 hover:bg-[#054E53]">
+        <header className="flex flex-col gap-7 px-[clamp(24px,2.8vw,36px)] pt-[clamp(28px,3vw,40px)]">
+          <div className="flex justify-between items-start gap-4">
+            <span className="flex items-center gap-2.5 font-mono text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[#9DB3B2]">
+              <span className="w-2 h-2 bg-(--lime)" />
               {areaLabel} {String(index + 1).padStart(2, "0")}
             </span>
-            <h3 className="m-0 font-mono text-[1.3rem] font-medium leading-tight text-white text-balance">
-              {card.title}
-            </h3>
+            <div aria-hidden="true" className="relative flex-none w-11 h-11">
+              <ServiceGlyph kind={card.key} />
+            </div>
           </div>
-          <div aria-hidden="true" className="relative flex-none w-16 h-16 self-start">
-            <ServiceGlyph kind={card.key} />
+
+          <h3 className="m-0 min-h-[2.3em] font-mono text-[clamp(1.4rem,2vw,1.7rem)] font-medium leading-[1.15] tracking-[-0.025em] text-white text-balance">
+            {card.title}
+          </h3>
+          <p className="m-0 min-h-[6.8em] text-[0.95rem] leading-[1.7] text-[#C7D9D8] text-pretty">
+            {card.description}
+          </p>
+
+          <div role="tablist" aria-label={card.title} className="flex gap-7 border-b border-white/14">
+            <button
+              type="button"
+              role="tab"
+              aria-selected={!showProcess}
+              aria-controls={panelId}
+              onClick={() => setTab("services")}
+              className={tabClass(!showProcess)}
+            >
+              {servicesTab}
+            </button>
+            <button
+              type="button"
+              role="tab"
+              aria-selected={showProcess}
+              aria-controls={panelId}
+              onClick={() => setTab("process")}
+              className={tabClass(showProcess)}
+            >
+              {processTab}
+            </button>
           </div>
-        </div>
+        </header>
 
-        <div role="tablist" aria-label={card.title} className="flex gap-0.5 p-0.5 bg-(--teal)">
-          <button
-            type="button"
-            role="tab"
-            aria-selected={!showProcess}
-            aria-controls={panelId}
-            onClick={() => setTab("services")}
-            className={tabClass(!showProcess)}
-          >
-            {servicesTab}
-          </button>
-          <button
-            type="button"
-            role="tab"
-            aria-selected={showProcess}
-            aria-controls={panelId}
-            onClick={() => setTab("process")}
-            className={tabClass(showProcess)}
-          >
-            {processTab}
-          </button>
-        </div>
-
-        <div id={panelId} role="tabpanel" className="flex-1 flex flex-col gap-5 p-6">
-          <p className="m-0 text-[0.95rem] leading-relaxed text-(--text-300) text-pretty">{card.description}</p>
-
+        <div id={panelId} role="tabpanel" className="flex-1 px-[clamp(24px,2.8vw,36px)] pt-2 pb-8">
           {showProcess ? (
-            <ol className="m-0 p-0 list-none flex flex-col gap-3.5">
+            <ol className="m-0 p-0 list-none flex flex-col">
               {card.process.map((step) => (
-                <li key={step.step} className="grid grid-cols-[28px_minmax(0,1fr)] gap-2.5">
-                  <span className="font-mono text-[0.85rem] font-bold text-(--teal)/50">{step.step}</span>
-                  <div className="flex flex-col gap-[3px]">
-                    <span className="font-mono text-[0.92rem] font-medium text-(--teal)">{step.title}</span>
-                    <span className="text-[0.86rem] leading-normal text-(--text-300)">{step.description}</span>
+                <li
+                  key={step.step}
+                  className="grid grid-cols-[32px_minmax(0,1fr)] items-baseline py-3.5 border-b border-white/8"
+                >
+                  <span className={numClass}>{step.step}</span>
+                  <div className="flex flex-col gap-1">
+                    <span className="font-mono text-[0.95rem] font-medium text-white">{step.title}</span>
+                    <span className="text-[0.86rem] leading-[1.55] text-[#C7D9D8]">{step.description}</span>
                   </div>
                 </li>
               ))}
             </ol>
           ) : (
-            <ul className="m-0 p-0 list-none flex flex-col gap-3">
-              {card.items.map((item) => (
-                <li key={item} className="flex gap-3 items-start text-[0.92rem] leading-normal text-(--teal)">
-                  <span className="flex-none w-2 h-2 mt-[7px] bg-(--lime-hover)" />
+            <ul className="m-0 p-0 list-none flex flex-col">
+              {card.items.map((item, i) => (
+                <li
+                  key={item}
+                  className="grid grid-cols-[32px_minmax(0,1fr)] items-baseline py-3.5 border-b border-white/8 text-[0.93rem] leading-normal text-white"
+                >
+                  <span className={numClass}>{String(i + 1).padStart(2, "0")}</span>
                   {item}
                 </li>
               ))}
@@ -130,11 +141,14 @@ export default function ServiceCard({
           )}
         </div>
 
-        <div className="px-6 pb-6">
-          <Link href={`/${card.link}`} locale={locale} className="btn btn-primary whitespace-nowrap">
-            {linkLabel}
-          </Link>
-        </div>
+        <Link
+          href={`/${card.link}`}
+          locale={locale}
+          className="flex justify-between items-center gap-4 px-[clamp(24px,2.8vw,36px)] py-[22px] border-t border-white/14 font-mono text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-white no-underline transition-colors duration-250 hover:bg-(--lime) hover:text-(--teal)"
+        >
+          <span>{linkLabel}</span>
+          <span aria-hidden="true" className="text-base tracking-normal">→</span>
+        </Link>
       </article>
     </div>
   );

@@ -20,7 +20,7 @@ export default function WebsiteServiceSection({
     locale,
 }: WebsiteServiceSectionProps) {
     return (
-        <section className="section-padding">
+        <section id="leistungen" className="section-padding">
             <MobileCenterActivationObserver selector=".service-card" threshold={150} />
             <div className="max-w-6xl mx-auto px-4 sm:px-6">
                 <TitleHeader title={servicesTitle} description={servicesDescription} />

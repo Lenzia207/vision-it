@@ -11,7 +11,7 @@ export default function WebsitePricingSection({ pricing, locale }: WebsitePricin
 
   return (
     <>
-      <section className="section-dark section-padding" style={{ paddingBottom: 0 }}>
+      <section id="preisModelle" className="section-dark section-padding" style={{ paddingBottom: 0 }}>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col gap-12">
           <div className="max-w-2xl flex flex-col gap-5 reveal-on-scroll">
             <span className="label-mono">{factorsTag}</span>

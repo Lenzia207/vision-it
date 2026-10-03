@@ -12,11 +12,6 @@
     },
     {
       "page": "/",
-      "name": "Projects & Insights",
-      "pageId": "#projekte"
-    },
-    {
-      "page": "/",
       "name": "About me",
       "pageId": "#ueber-mich"
     },
@@ -251,7 +246,7 @@
     "text": "A successful digital presence doesn't come from a single measure. What matters is how the different components work together.",
     "cta": {
       "label": "Discover the full recipe",
-      "pageId": "#projekte"
+      "pageId": "/en/angebot-webseiten"
     },
 
     "items": [

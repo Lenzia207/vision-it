@@ -1,15 +1,15 @@
-import TitleHeader from "@/components/TitleHeader";
 import { AngebotProcessStep } from "../../home/sections/data/types/home-types";
+import WebsiteHeroSection from "../component/WebsiteHeroSection";
 import WebsiteProcessSection from "../component/WebsiteProcessSection";
 import WebsiteServiceSection from "../component/WebsiteServiceSection";
 import WebsiteAudienceSection from "../component/WebsiteAudienceSection";
 import WebsitePricingSection from "../component/WebsitePricingSection";
 import WebsiteFaqSection from "../component/WebsiteFaqSection";
-import { AngebotAudienceData, AngebotFaqData, AngebotPricingData, AngebotWebsiteService } from "../data/website-dev-types";
+import { AngebotAudienceData, AngebotWebsiteHeroData, AngebotFaqData, AngebotPricingData, AngebotWebsiteService } from "../data/website-dev-types";
 
 
 interface WebsiteDetailUIProps {
-  badge: string;
+  hero: AngebotWebsiteHeroData;
   title: string;
   description: string;
   servicesTitle: string;
@@ -24,12 +24,16 @@ interface WebsiteDetailUIProps {
   locale: string;
 }
 
-export default function WebsiteDetailUI({ badge, title, description, servicesTitle, servicesDescription, processLabel, ctaLabel, services, audience, pricing, faq, process, locale }: WebsiteDetailUIProps) {
+export default function WebsiteDetailUI({ hero, title, description, servicesTitle, servicesDescription, processLabel, ctaLabel, services, audience, pricing, faq, process, locale }: WebsiteDetailUIProps) {
   return (
     <>
-      <section className="section-dark relative section-padding" style={{ paddingTop: "8rem" }}>
-        <TitleHeader as="h1" variant="badge" badge={badge} title={title} description={description} />
-      </section>
+      <WebsiteHeroSection
+        hero={hero}
+        title={title}
+        description={description}
+        processLabel={processLabel}
+        processSteps={process.map((step) => step.title)}
+      />
 
       <WebsiteAudienceSection audience={audience} locale={locale} />
       <WebsiteServiceSection servicesTitle={servicesTitle} servicesDescription={servicesDescription} services={services} ctaLabel={ctaLabel} locale={locale} />

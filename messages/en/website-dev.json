@@ -1,5 +1,10 @@
 {
     "angebot_website_data": {
+        "hero": {
+            "tag": "Web Design · Web Development · Relaunch",
+            "primaryCtaLabel": "View pricing",
+            "secondaryCtaLabel": "View services"
+        },
         "title": "Professional Websites & Web Development in Vienna",
         "description": "Let VisionIT build your website. We offer professional web development, web design and tailored solutions for your business in Vienna.",
         "servicesTitle": "Our Services",

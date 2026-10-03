@@ -1,5 +1,10 @@
 {
     "angebot_website_data": {
+        "hero": {
+            "tag": "Webdesign · Webentwicklung · Relaunch",
+            "primaryCtaLabel": "Preise ansehen",
+            "secondaryCtaLabel": "Leistungen ansehen"
+        },
         "title": "Professionelle Websites & Webentwicklung in Wien",
         "description": "Lasse deine Website von VisionIT entwickeln. Wir bieten professionelle Webentwicklung, Webdesign und maßgeschneiderte Lösungen für dein Unternehmen in Wien.",
         "servicesTitle": "Alle Leistungen auf einen Blick",

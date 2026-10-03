@@ -64,7 +64,14 @@ export interface AngebotFaqData {
   noteCta: string;
 }
 
+export interface AngebotWebsiteHeroData {
+  tag: string;
+  primaryCtaLabel: string;
+  secondaryCtaLabel: string;
+}
+
 export interface AngebotWebsiteData {
+  hero: AngebotWebsiteHeroData;
   title: string;
   description: string;
   servicesTitle: string;

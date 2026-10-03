@@ -13,7 +13,7 @@ interface WebsiteDetailViewProps {
 export default function WebsiteDetailView({ websitePage, area, locale }: WebsiteDetailViewProps) {
   return (
     <AngebotDetailUI  
-      badge={area.badge}
+      hero={websitePage.hero}
       title={websitePage.title}
       description={websitePage.description}
       servicesTitle={websitePage.servicesTitle}

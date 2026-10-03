@@ -54,6 +54,5 @@ consolidated token layer (see `design-system/src/styles/tokens.css`).
   are NOT committed. A fresh clone/machine will re-verify everything from scratch on first
   run here (expected, not a bug) until this project has been uploaded once and its
   `_ds_sync.json` anchor exists to carry forward against.
-- No `list_files`/upload has happened yet - this session lacked design-system authorization
-  (`/design-login` required). `projectId` is not yet recorded in `.design-sync/config.json`.
-  The next sync must still create/pick a target project (base SKILL.md §1) before uploading.
+- Project `e7f11472-...` is uploaded and anchored (`_ds_sync.json`); re-syncs carry
+  grades forward from that anchor. Re-sync 2026-10-03: no changes, nothing uploaded.

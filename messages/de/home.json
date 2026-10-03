@@ -12,11 +12,6 @@
     },
     {
       "page": "/",
-      "name": "Projekte & Wissen",
-      "pageId": "#projekte"
-    },
-    {
-      "page": "/",
       "name": "Über mich",
       "pageId": "#ueber-mich"
     },
@@ -251,7 +246,7 @@
     "text": "Eine erfolgreiche digitale Präsenz entsteht nicht durch eine einzelne Maßnahme. Entscheidend ist das Zusammenspiel verschiedener Komponenten.",
     "cta": {
       "label": "Das gesamte Rezept entdecken",
-      "pageId": "#projekte"
+      "pageId": "/de/angebot-webseiten"
     },
     "items": [
       {

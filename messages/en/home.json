@@ -2,28 +2,495 @@
   "main_navigation": [
     {
       "page": "/",
-      "name": "Info",
-      "pageId": "#about-me"
+      "name": "Services",
+      "pageId": "#leistungen"
     },
     {
       "page": "/",
-      "name": "Services",
-      "pageId": "#services",
-      "submenuDescription": "Four service areas. Each with its own process, scope, and pricing.",
-      "submenu": [
-        { "name": "Websites", "pageId": "#webseiten", "description": "New build, redesign, design-to-code" },
-        { "name": "SEO and GEO", "pageId": "#seo-geo", "description": "Audit, roadmap, monitoring, GEO" },
-        { "name": "Mobile Apps", "pageId": "#mobile-apps", "description": "iOS and Android, React Native" },
-        { "name": "Agencies", "pageId": "#agenturen", "description": "Delivery as an external developer" }
-      ]
+      "name": "My Approach",
+      "pageId": "#ansatz"
     },
-
+    {
+      "page": "/",
+      "name": "Projects & Insights",
+      "pageId": "#projekte"
+    },
+    {
+      "page": "/",
+      "name": "About me",
+      "pageId": "#ueber-mich"
+    },
     {
       "page": "/",
       "name": "Contact",
       "pageId": "#contact"
     }
   ],
+  "navigation_labels": {
+    "cta": "Discuss a project",
+    "ctaPageId": "#contact",
+    "home": "VisionIT home",
+    "mainNav": "Main navigation",
+    "mobileNav": "Mobile navigation",
+    "menu": "Menu",
+    "close": "Close",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "email": "office@vision-it.at"
+  },
+  "hero": {
+    "eyebrow": "VisionIT / Web development & digital visibility",
+    "titleLines": [
+      "Digitally present.",
+      "Visible.",
+      "Future-proof."
+    ],
+    "text": "I build digital solutions that do more than look good. With modern web development, search engine optimization and AI-assisted analysis, I bring technology, design and visibility together into one well-considered presence.",
+    "primaryCta": {
+      "label": "Explore services",
+      "pageId": "#leistungen"
+    },
+    "secondaryCta": {
+      "label": "Discuss a project",
+      "pageId": "#contact"
+    },
+    "keywords": [
+      "Web development",
+      "Digital applications",
+      "SEO",
+      "GEO",
+      "Design",
+      "AI Visibility",
+      "Technical solutions"
+    ],
+    "tagline": "Technology — Design — Visibility",
+    "braidLabel": "Interplay of web development, design and SEO & GEO",
+    "nodes": [
+      {
+        "title": "Web development",
+        "label": "Dev",
+        "text": "Websites and digital applications – technically clean, fast and maintainable.",
+        "satellites": [
+          "Website",
+          "Web apps",
+          "Integrations"
+        ]
+      },
+      {
+        "title": "Design",
+        "label": "Design",
+        "text": "Design and structure that make content easy to understand.",
+        "satellites": [
+          "Identity",
+          "Structure",
+          "Content"
+        ]
+      },
+      {
+        "title": "SEO & GEO",
+        "label": "SEO/GEO",
+        "text": "Findable in search engines, on Google Maps and in AI-powered answer engines.",
+        "satellites": [
+          "Search engine",
+          "Google Maps",
+          "AI search",
+          "External sources"
+        ]
+      }
+    ]
+  },
+  "interplay_section": {
+    "tag": "More than just a website",
+    "title": "Digital presence comes from interplay.",
+    "text": "A professional website is the foundation. But digital visibility happens where technology, content and company information work together – in classic search engines as well as in new AI-powered information systems.",
+    "pillars": [
+      {
+        "title": "Presence",
+        "text": "A professional digital appearance"
+      },
+      {
+        "title": "Findability",
+        "text": "Visibility in relevant search systems"
+      },
+      {
+        "title": "Identity",
+        "text": "Clear and consistent company information"
+      },
+      {
+        "title": "Evolution",
+        "text": "Analyse, measure and optimise"
+      }
+    ]
+  },
+  "services_section": {
+    "tag": "Services",
+    "title": "My services",
+    "description": "Good development starts before the first line of code. Three areas that work on their own and achieve the most together.",
+    "areaLabel": "Area",
+    "servicesTab": "Services",
+    "processTab": "Process",
+    "linkLabel": "Learn more",
+    "cards": [
+      {
+        "key": "web",
+        "title": "Websites & digital applications",
+        "description": "Professional company websites, custom web applications, responsive design and technical integrations.",
+        "link": "angebot-webseiten",
+        "items": [
+          "Professional company websites",
+          "Custom web applications",
+          "Responsive design",
+          "Technical integrations"
+        ],
+        "process": [
+          {
+            "step": "01",
+            "title": "Inquiry",
+            "description": "A no-obligation first call about goals, scope and budget."
+          },
+          {
+            "step": "02",
+            "title": "Concept",
+            "description": "Information architecture, user flows and a roadmap with a realistic timeline."
+          },
+          {
+            "step": "03",
+            "title": "Design",
+            "description": "High-fidelity mockups in Figma, feedback in defined rounds."
+          },
+          {
+            "step": "04",
+            "title": "Development",
+            "description": "Component-based build with Next.js, tested across browsers and devices."
+          },
+          {
+            "step": "05",
+            "title": "Launch",
+            "description": "Deployment, domain setup, SSL and performance optimization."
+          }
+        ]
+      },
+      {
+        "key": "seo",
+        "title": "SEO & GEO",
+        "description": "Technical and content-focused search engine optimization, local SEO and analysis of visibility in AI-powered search systems.",
+        "link": "angebot-seo-geo",
+        "items": [
+          "Technical search engine optimization",
+          "Content optimization",
+          "Local SEO",
+          "Visibility in AI-powered search systems"
+        ],
+        "process": [
+          {
+            "step": "01",
+            "title": "Overview",
+            "description": "Getting to know the project, its goals and requirements."
+          },
+          {
+            "step": "02",
+            "title": "Audit",
+            "description": "Technical analysis: crawling, indexing and Core Web Vitals."
+          },
+          {
+            "step": "03",
+            "title": "Analysis",
+            "description": "Keyword and competitor research along search intent."
+          },
+          {
+            "step": "04",
+            "title": "Implementation",
+            "description": "Technical SEO, content, metadata and structured data."
+          },
+          {
+            "step": "05",
+            "title": "Monitoring",
+            "description": "Keeping an eye on rankings, Search Console and visibility in AI answers."
+          }
+        ]
+      },
+      {
+        "key": "agency",
+        "title": "Technical support for agencies",
+        "description": "Web development, design-to-code, custom features and project-based technical support.",
+        "link": "angebot-agenturen",
+        "items": [
+          "Web development",
+          "Design-to-code",
+          "Custom features",
+          "Project-based technical support"
+        ],
+        "process": [
+          {
+            "step": "01",
+            "title": "Inquiry",
+            "description": "A short briefing on project, stack, scope and timeline."
+          },
+          {
+            "step": "02",
+            "title": "Handover",
+            "description": "Access, a codebase walkthrough and a clear definition of done."
+          },
+          {
+            "step": "03",
+            "title": "Implementation",
+            "description": "Independent work on the tickets, with regular updates."
+          },
+          {
+            "step": "04",
+            "title": "Review",
+            "description": "A clean, documented pull request, delivered on time."
+          }
+        ]
+      }
+    ]
+  },
+  "principle_section": {
+    "tag": "The VisionIT principle",
+    "title": "The recipe for a highly visible business.",
+    "text": "A successful digital presence doesn't come from a single measure. What matters is how the different components work together.",
+    "cta": {
+      "label": "Discover the full recipe",
+      "pageId": "#projekte"
+    },
+    "statusProgress": "components",
+    "statusComplete": "Complete system",
+    "items": [
+      {
+        "title": "The foundation",
+        "text": "Technically clean websites.",
+        "ringLabel": "Foundation"
+      },
+      {
+        "title": "The identity",
+        "text": "Clarity about what a business stands for.",
+        "ringLabel": "Identity"
+      },
+      {
+        "title": "The findability",
+        "text": "Presence on relevant search and information platforms.",
+        "ringLabel": "Findability"
+      },
+      {
+        "title": "The trust",
+        "text": "Expertise, transparent information and external mentions.",
+        "ringLabel": "Trust"
+      },
+      {
+        "title": "The evolution",
+        "text": "Continuous analysis and optimization.",
+        "ringLabel": "Evolution"
+      }
+    ]
+  },
+  "audience_section": {
+    "tag": "Who it's for",
+    "title": "Who I work for",
+    "items": [
+      {
+        "title": "Companies & service providers",
+        "text": "Websites, visibility and digital solutions for day-to-day business."
+      },
+      {
+        "title": "Freelancers & young companies",
+        "text": "A professional start with a clear structure and room to grow."
+      },
+      {
+        "title": "Agencies & development teams",
+        "text": "Technical delivery as an extension of your existing team."
+      }
+    ]
+  },
+  "collaboration_section": {
+    "tag": "Collaboration",
+    "title": "From the first idea to the right solution.",
+    "stepLabel": "Step",
+    "steps": [
+      {
+        "title": "Getting to know you & requirements",
+        "text": "A no-obligation conversation about goals, scope and framework – online or over coffee in Vienna."
+      },
+      {
+        "title": "Analysis & concept",
+        "text": "An assessment, a structure and a clear plan with a realistic timeline."
+      },
+      {
+        "title": "Implementation & optimization",
+        "text": "Development, design and optimization in clearly agreed steps."
+      },
+      {
+        "title": "Handover & evolution",
+        "text": "Launch and handover with documentation, followed by further development as needed."
+      }
+    ]
+  },
+  "projects_section": {
+    "tag": "Projects & Insights",
+    "title": "Projects & Insights",
+    "description": "Hands-on work from my own projects and from working in development teams – complemented by articles on visibility, SEO and GEO.",
+    "articlesTitle": "Articles",
+    "articlesBadge": "Placeholder",
+    "articleStatus": "Article in preparation",
+    "projects": [
+      {
+        "image": "/images/portfolio/pictolog.jpg",
+        "title": "Pictolog PDF",
+        "subtitle": "Independently conceived, designed and developed: an offline app for project management and reporting with PDF export.",
+        "tags": [
+          "Flutter",
+          "Dart",
+          "Own project"
+        ],
+        "url": "https://apps.apple.com/us/app/pictolog-pdf/id6759091493"
+      },
+      {
+        "image": "/images/portfolio/aktionsfinder.jpg",
+        "title": "Aktionsfinder App and PWA",
+        "subtitle": "Part of the development team at Marqably.",
+        "tags": [
+          "Flutter",
+          "PWA"
+        ],
+        "url": "https://marqably.com/case-study/aktionsfinder-app"
+      },
+      {
+        "image": "/images/portfolio/tt.jpg",
+        "title": "Tiroler Tageszeitung App",
+        "subtitle": "Ongoing development in the team at Marqably.",
+        "tags": [
+          "Flutter",
+          "Dark Mode"
+        ],
+        "url": "https://marqably.com/case-study/tt-app"
+      }
+    ],
+    "articles": [
+      "The recipe for a highly visible business",
+      "How do AI systems recognize your business?",
+      "SEO vs. GEO: What is really changing?"
+    ]
+  },
+  "visionseo_section": {
+    "badge": "In-house development",
+    "statusBadge": "In development",
+    "title": "VisionSEO – analysis meets development.",
+    "text": "VisionSEO is my own analysis tool that combines technical website audits with AI-assisted evaluation. The goal is to examine digital visibility transparently and to present optimization potential in a structured way.",
+    "windowAriaLabel": "Concept sketch of the audit flow",
+    "windowTitle": "visionseo / audit",
+    "windowLabel": "Concept sketch",
+    "analyzing": "Preparing AI evaluation",
+    "tree": [
+      {
+        "path": "example.com/",
+        "check": "Technology",
+        "done": true
+      },
+      {
+        "path": "├─ /services",
+        "check": "Indexing",
+        "done": true
+      },
+      {
+        "path": "│  └─ /services/seo",
+        "check": "Structure",
+        "done": true
+      },
+      {
+        "path": "├─ /about",
+        "check": "Structured data",
+        "done": true
+      },
+      {
+        "path": "└─ /contact",
+        "check": "Local details",
+        "done": false
+      }
+    ]
+  },
+  "about_section": {
+    "tag": "About me",
+    "title": "Understand technology. Shape ideas. Build solutions.",
+    "name": "Lena Zyadeh",
+    "degree": "BSC.",
+    "imageAlt": "Lena Zyadeh, founder of VisionIT",
+    "paragraphs": [
+      "I'm a freelance web and app developer specialising in React, Next.js and Flutter.",
+      "I started at Marqably, a Viennese digital agency, where I spent two years working on several digital products – including apps with hundreds of thousands of active users. That experience shaped my standards for code quality, documentation and working independently.",
+      "With hands-on agency experience in software development, media design and search engine optimization, I don't want to limit myself to a single discipline – I want to connect these areas in a meaningful way."
+    ],
+    "facts": [
+      {
+        "label": "Based in",
+        "value": "Vienna"
+      },
+      {
+        "label": "Self-employed",
+        "value": "since 2026"
+      },
+      {
+        "label": "Stack",
+        "value": "React · Next.js · Flutter"
+      }
+    ],
+    "links": [
+      {
+        "name": "GitHub",
+        "url": "https://github.com/Lenzia207"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/lena-z-230b01176/"
+      }
+    ]
+  },
+  "kontakt_section": {
+    "tag": "Contact",
+    "title": "Let's get things moving.",
+    "paragraphs": [
+      "Want to take your website further, improve your digital visibility or need technical support for an existing project?",
+      "Tell me about your plans. Together we'll figure out which solution fits your requirements."
+    ],
+    "emailLabel": "Write directly",
+    "email": "office@vision-it.at",
+    "personalLabel": "In person",
+    "personalText": "Online or over coffee in Vienna.",
+    "form": {
+      "nameLabel": "Name",
+      "namePlaceholder": "Full name",
+      "companyLabel": "Company",
+      "companyPlaceholder": "Your company",
+      "emailLabel": "Email",
+      "emailPlaceholder": "your.name@mail.com",
+      "topicLabel": "What is it about?",
+      "topics": [
+        {
+          "value": "website",
+          "label": "Website / application"
+        },
+        {
+          "value": "seo",
+          "label": "SEO & GEO"
+        },
+        {
+          "value": "agentur",
+          "label": "Agency support"
+        },
+        {
+          "value": "allgemein",
+          "label": "General"
+        }
+      ],
+      "messageLabel": "Message",
+      "messagePlaceholder": "Tell me briefly about your project.",
+      "privacyText": "I have read the privacy policy and agree to the processing of my details.",
+      "submit": "Send message",
+      "sending": "Sending …",
+      "error": "Something went wrong. Please try again.",
+      "successTitle": "Thanks for your message.",
+      "successText": "I'll get back to you personally.",
+      "reset": "Send another message"
+    }
+  },
   "hero_section": {
     "title_line1": "Software Development | Media Design | Search Engine Optimization",
     "sub_text": "for your vision."
@@ -32,95 +499,167 @@
     "title": "My Services at a Glance",
     "description": "Good development starts before the first line of code. With my tech stack, I build digital products with thoughtful concepts, clean architecture, and maintainable code that stays extensible in the long run. For each area you can see the services and the matching project process.",
     "areas": [
-    {
-      "id": "agenturen",
-      "badge": "Area 01",
-      "title": "Working with Agencies",
-      "servicesLabel": "Services",
-      "processLabel": "Process",
-      "linkLabel": "Learn More",
-      "link": "angebot-agenturen",
-      "services": [
-        "Development as an extension of your team",
-        "Design to code – pixel-perfect implementation of existing Figma files",
-        "Feature development & integrations in ongoing projects",
-        "Clean, documented pull requests and on-time handoffs"
-      ],
-      "process": [
-        { "step": "01", "title": "Inquiry", "description": "Short briefing on project, stack, scope, and timeline." },
-        { "step": "02", "title": "Handoff", "description": "Access, a walkthrough of the codebase, and a clear definition of done." },
-        { "step": "03", "title": "Execution", "description": "Independent work on tickets, with regular updates." },
-        { "step": "04", "title": "Review", "description": "Clean pull request, documented and delivered on time." }
-      ]
-    },
-    {
-      "id": "webseiten",
-      "badge": "Area 02",
-      "title": "Websites",
-      "servicesLabel": "Services",
-      "processLabel": "Process",
-      "linkLabel": "Learn More",
-      "link": "angebot-webseiten",
-      "services": [
-        "Design to code",
-        "Custom software development from scratch",
-        "Feature development & integrations",
-        "Website redesign"
-      ],
-      "process": [
-        { "step": "01", "title": "Inquiry", "description": "No-obligation initial conversation about goals, scope, and budget." },
-        { "step": "02", "title": "Concept", "description": "Information architecture, user flows, and a roadmap with a realistic timeline." },
-        { "step": "03", "title": "Design", "description": "High-fidelity mockups in Figma, feedback in defined rounds." },
-        { "step": "04", "title": "Development", "description": "Component-based implementation with Next.js, tested across browsers and devices." },
-        { "step": "05", "title": "Launch", "description": "Deployment, domain setup, SSL, and performance optimization." }
-      ]
-    },
-    {
-      "id": "mobile-apps",
-      "badge": "Area 03",
-      "title": "Mobile Apps",
-      "servicesLabel": "Services",
-      "processLabel": "Process",
-      "linkLabel": "Learn More",
-      "link": "angebot-mobile-apps",
-      "services": [
-        "Custom software development from scratch",
-        "Feature development & integrations",
-        "Design to code",
-        "App redesign"
-      ],
-      "process": [
-        { "step": "01", "title": "Inquiry", "description": "Initial conversation about platforms, feature scope, and budget." },
-        { "step": "02", "title": "Concept", "description": "User flows, navigation structure, and technical architecture." },
-        { "step": "03", "title": "Design", "description": "Screens and components for iOS and Android, in defined feedback rounds." },
-        { "step": "04", "title": "Development", "description": "Implementation in Flutter, with beta builds for early feedback." },
-        { "step": "05", "title": "Store Release", "description": "Submission to the App Store and Play Store, including store assets." }
-      ]
-    },
-    {
-      "id": "seo-geo",
-      "badge": "Area 04",
-      "title": "SEO and GEO",
-      "servicesLabel": "Services",
-      "processLabel": "Process",
-      "linkLabel": "Learn More",
-      "link": "angebot-seo-geo",
-      "services": [
-        "Technical SEO: Core Web Vitals, indexing, crawling",
-        "Keyword and competitor research",
-        "On-page optimization: page structure, meta tags, internal linking",
-        "Structured data (Schema.org) for rich results",
-        "Local SEO: Google Business Profile and consistent location data",
-        "GEO: preparing content and sources for answers in AI search systems",
-        "Monitoring and reporting via Search Console and rankings"
-      ],
-      "process": [
-        { "step": "01", "title": "Audit", "description": "Technical analysis: crawling, indexing, and Core Web Vitals." },
-        { "step": "02", "title": "Analysis", "description": "Keyword and competitor research aligned with search intent." },
-        { "step": "03", "title": "Execution", "description": "Technical SEO, content, metadata, and structured data." },
-        { "step": "04", "title": "Monitoring", "description": "Rankings, Search Console, and visibility in AI answers." }
-      ]
-    }
+      {
+        "id": "agenturen",
+        "badge": "Area 01",
+        "title": "Working with Agencies",
+        "servicesLabel": "Services",
+        "processLabel": "Process",
+        "linkLabel": "Learn More",
+        "link": "angebot-agenturen",
+        "services": [
+          "Development as an extension of your team",
+          "Design to code – pixel-perfect implementation of existing Figma files",
+          "Feature development & integrations in ongoing projects",
+          "Clean, documented pull requests and on-time handoffs"
+        ],
+        "process": [
+          {
+            "step": "01",
+            "title": "Inquiry",
+            "description": "Short briefing on project, stack, scope, and timeline."
+          },
+          {
+            "step": "02",
+            "title": "Handoff",
+            "description": "Access, a walkthrough of the codebase, and a clear definition of done."
+          },
+          {
+            "step": "03",
+            "title": "Execution",
+            "description": "Independent work on tickets, with regular updates."
+          },
+          {
+            "step": "04",
+            "title": "Review",
+            "description": "Clean pull request, documented and delivered on time."
+          }
+        ]
+      },
+      {
+        "id": "webseiten",
+        "badge": "Area 02",
+        "title": "Websites",
+        "servicesLabel": "Services",
+        "processLabel": "Process",
+        "linkLabel": "Learn More",
+        "link": "angebot-webseiten",
+        "services": [
+          "Design to code",
+          "Custom software development from scratch",
+          "Feature development & integrations",
+          "Website redesign"
+        ],
+        "process": [
+          {
+            "step": "01",
+            "title": "Inquiry",
+            "description": "No-obligation initial conversation about goals, scope, and budget."
+          },
+          {
+            "step": "02",
+            "title": "Concept",
+            "description": "Information architecture, user flows, and a roadmap with a realistic timeline."
+          },
+          {
+            "step": "03",
+            "title": "Design",
+            "description": "High-fidelity mockups in Figma, feedback in defined rounds."
+          },
+          {
+            "step": "04",
+            "title": "Development",
+            "description": "Component-based implementation with Next.js, tested across browsers and devices."
+          },
+          {
+            "step": "05",
+            "title": "Launch",
+            "description": "Deployment, domain setup, SSL, and performance optimization."
+          }
+        ]
+      },
+      {
+        "id": "mobile-apps",
+        "badge": "Area 03",
+        "title": "Mobile Apps",
+        "servicesLabel": "Services",
+        "processLabel": "Process",
+        "linkLabel": "Learn More",
+        "link": "angebot-mobile-apps",
+        "services": [
+          "Custom software development from scratch",
+          "Feature development & integrations",
+          "Design to code",
+          "App redesign"
+        ],
+        "process": [
+          {
+            "step": "01",
+            "title": "Inquiry",
+            "description": "Initial conversation about platforms, feature scope, and budget."
+          },
+          {
+            "step": "02",
+            "title": "Concept",
+            "description": "User flows, navigation structure, and technical architecture."
+          },
+          {
+            "step": "03",
+            "title": "Design",
+            "description": "Screens and components for iOS and Android, in defined feedback rounds."
+          },
+          {
+            "step": "04",
+            "title": "Development",
+            "description": "Implementation in Flutter, with beta builds for early feedback."
+          },
+          {
+            "step": "05",
+            "title": "Store Release",
+            "description": "Submission to the App Store and Play Store, including store assets."
+          }
+        ]
+      },
+      {
+        "id": "seo-geo",
+        "badge": "Area 04",
+        "title": "SEO and GEO",
+        "servicesLabel": "Services",
+        "processLabel": "Process",
+        "linkLabel": "Learn More",
+        "link": "angebot-seo-geo",
+        "services": [
+          "Technical SEO: Core Web Vitals, indexing, crawling",
+          "Keyword and competitor research",
+          "On-page optimization: page structure, meta tags, internal linking",
+          "Structured data (Schema.org) for rich results",
+          "Local SEO: Google Business Profile and consistent location data",
+          "GEO: preparing content and sources for answers in AI search systems",
+          "Monitoring and reporting via Search Console and rankings"
+        ],
+        "process": [
+          {
+            "step": "01",
+            "title": "Audit",
+            "description": "Technical analysis: crawling, indexing, and Core Web Vitals."
+          },
+          {
+            "step": "02",
+            "title": "Analysis",
+            "description": "Keyword and competitor research aligned with search intent."
+          },
+          {
+            "step": "03",
+            "title": "Execution",
+            "description": "Technical SEO, content, metadata, and structured data."
+          },
+          {
+            "step": "04",
+            "title": "Monitoring",
+            "description": "Rankings, Search Console, and visibility in AI answers."
+          }
+        ]
+      }
     ]
   },
   "portfolio_section": {

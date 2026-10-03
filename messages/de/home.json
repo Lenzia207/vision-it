@@ -2,20 +2,23 @@
   "main_navigation": [
     {
       "page": "/",
-      "name": "Info",
-      "pageId": "#about-me"
+      "name": "Leistungen",
+      "pageId": "#leistungen"
     },
     {
       "page": "/",
-      "name": "Angebot",
-      "pageId": "#services",
-      "submenuDescription": "Vier Leistungsbereiche. Jeder mit eigenem Ablauf, Umfang und Preisrahmen.",
-      "submenu": [
-        { "name": "Webseiten", "pageId": "#webseiten", "description": "Neubau, Redesign, Design-to-Code" },
-        { "name": "SEO und GEO", "pageId": "#seo-geo", "description": "Audit, Roadmap, Monitoring, GEO" },
-        { "name": "Mobile Apps", "pageId": "#mobile-apps", "description": "iOS und Android, React Native" },
-        { "name": "Agenturen", "pageId": "#agenturen", "description": "Umsetzung als externer Entwickler" }
-      ]
+      "name": "Mein Ansatz",
+      "pageId": "#ansatz"
+    },
+    {
+      "page": "/",
+      "name": "Projekte & Wissen",
+      "pageId": "#projekte"
+    },
+    {
+      "page": "/",
+      "name": "Über mich",
+      "pageId": "#ueber-mich"
     },
     {
       "page": "/",
@@ -23,6 +26,462 @@
       "pageId": "#contact"
     }
   ],
+  "navigation_labels": {
+    "cta": "Projekt besprechen",
+    "ctaPageId": "#contact",
+    "home": "VisionIT Startseite",
+    "mainNav": "Hauptnavigation",
+    "mobileNav": "Mobile Navigation",
+    "menu": "Menü",
+    "close": "Schließen",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "email": "office@vision-it.at"
+  },
+  "hero": {
+    "eyebrow": "Softwareentwicklung  und digitale Sichtbarkeit",
+    "titleLines": [
+      "Digital präsent.",
+      "Sichtbar.",
+      "Zukunftsfähig."
+    ],
+    "text": "Ich entwickle digitale Lösungen, die mehr können als gut aussehen. Mit moderner Webentwicklung, Suchmaschinenoptimierung und KI-gestützter Analyse verbinde ich Technik, Gestaltung und Sichtbarkeit zu einem durchdachten Gesamtauftritt.",
+    "primaryCta": {
+      "label": "Leistungen entdecken",
+      "pageId": "#leistungen"
+    },
+    "secondaryCta": {
+      "label": "Projekt besprechen",
+      "pageId": "#contact"
+    },
+    "keywords": [
+      "Webentwicklung",
+      "Digitale Anwendungen",
+      "SEO",
+      "GEO",
+      "Design",
+      "AI Visibility",
+      "Technische Lösungen"
+    ],
+    "tagline": "Technik — Gestaltung — Sichtbarkeit",
+    "braidLabel": "Zusammenspiel von Webentwicklung, Design und SEO & GEO",
+    "nodes": [
+      {
+        "title": "Webentwicklung",
+        "label": "Dev",
+        "text": "Websites und digitale Anwendungen – technisch sauber, schnell und wartbar.",
+        "satellites": [
+          "Website",
+          "Web-Apps",
+          "Integrationen"
+        ]
+      },
+      {
+        "title": "Design",
+        "label": "Design",
+        "text": "Gestaltung und Struktur, die Inhalte verständlich machen.",
+        "satellites": [
+          "Identität",
+          "Struktur",
+          "Inhalte"
+        ]
+      },
+      {
+        "title": "SEO & GEO",
+        "label": "SEO/GEO",
+        "text": "Auffindbar in Suchmaschinen, auf Google Maps und in KI-gestützten Antwortsystemen.",
+        "satellites": [
+          "Suchmaschine",
+          "Google Maps",
+          "KI-Suche",
+          "Externe Quellen"
+        ]
+      }
+    ]
+  },
+  "interplay_section": {
+    "tag": "Mehr als nur eine Website",
+    "title": "Digitale Präsenz entsteht im Zusammenspiel.",
+    "text": "Eine professionelle Website bildet das Fundament. Doch digitale Sichtbarkeit entsteht dort, wo Technik, Inhalte und Unternehmensinformationen sinnvoll zusammenspielen. In klassischen Suchmaschinen ebenso wie in neuen KI-gestützten Informationssystemen.",
+    "pillars": [
+      {
+        "title": "Präsenz",
+        "text": "Ein professioneller digitaler Auftritt"
+      },
+      {
+        "title": "Auffindbarkeit",
+        "text": "Sichtbarkeit in relevanten Suchsystemen"
+      },
+      {
+        "title": "Identität",
+        "text": "Klare und konsistente Unternehmensinformationen"
+      },
+      {
+        "title": "Weiterentwicklung",
+        "text": "Analysieren, messen und optimieren"
+      }
+    ]
+  },
+  "services_section": {
+    "tag": "Leistungen",
+    "title": "Meine Leistungen",
+    "description": "Gute Entwicklung beginnt vor der ersten Codezeile. Drei Bereiche, die einzeln funktionieren und gemeinsam am meisten bewirken.",
+    "areaLabel": "Bereich",
+    "servicesTab": "Leistungen",
+    "processTab": "Projektablauf",
+    "linkLabel": "Mehr Infos",
+    "cards": [
+      {
+        "key": "web",
+        "title": "Websites & digitale Anwendungen",
+        "description": "Professionelle Unternehmenswebsites, individuelle Webanwendungen, responsive Design und technische Integrationen.",
+        "link": "angebot-webseiten",
+        "items": [
+          "Professionelle Unternehmenswebsites",
+          "Individuelle Webanwendungen",
+          "Responsive Design",
+          "Technische Integrationen"
+        ],
+        "process": [
+          {
+            "step": "01",
+            "title": "Anfrage",
+            "description": "Unverbindliches Erstgespräch zu Zielen, Umfang und Budget."
+          },
+          {
+            "step": "02",
+            "title": "Konzept",
+            "description": "Informationsarchitektur, User Flows und eine Roadmap mit realistischem Zeitplan."
+          },
+          {
+            "step": "03",
+            "title": "Design",
+            "description": "High-Fidelity-Mockups in Figma, Feedback in definierten Runden."
+          },
+          {
+            "step": "04",
+            "title": "Entwicklung",
+            "description": "Komponentenbasierte Umsetzung mit Next.js, getestet über Browser und Geräte."
+          },
+          {
+            "step": "05",
+            "title": "Launch",
+            "description": "Deployment, Domain-Einrichtung, SSL und Performance-Optimierung."
+          }
+        ]
+      },
+      {
+        "key": "seo",
+        "title": "SEO & GEO",
+        "description": "Technische und inhaltliche Suchmaschinenoptimierung, Local SEO und Analyse der Sichtbarkeit in KI-gestützten Suchsystemen.",
+        "link": "angebot-seo-geo",
+        "items": [
+          "Technische Suchmaschinenoptimierung",
+          "Inhaltliche Optimierung",
+          "Local SEO",
+          "Sichtbarkeit in KI-gestützten Suchsystemen"
+        ],
+        "process": [
+          {
+            "step": "01",
+            "title": "Überblick",
+            "description": "Auseinandersetzung mit dem Projekt, dessen Zielen und Anforderungen."
+          },
+          {
+            "step": "02",
+            "title": "Audit",
+            "description": "Technische Analyse: Crawling, Indexierung und Core Web Vitals."
+          },
+          {
+            "step": "03",
+            "title": "Analyse",
+            "description": "Keyword- und Wettbewerbsrecherche entlang der Suchintentionen."
+          },
+          {
+            "step": "04",
+            "title": "Umsetzung",
+            "description": "Technisches SEO, Inhalte, Metadaten und strukturierte Daten."
+          },
+          {
+            "step": "05",
+            "title": "Monitoring",
+            "description": "Rankings, Search Console und Sichtbarkeit in KI-Antworten im Blick."
+          }
+        ]
+      },
+      {
+        "key": "agency",
+        "title": "Technische Unterstützung für Agenturen",
+        "description": "Webentwicklung, Design-to-Code, individuelle Funktionen und projektbezogene technische Unterstützung.",
+        "link": "angebot-agenturen",
+        "items": [
+          "Webentwicklung",
+          "Design-to-Code",
+          "Individuelle Funktionen",
+          "Projektbezogene technische Unterstützung"
+        ],
+        "process": [
+          {
+            "step": "01",
+            "title": "Anfrage",
+            "description": "Kurzes Briefing zu Projekt, Stack, Umfang und Zeitrahmen."
+          },
+          {
+            "step": "02",
+            "title": "Übergabe",
+            "description": "Zugänge, Walkthrough der Codebase und eine klare Definition of Done."
+          },
+          {
+            "step": "03",
+            "title": "Umsetzung",
+            "description": "Eigenständige Arbeit an den Tickets, mit regelmäßigen Updates."
+          },
+          {
+            "step": "04",
+            "title": "Review",
+            "description": "Sauberer Pull Request, dokumentiert und termintreu abgeliefert."
+          }
+        ]
+      }
+    ]
+  },
+  "principle_section": {
+    "tag": "Das VisionIT-Prinzip",
+    "title": "Das Rezept für ein gut sichtbares Unternehmen.",
+    "text": "Eine erfolgreiche digitale Präsenz entsteht nicht durch eine einzelne Maßnahme. Entscheidend ist das Zusammenspiel verschiedener Komponenten.",
+    "cta": {
+      "label": "Das gesamte Rezept entdecken",
+      "pageId": "#projekte"
+    },
+    "statusProgress": "Komponenten",
+    "statusComplete": "Gesamtsystem",
+    "items": [
+      {
+        "title": "Das Fundament",
+        "text": "Technisch saubere Websites.",
+        "ringLabel": "Fundament"
+      },
+      {
+        "title": "Die Identität",
+        "text": "Klarheit darüber, wofür ein Unternehmen steht.",
+        "ringLabel": "Identität"
+      },
+      {
+        "title": "Die Auffindbarkeit",
+        "text": "Präsenz auf relevanten Such- und Informationsplattformen.",
+        "ringLabel": "Auffindbarkeit"
+      },
+      {
+        "title": "Das Vertrauen",
+        "text": "Fachkompetenz, nachvollziehbare Informationen und externe Erwähnungen.",
+        "ringLabel": "Vertrauen"
+      },
+      {
+        "title": "Die Weiterentwicklung",
+        "text": "Kontinuierliche Analyse und Optimierung.",
+        "ringLabel": "Weiterentwicklung"
+      }
+    ]
+  },
+  "audience_section": {
+    "tag": "Für wen",
+    "title": "Für wen ich arbeite",
+    "items": [
+      {
+        "title": "Unternehmen & Dienstleister",
+        "text": "Websites, Sichtbarkeit und digitale Lösungen für den laufenden Betrieb."
+      },
+      {
+        "title": "Selbstständige & junge Unternehmen",
+        "text": "Ein professioneller Start mit klarer Struktur und Raum zum Wachsen."
+      },
+      {
+        "title": "Agenturen & Entwicklungsteams",
+        "text": "Technische Umsetzung als Erweiterung des bestehenden Teams."
+      }
+    ]
+  },
+  "collaboration_section": {
+    "tag": "Zusammenarbeit",
+    "title": "Von der ersten Idee zur passenden Lösung.",
+    "stepLabel": "Schritt",
+    "steps": [
+      {
+        "title": "Kennenlernen & Anforderungen",
+        "text": "Ein unverbindliches Gespräch über Ziele, Umfang und Rahmen – online oder bei einem Kaffee in Wien."
+      },
+      {
+        "title": "Analyse & Konzeption",
+        "text": "Bestandsaufnahme, Struktur und ein nachvollziehbarer Plan mit realistischem Zeitrahmen."
+      },
+      {
+        "title": "Umsetzung & Optimierung",
+        "text": "Entwicklung, Gestaltung und Optimierung in klar abgestimmten Schritten."
+      },
+      {
+        "title": "Übergabe & Weiterentwicklung",
+        "text": "Launch und Übergabe mit Dokumentation, danach Weiterentwicklung nach Bedarf."
+      }
+    ]
+  },
+  "projects_section": {
+    "tag": "Projekte & Wissen",
+    "title": "Projekte & Einblicke",
+    "description": "Praktische Arbeiten aus eigenen Projekten und aus der Mitarbeit in Entwicklungsteams – ergänzt um Fachbeiträge zu Sichtbarkeit, SEO und GEO.",
+    "articlesTitle": "Fachbeiträge",
+    "articlesBadge": "Platzhalter",
+    "articleStatus": "Beitrag in Vorbereitung",
+    "projects": [
+      {
+        "image": "/images/portfolio/pictolog.jpg",
+        "title": "Pictolog PDF",
+        "subtitle": "Eigenständig konzipiert, gestaltet und entwickelt: Offline-App zur Projektverwaltung und Berichtserstellung mit PDF-Export.",
+        "tags": [
+          "Flutter",
+          "Dart",
+          "Eigenes Projekt"
+        ],
+        "url": "https://apps.apple.com/us/app/pictolog-pdf/id6759091493"
+      },
+      {
+        "image": "/images/portfolio/aktionsfinder.jpg",
+        "title": "Aktionsfinder App und PWA",
+        "subtitle": "Mitarbeit im Entwicklungsteam bei Marqably.",
+        "tags": [
+          "Flutter",
+          "PWA"
+        ],
+        "url": "https://marqably.com/case-study/aktionsfinder-app"
+      },
+      {
+        "image": "/images/portfolio/tt.jpg",
+        "title": "Tiroler Tageszeitung App",
+        "subtitle": "Weiterentwicklung im Team bei Marqably.",
+        "tags": [
+          "Flutter",
+          "Dark Mode"
+        ],
+        "url": "https://marqably.com/case-study/tt-app"
+      }
+    ],
+    "articles": [
+      "Das Rezept für ein gut sichtbares Unternehmen",
+      "Wie erkennen KI-Systeme dein Unternehmen?",
+      "SEO vs. GEO: Was verändert sich wirklich?"
+    ]
+  },
+  "visionseo_section": {
+    "badge": "Eigene Entwicklung",
+    "statusBadge": "In Entwicklung",
+    "title": "VisionSEO – Analyse trifft Entwicklung.",
+    "text": "Mit VisionSEO entsteht ein eigenes Analysewerkzeug, das technische Website-Audits mit KI-gestützter Auswertung verbindet. Ziel ist es, digitale Sichtbarkeit nachvollziehbar zu untersuchen und Optimierungspotenziale strukturiert aufzubereiten.",
+    "windowAriaLabel": "Konzeptskizze des Audit-Ablaufs",
+    "windowTitle": "visionseo / audit",
+    "windowLabel": "Konzeptskizze",
+    "analyzing": "KI-Auswertung wird aufbereitet",
+    "tree": [
+      {
+        "path": "beispiel.at/",
+        "check": "Technik",
+        "done": true
+      },
+      {
+        "path": "├─ /leistungen",
+        "check": "Indexierung",
+        "done": true
+      },
+      {
+        "path": "│  └─ /leistungen/seo",
+        "check": "Struktur",
+        "done": true
+      },
+      {
+        "path": "├─ /ueber-uns",
+        "check": "Strukturierte Daten",
+        "done": true
+      },
+      {
+        "path": "└─ /kontakt",
+        "check": "Lokale Angaben",
+        "done": false
+      }
+    ]
+  },
+  "about_section": {
+    "tag": "Über mich",
+    "title": "Technik verstehen. Ideen gestalten. Lösungen entwickeln.",
+    "name": "Lena Zyadeh",
+    "degree": "BSC.",
+    "imageAlt": "Lena Zyadeh, Gründerin von VisionIT",
+    "paragraphs": [
+      "Seit mehreren Jahren gestalte und entwickle ich Webseiten und digitale Anwendungen. Seit 2026 bin ich selbstständig als Freelancer tätig und verbinde dabei meine Leidenschaft für Technik mit Kreativität. VisionIT ist mein Einzelunternehmen für Softwareentwicklung, SEO und digitale Lösungen mit Sitz in Wien. Durch meine Erfahrung in unterschiedlichen Bereichen begleite ich Projekte mit einem breiten Verständnis. Unkompliziert, präzise und alles aus einer Hand.",
+      "Durch meine praktische Agenturerfahrung in Softwareentwicklung, Mediengestaltung und Suchmaschinenoptimierung möchte ich mich nicht auf eine einzelne Disziplin beschränken, sondern diese Bereiche sinnvoll miteinander verbinden. Genau dieses Zusammenspiel macht für mich den Reiz meiner Arbeit aus und ermöglicht Lösungen, bei denen Technik, Gestaltung und Sichtbarkeit von Anfang an zusammengedacht werden."
+    ],
+    "facts": [
+      {
+        "label": "Sitz",
+        "value": "Wien"
+      },
+      {
+        "label": "Selbstständig",
+        "value": "seit 2026"
+      }
+    ],
+    "links": [
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/lena-z-230b01176/"
+      }
+    ]
+  },
+  "kontakt_section": {
+    "tag": "Kontakt",
+    "title": "Lass uns etwas bewegen.",
+    "paragraphs": [
+      "Du möchtest deine Website weiterentwickeln, deine digitale Sichtbarkeit verbessern oder benötigst technische Unterstützung für ein bestehendes Projekt?",
+      "Erzähl mir von deinem Vorhaben. Gemeinsam finden wir heraus, welche Lösung zu deinen Anforderungen passt."
+    ],
+    "emailLabel": "Direkt schreiben",
+    "email": "office@vision-it.at",
+    "personalLabel": "Persönlich",
+    "personalText": "Online oder bei einem Kaffee in Wien.",
+    "form": {
+      "nameLabel": "Name",
+      "namePlaceholder": "Vollständiger Name",
+      "companyLabel": "Firma",
+      "companyPlaceholder": "Dein Unternehmen",
+      "emailLabel": "E-Mail",
+      "emailPlaceholder": "dein.name@mail.com",
+      "topicLabel": "Worum geht es?",
+      "topics": [
+        {
+          "value": "website",
+          "label": "Website / Anwendung"
+        },
+        {
+          "value": "seo",
+          "label": "SEO & GEO"
+        },
+        {
+          "value": "agentur",
+          "label": "Agentur-Support"
+        },
+        {
+          "value": "allgemein",
+          "label": "Allgemein"
+        }
+      ],
+      "messageLabel": "Nachricht",
+      "messagePlaceholder": "Erzähl mir kurz von deinem Vorhaben.",
+      "privacyText": "Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner Angaben zu.",
+      "submit": "Nachricht senden",
+      "sending": "Wird gesendet …",
+      "error": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+      "successTitle": "Danke für deine Nachricht.",
+      "successText": "Ich melde mich persönlich bei dir.",
+      "reset": "Weitere Nachricht"
+    }
+  },
   "hero_section": {
     "title_line1": "Softwareentwicklung | Mediengestaltung | Suchmaschinenoptimierung",
     "sub_text": "für Deine Vision."
@@ -31,98 +490,174 @@
     "title": "Mein Angebot im Überblick",
     "description": "Gute Entwicklung beginnt vor der ersten Codezeile. Mit meinem entsprechenden Tech-Stack entwickle ich digitale Produkte mit durchdachten Konzepten, sauberer Architektur und wartbarem Code, der auch langfristig erweiterbar bleibt. Inkludiert sind auch die Grundvorraussetzung jeder Plattform: Suchmaschinenoptimierung, Performance-Optimierung und Barrierefreiheit.",
     "areas": [
-    {
-      "id": "webseiten",
-      "badge": "Bereich 02",
-      "title": "Webseiten",
-      "servicesLabel": "Leistungen",
-      "processLabel": "Projektablauf",
-      "linkLabel": "Mehr Infos",
-      "link": "angebot-webseiten",
-      "services": [
-        "Firmenwebsite erstellen lassen",
-        "Feature-Entwicklung & Integrationen",
-        "Webshop erstellen lassen",
-        "Landing Page erstellen lassen",
-        "Website Relaunch",
-        "Custom Web-Entwicklung"
-      ],
-      "process": [
-        { "step": "01", "title": "Anfrage", "description": "Unverbindliches Erstgespräch zu Zielen, Umfang und Budget." },
-        { "step": "02", "title": "Konzept", "description": "Informationsarchitektur, User Flows und eine Roadmap mit realistischem Zeitplan." },
-        { "step": "03", "title": "Design", "description": "High-Fidelity-Mockups in Figma, Feedback in definierten Runden." },
-        { "step": "04", "title": "Entwicklung", "description": "Komponentenbasierte Umsetzung mit Next.js, getestet über Browser und Geräte." },
-        { "step": "05", "title": "Launch", "description": "Deployment, Domain-Einrichtung, SSL und Performance-Optimierung." }
-      ]
-    },
-    {
-      "id": "seo-geo",
-      "badge": "Bereich 02",
-      "title": "SEO und GEO",
-      "servicesLabel": "Leistungen",
-      "processLabel": "Projektablauf",
-      "linkLabel": "Mehr Infos",
-      "link": "angebot-seo-geo",
-      "services": [
-        "Technisches SEO: Core Web Vitals, Indexierung, Crawling",
-        "Keyword- und Wettbewerbsrecherche",
-        "On-Page-Optimierung: Seitenstruktur, Meta-Tags, interne Verlinkung",
-        "Strukturierte Daten (Schema.org) für Rich Results",
-        "Lokales SEO: Google Business Profile und konsistente Standortdaten",
-        "GEO: Inhalte und Quellen für Antworten in KI-Suchsystemen aufbereiten",
-        "Monitoring und Reporting über Search Console und Rankings"
-      ],
-      "process": [
-        { "step": "01", "title": "Überblick", "description": "Auseinandersetzung mit dem Projekt,dessen Ziele und Anforderungen." },
-        { "step": "02", "title": "Audit", "description": "Technische Analyse: Crawling, Indexierung und Core Web Vitals." },
-        { "step": "03", "title": "Analyse", "description": "Keyword- und Wettbewerbsrecherche entlang der Suchintentionen." },
-        { "step": "04", "title": "Umsetzung", "description": "Technisches SEO, Inhalte, Metadaten und strukturierte Daten." },
-        { "step": "05", "title": "Monitoring", "description": "Rankings, Search Console und Sichtbarkeit in KI-Antworten im Blick." }
-      ]
-    },
-    {
-      "id": "mobile-apps",
-      "badge": "Bereich 03",
-      "title": "Mobile Apps",
-      "servicesLabel": "Leistungen",
-      "processLabel": "Projektablauf",
-      "linkLabel": "Mehr Infos",
-      "link": "angebot-mobile-apps",
-      "services": [
-        "Individuelle Softwareentwicklung von Grund auf",
-        "Feature-Entwicklung & Integrationen",
-        "Design zu Code",
-        "App Redesign"
-      ],
-      "process": [
-        { "step": "01", "title": "Anfrage", "description": "Erstgespräch zu Plattformen, Funktionsumfang und Budget." },
-        { "step": "02", "title": "Konzept", "description": "User Flows, Navigationsstruktur und technische Architektur." },
-        { "step": "03", "title": "Design", "description": "Screens und Komponenten für iOS und Android, in definierten Feedback-Runden." },
-        { "step": "04", "title": "Entwicklung", "description": "Umsetzung in Flutter, mit Beta-Builds für frühes Feedback." },
-        { "step": "05", "title": "Store-Release", "description": "Einreichung im App Store und Play Store inklusive Store-Assets." }
-      ]
-    },
-     {
-      "id": "agenturen",
-      "badge": "Bereich 04",
-      "title": "Zusammenarbeit mit Agenturen",
-      "servicesLabel": "Leistungen",
-      "processLabel": "Projektablauf",
-      "linkLabel": "Mehr Infos",
-      "link": "angebot-agenturen",
-      "services": [
-        "Entwicklung als Erweiterung deines Teams",
-        "Design zu Code – pixel-genaue Umsetzung bestehender Figma-Files",
-        "Feature-Entwicklung & Integrationen in laufenden Projekten",
-        "Sauberer, dokumentierter Pull Request und termintreue Übergabe"
-      ],
-      "process": [
-        { "step": "01", "title": "Anfrage", "description": "Kurzes Briefing zu Projekt, Stack, Umfang und Zeitrahmen." },
-        { "step": "02", "title": "Übergabe", "description": "Zugänge, Walkthrough der Codebase und eine klare Definition of Done." },
-        { "step": "03", "title": "Umsetzung", "description": "Eigenständige Arbeit an den Tickets, mit regelmäßigen Updates." },
-        { "step": "04", "title": "Review", "description": "Sauberer Pull Request, dokumentiert und termintreu abgeliefert." }
-      ]
-    }
+      {
+        "id": "webseiten",
+        "badge": "Bereich 02",
+        "title": "Webseiten",
+        "servicesLabel": "Leistungen",
+        "processLabel": "Projektablauf",
+        "linkLabel": "Mehr Infos",
+        "link": "angebot-webseiten",
+        "services": [
+          "Firmenwebsite erstellen lassen",
+          "Feature-Entwicklung & Integrationen",
+          "Webshop erstellen lassen",
+          "Landing Page erstellen lassen",
+          "Website Relaunch",
+          "Custom Web-Entwicklung"
+        ],
+        "process": [
+          {
+            "step": "01",
+            "title": "Anfrage",
+            "description": "Unverbindliches Erstgespräch zu Zielen, Umfang und Budget."
+          },
+          {
+            "step": "02",
+            "title": "Konzept",
+            "description": "Informationsarchitektur, User Flows und eine Roadmap mit realistischem Zeitplan."
+          },
+          {
+            "step": "03",
+            "title": "Design",
+            "description": "High-Fidelity-Mockups in Figma, Feedback in definierten Runden."
+          },
+          {
+            "step": "04",
+            "title": "Entwicklung",
+            "description": "Komponentenbasierte Umsetzung mit Next.js, getestet über Browser und Geräte."
+          },
+          {
+            "step": "05",
+            "title": "Launch",
+            "description": "Deployment, Domain-Einrichtung, SSL und Performance-Optimierung."
+          }
+        ]
+      },
+      {
+        "id": "seo-geo",
+        "badge": "Bereich 02",
+        "title": "SEO und GEO",
+        "servicesLabel": "Leistungen",
+        "processLabel": "Projektablauf",
+        "linkLabel": "Mehr Infos",
+        "link": "angebot-seo-geo",
+        "services": [
+          "Technisches SEO: Core Web Vitals, Indexierung, Crawling",
+          "Keyword- und Wettbewerbsrecherche",
+          "On-Page-Optimierung: Seitenstruktur, Meta-Tags, interne Verlinkung",
+          "Strukturierte Daten (Schema.org) für Rich Results",
+          "Lokales SEO: Google Business Profile und konsistente Standortdaten",
+          "GEO: Inhalte und Quellen für Antworten in KI-Suchsystemen aufbereiten",
+          "Monitoring und Reporting über Search Console und Rankings"
+        ],
+        "process": [
+          {
+            "step": "01",
+            "title": "Überblick",
+            "description": "Auseinandersetzung mit dem Projekt,dessen Ziele und Anforderungen."
+          },
+          {
+            "step": "02",
+            "title": "Audit",
+            "description": "Technische Analyse: Crawling, Indexierung und Core Web Vitals."
+          },
+          {
+            "step": "03",
+            "title": "Analyse",
+            "description": "Keyword- und Wettbewerbsrecherche entlang der Suchintentionen."
+          },
+          {
+            "step": "04",
+            "title": "Umsetzung",
+            "description": "Technisches SEO, Inhalte, Metadaten und strukturierte Daten."
+          },
+          {
+            "step": "05",
+            "title": "Monitoring",
+            "description": "Rankings, Search Console und Sichtbarkeit in KI-Antworten im Blick."
+          }
+        ]
+      },
+      {
+        "id": "mobile-apps",
+        "badge": "Bereich 03",
+        "title": "Mobile Apps",
+        "servicesLabel": "Leistungen",
+        "processLabel": "Projektablauf",
+        "linkLabel": "Mehr Infos",
+        "link": "angebot-mobile-apps",
+        "services": [
+          "Individuelle Softwareentwicklung von Grund auf",
+          "Feature-Entwicklung & Integrationen",
+          "Design zu Code",
+          "App Redesign"
+        ],
+        "process": [
+          {
+            "step": "01",
+            "title": "Anfrage",
+            "description": "Erstgespräch zu Plattformen, Funktionsumfang und Budget."
+          },
+          {
+            "step": "02",
+            "title": "Konzept",
+            "description": "User Flows, Navigationsstruktur und technische Architektur."
+          },
+          {
+            "step": "03",
+            "title": "Design",
+            "description": "Screens und Komponenten für iOS und Android, in definierten Feedback-Runden."
+          },
+          {
+            "step": "04",
+            "title": "Entwicklung",
+            "description": "Umsetzung in Flutter, mit Beta-Builds für frühes Feedback."
+          },
+          {
+            "step": "05",
+            "title": "Store-Release",
+            "description": "Einreichung im App Store und Play Store inklusive Store-Assets."
+          }
+        ]
+      },
+      {
+        "id": "agenturen",
+        "badge": "Bereich 04",
+        "title": "Zusammenarbeit mit Agenturen",
+        "servicesLabel": "Leistungen",
+        "processLabel": "Projektablauf",
+        "linkLabel": "Mehr Infos",
+        "link": "angebot-agenturen",
+        "services": [
+          "Entwicklung als Erweiterung deines Teams",
+          "Design zu Code – pixel-genaue Umsetzung bestehender Figma-Files",
+          "Feature-Entwicklung & Integrationen in laufenden Projekten",
+          "Sauberer, dokumentierter Pull Request und termintreue Übergabe"
+        ],
+        "process": [
+          {
+            "step": "01",
+            "title": "Anfrage",
+            "description": "Kurzes Briefing zu Projekt, Stack, Umfang und Zeitrahmen."
+          },
+          {
+            "step": "02",
+            "title": "Übergabe",
+            "description": "Zugänge, Walkthrough der Codebase und eine klare Definition of Done."
+          },
+          {
+            "step": "03",
+            "title": "Umsetzung",
+            "description": "Eigenständige Arbeit an den Tickets, mit regelmäßigen Updates."
+          },
+          {
+            "step": "04",
+            "title": "Review",
+            "description": "Sauberer Pull Request, dokumentiert und termintreu abgeliefert."
+          }
+        ]
+      }
     ]
   },
   "portfolio_section": {

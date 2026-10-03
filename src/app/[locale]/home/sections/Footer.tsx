@@ -7,7 +7,7 @@ export default function Footer({locale}: {locale: string}) {
     const privacy = getLocalizedPath(locale, 'privacy');
 
     return (
-        <footer className="section-lime py-8 pb-28 md:pb-8 text-sm">
+        <footer className="section-lime py-8 text-sm">
             <div className="max-w-6xl mx-auto px-6 flex flex-col flex-wrap items-center lg:justify-between gap-6">
                 <p className="font-mono font-bold text-lg" style={{ color: "var(--teal)" }}>VisionIT</p>
                 <div className="flex gap-8">

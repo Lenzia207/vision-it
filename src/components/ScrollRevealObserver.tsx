@@ -15,7 +15,7 @@ export default function ScrollRevealObserver() {
     );
 
     document
-      .querySelectorAll(".reveal-on-scroll")
+      .querySelectorAll(".reveal-on-scroll, .reveal-grow")
       .forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();

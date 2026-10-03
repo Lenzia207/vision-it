@@ -1,7 +1,6 @@
 import { ReactNode } from "react";
 import Footer from "../app/[locale]/home/sections/Footer";
 import ScrollRevealObserver from "@/components/ScrollRevealObserver";
-import BottomNavigation from "@/components/AppNavigation/BottomNavigation";
 import fetchHomePageData from "../app/[locale]/home/sections/data/home-page-data";
 import MainNavigation from "./AppNavigation/MainNavigation";
 
@@ -21,8 +20,6 @@ export default async function PageWrapper({
       <MainNavigation data={data} locale={locale} />
       {pageContent}
       <Footer locale={locale} />
-      {/* Mobile View */}
-      <BottomNavigation data={data} locale={locale} />
     </main>
   );
 }

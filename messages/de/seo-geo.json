@@ -209,9 +209,9 @@
                     "badgeLabel": "Einmalig",
                     "badgeVariant": "outline",
                     "description": "Der professionelle Ausgangspunkt für Unternehmen, die wissen möchten, wo sie stehen und welche SEO-Maßnahmen wirklich sinnvoll sind.",
-                    "price": "ab 850 €",
+                    "price": "ab 690 €",
                     "priceTiers": [
-                        { "label": "Bis 10 Seiten: ", "price": "850 €" },
+                        { "label": "Bis 10 Seiten: ", "price": "690 €" },
                         { "label": "11–30 Seiten: ", "price": "1.150 €" },
                         { "label": "Über 30 Seiten: ", "price": "auf Anfrage" }
                     ],
@@ -236,9 +236,9 @@
                     "badgeLabel": "3 Monate",
                     "badgeVariant": "solid",
                     "description": "Für Unternehmen, die nicht nur analysieren möchten, was verbessert werden muss, sondern die Maßnahmen gemeinsam mit VisionIT umsetzen wollen.",
-                    "price": "ab 650 €",
+                    "price": "ab 550 €",
                     "priceTiers": [
-                        { "label": "Bis 10 Seiten: ", "price": "650 € / Monat" },
+                        { "label": "Bis 10 Seiten: ", "price": "550 € / Monat" },
                         { "label": "11–30 Seiten: ", "price": "950 € / Monat" },
                         { "label": "Über 30 Seiten: ", "price": "auf Anfrage" }
                     ],

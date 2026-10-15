@@ -67,6 +67,11 @@ const prefersReducedMotion = () =>
   typeof window !== "undefined" &&
   !!window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
 
+// Math.sin/cos can yield slightly different last-digit results between the
+// server's and the browser's math libraries, which breaks SSR hydration.
+// Rounding every trig-derived coordinate keeps server and client identical.
+const round = (n: number) => Math.round(n * 1000) / 1000;
+
 /**
  * Connected ecosystem: two strands braided between the three service nodes,
  * with data packets travelling along them. The active node fans out its
@@ -173,23 +178,23 @@ export default function HeroBraid({ nodes, label, braidDelay, captionDelay }: He
         const ang = Math.atan2(cy, left);
         return {
           text, w, h, left, cy,
-          x1: Math.cos(ang) * (L.nodeR + 4), y1: Math.sin(ang) * (L.nodeR + 4),
+          x1: round(Math.cos(ang) * (L.nodeR + 4)), y1: round(Math.sin(ang) * (L.nodeR + 4)),
           x2: left, y2: cy,
         };
       }
 
       const angles = SAT_ANGLES[node.satellites.length] ?? SAT_ANGLES[3];
       const ang = ((angles[k] ?? 270) * Math.PI) / 180;
-      let cx = Math.cos(ang) * 132;
-      const cy = Math.sin(ang) * 104;
+      let cx = round(Math.cos(ang) * 132);
+      const cy = round(Math.sin(ang) * 104);
       // Keep chips inside the viewBox.
       const absX = pts[i].x + cx;
       if (absX - w / 2 < 4) cx += 4 - (absX - w / 2);
       if (absX + w / 2 > W - 4) cx -= absX + w / 2 - (W - 4);
       return {
         text, w, h, left: cx - w / 2, cy,
-        x1: Math.cos(ang) * 50, y1: Math.sin(ang) * 50,
-        x2: cx, y2: cy + h / 2,
+        x1: round(Math.cos(ang) * 50), y1: round(Math.sin(ang) * 50),
+        x2: round(cx), y2: cy + h / 2,
       };
     });
 

@@ -3,7 +3,9 @@
     {
       "page": "/",
       "name": "Services",
-      "pageId": "#leistungen"
+      "pageId": "#leistungen",
+      "servicesSubmenu": true,
+      "submenuDescription": "Four service areas, each with its own process, scope and pricing."
     },
     {
       "page": "/",
@@ -30,6 +32,7 @@
     "menu": "Menu",
     "close": "Close",
     "openMenu": "Open menu",
+    "submenuToggle": "Services submenu",
     "closeMenu": "Close menu",
     "email": "office@vision-it.at"
   },
@@ -120,7 +123,7 @@
   "services_section": {
     "tag": "Services",
     "title": "My services",
-    "description": "Good development starts before the first line of code. Three areas that work on their own and achieve the most together.",
+    "description": "Good development starts before the first line of code. Four areas that work on their own and achieve the most together.",
     "areaLabel": "Area",
     "servicesTab": "Services",
     "processTab": "Process",
@@ -162,6 +165,45 @@
             "step": "05",
             "title": "Launch",
             "description": "Deployment, domain setup, SSL and performance optimization."
+          }
+        ]
+      },
+      {
+        "key": "mobile",
+        "title": "Mobile apps",
+        "description": "Native apps for iOS and Android built with Flutter – from new builds and new features to redesigns of existing apps.",
+        "link": "angebot-mobile-apps",
+        "items": [
+          "Custom app development from scratch",
+          "Feature development & integrations",
+          "Design-to-code",
+          "App redesign"
+        ],
+        "process": [
+          {
+            "step": "01",
+            "title": "Inquiry",
+            "description": "Initial conversation about platforms, feature scope and budget."
+          },
+          {
+            "step": "02",
+            "title": "Concept",
+            "description": "User flows, navigation structure and technical architecture."
+          },
+          {
+            "step": "03",
+            "title": "Design",
+            "description": "Screens and components for iOS and Android, in defined feedback rounds."
+          },
+          {
+            "step": "04",
+            "title": "Development",
+            "description": "Implementation in Flutter, with beta builds for early feedback."
+          },
+          {
+            "step": "05",
+            "title": "Store release",
+            "description": "Submission to the App Store and Play Store, including store assets."
           }
         ]
       },

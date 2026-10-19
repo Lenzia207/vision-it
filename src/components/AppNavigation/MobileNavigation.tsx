@@ -1,12 +1,18 @@
 "use client";
 
 import { MouseEvent, useEffect } from "react";
-import { MainNavigation as MainNavigationItem, NavigationLabels } from "@/app/[locale]/home/sections/data/types/home-types";
+import { Link } from "@/app/i18n/routing";
+import {
+  MainNavigation as MainNavigationItem,
+  NavigationLabels,
+  ServiceCardData,
+} from "@/app/[locale]/home/sections/data/types/home-types";
 
 interface MobileNavigationProps {
   id: string;
   open: boolean;
   items: MainNavigationItem[];
+  serviceCards: ServiceCardData[];
   labels: NavigationLabels;
   locale: string;
   activeSection: string;
@@ -22,6 +28,7 @@ export default function MobileNavigation({
   id,
   open,
   items,
+  serviceCards,
   labels,
   locale,
   activeSection,
@@ -54,20 +61,38 @@ export default function MobileNavigation({
         {items.map((item, i) => {
           const isActive = item.pageId.replace("#", "") === activeSection;
           return (
-            <a
-              key={item.pageId}
-              href={`/${locale}${item.pageId}`}
-              aria-current={isActive ? "location" : undefined}
-              onClick={(e) => onNavigate(e, item.pageId)}
-              className={`flex items-baseline gap-4 py-4 border-b border-white/12 font-mono text-[1.9rem] font-medium tracking-[-0.02em] no-underline ${
-                isActive ? "text-(--lime)" : "text-white"
-              }`}
-            >
-              <span className="text-xs font-bold tracking-widest text-(--lime)">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              {item.name}
-            </a>
+            <div key={item.pageId} className="flex flex-col border-b border-white/12">
+              <a
+                href={`/${locale}${item.pageId}`}
+                aria-current={isActive ? "location" : undefined}
+                onClick={(e) => onNavigate(e, item.pageId)}
+                className={`flex items-baseline gap-4 py-4 font-mono text-[1.9rem] font-medium tracking-[-0.02em] no-underline ${
+                  isActive ? "text-(--lime)" : "text-white"
+                }`}
+              >
+                <span className="text-xs font-bold tracking-widest text-(--lime)">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                {item.name}
+              </a>
+              {item.servicesSubmenu && serviceCards.length > 0 && (
+                <ul className="m-0 -mt-1 pb-4 pl-9 list-none flex flex-col">
+                  {serviceCards.map((card) => (
+                    <li key={card.key}>
+                      <Link
+                        href={`/${card.link}`}
+                        locale={locale}
+                        onClick={onClose}
+                        className="flex items-center gap-3 py-2 font-mono text-[0.95rem] text-[#C7D9D8] no-underline transition-colors hover:text-(--lime)"
+                      >
+                        <span aria-hidden="true" className="w-3 h-px bg-(--lime)" />
+                        {card.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
           );
         })}
       </nav>

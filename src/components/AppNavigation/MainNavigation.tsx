@@ -3,6 +3,7 @@
 import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import { HomePageData } from "@/app/[locale]/home/sections/data/types/home-types";
+import { Link } from "@/app/i18n/routing";
 import { MouseEvent, useCallback, useEffect, useState } from "react";
 import { checkSectionLocation, createScrollVisibilityHandler, navigate, setItemActive } from "./navigation-service";
 import MobileNavigation from "./MobileNavigation";
@@ -21,8 +22,11 @@ export default function MainNavigation({ data, locale }: MainNavigationProps) {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [submenuOpen, setSubmenuOpen] = useState(false);
   const isHomePage = pathname === `/${locale}` || pathname === `/${locale}/`;
   const labels = data.navigation_labels;
+  const serviceCards = data.services_section.cards;
+  const submenuItem = data.main_navigation.find((item) => item.servicesSubmenu);
 
   // On home page load, check if we need to scroll to a section (cross-page nav)
   useEffect(() => {
@@ -39,21 +43,32 @@ export default function MainNavigation({ data, locale }: MainNavigationProps) {
     return () => mq.removeEventListener("change", onChange);
   }, []);
 
+  // Close the services dropdown on Escape.
+  useEffect(() => {
+    if (!submenuOpen) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setSubmenuOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [submenuOpen]);
+
   const handleNavigate = useCallback(
     (e: MouseEvent<HTMLAnchorElement>, pageId: string) => {
       e.preventDefault();
       setMenuOpen(false);
+      setSubmenuOpen(false);
       navigate(pageId.replace("#", ""), locale, isHomePage, router);
     },
     [isHomePage, router, locale]
   );
 
   const closeMenu = useCallback(() => setMenuOpen(false), []);
-  const solid = scrolled || menuOpen;
+  const closeSubmenu = useCallback(() => setSubmenuOpen(false), []);
+  const solid = scrolled || menuOpen || submenuOpen;
 
   return (
     <>
       <header
+        onMouseLeave={closeSubmenu}
         className={`fixed top-0 inset-x-0 z-50 border-b transition-[background-color,border-color] duration-300 ${
           solid ? "bg-(--teal)" : "bg-transparent"
         } ${scrolled && !menuOpen ? "border-white/10" : "border-transparent"}`}
@@ -71,23 +86,50 @@ export default function MainNavigation({ data, locale }: MainNavigationProps) {
           <nav aria-label={labels.mainNav} className="hidden min-[1060px]:flex items-center gap-[30px] whitespace-nowrap">
             {data.main_navigation.map((item) => {
               const isActive = item.pageId.replace("#", "") === activeSection;
-              return (
+              const hasSubmenu = item.servicesSubmenu && serviceCards.length > 0;
+              const highlighted = isActive || (hasSubmenu && submenuOpen);
+              const link = (
                 <a
                   key={item.pageId}
                   href={`/${locale}${item.pageId}`}
                   aria-current={isActive ? "location" : undefined}
                   onClick={(e) => handleNavigate(e, item.pageId)}
+                  onMouseEnter={() => setSubmenuOpen(!!hasSubmenu)}
                   className={`font-mono text-xs font-medium uppercase tracking-[0.14em] no-underline py-1.5 border-b-2 transition-colors hover:text-(--lime) hover:border-(--lime) ${
-                    isActive ? "text-(--lime) border-(--lime)" : "text-white border-transparent"
+                    highlighted ? "text-(--lime) border-(--lime)" : "text-white border-transparent"
                   }`}
                 >
                   {item.name}
                 </a>
               );
+              if (!hasSubmenu) return link;
+
+              return (
+                <div key={item.pageId} className="flex items-center gap-1.5">
+                  {link}
+                  <button
+                    type="button"
+                    onClick={() => setSubmenuOpen((open) => !open)}
+                    onMouseEnter={() => setSubmenuOpen(true)}
+                    aria-expanded={submenuOpen}
+                    aria-controls="services-submenu"
+                    aria-label={labels.submenuToggle}
+                    className="group flex items-center justify-center w-5 h-6 bg-transparent border-0 cursor-pointer"
+                  >
+                    <span
+                      aria-hidden="true"
+                      className={`block w-[5px] h-[5px] border-r-[1.5px] border-b-[1.5px] transition-[transform,border-color] duration-200 group-hover:border-(--lime) ${
+                        submenuOpen ? "rotate-[225deg] translate-y-px border-(--lime)" : "rotate-45 -translate-y-px border-white"
+                      }`}
+                    />
+                  </button>
+                </div>
+              );
             })}
             <a
               href={`/${locale}${labels.ctaPageId}`}
               onClick={(e) => handleNavigate(e, labels.ctaPageId)}
+              onMouseEnter={closeSubmenu}
               className="btn btn-primary whitespace-nowrap px-[1.1rem]! py-[0.65rem]! text-xs!"
             >
               {labels.cta}
@@ -117,12 +159,50 @@ export default function MainNavigation({ data, locale }: MainNavigationProps) {
             </span>
           </button>
         </div>
+
+        {submenuOpen && submenuItem && (
+          <div id="services-submenu" className="hidden min-[1060px]:block border-t border-white/10">
+            <div className="max-w-[1320px] mx-auto grid grid-cols-[280px_1fr] gap-12 px-[clamp(20px,4vw,48px)] pt-8 pb-10">
+              <div className="flex flex-col gap-2.5">
+                <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.16em] text-(--lime)">
+                  {submenuItem.name}
+                </span>
+                {submenuItem.submenuDescription && (
+                  <p className="m-0 text-sm leading-relaxed text-[#C7D9D8]">{submenuItem.submenuDescription}</p>
+                )}
+              </div>
+              <ul className="m-0 p-0 list-none grid grid-cols-2 gap-x-8">
+                {serviceCards.map((card, i) => (
+                  <li key={card.key}>
+                    <Link
+                      href={`/${card.link}`}
+                      locale={locale}
+                      onClick={closeSubmenu}
+                      className="group grid grid-cols-[28px_minmax(0,1fr)] items-baseline gap-3 px-4 -mx-4 py-3.5 border-b border-white/8 no-underline transition-colors hover:bg-white/5"
+                    >
+                      <span className="font-mono text-[11px] font-semibold tracking-[0.08em] text-[#9DB3B2]">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <span className="flex flex-col gap-1">
+                        <span className="font-mono text-[15px] font-medium text-white transition-colors group-hover:text-(--lime)">
+                          {card.title}
+                        </span>
+                        <span className="text-[13px] leading-normal text-[#9DB3B2]">{card.items.slice(0, 3).join(" · ")}</span>
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        )}
       </header>
 
       <MobileNavigation
         id="mobile-navigation"
         open={menuOpen}
         items={data.main_navigation}
+        serviceCards={serviceCards}
         labels={labels}
         locale={locale}
         activeSection={activeSection}

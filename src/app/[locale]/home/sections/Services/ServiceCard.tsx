@@ -25,6 +25,15 @@ function ServiceGlyph({ kind }: { kind: string }) {
       </>
     );
   }
+  if (kind === "mobile") {
+    return (
+      <>
+        <span className="absolute left-[9px] top-0 w-6 h-[42px] rounded-[5px] border-[1.5px] border-white/55" />
+        <span className="absolute left-[15px] top-[7px] w-3 h-[22px] bg-(--lime)" />
+        <span className="absolute left-[18px] top-[34px] w-1.5 h-[1.5px] bg-white" />
+      </>
+    );
+  }
   if (kind === "agency") {
     return (
       <>

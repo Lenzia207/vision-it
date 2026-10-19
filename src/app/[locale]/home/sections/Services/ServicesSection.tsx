@@ -22,7 +22,7 @@ export default function ServicesSection({ data, locale }: ServicesSectionProps) 
           <p className="m-0 mt-1.5 max-w-2xl text-base leading-relaxed text-(--teal)">{data.description}</p>
         </div>
 
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,340px),1fr))] gap-px items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-px items-stretch">
           {data.cards.map((card, i) => (
             <ServiceCard
               key={card.key}

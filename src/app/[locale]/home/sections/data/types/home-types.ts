@@ -47,6 +47,7 @@ export interface NavigationLabels {
   close: string;
   openMenu: string;
   closeMenu: string;
+  submenuToggle: string;
   email: string;
 }
 
@@ -89,7 +90,7 @@ export interface InterplaySection {
 }
 
 export interface ServiceCardData {
-  /** "web" | "seo" | "agency" – selects the card's header glyph. */
+  /** "web" | "mobile" | "seo" | "agency" – selects the card's header glyph. */
   key: string;
   title: string;
   description: string;
@@ -219,6 +220,8 @@ export interface MainNavigation {
   page: string;
   pageId: string;
   submenu?: MainNavigationSubItem[];
+  /** Shows the service cards (services_section.cards) as a dropdown under this item. */
+  servicesSubmenu?: boolean;
   submenuDescription?: string;
 }
 

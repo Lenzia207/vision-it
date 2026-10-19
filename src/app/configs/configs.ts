@@ -10,4 +10,4 @@ export const briefingFormularUrl = `/briefing-formular`;
  * (nav, service overview, etc.) without deleting their data/pages.
  * Add an id here to "comment it out" everywhere it's used.
  */
-export const hiddenAngebotIds = ["mobile-apps"];
+export const hiddenAngebotIds: string[] = ["agenturen"];

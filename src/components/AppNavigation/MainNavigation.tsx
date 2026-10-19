@@ -119,7 +119,7 @@ export default function MainNavigation({ data, locale }: MainNavigationProps) {
                     <span
                       aria-hidden="true"
                       className={`block w-[5px] h-[5px] border-r-[1.5px] border-b-[1.5px] transition-[transform,border-color] duration-200 group-hover:border-(--lime) ${
-                        submenuOpen ? "rotate-[225deg] translate-y-px border-(--lime)" : "rotate-45 -translate-y-px border-white"
+                        submenuOpen ? "rotate-225 translate-y-px border-(--lime)" : "rotate-45 -translate-y-px border-white"
                       }`}
                     />
                   </button>
@@ -178,7 +178,7 @@ export default function MainNavigation({ data, locale }: MainNavigationProps) {
                       href={`/${card.link}`}
                       locale={locale}
                       onClick={closeSubmenu}
-                      className="group grid grid-cols-[28px_minmax(0,1fr)] items-baseline gap-3 px-4 -mx-4 py-3.5 border-b border-white/8 no-underline transition-colors hover:bg-white/5"
+                      className="group h-full grid grid-cols-[28px_minmax(0,1fr)] items-baseline content-start gap-3 px-4 -mx-4 py-3.5 border-b border-white/8 no-underline transition-colors hover:bg-white/5"
                     >
                       <span className="font-mono text-[11px] font-semibold tracking-[0.08em] text-[#9DB3B2]">
                         {String(i + 1).padStart(2, "0")}

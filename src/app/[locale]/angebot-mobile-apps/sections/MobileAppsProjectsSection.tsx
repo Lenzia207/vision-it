@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Istok_Web, Plus_Jakarta_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import { Link } from "@/app/i18n/routing";
 import { caseStudiesUrl } from "@/app/configs/configs";
 import Eyebrow from "../../home/sections/components/Eyebrow";
@@ -15,8 +15,18 @@ interface MobileAppsProjectsSectionProps {
 }
 
 // The phone mockups use each app's own typeface
-const istokWeb = Istok_Web({ subsets: ["latin"], weight: ["400", "700"], display: "swap" });
-const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], display: "swap" });
+const istokWeb = localFont({
+  src: [
+    { path: "../../../../fonts/istok-web-400.woff2", weight: "400" },
+    { path: "../../../../fonts/istok-web-700.woff2", weight: "700" },
+  ],
+  display: "swap",
+});
+const plusJakartaSans = localFont({
+  src: "../../../../fonts/plus-jakarta-sans.woff2",
+  weight: "200 800",
+  display: "swap",
+});
 
 const cardHoverClassName = "transition-[border-color,transform] duration-300 hover:border-(--lime) hover:-translate-y-1";
 

@@ -15,10 +15,7 @@
    ======================================================================= */
 
 :root {
-  /* Font variable fallbacks - Next.js injects the real values on <body>;
-     these ensure the vars always resolve at :root level. */
-  --font-manrope:      'Manrope', sans-serif;
-  --font-space-grotesk: 'Space Grotesk', sans-serif;
+  /* --font-manrope and --font-space-grotesk are set by next/font on <html> */
   --font-sans: var(--font-manrope);
   --font-mono: var(--font-space-grotesk);
 

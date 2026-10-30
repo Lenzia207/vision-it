@@ -1,13 +1,23 @@
 import { ReactNode } from "react";
 import Image from "next/image";
-import { Figtree, Hanken_Grotesk } from "next/font/google";
+import localFont from "next/font/local";
 import { Link } from "@/app/i18n/routing";
 import { caseStudiesUrl } from "@/app/configs/configs";
 import CaseStudyShell, { CaseStudyNav } from "../components/CaseStudyShell";
 import { HerzHirnHumorCaseStudyData } from "../data/case-studies-types";
 
-const figtree = Figtree({ subsets: ["latin"], variable: "--cs-display", display: "swap" });
-const hankenGrotesk = Hanken_Grotesk({ subsets: ["latin"], variable: "--cs-body", display: "swap" });
+const figtree = localFont({
+  src: "../../../../fonts/figtree.woff2",
+  weight: "300 900",
+  variable: "--cs-display",
+  display: "swap",
+});
+const hankenGrotesk = localFont({
+  src: "../../../../fonts/hanken-grotesk.woff2",
+  weight: "100 900",
+  variable: "--cs-body",
+  display: "swap",
+});
 
 const display = "font-(family-name:--cs-display)";
 const sectionX = "px-[clamp(20px,5vw,64px)]";

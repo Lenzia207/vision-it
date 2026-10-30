@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import Script from "next/script";
-import { Manrope, Space_Grotesk } from "next/font/google";
+import localFont from "next/font/local";
 import "../globals.css";
 
 const jsonLd = {
@@ -52,18 +52,18 @@ const jsonLd = {
   ],
 };
 
-const manrope = Manrope({
-  subsets: ["latin"],
+const manrope = localFont({
+  src: "../../fonts/manrope.woff2",
+  weight: "400 700",
   variable: "--font-manrope",
   display: "swap",
-  weight: ["400", "500", "600", "700"],
 });
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
+const spaceGrotesk = localFont({
+  src: "../../fonts/space-grotesk.woff2",
+  weight: "400 700",
   variable: "--font-space-grotesk",
   display: "swap",
-  weight: ["400", "500", "700"],
 });
 
 export const metadata: Metadata = {
@@ -108,10 +108,8 @@ export default async function LocaleLayout({
   const { locale } = await params;
 
   return (
-    <html lang={locale} className="scroll-smooth">
-      <body
-        className={`${manrope.variable} ${spaceGrotesk.variable} font-sans antialiased`}
-      >
+    <html lang={locale} className={`${manrope.variable} ${spaceGrotesk.variable} scroll-smooth`}>
+      <body className="font-sans antialiased">
         <Script
           id="json-ld-org"
           type="application/ld+json"

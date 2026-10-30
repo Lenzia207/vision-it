@@ -1,11 +1,18 @@
 import Image from "next/image";
-import { Istok_Web } from "next/font/google";
+import localFont from "next/font/local";
 import { Link } from "@/app/i18n/routing";
 import { caseStudiesUrl } from "@/app/configs/configs";
 import CaseStudyShell, { CaseStudyNav } from "../components/CaseStudyShell";
 import { PictologCaseStudyData } from "../data/case-studies-types";
 
-const istokWeb = Istok_Web({ subsets: ["latin"], weight: ["400", "700"], variable: "--cs-body", display: "swap" });
+const istokWeb = localFont({
+  src: [
+    { path: "../../../../fonts/istok-web-400.woff2", weight: "400" },
+    { path: "../../../../fonts/istok-web-700.woff2", weight: "700" },
+  ],
+  variable: "--cs-body",
+  display: "swap",
+});
 
 const sectionX = "px-[clamp(20px,5vw,64px)]";
 const sectionHeading = "m-0 font-bold text-[clamp(1.9rem,3.4vw,2.8rem)] leading-[1.08] tracking-[-0.02em]";

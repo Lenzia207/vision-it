@@ -1,13 +1,28 @@
 import Image from "next/image";
-import { Annie_Use_Your_Telescope, Anton, Roboto_Flex } from "next/font/google";
+import localFont from "next/font/local";
 import { Link } from "@/app/i18n/routing";
 import { caseStudiesUrl } from "@/app/configs/configs";
 import CaseStudyShell, { CaseStudyNav } from "../components/CaseStudyShell";
 import { CampCurrieCaseStudyData } from "../data/case-studies-types";
 
-const anton = Anton({ subsets: ["latin"], weight: "400", variable: "--cs-display", display: "swap" });
-const annie = Annie_Use_Your_Telescope({ subsets: ["latin"], weight: "400", variable: "--cs-hand", display: "swap" });
-const robotoFlex = Roboto_Flex({ subsets: ["latin"], variable: "--cs-body", display: "swap" });
+const anton = localFont({
+  src: "../../../../fonts/anton.woff2",
+  weight: "400",
+  variable: "--cs-display",
+  display: "swap",
+});
+const annie = localFont({
+  src: "../../../../fonts/annie-use-your-telescope.woff2",
+  weight: "400",
+  variable: "--cs-hand",
+  display: "swap",
+});
+const robotoFlex = localFont({
+  src: "../../../../fonts/roboto-flex.woff2",
+  weight: "100 1000",
+  variable: "--cs-body",
+  display: "swap",
+});
 
 const display = "font-(family-name:--cs-display)";
 const hand = "font-(family-name:--cs-hand)";

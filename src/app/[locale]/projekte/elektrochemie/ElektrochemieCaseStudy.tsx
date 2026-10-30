@@ -1,13 +1,28 @@
 import Image from "next/image";
-import { Funnel_Display, Funnel_Sans, JetBrains_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import { Link } from "@/app/i18n/routing";
 import { caseStudiesUrl } from "@/app/configs/configs";
 import CaseStudyShell, { CaseStudyNav } from "../components/CaseStudyShell";
 import { ElektrochemieCaseStudyData } from "../data/case-studies-types";
 
-const funnelDisplay = Funnel_Display({ subsets: ["latin"], variable: "--cs-display", display: "swap" });
-const funnelSans = Funnel_Sans({ subsets: ["latin"], variable: "--cs-body", display: "swap" });
-const jetBrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--cs-mono", display: "swap" });
+const funnelDisplay = localFont({
+  src: "../../../../fonts/funnel-display.woff2",
+  weight: "300 800",
+  variable: "--cs-display",
+  display: "swap",
+});
+const funnelSans = localFont({
+  src: "../../../../fonts/funnel-sans.woff2",
+  weight: "300 800",
+  variable: "--cs-body",
+  display: "swap",
+});
+const jetBrainsMono = localFont({
+  src: "../../../../fonts/jetbrains-mono.woff2",
+  weight: "100 800",
+  variable: "--cs-mono",
+  display: "swap",
+});
 
 const mono = "font-(family-name:--cs-mono)";
 const display = "font-(family-name:--cs-display)";

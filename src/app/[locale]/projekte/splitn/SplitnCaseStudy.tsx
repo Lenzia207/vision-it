@@ -1,14 +1,16 @@
 import { Fragment } from "react";
 import Image from "next/image";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import { Link } from "@/app/i18n/routing";
 import { caseStudiesUrl } from "@/app/configs/configs";
 import CaseStudyShell, { CaseStudyNav } from "../components/CaseStudyShell";
 import { SplitnCaseStudyData } from "../data/case-studies-types";
 
-const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  style: ["normal", "italic"],
+const plusJakartaSans = localFont({
+  src: [
+    { path: "../../../../fonts/plus-jakarta-sans.woff2", weight: "200 800", style: "normal" },
+    { path: "../../../../fonts/plus-jakarta-sans-italic.woff2", weight: "200 800", style: "italic" },
+  ],
   variable: "--cs-body",
   display: "swap",
 });

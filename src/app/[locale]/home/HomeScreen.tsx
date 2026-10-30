@@ -24,7 +24,7 @@ export default function HomeScreen({ data, locale }: HomeScreenProps) {
       <PrincipleSection data={data.principle_section} />
       <AudienceSection data={data.audience_section} />
       <CollaborationSection data={data.collaboration_section} />
-      {/* <ProjectsSection data={data.projects_section} /> */}
+      <ProjectsSection data={data.projects_section} locale={locale} />
       {/* <VisionSeoSection data={data.visionseo_section} /> */}
       <AboutSection data={data.about_section} />
       <KontaktSection data={data.kontakt_section} locale={locale} />

@@ -59,6 +59,78 @@
                 "description": "Tailored web applications for complex business processes. Next.js, React, API integration."
             }
         ],
+        "references": {
+          "label": "References",
+          "title": "Websites I took from the first sketch to go-live.",
+          "description": "Three very different industries, one standard: a presence that suits the business – not a template.",
+          "roleLabel": "My role",
+          "highlightsLabel": "Highlights",
+          "caseStudyCta": "Read case study",
+          "items": [
+            {
+              "slug": "elektrochemie",
+              "image": "/images/portfolio/case-egm.jpg",
+              "imageAlt": "Homepage of elektrochemie.eu",
+              "category": "Civil engineering · Chemistry",
+              "title": "EGM – Institute for Electrochemistry",
+              "description": "A bilingual presence that makes eleven specialist services understandable for industry, courts and insurers.",
+              "roleItems": [
+                "Concept",
+                "UI design",
+                "Development",
+                "Deployment"
+              ],
+              "highlightItems": [
+                "Entry via 8 questions",
+                "Expert report area",
+                "DE / EN"
+              ],
+              "domain": "elektrochemie.eu",
+              "websiteUrl": "https://elektrochemie.eu/"
+            },
+            {
+              "slug": "herzhirnhumor",
+              "image": "/images/portfolio/case-herzhirnhumor.jpg",
+              "imageAlt": "Homepage of herzhirnhumor.at",
+              "category": "Psychotherapy · Health",
+              "title": "HerzHirnHumor – Psychotherapy",
+              "description": "A calm, trustworthy presence that answers the most important questions before they are asked – including online booking.",
+              "roleItems": [
+                "Concept",
+                "UI design",
+                "Development"
+              ],
+              "highlightItems": [
+                "Quick appointment booking",
+                "Transparent terms",
+                "DE / EN / FR"
+              ],
+              "domain": "herzhirnhumor.at",
+              "websiteUrl": "https://www.herzhirnhumor.at/"
+            },
+            {
+              "slug": "camp-currie",
+              "image": "/images/portfolio/case-camp-currie.jpg",
+              "imageAlt": "Homepage of camp-currie.at",
+              "category": "Organic farming · Non-profit",
+              "title": "Camp Currie – Community Farm",
+              "description": "An inviting, clearly structured presence for a community farm in Upper Austria that conveys the project's values.",
+              "roleItems": [
+                "Concept",
+                "Design in Figma",
+                "Development",
+                "Deployment"
+              ],
+              "highlightItems": [
+                "Getting involved & FAQ",
+                "News slider",
+                "Image gallery"
+              ],
+              "domain": "camp-currie.at",
+              "websiteUrl": "https://camp-currie.at/"
+            }
+          ]
+        },
         "pricing": {
             "factorsTag": "Pricing",
             "factorsTitle": "What influences the price of a website",

@@ -361,50 +361,136 @@
     ]
   },
   "projects_section": {
-    "tag": "Projects & Insights",
-    "title": "Projects & Insights",
-    "description": "Hands-on work from my own projects and from working in development teams – complemented by articles on visibility, SEO and GEO.",
-    "articlesTitle": "Articles",
-    "articlesBadge": "Placeholder",
-    "articleStatus": "Article in preparation",
-    "projects": [
+    "tag": "Projects",
+    "title": "Selected work – from the first idea to go-live.",
+    "description": "Websites I independently conceived, designed and developed for businesses, my own apps from idea to store – and apps with hundreds of thousands of users that I worked on as part of a development team.",
+    "stats": [
       {
-        "image": "/images/portfolio/pictolog.jpg",
+        "value": "3",
+        "label": "Websites end-to-end"
+      },
+      {
+        "value": "2",
+        "label": "Own apps"
+      },
+      {
+        "value": "2",
+        "label": "Team apps"
+      }
+    ],
+    "websitesTitle": "Built independently · Concept, design & development",
+    "appsTitle": "Own apps · Idea, design & development",
+    "teamTitle": "In the development team · employed at Marqably",
+    "caseStudyBadge": "Case Study",
+    "caseStudyCta": "View case study",
+    "teamCta": "Case study at Marqably",
+    "websites": [
+      {
+        "slug": "elektrochemie",
+        "image": "/images/portfolio/case-egm.jpg",
+        "imageAlt": "Homepage of elektrochemie.eu",
+        "domain": "elektrochemie.eu",
+        "category": "Civil engineering · Chemistry · Vienna",
+        "title": "EGM – Institute for Electrochemistry",
+        "description": "Bilingual website for state-authorised civil engineers: eleven specialist services clearly structured, with a clear way in for industry, courts and insurers.",
+        "tags": [
+          "Concept",
+          "UI design",
+          "Next.js",
+          "DE / EN"
+        ]
+      },
+      {
+        "slug": "herzhirnhumor",
+        "image": "/images/portfolio/case-herzhirnhumor.jpg",
+        "imageAlt": "Homepage of herzhirnhumor.at",
+        "domain": "herzhirnhumor.at",
+        "category": "Psychotherapy · Health · Vienna",
+        "title": "HerzHirnHumor – Psychotherapy",
+        "description": "A calm, trustworthy presence for a behavioural therapy practice: transparent terms, a clear process and direct online booking – in three languages.",
+        "tags": [
+          "Concept",
+          "UI design",
+          "Next.js",
+          "DE / EN / FR"
+        ]
+      },
+      {
+        "slug": "camp-currie",
+        "image": "/images/portfolio/case-camp-currie.jpg",
+        "imageAlt": "Homepage of camp-currie.at",
+        "domain": "camp-currie.at",
+        "category": "Organic farming · Upper Austria",
+        "title": "Camp Currie – Community Farm",
+        "description": "An inviting presence for a non-profit farming project: farm, animals, getting involved and news – from Figma design to deployment.",
+        "tags": [
+          "Figma",
+          "UI design",
+          "Next.js"
+        ]
+      }
+    ],
+    "apps": [
+      {
+        "slug": "pictolog",
+        "icon": "/images/portfolio/icon-pictolog.png",
+        "iconAlt": "Pictolog PDF app icon",
+        "category": "iOS · on the App Store",
         "title": "Pictolog PDF",
-        "subtitle": "Independently conceived, designed and developed: an offline app for project management and reporting with PDF export.",
+        "description": "Photo documentation that works offline: photograph, describe, sort – and share as a clean PDF.",
+        "tags": [
+          "Flutter",
+          "Offline-first",
+          "PDF export"
+        ]
+      },
+      {
+        "slug": "splitn",
+        "icon": "/images/portfolio/icon-splitn.png",
+        "iconAlt": "splitn app icon",
+        "category": "iOS & Android",
+        "title": "Splitn",
+        "description": "Split shared expenses fairly – for couples, flatmates and groups of friends. With its own backend, groups and push notifications.",
+        "tags": [
+          "Flutter",
+          "Serverpod",
+          "Full stack"
+        ]
+      }
+    ],
+    "team": [
+      {
+        "image": "/images/portfolio/team-tt.jpg",
+        "imageAlt": "Tiroler Tageszeitung logo",
+        "category": "News app · iOS & Android",
+        "title": "Tiroler Tageszeitung App",
+        "description": "Ongoing development of a news app with hundreds of thousands of active users – features, bug fixes, dark mode and design updates.",
         "tags": [
           "Flutter",
           "Dart",
-          "Own project"
+          "Dark mode"
         ],
-        "url": "https://apps.apple.com/us/app/pictolog-pdf/id6759091493"
+        "url": "https://marqably.com/case-study/tt-app"
       },
       {
-        "image": "/images/portfolio/aktionsfinder.jpg",
-        "title": "Aktionsfinder App and PWA",
-        "subtitle": "Part of the development team at Marqably.",
+        "image": "/images/portfolio/team-aktionsfinder.jpg",
+        "imageAlt": "Aktionsfinder logo",
+        "category": "Offers platform · App & PWA",
+        "title": "Aktionsfinder App & PWA",
+        "description": "Contributing to Austria's platform for brochures and offers – feature development and design updates in a scaled codebase.",
         "tags": [
           "Flutter",
+          "Dart",
           "PWA"
         ],
         "url": "https://marqably.com/case-study/aktionsfinder-app"
-      },
-      {
-        "image": "/images/portfolio/tt.jpg",
-        "title": "Tiroler Tageszeitung App",
-        "subtitle": "Ongoing development in the team at Marqably.",
-        "tags": [
-          "Flutter",
-          "Dark Mode"
-        ],
-        "url": "https://marqably.com/case-study/tt-app"
       }
     ],
-    "articles": [
-      "The recipe for a highly visible business",
-      "How do AI systems recognize your business?",
-      "SEO vs. GEO: What is really changing?"
-    ]
+    "cta": {
+      "title": "Your project as the next case study?",
+      "description": "Website, app or visibility – tell me what you have in mind.",
+      "label": "Start a project"
+    }
   },
   "visionseo_section": {
     "badge": "In-house development",

@@ -156,6 +156,15 @@ h1, h2, h3, h4 {
   font-family: var(--font-mono);
 }
 
+/* Case study pages show the client's typography instead of the site fonts */
+.case-study :is(h1, h2, h3, h4) {
+  font-family: var(--cs-display, inherit);
+}
+
+.case-study p {
+  font-family: inherit;
+}
+
 /* ─── Typography Utilities ──────────────────────────────────────────── */
 
 .label-mono {

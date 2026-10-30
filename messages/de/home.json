@@ -360,50 +360,136 @@
     ]
   },
   "projects_section": {
-    "tag": "Projekte & Wissen",
-    "title": "Projekte & Einblicke",
-    "description": "Praktische Arbeiten aus eigenen Projekten und aus der Mitarbeit in Entwicklungsteams – ergänzt um Fachbeiträge zu Sichtbarkeit, SEO und GEO.",
-    "articlesTitle": "Fachbeiträge",
-    "articlesBadge": "Platzhalter",
-    "articleStatus": "Beitrag in Vorbereitung",
-    "projects": [
+    "tag": "Projekte",
+    "title": "Ausgewählte Arbeiten – von der ersten Idee bis zum Livegang.",
+    "description": "Websites, die ich für Unternehmen eigenständig konzipiert, gestaltet und entwickelt habe, eigene Apps von der Idee bis zum Store – und Apps mit Hunderttausenden Nutzer:innen, an denen ich im Entwicklungsteam mitgearbeitet habe.",
+    "stats": [
       {
-        "image": "/images/portfolio/pictolog.jpg",
+        "value": "3",
+        "label": "Websites end-to-end"
+      },
+      {
+        "value": "2",
+        "label": "Eigene Apps"
+      },
+      {
+        "value": "2",
+        "label": "Apps im Team"
+      }
+    ],
+    "websitesTitle": "Eigenständig umgesetzt · Konzept, Design & Entwicklung",
+    "appsTitle": "Eigene Apps · Idee, Design & Entwicklung",
+    "teamTitle": "Im Entwicklungsteam · angestellt bei Marqably",
+    "caseStudyBadge": "Case Study",
+    "caseStudyCta": "Case Study ansehen",
+    "teamCta": "Case Study bei Marqably",
+    "websites": [
+      {
+        "slug": "elektrochemie",
+        "image": "/images/portfolio/case-egm.jpg",
+        "imageAlt": "Startseite von elektrochemie.eu",
+        "domain": "elektrochemie.eu",
+        "category": "Ziviltechnik · Chemie · Wien",
+        "title": "EGM – Institut für Elektrochemie",
+        "description": "Zweisprachiger Webauftritt für staatlich befugte Ziviltechniker:innen: elf Fachleistungen verständlich strukturiert, mit klarem Einstieg für Industrie, Gerichte und Versicherungen.",
+        "tags": [
+          "Konzept",
+          "UI-Design",
+          "Next.js",
+          "DE / EN"
+        ]
+      },
+      {
+        "slug": "herzhirnhumor",
+        "image": "/images/portfolio/case-herzhirnhumor.jpg",
+        "imageAlt": "Startseite von herzhirnhumor.at",
+        "domain": "herzhirnhumor.at",
+        "category": "Psychotherapie · Gesundheit · Wien",
+        "title": "HerzHirnHumor – Psychotherapie",
+        "description": "Ruhiger, vertrauensvoller Auftritt für eine Praxis für Verhaltenstherapie: transparente Rahmenbedingungen, klarer Ablauf und direkte Online-Terminbuchung – in drei Sprachen.",
+        "tags": [
+          "Konzept",
+          "UI-Design",
+          "Next.js",
+          "DE / EN / FR"
+        ]
+      },
+      {
+        "slug": "camp-currie",
+        "image": "/images/portfolio/case-camp-currie.jpg",
+        "imageAlt": "Startseite von camp-currie.at",
+        "domain": "camp-currie.at",
+        "category": "Bio-Landwirtschaft · Oberösterreich",
+        "title": "Camp Currie – Gemeinschaftshof",
+        "description": "Einladender Auftritt für ein gemeinnütziges Landwirtschaftsprojekt: Hof, Tiere, Mitmachen und Neuigkeiten – vom Figma-Entwurf bis zum Deployment.",
+        "tags": [
+          "Figma",
+          "UI-Design",
+          "Next.js"
+        ]
+      }
+    ],
+    "apps": [
+      {
+        "slug": "pictolog",
+        "icon": "/images/portfolio/icon-pictolog.png",
+        "iconAlt": "App-Icon Pictolog PDF",
+        "category": "iOS · im App Store",
         "title": "Pictolog PDF",
-        "subtitle": "Eigenständig konzipiert, gestaltet und entwickelt: Offline-App zur Projektverwaltung und Berichtserstellung mit PDF-Export.",
+        "description": "Fotodokumentation, die offline funktioniert: fotografieren, beschreiben, sortieren – und als sauberes PDF teilen.",
+        "tags": [
+          "Flutter",
+          "Offline-first",
+          "PDF-Export"
+        ]
+      },
+      {
+        "slug": "splitn",
+        "icon": "/images/portfolio/icon-splitn.png",
+        "iconAlt": "App-Icon splitn",
+        "category": "iOS & Android",
+        "title": "Splitn",
+        "description": "Gemeinsame Ausgaben fair aufteilen – für Paare, WGs und Freundesgruppen. Mit eigenem Backend, Gruppen und Push-Benachrichtigungen.",
+        "tags": [
+          "Flutter",
+          "Serverpod",
+          "Full-Stack"
+        ]
+      }
+    ],
+    "team": [
+      {
+        "image": "/images/portfolio/team-tt.jpg",
+        "imageAlt": "Logo Tiroler Tageszeitung",
+        "category": "News-App · iOS & Android",
+        "title": "Tiroler Tageszeitung App",
+        "description": "Weiterentwicklung einer News-App mit Hunderttausenden aktiven Nutzer:innen – Features, Bugfixes, Dark Mode und Design-Updates.",
         "tags": [
           "Flutter",
           "Dart",
-          "Eigenes Projekt"
-        ],
-        "url": "https://apps.apple.com/us/app/pictolog-pdf/id6759091493"
-      },
-      {
-        "image": "/images/portfolio/aktionsfinder.jpg",
-        "title": "Aktionsfinder App und PWA",
-        "subtitle": "Mitarbeit im Entwicklungsteam bei Marqably.",
-        "tags": [
-          "Flutter",
-          "PWA"
-        ],
-        "url": "https://marqably.com/case-study/aktionsfinder-app"
-      },
-      {
-        "image": "/images/portfolio/tt.jpg",
-        "title": "Tiroler Tageszeitung App",
-        "subtitle": "Weiterentwicklung im Team bei Marqably.",
-        "tags": [
-          "Flutter",
           "Dark Mode"
         ],
         "url": "https://marqably.com/case-study/tt-app"
+      },
+      {
+        "image": "/images/portfolio/team-aktionsfinder.jpg",
+        "imageAlt": "Logo Aktionsfinder",
+        "category": "Angebots-Plattform · App & PWA",
+        "title": "Aktionsfinder App & PWA",
+        "description": "Mitarbeit an Österreichs Plattform für Prospekte und Angebote – Feature-Entwicklung und Design-Updates in einer skalierten Codebase.",
+        "tags": [
+          "Flutter",
+          "Dart",
+          "PWA"
+        ],
+        "url": "https://marqably.com/case-study/aktionsfinder-app"
       }
     ],
-    "articles": [
-      "Das Rezept für ein gut sichtbares Unternehmen",
-      "Wie erkennen KI-Systeme dein Unternehmen?",
-      "SEO vs. GEO: Was verändert sich wirklich?"
-    ]
+    "cta": {
+      "title": "Dein Projekt als nächste Case Study?",
+      "description": "Website, App oder Sichtbarkeit – erzähl mir, was du vorhast.",
+      "label": "Projekt anfragen"
+    }
   },
   "visionseo_section": {
     "badge": "Eigene Entwicklung",

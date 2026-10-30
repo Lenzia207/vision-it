@@ -59,32 +59,45 @@ export interface AngebotMobileAppsCrossPlatformData {
   tools: string[];
 }
 
-export interface AngebotMobileAppsFeaturedProject {
-  badgeLabel: string;
+export interface AngebotMobileAppsApp {
+  icon: string;
+  badge: string;
   title: string;
   description: string;
-  image: string;
-  roleLabel: string;
   roleItems: string[];
-  highlightsLabel: string;
   highlightItems: string[];
-  tags: string[];
 }
 
-export interface AngebotMobileAppsProject {
-  badgeLabel: string;
+export interface AngebotMobileAppsSplitnMock {
+  balanceLabel: string;
+  balance: string;
+  oweLabel: string;
+  owe: string;
+  owedLabel: string;
+  owed: string;
+  add: string;
+}
+
+export interface AngebotMobileAppsTeamProject {
+  image: string;
+  imageAlt: string;
   title: string;
   description: string;
-  role?: string;
-  image: string;
-  tags: string[];
+  cta: string;
+  url: string;
 }
 
 export interface AngebotMobileAppsProjectsData {
   label: string;
   title: string;
-  featured: AngebotMobileAppsFeaturedProject;
-  items: AngebotMobileAppsProject[];
+  description: string;
+  roleLabel: string;
+  highlightsLabel: string;
+  caseStudyCta: string;
+  pictolog: AngebotMobileAppsApp & { mock: { title: string } };
+  splitn: AngebotMobileAppsApp & { mock: AngebotMobileAppsSplitnMock };
+  teamLabel: string;
+  team: AngebotMobileAppsTeamProject[];
 }
 
 export interface AngebotMobileAppsProcessStep {

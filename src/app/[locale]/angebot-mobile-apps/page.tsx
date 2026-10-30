@@ -68,7 +68,7 @@ export default async function MobileAppsDetailPage(props: LocaleParams) {
   return (
     <PageWrapper
       locale={locale}
-      pageContent={<MobileAppsDetailView mobileAppsPage={mobileAppsPageData} />}
+      pageContent={<MobileAppsDetailView mobileAppsPage={mobileAppsPageData} locale={locale} />}
     />
   );
 }

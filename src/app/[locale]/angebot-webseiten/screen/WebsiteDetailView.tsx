@@ -20,6 +20,7 @@ export default function WebsiteDetailView({ websitePage, area, locale }: Website
       servicesDescription={websitePage.servicesDescription}
       services={websitePage.services}
       audience={websitePage.audience}
+      references={websitePage.references}
       pricing={websitePage.pricing}
       faq={websitePage.faq}
       processLabel={area.processLabel}

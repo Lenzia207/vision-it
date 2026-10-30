@@ -137,10 +137,28 @@ export interface CollaborationSection {
 }
 
 export interface ProjectTeaser {
-  image: string;
   title: string;
-  subtitle: string;
+  category: string;
+  description: string;
   tags: string[];
+}
+
+export interface WebsiteProjectTeaser extends ProjectTeaser {
+  slug: string;
+  image: string;
+  imageAlt: string;
+  domain: string;
+}
+
+export interface AppProjectTeaser extends ProjectTeaser {
+  slug: string;
+  icon: string;
+  iconAlt: string;
+}
+
+export interface TeamProjectTeaser extends ProjectTeaser {
+  image: string;
+  imageAlt: string;
   url: string;
 }
 
@@ -148,11 +166,17 @@ export interface ProjectsSection {
   tag: string;
   title: string;
   description: string;
-  articlesTitle: string;
-  articlesBadge: string;
-  articleStatus: string;
-  projects: ProjectTeaser[];
-  articles: string[];
+  stats: { value: string; label: string }[];
+  websitesTitle: string;
+  appsTitle: string;
+  teamTitle: string;
+  caseStudyBadge: string;
+  caseStudyCta: string;
+  teamCta: string;
+  websites: WebsiteProjectTeaser[];
+  apps: AppProjectTeaser[];
+  team: TeamProjectTeaser[];
+  cta: { title: string; description: string; label: string };
 }
 
 export interface VisionSeoSection {

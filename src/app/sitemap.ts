@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { agenturenDetailUrl, baseUrl, briefingFormularUrl, mobileAppDetailUrl, seoGeoDetailUrl, websiteDetailUrl } from './configs/configs';
+import { agenturenDetailUrl, baseUrl, briefingFormularUrl, caseStudiesUrl, caseStudySlugs, mobileAppDetailUrl, seoGeoDetailUrl, websiteDetailUrl } from './configs/configs';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
@@ -197,5 +197,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
       },
     },
+    ...caseStudySlugs.flatMap((slug) =>
+      (['de', 'en'] as const).map((locale) => ({
+        url: `${baseUrl}/${locale}${caseStudiesUrl}/${slug}`,
+        lastModified,
+        changeFrequency: 'yearly' as const,
+        priority: 0.7,
+        alternates: {
+          languages: {
+            de: `${baseUrl}/de${caseStudiesUrl}/${slug}`,
+            en: `${baseUrl}/en${caseStudiesUrl}/${slug}`,
+          },
+        },
+      }))
+    ),
   ];
 }

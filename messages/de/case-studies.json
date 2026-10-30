@@ -1,0 +1,296 @@
+{
+  "case_studies": {
+    "elektrochemie": {
+      "meta": {
+        "title": "Case Study: EGM – Institut für Elektrochemie",
+        "description": "Neuer zweisprachiger Webauftritt für das EGM – Institut für Elektrochemie: konzipiert, gestaltet und entwickelt von VisionIT."
+      },
+      "nav": { "ariaLabel": "Case-Study-Navigation", "back": "VisionIT · Alle Projekte", "label": "Case Study 01 / 05" },
+      "hero": {
+        "eyebrow": "Case Study · Website · Ziviltechnik",
+        "title": "Elektrochemie, verständlich gemacht.",
+        "description": "Neuer Webauftritt für das EGM – Institut für Elektrochemie, Galvanotechnik und Materialchemie: konzipiert, gestaltet und entwickelt von VisionIT.",
+        "websiteCta": "Website ansehen",
+        "websiteUrl": "https://elektrochemie.eu/",
+        "detailsCta": "Zur Umsetzung"
+      },
+      "facts": [
+        { "label": "Kunde", "value": "EGM Ziviltechniker GmbH" },
+        { "label": "Branche", "value": "Chemie · Korrosion · Oberflächentechnik" },
+        { "label": "Meine Rolle", "value": "Konzept, Design, Entwicklung, Deployment" },
+        { "label": "Stack", "value": "Next.js · React · TypeScript · Tailwind" }
+      ],
+      "intro": {
+        "label": "01 — Ausgangslage",
+        "title": "Viel Expertise, schwer greifbar.",
+        "paragraphs": [
+          "Das EGM ist ein staatlich befugtes und beeidetes Ziviltechniker-Institut mit über 20 Jahren Industriepraxis – gerichtlich zertifizierte Sachverständige für Chemie, Korrosion und Oberflächentechnik.",
+          "Elf Fachleistungen, sechs Schwerpunkte und sehr unterschiedliche Zielgruppen – von Industriebetrieben bis zu Gerichten, Anwält:innen und Versicherungen – sollten auf einer Website zusammenfinden, ohne dass jemand Chemie studiert haben muss."
+        ]
+      },
+      "screenshotAlt": "Hero der Startseite elektrochemie.eu mit holografischem Hintergrund",
+      "domain": "elektrochemie.eu",
+      "work": {
+        "label": "02 — Umsetzung",
+        "title": "Sechs Elemente, eine Reaktion.",
+        "description": "Angelehnt an das Periodensystem wurde jede Baustelle des Projekts zu einem eigenen Element – genau wie die Kompetenzen auf der fertigen Website.",
+        "items": [
+          { "symbol": "Ko", "title": "Konzeption", "description": "Informationsarchitektur für elf Leistungen, sechs Schwerpunkte, Gutachten und Team – mit klaren Wegen statt Fachjargon-Labyrinth." },
+          { "symbol": "Fr", "title": "Fragen als Einstieg", "description": "„Wobei können wir Ihnen helfen?“ – acht konkrete Fragen holen Besucher:innen bei ihrem Problem ab und führen direkt zur passenden Leistung." },
+          { "symbol": "De", "title": "Design in Logofarben", "description": "Blau, Cyan und Violett aus dem EGM-Logo, Element-Kacheln als wiederkehrendes Motiv und ein holografischer Hero, der Oberflächen und Reaktion sichtbar macht." },
+          { "symbol": "Gu", "title": "Gutachten im Fokus", "description": "Ein eigener Bereich für Gerichte, Anwält:innen, Versicherungen und Privatgutachten – mit direktem Call-to-Action zur Gutachtenanfrage." },
+          { "symbol": "Ml", "title": "Zweisprachig", "description": "Deutsch und Englisch mit eigener Sprachumschaltung – für internationale Industriekunden und Fachkonferenzen." },
+          { "symbol": "Nx", "title": "Entwicklung & Launch", "description": "Umgesetzt mit Next.js, React, TypeScript und Tailwind CSS – schnell, responsiv und vom Frontend bis zum Deployment aus einer Hand." }
+        ]
+      },
+      "result": {
+        "label": "03 — Ergebnis",
+        "title": "Ein Auftritt, so präzise wie die Arbeit dahinter.",
+        "stats": [
+          { "value": "11", "label": "Leistungen klar strukturiert" },
+          { "value": "6", "label": "Schwerpunkte auf einen Blick" },
+          { "value": "8", "label": "Einstiegsfragen statt Fachjargon" },
+          { "value": "2", "label": "Sprachen: Deutsch & Englisch" }
+        ]
+      },
+      "next": { "label": "Nächste Case Study", "title": "HerzHirnHumor – Psychotherapie" },
+      "contact": { "label": "VisionIT", "title": "Auch eine Website mit Substanz? Projekt anfragen" }
+    },
+    "herzhirnhumor": {
+      "meta": {
+        "title": "Case Study: HerzHirnHumor – Psychotherapie",
+        "description": "Ruhiger, vertrauensvoller Webauftritt für eine psychotherapeutische Praxis in Wien – mit Online-Terminbuchung in drei Sprachen."
+      },
+      "nav": { "ariaLabel": "Case-Study-Navigation", "back": "VisionIT · Alle Projekte", "label": "Case Study 02 / 05" },
+      "hero": {
+        "illustrationLabel": "Linienzeichnung: Herz und Hirn, verbunden durch ein Lächeln",
+        "eyebrow": "Case Study · Website · Psychotherapie",
+        "titleStart": "Eine Website mit Herz, Hirn und ",
+        "titleAccent": "Humor",
+        "titleEnd": ".",
+        "description": "Webauftritt für die psychotherapeutische Praxis von Maram Maria Zyadeh, MA in Wien – ruhig, vertrauensvoll und so klar, dass der erste Schritt leichter fällt.",
+        "websiteCta": "Website ansehen",
+        "websiteUrl": "https://www.herzhirnhumor.at/",
+        "detailsCta": "Zur Umsetzung"
+      },
+      "screenshotAlt": "Startseite von herzhirnhumor.at mit Linienillustration und Hero-Text",
+      "domain": "herzhirnhumor.at",
+      "facts": [
+        { "label": "Kundin", "value": "Maram Maria Zyadeh, MA" },
+        { "label": "Branche", "value": "Psychotherapie, Wien" },
+        { "label": "Meine Rolle", "value": "Konzept, Design, Entwicklung" },
+        { "label": "Stack", "value": "Next.js · React · TypeScript" },
+        { "label": "Sprachen", "value": "Deutsch · Englisch · Französisch" }
+      ],
+      "challenge": {
+        "label": "Die Herausforderung",
+        "title": "Wer eine Therapie sucht, ist oft gerade in einer schweren Phase.",
+        "description": "Die Website muss deshalb Ruhe ausstrahlen, Vertrauen aufbauen und die wichtigsten Fragen beantworten, bevor sie gestellt werden: Wie läuft eine Therapie ab? Was kostet sie? Und wie komme ich zu einem ersten Termin?"
+      },
+      "work": {
+        "label": "Die Umsetzung",
+        "title": "Klarheit, die sich warm anfühlt.",
+        "items": [
+          { "title": "Ruhige Gestaltung", "description": "Warme Creme- und Salbeitöne, viel Weißraum, leichte Typografie und eine feine Linienillustration als Markenzeichen – nichts, das drängt." },
+          { "title": "Ablauf in drei Schritten", "description": "Kontakt, Erstgespräch, nächste Schritte: der Weg in die Therapie ist auf einen Blick verständlich und nimmt die Unsicherheit vor dem ersten Anruf." },
+          { "title": "Transparente Rahmenbedingungen", "description": "Honorar, Kostenzuschuss, Absageregelung, Verschwiegenheit und Therapiedauer – offen kommuniziert statt im Kleingedruckten versteckt." },
+          { "title": "Direkte Terminbuchung", "description": "Online-Schnelltermin direkt aus der Navigation, dazu Kontaktformular, Telefon und Adresse – jede:r findet den passenden Weg." },
+          { "title": "Notfallkontakte sichtbar", "description": "Krisen-Hotlines haben einen festen Platz auf der Seite – Verantwortung, die bei einer Gesundheitswebsite einfach dazugehört." },
+          { "title": "Drei Sprachen", "description": "Deutsch, Englisch und Französisch – passend zu einer Praxis, die Therapie in allen drei Sprachen anbietet." }
+        ]
+      },
+      "next": { "label": "Nächste Case Study", "title": "Camp Currie – Gemeinschaftshof" },
+      "contact": { "label": "VisionIT", "title": "Eine Website, die zu dir passt? Projekt anfragen" }
+    },
+    "campCurrie": {
+      "meta": {
+        "title": "Case Study: Camp Currie – Gemeinschaftshof",
+        "description": "Einladende Website für einen Gemeinschaftshof für nachhaltige Landwirtschaft in Oberösterreich – vom Figma-Entwurf bis zum Deployment."
+      },
+      "nav": { "ariaLabel": "Case-Study-Navigation", "back": "VisionIT · Alle Projekte", "label": "CASE STUDY 03 / 05" },
+      "hero": {
+        "eyebrow": "Case Study · Website",
+        "title": "Camp Currie",
+        "description": "Eine Website für einen Gemeinschaftshof für nachhaltige Landwirtschaft in Oberösterreich.",
+        "websiteCta": "Website ansehen",
+        "websiteUrl": "https://camp-currie.at/",
+        "detailsCta": "Zur Umsetzung"
+      },
+      "facts": [
+        { "label": "KUNDE", "value": "Camp Currie, Gemeinschaftshof" },
+        { "label": "BRANCHE", "value": "Bio-Landwirtschaft, gemeinnützig" },
+        { "label": "MEINE ROLLE", "value": "Konzept, Design in Figma, Entwicklung, Deployment" },
+        { "label": "STACK", "value": "Next.js · React · TypeScript · Tailwind" }
+      ],
+      "intro": {
+        "label": "Die Ausgangslage",
+        "title": "Viel Leben am Hof – und viel zu erzählen.",
+        "paragraphs": [
+          "Camp Currie ist ein bio-zertifizierter Gemeinschaftshof im Mühlviertel: Felder, Tiere, gemeinsame Arbeit und Menschen, die mitmachen wollen. All das sollte auf einer Website Platz finden – ohne dass sie überladen wirkt.",
+          "Ziel war ein einladender, klar strukturierter Auftritt, der die Werte des Projekts transportiert und Interessierten zeigt, wie sie sich einbringen können."
+        ]
+      },
+      "screenshotAlt": "Startseite camp-currie.at mit Landschaftsbild und Schriftzug Camp Currie",
+      "domain": "camp-currie.at",
+      "work": {
+        "label": "Die Umsetzung",
+        "title": "Bodenständig, warm und klar.",
+        "items": [
+          { "title": "Design in Figma", "description": "Zuerst in Figma gestaltet und abgestimmt: kräftige Anton-Headlines, handschriftliche Akzente, Naturtöne in Salbeigrün und Ernte-Gelb." },
+          { "title": "Stimmungsvoller Einstieg", "description": "Ein großflächiges Landschaftsbild des Hofs empfängt Besucher:innen – man spürt sofort, worum es geht." },
+          { "title": "Klare Struktur", "description": "Über uns, Hof, Tiere, Bio-Zertifizierung, Mitmachen, News und Kontakt – eine durchgehende Seite mit klarer Navigation." },
+          { "title": "Mitmachen leicht gemacht", "description": "Ein eigener Bereich und häufige Fragen zeigen Interessierten, wie sie sich einbringen können." },
+          { "title": "Neues vom Hof", "description": "Ein News-Slider mit Ernte-Vorschau, tierischem Zuwachs und Hof-Angeboten hält die Seite lebendig." },
+          { "title": "Galerie & Partner", "description": "Eine Bildergalerie zeigt den Alltag am Hof, Partner bekommen ihren eigenen Platz." }
+        ]
+      },
+      "next": { "label": "Nächste Case Study", "title": "Pictolog PDF – eigene App" },
+      "contact": { "label": "VisionIT", "title": "Dein Projekt verdient auch eine Bühne? Anfragen" }
+    },
+    "pictolog": {
+      "meta": {
+        "title": "Case Study: Pictolog PDF – eigene App",
+        "description": "Offline-App, die aus Fotos und Notizen eine saubere Fotodokumentation macht – eigenständig konzipiert, gestaltet und entwickelt."
+      },
+      "nav": { "ariaLabel": "Case-Study-Navigation", "back": "VisionIT · Alle Projekte", "label": "Case Study · Eigene App" },
+      "hero": {
+        "appName": "Pictolog PDF",
+        "iconAlt": "App-Icon Pictolog PDF",
+        "titleStart": "Fotografieren. Beschreiben. ",
+        "titleAccent": "PDF.",
+        "description": "Eine Offline-App, die aus Fotos und Notizen in wenigen Schritten eine saubere Fotodokumentation macht – eigenständig konzipiert, gestaltet und entwickelt.",
+        "storeCta": "Im App Store ansehen",
+        "storeUrl": "https://apps.apple.com/us/app/pictolog-pdf/id6759091493",
+        "featuresCta": "Funktionen"
+      },
+      "mock": {
+        "title": "Pictologs",
+        "search": "Pictologs durchsuchen",
+        "recent": "ZULETZT BEARBEITET",
+        "projects": [
+          { "title": "Projekt A", "pages": "6 Seiten" },
+          { "title": "Projekt B", "pages": "12 Seiten" },
+          { "title": "Projekt C", "pages": "3 Seiten" }
+        ],
+        "add": "+ Neuer Pictolog",
+        "previewTitle": "PDF-Vorschau",
+        "documentLabel": "FOTODOKUMENTATION",
+        "documentTitle": "Projekttitel",
+        "share": "Teilen"
+      },
+      "facts": [
+        { "label": "Projekt", "value": "Eigene App" },
+        { "label": "Meine Rolle", "value": "Konzept, UX/UI, Entwicklung, Release" },
+        { "label": "Plattform", "value": "iOS · App Store" },
+        { "label": "Stack", "value": "Flutter · Dart · Riverpod · Hive" }
+      ],
+      "idea": {
+        "label": "Die Idee",
+        "title": "Fotos sind schnell gemacht. Die Dokumentation nicht.",
+        "paragraphs": [
+          "Wer Fortschritte, Zustände oder Arbeiten festhält, sammelt Fotos in der Galerie – und kopiert sie danach mühsam in ein Dokument. Pictolog verkürzt diesen Weg auf drei Schritte, direkt am Handy.",
+          "Weil Fotos oft sensibel sind, war von Anfang an klar: alles bleibt lokal auf dem Gerät. Kein Konto, keine Cloud, funktioniert auch ohne Netz."
+        ]
+      },
+      "steps": [
+        { "title": "Projekt anlegen und benennen", "description": "Titel und Beschreibung landen automatisch auf der Titelseite des PDFs." },
+        { "title": "Fotos als Seiten hinzufügen", "description": "Direkt mit der Kamera oder aus der Galerie – jede Seite mit eigener Beschreibung." },
+        { "title": "PDF erstellen und teilen", "description": "Vorschau prüfen, als PDF speichern oder direkt über das Teilen-Menü weitergeben." }
+      ],
+      "features": {
+        "label": "Funktionen & Umsetzung",
+        "title": "Klein im Umfang, sorgfältig im Detail.",
+        "items": [
+          { "title": "Offline-first", "description": "Lokale Datenspeicherung mit Hive – kein Konto, keine Cloud." },
+          { "title": "Eigene Kamera-Ansicht", "description": "Fotos direkt in der App aufnehmen oder aus der Galerie wählen." },
+          { "title": "Seiten bearbeiten", "description": "Bild drehen, ersetzen, beschreiben und per Drag & Drop neu ordnen." },
+          { "title": "PDF-Generierung", "description": "Titelseite, Bildseiten mit Beschreibung und Fußzeile – erzeugt direkt am Gerät." },
+          { "title": "Hell, Dunkel, System", "description": "Vollständiger Dark Mode mit eigenem Farbsystem und geprüften Kontrasten." },
+          { "title": "Deutsch & Englisch", "description": "Lokalisiert inklusive Pluralformen, Sprache in der App umschaltbar." }
+        ],
+        "stack": ["Flutter", "Dart", "Riverpod", "go_router", "Hive", "pdf & printing", "camera"]
+      },
+      "next": { "label": "Nächste Case Study", "title": "Splitn – Ausgaben fair teilen" },
+      "contact": { "label": "VisionIT", "title": "Du hast eine App-Idee? Projekt anfragen" }
+    },
+    "splitn": {
+      "meta": {
+        "title": "Case Study: splitn – Ausgaben fair teilen",
+        "description": "App für Paare, WGs und Freundesgruppen mit fairer Aufteilung und klaren Salden – Idee, Design, App und Backend aus einer Hand."
+      },
+      "nav": { "ariaLabel": "Case-Study-Navigation", "back": "VisionIT · Alle Projekte", "label": "Case Study · Eigene App" },
+      "hero": {
+        "logoAlt": "splitn",
+        "titleStart": "Wer schuldet wem? ",
+        "titleAccent": "Geklärt.",
+        "description": "Eine App für Paare, WGs und Freundesgruppen, die gemeinsam einkaufen und ausgeben – mit fairer Aufteilung und klaren Salden. Idee, Design, App und Backend aus einer Hand.",
+        "detailsCta": "So funktioniert's"
+      },
+      "mock": {
+        "greeting": "Guten Morgen, Daniel",
+        "headline": "Lass uns deine Ausgaben klären",
+        "balanceLabel": "GESAMTSALDO",
+        "balance": "+ 42,50 €",
+        "oweLabel": "DU SCHULDEST",
+        "owe": "12,00 €",
+        "owedLabel": "DIR WIRD GESCHULDET",
+        "owed": "54,50 €",
+        "quickActions": "Schnellaktionen",
+        "actions": ["Ausgabe hinzufügen", "Abrechnen", "Gruppe erstellen"],
+        "groups": "Deine Gruppen",
+        "groupName": "WG Einkauf",
+        "groupBalance": "+ 18,20 €",
+        "expenseTitle": "Wofür ist das?",
+        "expensePlaceholder": "Abendessen, Einkäufe, Kino…",
+        "expenseAmount": "64,00 €",
+        "splitWith": "AUFTEILEN MIT",
+        "splitOptions": ["50/50", "Gesamtbetrag", "Prozent", "Individuell"],
+        "save": "Ausgabe speichern"
+      },
+      "facts": [
+        { "label": "Projekt", "value": "Eigene App" },
+        { "label": "Meine Rolle", "value": "Konzept, UX/UI, App, Backend" },
+        { "label": "Plattform", "value": "iOS & Android" },
+        { "label": "Stack", "value": "Flutter · Serverpod · Firebase" }
+      ],
+      "idea": {
+        "label": "Die Idee",
+        "title": "Gemeinsam einkaufen ist leicht. Fair abrechnen nicht.",
+        "paragraphs": [
+          "Ob Paar, WG oder Urlaub mit Freund:innen: Nicht jede Ausgabe wird gleich geteilt. Mal zahlt eine Person alles, mal wird nach Prozent oder ganz individuell aufgeteilt – und am Ende weiß niemand mehr, wer wem was schuldet.",
+          "splitn rechnet je nach Aufteilungsart den Anteil aus, führt die Salden pro Gruppe und zeigt auf einen Blick, wer zahlen muss und wer etwas zurückbekommt."
+        ]
+      },
+      "splits": {
+        "title": "Vier Arten zu teilen.",
+        "items": [
+          { "value": "50/50", "description": "Klassisch halbe-halbe – der schnellste Weg für den Alltag." },
+          { "value": "100 %", "description": "Gesamtbetrag: eine Person übernimmt alles, die andere schuldet es." },
+          { "value": "70 / 30", "description": "Prozent: Aufteilung per Schieberegler anpassen." },
+          { "value": "€ ✎", "description": "Individuell: Beträge pro Person eingeben – mit Live-Anzeige, was noch offen ist." }
+        ]
+      },
+      "features": {
+        "label": "Funktionen",
+        "items": [
+          { "title": "Gruppen & Salden", "description": "Aktive Salden pro Mitglied, „Alle Schulden begleichen“ mit einem Tipp." },
+          { "title": "Freunde per QR-Code", "description": "Eigener QR-Code zum Teilen und Scannen statt umständlicher Einladungen." },
+          { "title": "Push-Benachrichtigungen", "description": "In der App jederzeit ein- und ausschaltbar." },
+          { "title": "Konto & Datenschutz", "description": "Login, Profil mit Bild, Standardwährung – und Account-Löschung, bei der die Salden der anderen korrekt bleiben." },
+          { "title": "Deutsch & Englisch", "description": "Vollständig lokalisiert, Sprache in der App wählbar." }
+        ]
+      },
+      "architecture": {
+        "label": "Architektur – Full-Stack in Dart",
+        "clientLabel": "↓ generierter Client ↓",
+        "nodes": [
+          { "title": "Flutter-App", "description": "Riverpod · go_router · Hive-Cache" },
+          { "title": "Serverpod-Backend", "description": "Eigene Endpoints, Authentifizierung, Datenbank" },
+          { "title": "Firebase Cloud Messaging", "description": "Push-Benachrichtigungen auf iOS & Android" }
+        ]
+      },
+      "next": { "label": "Nächste Case Study", "title": "EGM – Institut für Elektrochemie" },
+      "contact": { "label": "VisionIT", "title": "App mit eigenem Backend geplant? Projekt anfragen" }
+    }
+  }
+}

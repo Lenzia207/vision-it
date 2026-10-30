@@ -1,0 +1,296 @@
+{
+  "case_studies": {
+    "elektrochemie": {
+      "meta": {
+        "title": "Case Study: EGM – Institute for Electrochemistry",
+        "description": "New bilingual website for the EGM Institute for Electrochemistry: conceived, designed and developed by VisionIT."
+      },
+      "nav": { "ariaLabel": "Case study navigation", "back": "VisionIT · All projects", "label": "Case Study 01 / 05" },
+      "hero": {
+        "eyebrow": "Case Study · Website · Civil Engineering",
+        "title": "Electrochemistry, made understandable.",
+        "description": "New website for EGM, the Institute for Electrochemistry, Electroplating and Materials Chemistry: conceived, designed and developed by VisionIT.",
+        "websiteCta": "View website",
+        "websiteUrl": "https://elektrochemie.eu/",
+        "detailsCta": "See the work"
+      },
+      "facts": [
+        { "label": "Client", "value": "EGM Ziviltechniker GmbH" },
+        { "label": "Industry", "value": "Chemistry · Corrosion · Surface technology" },
+        { "label": "My role", "value": "Concept, design, development, deployment" },
+        { "label": "Stack", "value": "Next.js · React · TypeScript · Tailwind" }
+      ],
+      "intro": {
+        "label": "01 — Starting point",
+        "title": "Deep expertise, hard to grasp.",
+        "paragraphs": [
+          "EGM is a state-authorised and sworn civil engineering institute with more than 20 years of industry practice – court-certified experts in chemistry, corrosion and surface technology.",
+          "Eleven specialist services, six focus areas and very different audiences – from industrial companies to courts, lawyers and insurers – had to come together on one website, without anyone needing a chemistry degree."
+        ]
+      },
+      "screenshotAlt": "Hero of the elektrochemie.eu homepage with a holographic background",
+      "domain": "elektrochemie.eu",
+      "work": {
+        "label": "02 — Implementation",
+        "title": "Six elements, one reaction.",
+        "description": "Inspired by the periodic table, every part of the project became its own element – just like the competences on the finished website.",
+        "items": [
+          { "symbol": "Co", "title": "Concept", "description": "Information architecture for eleven services, six focus areas, expert reports and the team – with clear paths instead of a maze of jargon." },
+          { "symbol": "Qu", "title": "Questions as the way in", "description": "“How can we help you?” – eight concrete questions meet visitors at their problem and lead straight to the right service." },
+          { "symbol": "De", "title": "Design in logo colours", "description": "Blue, cyan and violet from the EGM logo, element tiles as a recurring motif and a holographic hero that makes surfaces and reactions visible." },
+          { "symbol": "Ex", "title": "Expert reports in focus", "description": "A dedicated area for courts, lawyers, insurers and private reports – with a direct call to action for report requests." },
+          { "symbol": "Ml", "title": "Bilingual", "description": "German and English with a dedicated language switch – for international industrial clients and specialist conferences." },
+          { "symbol": "Nx", "title": "Development & launch", "description": "Built with Next.js, React, TypeScript and Tailwind CSS – fast, responsive and from frontend to deployment from a single source." }
+        ]
+      },
+      "result": {
+        "label": "03 — Result",
+        "title": "A presence as precise as the work behind it.",
+        "stats": [
+          { "value": "11", "label": "Services clearly structured" },
+          { "value": "6", "label": "Focus areas at a glance" },
+          { "value": "8", "label": "Entry questions instead of jargon" },
+          { "value": "2", "label": "Languages: German & English" }
+        ]
+      },
+      "next": { "label": "Next case study", "title": "HerzHirnHumor – Psychotherapy" },
+      "contact": { "label": "VisionIT", "title": "Want a website with substance too? Start a project" }
+    },
+    "herzhirnhumor": {
+      "meta": {
+        "title": "Case Study: HerzHirnHumor – Psychotherapy",
+        "description": "A calm, trustworthy website for a psychotherapy practice in Vienna – with online booking in three languages."
+      },
+      "nav": { "ariaLabel": "Case study navigation", "back": "VisionIT · All projects", "label": "Case Study 02 / 05" },
+      "hero": {
+        "illustrationLabel": "Line drawing: heart and brain, connected by a smile",
+        "eyebrow": "Case Study · Website · Psychotherapy",
+        "titleStart": "A website with heart, brain and ",
+        "titleAccent": "humour",
+        "titleEnd": ".",
+        "description": "Website for the psychotherapy practice of Maram Maria Zyadeh, MA in Vienna – calm, trustworthy and so clear that the first step feels easier.",
+        "websiteCta": "View website",
+        "websiteUrl": "https://www.herzhirnhumor.at/",
+        "detailsCta": "See the work"
+      },
+      "screenshotAlt": "Homepage of herzhirnhumor.at with a line illustration and hero text",
+      "domain": "herzhirnhumor.at",
+      "facts": [
+        { "label": "Client", "value": "Maram Maria Zyadeh, MA" },
+        { "label": "Industry", "value": "Psychotherapy, Vienna" },
+        { "label": "My role", "value": "Concept, design, development" },
+        { "label": "Stack", "value": "Next.js · React · TypeScript" },
+        { "label": "Languages", "value": "German · English · French" }
+      ],
+      "challenge": {
+        "label": "The challenge",
+        "title": "People looking for therapy are often going through a difficult time.",
+        "description": "So the website has to radiate calm, build trust and answer the most important questions before they are asked: How does therapy work? What does it cost? And how do I get a first appointment?"
+      },
+      "work": {
+        "label": "The implementation",
+        "title": "Clarity that feels warm.",
+        "items": [
+          { "title": "Calm design", "description": "Warm cream and sage tones, plenty of white space, light typography and a fine line illustration as a signature – nothing that pushes." },
+          { "title": "Three-step process", "description": "Contact, first conversation, next steps: the path into therapy is clear at a glance and eases the uncertainty before the first call." },
+          { "title": "Transparent terms", "description": "Fees, cost subsidies, cancellation policy, confidentiality and therapy duration – communicated openly instead of hidden in small print." },
+          { "title": "Direct booking", "description": "Quick online appointments right from the navigation, plus contact form, phone and address – everyone finds the right way in." },
+          { "title": "Visible emergency contacts", "description": "Crisis hotlines have a permanent place on the site – a responsibility that simply belongs on a health website." },
+          { "title": "Three languages", "description": "German, English and French – matching a practice that offers therapy in all three languages." }
+        ]
+      },
+      "next": { "label": "Next case study", "title": "Camp Currie – Community Farm" },
+      "contact": { "label": "VisionIT", "title": "A website that suits you? Start a project" }
+    },
+    "campCurrie": {
+      "meta": {
+        "title": "Case Study: Camp Currie – Community Farm",
+        "description": "An inviting website for a community farm for sustainable agriculture in Upper Austria – from Figma design to deployment."
+      },
+      "nav": { "ariaLabel": "Case study navigation", "back": "VisionIT · All projects", "label": "CASE STUDY 03 / 05" },
+      "hero": {
+        "eyebrow": "Case Study · Website",
+        "title": "Camp Currie",
+        "description": "A website for a community farm for sustainable agriculture in Upper Austria.",
+        "websiteCta": "View website",
+        "websiteUrl": "https://camp-currie.at/",
+        "detailsCta": "See the work"
+      },
+      "facts": [
+        { "label": "CLIENT", "value": "Camp Currie, community farm" },
+        { "label": "INDUSTRY", "value": "Organic farming, non-profit" },
+        { "label": "MY ROLE", "value": "Concept, design in Figma, development, deployment" },
+        { "label": "STACK", "value": "Next.js · React · TypeScript · Tailwind" }
+      ],
+      "intro": {
+        "label": "The starting point",
+        "title": "Plenty of life on the farm – and plenty to tell.",
+        "paragraphs": [
+          "Camp Currie is a certified organic community farm in the Mühlviertel: fields, animals, shared work and people who want to get involved. All of that needed a place on one website – without it feeling overloaded.",
+          "The goal was an inviting, clearly structured presence that conveys the project's values and shows interested people how they can take part."
+        ]
+      },
+      "screenshotAlt": "Homepage of camp-currie.at with a landscape image and the Camp Currie lettering",
+      "domain": "camp-currie.at",
+      "work": {
+        "label": "The implementation",
+        "title": "Down-to-earth, warm and clear.",
+        "items": [
+          { "title": "Design in Figma", "description": "Designed and agreed in Figma first: bold Anton headlines, handwritten accents, natural tones in sage green and harvest yellow." },
+          { "title": "An atmospheric opening", "description": "A large landscape image of the farm welcomes visitors – you immediately feel what it's about." },
+          { "title": "Clear structure", "description": "About us, farm, animals, organic certification, getting involved, news and contact – one continuous page with clear navigation." },
+          { "title": "Getting involved made easy", "description": "A dedicated section and frequently asked questions show interested people how they can take part." },
+          { "title": "News from the farm", "description": "A news slider with harvest previews, new animal arrivals and farm offers keeps the site alive." },
+          { "title": "Gallery & partners", "description": "An image gallery shows everyday life on the farm, and partners get their own place." }
+        ]
+      },
+      "next": { "label": "Next case study", "title": "Pictolog PDF – own app" },
+      "contact": { "label": "VisionIT", "title": "Your project deserves a stage too? Get in touch" }
+    },
+    "pictolog": {
+      "meta": {
+        "title": "Case Study: Pictolog PDF – own app",
+        "description": "An offline app that turns photos and notes into clean photo documentation – independently conceived, designed and developed."
+      },
+      "nav": { "ariaLabel": "Case study navigation", "back": "VisionIT · All projects", "label": "Case Study · Own app" },
+      "hero": {
+        "appName": "Pictolog PDF",
+        "iconAlt": "Pictolog PDF app icon",
+        "titleStart": "Photograph. Describe. ",
+        "titleAccent": "PDF.",
+        "description": "An offline app that turns photos and notes into clean photo documentation in just a few steps – independently conceived, designed and developed.",
+        "storeCta": "View on the App Store",
+        "storeUrl": "https://apps.apple.com/us/app/pictolog-pdf/id6759091493",
+        "featuresCta": "Features"
+      },
+      "mock": {
+        "title": "Pictologs",
+        "search": "Search Pictologs",
+        "recent": "RECENTLY EDITED",
+        "projects": [
+          { "title": "Project A", "pages": "6 pages" },
+          { "title": "Project B", "pages": "12 pages" },
+          { "title": "Project C", "pages": "3 pages" }
+        ],
+        "add": "+ New Pictolog",
+        "previewTitle": "PDF preview",
+        "documentLabel": "PHOTO DOCUMENTATION",
+        "documentTitle": "Project title",
+        "share": "Share"
+      },
+      "facts": [
+        { "label": "Project", "value": "Own app" },
+        { "label": "My role", "value": "Concept, UX/UI, development, release" },
+        { "label": "Platform", "value": "iOS · App Store" },
+        { "label": "Stack", "value": "Flutter · Dart · Riverpod · Hive" }
+      ],
+      "idea": {
+        "label": "The idea",
+        "title": "Photos are quick to take. The documentation isn't.",
+        "paragraphs": [
+          "Anyone recording progress, conditions or work collects photos in the gallery – and then laboriously copies them into a document. Pictolog cuts that down to three steps, right on the phone.",
+          "Because photos are often sensitive, one thing was clear from the start: everything stays local on the device. No account, no cloud, and it works without a connection."
+        ]
+      },
+      "steps": [
+        { "title": "Create and name a project", "description": "Title and description automatically end up on the PDF's cover page." },
+        { "title": "Add photos as pages", "description": "Directly with the camera or from the gallery – each page with its own description." },
+        { "title": "Create and share the PDF", "description": "Check the preview, save as PDF or pass it on directly via the share menu." }
+      ],
+      "features": {
+        "label": "Features & implementation",
+        "title": "Small in scope, careful in detail.",
+        "items": [
+          { "title": "Offline-first", "description": "Local data storage with Hive – no account, no cloud." },
+          { "title": "Custom camera view", "description": "Take photos right in the app or choose them from the gallery." },
+          { "title": "Edit pages", "description": "Rotate, replace and describe images, and reorder them by drag & drop." },
+          { "title": "PDF generation", "description": "Cover page, image pages with descriptions and a footer – generated right on the device." },
+          { "title": "Light, dark, system", "description": "Full dark mode with its own colour system and checked contrasts." },
+          { "title": "German & English", "description": "Localised including plural forms, with language switching in the app." }
+        ],
+        "stack": ["Flutter", "Dart", "Riverpod", "go_router", "Hive", "pdf & printing", "camera"]
+      },
+      "next": { "label": "Next case study", "title": "Splitn – share expenses fairly" },
+      "contact": { "label": "VisionIT", "title": "Got an app idea? Start a project" }
+    },
+    "splitn": {
+      "meta": {
+        "title": "Case Study: splitn – share expenses fairly",
+        "description": "An app for couples, flatmates and groups of friends with fair splitting and clear balances – idea, design, app and backend from a single source."
+      },
+      "nav": { "ariaLabel": "Case study navigation", "back": "VisionIT · All projects", "label": "Case Study · Own app" },
+      "hero": {
+        "logoAlt": "splitn",
+        "titleStart": "Who owes whom? ",
+        "titleAccent": "Sorted.",
+        "description": "An app for couples, flatmates and groups of friends who shop and spend together – with fair splitting and clear balances. Idea, design, app and backend from a single source.",
+        "detailsCta": "How it works"
+      },
+      "mock": {
+        "greeting": "Good morning, Daniel",
+        "headline": "Let's sort out your expenses",
+        "balanceLabel": "TOTAL BALANCE",
+        "balance": "+ €42.50",
+        "oweLabel": "YOU OWE",
+        "owe": "€12.00",
+        "owedLabel": "YOU ARE OWED",
+        "owed": "€54.50",
+        "quickActions": "Quick actions",
+        "actions": ["Add expense", "Settle up", "Create group"],
+        "groups": "Your groups",
+        "groupName": "Flat groceries",
+        "groupBalance": "+ €18.20",
+        "expenseTitle": "What is this for?",
+        "expensePlaceholder": "Dinner, groceries, cinema…",
+        "expenseAmount": "€64.00",
+        "splitWith": "SPLIT WITH",
+        "splitOptions": ["50/50", "Full amount", "Percent", "Custom"],
+        "save": "Save expense"
+      },
+      "facts": [
+        { "label": "Project", "value": "Own app" },
+        { "label": "My role", "value": "Concept, UX/UI, app, backend" },
+        { "label": "Platform", "value": "iOS & Android" },
+        { "label": "Stack", "value": "Flutter · Serverpod · Firebase" }
+      ],
+      "idea": {
+        "label": "The idea",
+        "title": "Shopping together is easy. Settling up fairly isn't.",
+        "paragraphs": [
+          "Whether it's a couple, a flatshare or a holiday with friends: not every expense is split equally. Sometimes one person pays for everything, sometimes it's split by percentage or individually – and in the end nobody knows who owes whom what.",
+          "splitn calculates each share according to the split type, keeps balances per group and shows at a glance who has to pay and who gets something back."
+        ]
+      },
+      "splits": {
+        "title": "Four ways to split.",
+        "items": [
+          { "value": "50/50", "description": "Classic half and half – the fastest way for everyday life." },
+          { "value": "100 %", "description": "Full amount: one person covers everything, the other owes it." },
+          { "value": "70 / 30", "description": "Percent: adjust the split with a slider." },
+          { "value": "€ ✎", "description": "Custom: enter amounts per person – with a live display of what's still open." }
+        ]
+      },
+      "features": {
+        "label": "Features",
+        "items": [
+          { "title": "Groups & balances", "description": "Active balances per member, “Settle all debts” with one tap." },
+          { "title": "Friends via QR code", "description": "Your own QR code to share and scan instead of cumbersome invitations." },
+          { "title": "Push notifications", "description": "Can be switched on and off in the app at any time." },
+          { "title": "Account & privacy", "description": "Login, profile with picture, default currency – and account deletion that keeps everyone else's balances correct." },
+          { "title": "German & English", "description": "Fully localised, with language selection in the app." }
+        ]
+      },
+      "architecture": {
+        "label": "Architecture – full stack in Dart",
+        "clientLabel": "↓ generated client ↓",
+        "nodes": [
+          { "title": "Flutter app", "description": "Riverpod · go_router · Hive cache" },
+          { "title": "Serverpod backend", "description": "Custom endpoints, authentication, database" },
+          { "title": "Firebase Cloud Messaging", "description": "Push notifications on iOS & Android" }
+        ]
+      },
+      "next": { "label": "Next case study", "title": "EGM – Institute for Electrochemistry" },
+      "contact": { "label": "VisionIT", "title": "Planning an app with its own backend? Start a project" }
+    }
+  }
+}

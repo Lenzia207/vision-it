@@ -2,6 +2,7 @@
 
 import { MouseEvent, useEffect } from "react";
 import { Link } from "@/app/i18n/routing";
+import LanguageSwitcher from "../LanguageSwitcher";
 import {
   MainNavigation as MainNavigationItem,
   NavigationLabels,
@@ -105,9 +106,12 @@ export default function MobileNavigation({
         >
           {labels.cta}
         </a>
-        <a href={`mailto:${labels.email}`} className="font-mono text-[0.9rem] text-(--text-300)">
-          {labels.email}
-        </a>
+        <div className="flex flex-wrap items-center justify-between gap-4">
+          <a href={`mailto:${labels.email}`} className="font-mono text-[0.9rem] text-(--text-300)">
+            {labels.email}
+          </a>
+          <LanguageSwitcher className="text-white" activeClassName="text-(--lime)" />
+        </div>
       </div>
     </div>
   );

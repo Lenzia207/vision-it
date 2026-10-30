@@ -7,6 +7,7 @@ import { Link } from "@/app/i18n/routing";
 import { MouseEvent, useCallback, useEffect, useState } from "react";
 import { checkSectionLocation, createScrollVisibilityHandler, navigate, setItemActive } from "./navigation-service";
 import MobileNavigation from "./MobileNavigation";
+import LanguageSwitcher from "../LanguageSwitcher";
 
 interface MainNavigationProps {
   data: HomePageData;
@@ -126,6 +127,9 @@ export default function MainNavigation({ data, locale }: MainNavigationProps) {
                 </div>
               );
             })}
+            <div onMouseEnter={closeSubmenu}>
+              <LanguageSwitcher className="text-white" activeClassName="text-(--lime)" />
+            </div>
             <a
               href={`/${locale}${labels.ctaPageId}`}
               onClick={(e) => handleNavigate(e, labels.ctaPageId)}

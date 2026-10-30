@@ -70,6 +70,29 @@ export interface AngebotWebsiteHeroData {
   secondaryCtaLabel: string;
 }
 
+export interface AngebotReference {
+  slug: string;
+  image: string;
+  imageAlt: string;
+  category: string;
+  title: string;
+  description: string;
+  roleItems: string[];
+  highlightItems: string[];
+  domain: string;
+  websiteUrl: string;
+}
+
+export interface AngebotReferencesData {
+  label: string;
+  title: string;
+  description: string;
+  roleLabel: string;
+  highlightsLabel: string;
+  caseStudyCta: string;
+  items: AngebotReference[];
+}
+
 export interface AngebotWebsiteData {
   hero: AngebotWebsiteHeroData;
   title: string;
@@ -78,6 +101,7 @@ export interface AngebotWebsiteData {
   servicesDescription: string;
   services: AngebotWebsiteService[];
   audience: AngebotAudienceData;
+  references: AngebotReferencesData;
   pricing: AngebotPricingData;
   faq: AngebotFaqData;
   ctaLabel: string;

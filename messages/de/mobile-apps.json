@@ -74,33 +74,68 @@
     },
     "projects": {
       "label": "Projekterfahrung",
-      "title": "App-Erfahrung aus eigenen und produktiven Projekten",
-      "featured": {
-        "badgeLabel": "Eigenständig konzipiert, designed und entwickelt",
+      "title": "App-Erfahrung aus eigenen und produktiven Projekten.",
+      "description": "Zwei eigene Apps, von der Idee über UX und Architektur bis zum Release – und Mitarbeit an Apps mit Hunderttausenden Nutzer:innen.",
+      "roleLabel": "Meine Rolle",
+      "highlightsLabel": "Besonderheiten",
+      "caseStudyCta": "Case Study lesen",
+      "pictolog": {
+        "icon": "/images/portfolio/icon-pictolog.png",
+        "badge": "Eigene App · im App Store",
         "title": "Pictolog PDF",
-        "description": "Eine Offline-App zur Projektverwaltung und Berichtserstellung. Alle Daten werden lokal gespeichert. Nutzer können Fortschritte dokumentieren und Berichte direkt als PDF exportieren.",
-        "image": "/images/portfolio/pictolog.jpg",
-        "roleLabel": "Meine Rolle",
-        "roleItems": ["Konzeption", "UX / UI", "Entwicklung", "technische Architektur", "Release"],
-        "highlightsLabel": "Besonderheiten",
-        "highlightItems": ["Offline-Nutzung", "lokale Datenspeicherung", "PDF-Generierung", "Projektverwaltung"],
-        "tags": ["Flutter", "Dart"]
+        "description": "Offline-App zur Fotodokumentation: Projekte anlegen, Fotos als Seiten beschreiben und sortieren, als PDF teilen. Alle Daten bleiben auf dem Gerät.",
+        "roleItems": [
+          "Konzeption · UX/UI",
+          "Entwicklung · Release"
+        ],
+        "highlightItems": [
+          "Offline-first · PDF-Generierung",
+          "Dark Mode · DE / EN"
+        ],
+        "mock": {
+          "title": "Pictologs"
+        }
       },
-      "items": [
+      "splitn": {
+        "icon": "/images/portfolio/icon-splitn.png",
+        "badge": "Eigene App",
+        "title": "splitn",
+        "description": "Gemeinsame Ausgaben fair aufteilen – 50/50, nach Prozent oder individuell. Mit Gruppen, Salden, QR-Code-Einladung und Push-Benachrichtigungen.",
+        "roleItems": [
+          "Konzeption · UX/UI",
+          "App & Backend"
+        ],
+        "highlightItems": [
+          "Eigenes Serverpod-Backend",
+          "Push · Login · DE / EN"
+        ],
+        "mock": {
+          "balanceLabel": "GESAMTSALDO",
+          "balance": "+ 42,50 €",
+          "oweLabel": "DU SCHULDEST",
+          "owe": "12,00 €",
+          "owedLabel": "DIR WIRD GESCHULDET",
+          "owed": "54,50 €",
+          "add": "Ausgabe hinzufügen"
+        }
+      },
+      "teamLabel": "Im Entwicklungsteam bei Marqably",
+      "team": [
         {
-          "badgeLabel": "Projekterfahrung aus meiner Tätigkeit bei Marqably",
-          "title": "Aktionsfinder App & PWA",
-          "description": "Mitarbeit an einer produktiven App und PWA mit Feature-Entwicklung, Bugfixes und laufenden Design-Updates innerhalb einer bestehenden Codebase.",
-          "role": "Rolle: Mitarbeit im Entwicklungsteam bei Marqably",
-          "image": "/images/portfolio/aktionsfinder.jpg",
-          "tags": ["Flutter", "Dart", "PWA", "Feature Development", "Bugfixing", "Design Updates"]
+          "image": "/images/portfolio/team-tt.jpg",
+          "imageAlt": "Logo Tiroler Tageszeitung",
+          "title": "Tiroler Tageszeitung App",
+          "description": "News-App mit Hunderttausenden aktiven Nutzer:innen – Features, Bugfixes, Dark Mode, Design-Updates.",
+          "cta": "Case Study bei Marqably",
+          "url": "https://marqably.com/case-study/tt-app"
         },
         {
-          "badgeLabel": "Mitarbeit im Entwicklungsteam bei Marqably",
-          "title": "Tiroler Tageszeitung App",
-          "description": "Kontinuierliche Weiterentwicklung einer News-App mit Hunderttausenden aktiven Nutzern. Arbeit an Bugfixes, Feature-Erweiterungen, Dark Mode und laufenden Design-Updates.",
-          "image": "/images/portfolio/tt.jpg",
-          "tags": ["Flutter", "Dart", "Feature Development", "Bugfixing", "Dark Mode", "Design Updates"]
+          "image": "/images/portfolio/team-aktionsfinder.jpg",
+          "imageAlt": "Logo Aktionsfinder",
+          "title": "Aktionsfinder App & PWA",
+          "description": "Feature-Entwicklung, Bugfixing und Design-Updates in einer produktiven, skalierten Codebase.",
+          "cta": "Case Study bei Marqably",
+          "url": "https://marqably.com/case-study/aktionsfinder-app"
         }
       ]
     },

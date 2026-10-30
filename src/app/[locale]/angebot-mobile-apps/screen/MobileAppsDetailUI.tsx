@@ -13,7 +13,7 @@ import MobileAppsTechStackSection from "../sections/MobileAppsTechStackSection";
 import MobileAppsFaqSection from "../sections/MobileAppsFaqSection";
 import MobileAppsFinalCtaSection from "../sections/MobileAppsFinalCtaSection";
 
-type MobileAppsDetailUIProps = AngebotMobileAppsData;
+type MobileAppsDetailUIProps = AngebotMobileAppsData & { locale: string };
 
 export default function MobileAppsDetailUI({
   hero,
@@ -29,6 +29,7 @@ export default function MobileAppsDetailUI({
   techStack,
   faq,
   finalCta,
+  locale,
 }: MobileAppsDetailUIProps) {
   return (
     <>
@@ -37,7 +38,7 @@ export default function MobileAppsDetailUI({
       <MobileAppsAppVsWebAppSection appVsWebApp={appVsWebApp} />
       <MobileAppsServicesSection services={services} />
       <MobileAppsCrossPlatformSection crossPlatform={crossPlatform} />
-      <MobileAppsProjectsSection projects={projects} />
+      <MobileAppsProjectsSection projects={projects} locale={locale} />
       <MobileAppsProcessSection process={process} />
       <MobileAppsMvpSection mvp={mvp} />
       <MobileAppsCostsSection costs={costs} />

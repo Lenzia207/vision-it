@@ -59,6 +59,78 @@
                 "description": "Maßgeschneiderte Webanwendungen für komplexe Geschäftsprozesse. Next.js, React, API-Integration."
             }
         ],
+        "references": {
+          "label": "Referenzen",
+          "title": "Websites, die ich von der ersten Skizze bis zum Livegang umgesetzt habe.",
+          "description": "Drei sehr unterschiedliche Branchen, ein Anspruch: ein Auftritt, der zum Unternehmen passt – nicht zu einem Template.",
+          "roleLabel": "Meine Rolle",
+          "highlightsLabel": "Besonderheiten",
+          "caseStudyCta": "Case Study lesen",
+          "items": [
+            {
+              "slug": "elektrochemie",
+              "image": "/images/portfolio/case-egm.jpg",
+              "imageAlt": "Startseite elektrochemie.eu",
+              "category": "Ziviltechnik · Chemie",
+              "title": "EGM – Institut für Elektrochemie",
+              "description": "Zweisprachiger Auftritt, der elf Fachleistungen für Industrie, Gerichte und Versicherungen verständlich macht.",
+              "roleItems": [
+                "Konzeption",
+                "UI-Design",
+                "Entwicklung",
+                "Deployment"
+              ],
+              "highlightItems": [
+                "Einstieg über 8 Fragen",
+                "Gutachten-Bereich",
+                "DE / EN"
+              ],
+              "domain": "elektrochemie.eu",
+              "websiteUrl": "https://elektrochemie.eu/"
+            },
+            {
+              "slug": "herzhirnhumor",
+              "image": "/images/portfolio/case-herzhirnhumor.jpg",
+              "imageAlt": "Startseite herzhirnhumor.at",
+              "category": "Psychotherapie · Gesundheit",
+              "title": "HerzHirnHumor – Psychotherapie",
+              "description": "Ruhiger, vertrauensvoller Auftritt, der die wichtigsten Fragen beantwortet, bevor sie gestellt werden – inklusive Online-Terminbuchung.",
+              "roleItems": [
+                "Konzeption",
+                "UI-Design",
+                "Entwicklung"
+              ],
+              "highlightItems": [
+                "Schnelltermin-Buchung",
+                "Transparente Rahmenbedingungen",
+                "DE / EN / FR"
+              ],
+              "domain": "herzhirnhumor.at",
+              "websiteUrl": "https://www.herzhirnhumor.at/"
+            },
+            {
+              "slug": "camp-currie",
+              "image": "/images/portfolio/case-camp-currie.jpg",
+              "imageAlt": "Startseite camp-currie.at",
+              "category": "Bio-Landwirtschaft · Gemeinnützig",
+              "title": "Camp Currie – Gemeinschaftshof",
+              "description": "Einladender, klar strukturierter Auftritt für einen Gemeinschaftshof in Oberösterreich, der die Werte des Projekts transportiert.",
+              "roleItems": [
+                "Konzeption",
+                "Design in Figma",
+                "Entwicklung",
+                "Deployment"
+              ],
+              "highlightItems": [
+                "Mitmachen & FAQ",
+                "News-Slider",
+                "Bildergalerie"
+              ],
+              "domain": "camp-currie.at",
+              "websiteUrl": "https://camp-currie.at/"
+            }
+          ]
+        },
         "pricing": {
             "factorsTag": "Preisgestaltung",
             "factorsTitle": "Was den Preis einer Website beeinflusst",

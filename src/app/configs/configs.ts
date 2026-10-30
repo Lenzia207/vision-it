@@ -4,6 +4,8 @@ export const mobileAppDetailUrl = `/angebot-mobile-apps`;
 export const seoGeoDetailUrl = `/angebot-seo-geo`;
 export const agenturenDetailUrl = `/angebot-agenturen`;
 export const briefingFormularUrl = `/briefing-formular`;
+export const caseStudiesUrl = `/projekte`;
+export const caseStudySlugs = ["elektrochemie", "herzhirnhumor", "camp-currie", "pictolog", "splitn"] as const;
 
 /**
  * IDs/pageIds that should temporarily be hidden from the site

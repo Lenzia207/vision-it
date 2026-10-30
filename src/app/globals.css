@@ -1877,6 +1877,76 @@ h1, h2, h3, h4 {
   animation: hero-enter-in 0.9s var(--ease-out-expo) both;
 }
 
+/* Hero video: starts below the fixed header so the navigation stays readable on
+   the video's white opening. In landscape the frame covers the stage, but never
+   zooms so far that the text in the video gets cut off. */
+.hero-video-stage {
+  top: 73px;
+  container-type: size;
+}
+
+@media (min-width: 1060px) {
+  .hero-video-stage {
+    top: 69px;
+  }
+}
+
+.hero-video-frame {
+  left: 50%;
+  top: 50%;
+  width: min(max(100cqw, 100cqh * 16 / 9), 100cqw * 1.1);
+  aspect-ratio: 16 / 9;
+  transform: translate(-50%, -50%);
+}
+
+.hero-video-still {
+  display: none;
+}
+
+.hero-video-frame[data-still] .hero-video-still {
+  display: block;
+}
+
+/* Sits exactly on "Projekt besprechen" in the video */
+.hero-video-cta {
+  left: 33.3%;
+  top: 70.1%;
+  width: 25.5%;
+  min-height: 44px;
+  transform: translateY(-50%);
+}
+
+/* Portrait: the 4:5 cut sits under the header at full width, the next section follows directly */
+@media (orientation: portrait) {
+  .hero-video-stage {
+    position: relative;
+    top: auto;
+    margin-top: 73px;
+    container-type: normal;
+  }
+
+  .hero-video-frame {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    transform: none;
+  }
+
+  .hero-video-cta {
+    left: 6.7%;
+    top: 78.7%;
+    width: 54.5%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-video-still {
+    display: block;
+  }
+}
+
 @keyframes slow-spin {
   to { transform: rotate(360deg); }
 }

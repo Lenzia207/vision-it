@@ -8,6 +8,7 @@ import ProjectsSection from "./sections/ProjectsSection";
 import VisionSeoSection from "./sections/VisionSeoSection";
 import AboutSection from "./sections/AboutSection";
 import KontaktSection from "./sections/Kontakt/KontaktSection";
+import BlogTeaserSection from "../blog/components/BlogTeaserSection";
 import { HomePageData } from "./sections/data/types/home-types";
 
 interface HomeScreenProps {
@@ -26,6 +27,7 @@ export default function HomeScreen({ data, locale }: HomeScreenProps) {
       <CollaborationSection data={data.collaboration_section} />
       <ProjectsSection data={data.projects_section} locale={locale} />
       {/* <VisionSeoSection data={data.visionseo_section} /> */}
+      <BlogTeaserSection locale={locale} />
       <AboutSection data={data.about_section} />
       <KontaktSection data={data.kontakt_section} locale={locale} />
     </div>

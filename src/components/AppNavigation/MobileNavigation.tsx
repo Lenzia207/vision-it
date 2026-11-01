@@ -1,8 +1,10 @@
 "use client";
 
 import { MouseEvent, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { Link } from "@/app/i18n/routing";
 import LanguageSwitcher from "../LanguageSwitcher";
+import { isNavItemActive, isPageLink } from "./navigation-service";
 import {
   MainNavigation as MainNavigationItem,
   NavigationLabels,
@@ -36,6 +38,8 @@ export default function MobileNavigation({
   onNavigate,
   onClose,
 }: MobileNavigationProps) {
+  const pathname = usePathname();
+
   // Lock body scroll and allow Escape to close while open
   useEffect(() => {
     if (!open) return;
@@ -60,22 +64,40 @@ export default function MobileNavigation({
     >
       <nav aria-label={labels.mobileNav} className="flex flex-col">
         {items.map((item, i) => {
-          const isActive = item.pageId.replace("#", "") === activeSection;
+          const isActive = isNavItemActive(item, activeSection, pathname, locale);
+          const linkClassName = `flex items-baseline gap-4 py-4 font-mono text-[1.9rem] font-medium tracking-[-0.02em] no-underline ${
+            isActive ? "text-(--lime)" : "text-white"
+          }`;
+          const linkContent = (
+            <>
+              <span className="text-xs font-bold tracking-widest text-(--lime)">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              {item.name}
+            </>
+          );
           return (
-            <div key={item.pageId} className="flex flex-col border-b border-white/12">
-              <a
-                href={`/${locale}${item.pageId}`}
-                aria-current={isActive ? "location" : undefined}
-                onClick={(e) => onNavigate(e, item.pageId)}
-                className={`flex items-baseline gap-4 py-4 font-mono text-[1.9rem] font-medium tracking-[-0.02em] no-underline ${
-                  isActive ? "text-(--lime)" : "text-white"
-                }`}
-              >
-                <span className="text-xs font-bold tracking-widest text-(--lime)">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                {item.name}
-              </a>
+            <div key={item.pageId || item.page} className="flex flex-col border-b border-white/12">
+              {isPageLink(item) ? (
+                <Link
+                  href={item.page}
+                  locale={locale}
+                  aria-current={isActive ? "page" : undefined}
+                  onClick={onClose}
+                  className={linkClassName}
+                >
+                  {linkContent}
+                </Link>
+              ) : (
+                <a
+                  href={`/${locale}${item.pageId}`}
+                  aria-current={isActive ? "location" : undefined}
+                  onClick={(e) => onNavigate(e, item.pageId)}
+                  className={linkClassName}
+                >
+                  {linkContent}
+                </a>
+              )}
               {item.servicesSubmenu && serviceCards.length > 0 && (
                 <ul className="m-0 -mt-1 pb-4 pl-9 list-none flex flex-col">
                   {serviceCards.map((card) => (

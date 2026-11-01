@@ -11,6 +11,7 @@ import SeoGeoGeoSection from "../sections/SeoGeoGeoSection";
 import SeoGeoFinalCtaSection from "../sections/SeoGeoFinalCtaSection";
 import { AngebotSeoFaqData, AngebotSeoGeoAuditData, AngebotSeoGeoCollaborationData, AngebotSeoGeoFindingsData, AngebotSeoGeoFinalCtaData, AngebotSeoGeoGeoData, AngebotSeoGeoHeroData, AngebotSeoGeoMonitoringData, AngebotSeoGeoPrioritizationData, AngebotSeoGeoRoadmapData, AngebotSeoGeoSituationData } from "../data/seo-geo-types";
 import SeoGeoOfferSection from "../sections/SeoGeoCollaborationSection";
+import BlogTeaserSection from "../../blog/components/BlogTeaserSection";
 
 
 interface SeoGeoDetailUIProps {
@@ -58,6 +59,8 @@ export default function SeoGeoDetailUI({ hero, situation, audit, findings, prior
       <SeoGeoOfferSection pricingScheme={pricingScheme} locale={locale} />
 
       <SeoGeoFaqSection faq={faq} locale={locale} />
+
+      <BlogTeaserSection locale={locale} />
     </>
   );
 }

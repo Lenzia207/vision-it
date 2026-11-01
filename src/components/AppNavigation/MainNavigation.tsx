@@ -5,7 +5,7 @@ import Image from "next/image";
 import { HomePageData } from "@/app/[locale]/home/sections/data/types/home-types";
 import { Link } from "@/app/i18n/routing";
 import { MouseEvent, useCallback, useEffect, useState } from "react";
-import { checkSectionLocation, createScrollVisibilityHandler, navigate, setItemActive } from "./navigation-service";
+import { checkSectionLocation, createScrollVisibilityHandler, isNavItemActive, isPageLink, navigate, setItemActive } from "./navigation-service";
 import MobileNavigation from "./MobileNavigation";
 import LanguageSwitcher from "../LanguageSwitcher";
 
@@ -86,9 +86,26 @@ export default function MainNavigation({ data, locale }: MainNavigationProps) {
 
           <nav aria-label={labels.mainNav} className="hidden min-[1060px]:flex items-center gap-[30px] whitespace-nowrap">
             {data.main_navigation.map((item) => {
-              const isActive = item.pageId.replace("#", "") === activeSection;
+              const isActive = isNavItemActive(item, activeSection, pathname, locale);
               const hasSubmenu = item.servicesSubmenu && serviceCards.length > 0;
               const highlighted = isActive || (hasSubmenu && submenuOpen);
+              const linkClassName = `font-mono text-xs font-medium uppercase tracking-[0.14em] no-underline py-1.5 border-b-2 transition-colors hover:text-(--lime) hover:border-(--lime) ${
+                highlighted ? "text-(--lime) border-(--lime)" : "text-white border-transparent"
+              }`;
+              if (isPageLink(item)) {
+                return (
+                  <Link
+                    key={item.page}
+                    href={item.page}
+                    locale={locale}
+                    aria-current={isActive ? "page" : undefined}
+                    onMouseEnter={closeSubmenu}
+                    className={linkClassName}
+                  >
+                    {item.name}
+                  </Link>
+                );
+              }
               const link = (
                 <a
                   key={item.pageId}
@@ -96,9 +113,7 @@ export default function MainNavigation({ data, locale }: MainNavigationProps) {
                   aria-current={isActive ? "location" : undefined}
                   onClick={(e) => handleNavigate(e, item.pageId)}
                   onMouseEnter={() => setSubmenuOpen(!!hasSubmenu)}
-                  className={`font-mono text-xs font-medium uppercase tracking-[0.14em] no-underline py-1.5 border-b-2 transition-colors hover:text-(--lime) hover:border-(--lime) ${
-                    highlighted ? "text-(--lime) border-(--lime)" : "text-white border-transparent"
-                  }`}
+                  className={linkClassName}
                 >
                   {item.name}
                 </a>

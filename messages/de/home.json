@@ -18,6 +18,11 @@
       "pageId": "#ueber-mich"
     },
     {
+      "page": "/blog",
+      "name": "Wissenswertes",
+      "pageId": ""
+    },
+    {
       "page": "/",
       "name": "Kontakt",
       "pageId": "#contact"

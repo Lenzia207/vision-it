@@ -18,6 +18,11 @@
       "pageId": "#ueber-mich"
     },
     {
+      "page": "/blog",
+      "name": "Blog",
+      "pageId": ""
+    },
+    {
       "page": "/",
       "name": "Contact",
       "pageId": "#contact"

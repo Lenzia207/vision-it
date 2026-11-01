@@ -1,0 +1,160 @@
+{
+  "overview": {
+    "meta": {
+      "title": "Blog: Insights on Websites & Apps",
+      "description": "Articles by VisionIT in Vienna on websites, apps, design, technology and online visibility."
+    },
+    "tag": "Blog",
+    "title": "Useful insights for your online presence.",
+    "breadcrumbLabel": "Breadcrumb"
+  },
+  "section": {
+    "tag": "Blog",
+    "title": "The latest on SEO and GEO.",
+    "description": "How search is changing and what that means for your website.",
+    "allPosts": "All articles"
+  },
+  "readMore": "Read article",
+  "posts": [
+    {
+      "slug": "ki-sichtbarkeit-website",
+      "publishedAt": "2026-11-01",
+      "dateLabel": "November 2026",
+      "readingTime": "approx. 7 min read",
+      "categories": ["SEO", "GEO"],
+      "topic": "GEO & AI visibility",
+      "title": "Your website looks great. Too bad AI doesn't understand it.",
+      "excerpt": "What looks impressive to people is often just a pile of code to a machine. And what an AI doesn't understand, it won't recommend.",
+      "lead": "What looks impressive to us humans is often just a pile of code to a machine, one that barely reveals who you are, what you offer and who it's for. And what an AI doesn't understand, it won't recommend.",
+      "image": {
+        "src": "/images/blog/ki-brille.webp",
+        "alt": "Four-panel meme: without glasses, a man looks at a stylish website with a mountain landscape. Wearing AI glasses, he sees only “404 – Not found” on the same page: content not clearly recognizable, important information missing, structure hard to understand, hard for AI to use.",
+        "width": 1080,
+        "height": 1080
+      },
+      "meta": {
+        "title": "Your Website and AI: 7 Points for the AI Glasses",
+        "description": "Good design is no longer enough: why AI systems fail to understand many websites, and 7 points that make yours readable for search engines and AI."
+      },
+      "blocks": [
+        { "type": "heading", "text": "The misconception: “As long as it looks good”" },
+        { "type": "paragraph", "text": "Let me say this up front so no designer gets upset with me: good design matters. I come from film, animation and design myself. Good design builds trust, guides people through the page and makes them want to get in touch." },
+        { "type": "paragraph", "text": "The problem lies elsewhere. Many businesses spend almost their entire website budget on the part you can see, and hardly anything on the part machines read: clear copy, clean structure, understandable subpages, technical foundations." },
+        { "type": "statement", "text": "For people: ==wow==. For search engines: more like “??”" },
+        { "type": "paragraph", "text": "That has always been a risk. But until recently there was a consolation: once someone landed on the website, the design would win them over. That very consolation is now crumbling." },
+        {
+          "type": "image",
+          "image": {
+            "src": "/images/blog/ki-brille.webp",
+            "alt": "Four-panel meme: without glasses, a man looks at a stylish website with a mountain landscape. Wearing AI glasses, he sees only “404 – Not found” on the same page: content not clearly recognizable, important information missing, structure hard to understand, hard for AI to use.",
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        { "type": "heading", "text": "You used to have to visit the website. Not anymore." },
+        { "type": "paragraph", "text": "Quick question: how did you last look for a product or service provider?" },
+        {
+          "type": "options",
+          "items": [
+            { "label": "Option A", "text": "Open Google, open the top five results in tabs, click through them all, compare, get a coffee, compare again." },
+            { "label": "Option B", "text": "Ask ChatGPT, Gemini or Claude: “Which provider in Vienna is right for me, and how do they differ?” Then read the summary.", "highlighted": true },
+            { "label": "Option C", "text": "Ask Google, read the AI overview at the very top and … that's actually enough.", "highlighted": true }
+          ]
+        },
+        { "type": "paragraph", "text": "If you honestly nodded at **B or C**: welcome, you're not alone." },
+        { "type": "paragraph", "text": "This is where the real shift lies. More and more people have an AI gather information, compare providers and answer their questions. So part of the decision is made before anyone even clicks through to your website. Opinions form from what the AI knows about you: copy, service descriptions, reviews, other people's experiences." },
+        { "type": "paragraph", "text": "And now the uncomfortable consequence: the more preselection happens outside your website, the less your design can influence that early choice. **The AI doesn't see your video header. It reads your text. If it finds it.**" },
+        { "type": "heading", "text": "This isn't theory" },
+        { "type": "paragraph", "text": "I don't want to bury you in statistics. But a few figures from Germany, Austria and Switzerland show quite clearly where things are heading." },
+        {
+          "type": "stats",
+          "label": "Figures from Germany, Austria and Switzerland",
+          "sourceLabel": "Source",
+          "cards": [
+            {
+              "country": "Germany",
+              "value": "52%",
+              "chartLabel": "Bar chart: use of AI shopping assistants, September 2025 44 percent, May 2026 52 percent",
+              "bars": [
+                { "label": "September 2025", "value": "44%", "percent": 44 },
+                { "label": "May 2026", "value": "52%", "percent": 52, "current": true }
+              ],
+              "text": "use AI shopping assistants. In September 2025 it was still 44%.",
+              "source": "Deloitte, “The State of Agentic Commerce in Europe”, 1,500 respondents in Germany, May 2026",
+              "sourceUrl": "https://www.deloitte.com/de/de/about/press-room/jeder-zweite-in-europa-shoppt-mit-KI-untersuetzung.html"
+            },
+            {
+              "country": "Switzerland",
+              "value": "41.6%",
+              "chartLabel": "Bar chart: chatbots instead of Google or Bing, 2024 27.2 percent, 2026 41.6 percent",
+              "bars": [
+                { "label": "2024", "value": "27.2%", "percent": 27.2 },
+                { "label": "2026", "value": "41.6%", "percent": 41.6, "current": true }
+              ],
+              "text": "of chatbot users use them instead of Google or Bing. In 2024 it was still 27.2%.",
+              "source": "Comparis, survey of 1,035 people by Innofact, March 2026",
+              "sourceUrl": "https://www.comparis.ch/publikationen/mitteilungen/2026/04/bereits-drei-viertel-der-bevoelkerung-nutzen-ki-helfer-wie-chatgpt-co-"
+            },
+            {
+              "country": "Austria",
+              "value": "39%",
+              "chartLabel": "Bar chart: use of generative AI in Austria, 2024 28 percent, 2025 39 percent",
+              "bars": [
+                { "label": "2024", "value": "28%", "percent": 28 },
+                { "label": "2025", "value": "39% (+11 percentage points)", "percent": 39, "current": true }
+              ],
+              "text": "of the population used generative AI in 2025 – 11 percentage points more than in 2024.",
+              "source": "Statistics Austria on behalf of OeAD, reported by vienna.at, October 2026",
+              "sourceUrl": "https://www.vienna.at/vier-von-zehn-menschen-in-oesterreich-nutzen-ki/10524617"
+            }
+          ],
+          "note": {
+            "label": "Context",
+            "paragraphs": [
+              "These figures come from different studies with different questions and target groups, so they aren't directly comparable. Nor do they mean that half of all purchase decisions are already made without a website visit. But the direction is the same across the DACH region: people are using AI, and increasingly for research and shopping.",
+              "To be fair: search engines aren't dead. According to [YouGov](https://yougov.com/de-de/artikel/55191-neue-studie-zur-web-suche-in-deutschland-ki-assistenten-sind-wichtiger-erganzender-suchkanal-doch-suchmaschinen-bleiben-fuhrend), they remain the most common starting point.\n\nBut the path to businesses has gained a new **stopover**."
+            ]
+          }
+        },
+        { "type": "statement", "text": "Because search engines read rather than look." },
+        { "type": "heading", "text": "And now the AI agents are arriving too" },
+        { "type": "paragraph", "text": "So far we've talked about people asking an AI something. The next step is already here: AI agents that set off on their own. They open websites, compare offers, check opening hours or prices and bring a finished recommendation back to the person." },
+        { "type": "paragraph", "text": "An agent like that is essentially the most impatient visitor your website has ever had. It doesn't admire animations. It doesn't wait for a video. It wants to know within seconds:" },
+        {
+          "type": "questions",
+          "items": [
+            "Who is this company?",
+            "What exactly does it offer – and for whom?",
+            "Where, when, on what terms?",
+            "Why should I recommend it rather than the competition?"
+          ]
+        },
+        { "type": "paragraph", "text": "If it finds this clearly worded and cleanly structured, you end up in the answer. If it doesn't, someone else does. No ill will, just pragmatism. With the AI glasses on, there are only two states: **readable or 404. So to speak.**" },
+        { "type": "heading", "text": "What a website needs today:\n7 points for the AI glasses" },
+        { "type": "paragraph", "text": "The good news: none of this rules out good design.\nIt just needs a foundation underneath." },
+        {
+          "type": "checklist",
+          "items": [
+            { "title": "Important content as real text, not images.", "text": "Services, prices, opening hours and location belong in readable text. Anything that only exists in a graphic, slider or video often doesn't exist for a machine." },
+            { "title": "A clear heading structure.", "text": "One H1 per page, with logical H2s and H3s below it. Like a table of contents, not a styling device for large type." },
+            { "title": "One page per service.", "text": "Instead of “We do everything” on the homepage: dedicated subpages that each explain one service. Who it's for, what it is, how it works, roughly what it costs." },
+            { "title": "Answer real questions.", "text": "What do your customers ask on the phone? Those exact questions and answers belong on the website, ideally as an FAQ. That's the material AI answers are built from." },
+            { "title": "Add structured data.", "text": "With schema markup you tell machines explicitly who you are, where you're based and what you offer. Invisible to people, worth its weight in gold for search engines." },
+            { "title": "Fast and technically clean.", "text": "Content that only loads after three scripts and two animations is hard for crawlers to reach. Good loading times help people and machines alike." },
+            { "title": "Tell the same story everywhere.", "text": "Name, address, services and reviews should match across your website, Google Business Profile and business directories. AI doesn't just read your website, it reads everything about you online." }
+          ]
+        },
+        { "type": "heading", "text": "Conclusion: It can be beautiful. But it also has to be understood." },
+        { "type": "paragraph", "text": "A website today is no longer just a digital business card for people. It's a source of information for people, search engines and AI systems all at once. Funnily enough, that brings back what glitters least: good copy, clear knowledge, clean structure." },
+        { "type": "paragraph", "text": "Good design attracts, but good structure is what gets you found, understood and recommended in the first place. Ideally you have both. But without structure, the foundation is missing." },
+        { "type": "paragraph", "text": "So the question is no longer just “What does my website look like?” It's also: **“What does the AI see when it puts on the glasses?”**" }
+      ],
+      "cta": {
+        "title": "Curious what AI sees on your website?",
+        "text": "At VisionIT, I look at your website through both pairs of glasses – the human one and the machine one – and show you where it falls short.",
+        "primary": { "label": "Book a call", "href": "/#contact" },
+        "secondary": { "label": "Contact", "href": "mailto:office@vision-it.at" }
+      }
+    }
+  ]
+}

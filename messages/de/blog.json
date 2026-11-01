@@ -1,0 +1,160 @@
+{
+  "overview": {
+    "meta": {
+      "title": "Blog: Wissenswertes zu Websites & Apps",
+      "description": "Artikel von VisionIT aus Wien rund um Websites, Apps, Design, Technik und Sichtbarkeit im Netz."
+    },
+    "tag": "Blog",
+    "title": "Wissenswertes rund um Ihren digitalen Auftritt.",
+    "breadcrumbLabel": "Brotkrumen"
+  },
+  "section": {
+    "tag": "Blog",
+    "title": "Aktuelles zu SEO und GEO.",
+    "description": "Wie sich die Suche verändert und was das für Ihre Website bedeutet.",
+    "allPosts": "Alle Artikel"
+  },
+  "readMore": "Artikel lesen",
+  "posts": [
+    {
+      "slug": "ki-sichtbarkeit-website",
+      "publishedAt": "2026-11-01",
+      "dateLabel": "November 2026",
+      "readingTime": "ca. 7 Min. Lesezeit",
+      "categories": ["SEO", "GEO"],
+      "topic": "GEO & KI-Sichtbarkeit",
+      "title": "Ihre Website sieht super aus. Schade, dass die KI sie nicht versteht.",
+      "excerpt": "Was für Menschen beeindruckend aussieht, ist für eine Maschine oft ein Haufen Code. Und was eine KI nicht versteht, das empfiehlt sie auch nicht weiter.",
+      "lead": "Was für uns Menschen beeindruckend aussieht, ist für eine Maschine oft ein Haufen Code, aus dem sie kaum herauslesen kann, wer Sie sind, was Sie anbieten und für wen. Und was eine KI nicht versteht, das empfiehlt sie auch nicht weiter.",
+      "image": {
+        "src": "/images/blog/ki-brille.webp",
+        "alt": "Meme in vier Feldern: Ein Mann schaut ohne Brille auf eine schicke Website mit Berglandschaft. Mit aufgesetzter KI-Brille sieht er auf derselben Seite nur „404 – Nicht gefunden“: Inhalte nicht eindeutig erkennbar, wichtige Informationen fehlen, Struktur schwer verständlich, für KI schwer verwertbar.",
+        "width": 1080,
+        "height": 1080
+      },
+      "meta": {
+        "title": "Ihre Website und die KI: 7 Punkte für die KI-Brille",
+        "description": "Schönes Design reicht nicht mehr: Warum KI-Systeme viele Websites nicht verstehen und welche 7 Punkte Ihre Website für Suchmaschinen und KI lesbar machen."
+      },
+      "blocks": [
+        { "type": "heading", "text": "Das Missverständnis: „Hauptsache, sie sieht gut aus“" },
+        { "type": "paragraph", "text": "Gleich vorweg, damit mir keine Designerin böse ist: Schönes Design ist wichtig. Ich komme selbst aus Film, Animation und Design. Eine gute Gestaltung schafft Vertrauen, führt durch die Seite und macht Lust, sich zu melden." },
+        { "type": "paragraph", "text": "Das Problem ist ein anderes. Viele Unternehmen investieren fast ihr ganzes Website-Budget in den Teil, den man sieht. Und kaum etwas in den Teil, den Maschinen lesen: klare Texte, eine saubere Struktur, verständliche Unterseiten, technische Grundlagen." },
+        { "type": "statement", "text": "Für Menschen ==wow==. Für Suchmaschinen eher „??“" },
+        { "type": "paragraph", "text": "Das war schon immer ein Risiko. Aber bis vor Kurzem hatte man einen Trost: Wer einmal auf der Website gelandet ist, den überzeugt dann eben das Design. Genau dieser Trost bröckelt gerade." },
+        {
+          "type": "image",
+          "image": {
+            "src": "/images/blog/ki-brille.webp",
+            "alt": "Meme in vier Feldern: Ein Mann schaut ohne Brille auf eine schicke Website mit Berglandschaft. Mit aufgesetzter KI-Brille sieht er auf derselben Seite nur „404 – Nicht gefunden“: Inhalte nicht eindeutig erkennbar, wichtige Informationen fehlen, Struktur schwer verständlich, für KI schwer verwertbar.",
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        { "type": "heading", "text": "Früher musste man auf die Website. Heute nicht unbedingt." },
+        { "type": "paragraph", "text": "Kurze Frage: Wie haben Sie das letzte Mal ein Produkt oder einen Dienstleister gesucht?" },
+        {
+          "type": "options",
+          "items": [
+            { "label": "Variante A", "text": "Google aufmachen, die ersten fünf Treffer in Tabs öffnen, alle durchklicken, vergleichen, Kaffee holen, noch einmal vergleichen." },
+            { "label": "Variante B", "text": "ChatGPT, Gemini oder Claude fragen: „Welcher Anbieter in Wien passt für mich, und was unterscheidet die?“ Anschließend die Zusammenfassung lesen.", "highlighted": true },
+            { "label": "Variante C", "text": "Google fragen, die KI-Übersicht ganz oben lesen und … eigentlich reicht das schon.", "highlighted": true }
+          ]
+        },
+        { "type": "paragraph", "text": "Wenn Sie bei **B oder C** ehrlich genickt haben: Willkommen, Sie sind nicht allein." },
+        { "type": "paragraph", "text": "Genau hier liegt der eigentliche Wandel. Immer mehr Menschen lassen sich Informationen von einer KI zusammenstellen, Anbieter vergleichen und Fragen beantworten. Ein Teil der Entscheidung fällt damit, bevor überhaupt jemand auf Ihre Website klickt. Die Meinung bildet sich aus dem, was die KI über Sie weiß: Texte, Leistungsbeschreibungen, Bewertungen, Erfahrungen anderer." },
+        { "type": "paragraph", "text": "Und jetzt die unbequeme Konsequenz: Je mehr Vorauswahl außerhalb Ihrer Website passiert, desto weniger kann Ihr Design diese frühe Auswahl beeinflussen. **Die KI sieht Ihren Video-Header nicht. Sie liest Ihren Text. Wenn sie ihn findet.**" },
+        { "type": "heading", "text": "Das ist keine Theorie" },
+        { "type": "paragraph", "text": "Ein paar Zahlen aus Deutschland, Österreich und der Schweiz zeigen ziemlich deutlich, wohin die Reise geht." },
+        {
+          "type": "stats",
+          "label": "Zahlen aus Deutschland, Österreich und der Schweiz",
+          "sourceLabel": "Quelle",
+          "cards": [
+            {
+              "country": "Deutschland",
+              "value": "52 %",
+              "chartLabel": "Balkendiagramm: Nutzung von KI-Einkaufshilfen, September 2025 44 Prozent, Mai 2026 52 Prozent",
+              "bars": [
+                { "label": "September 2025", "value": "44 %", "percent": 44 },
+                { "label": "Mai 2026", "value": "52 %", "percent": 52, "current": true }
+              ],
+              "text": "nutzen KI-Einkaufshilfen. Im September 2025 waren es noch 44 %.",
+              "source": "Deloitte, „The State of Agentic Commerce in Europe“, 1.500 Befragte in Deutschland, Mai 2026",
+              "sourceUrl": "https://www.deloitte.com/de/de/about/press-room/jeder-zweite-in-europa-shoppt-mit-KI-untersuetzung.html"
+            },
+            {
+              "country": "Schweiz",
+              "value": "41,6 %",
+              "chartLabel": "Balkendiagramm: Chatbots anstelle von Google oder Bing, 2024 27,2 Prozent, 2026 41,6 Prozent",
+              "bars": [
+                { "label": "2024", "value": "27,2 %", "percent": 27.2 },
+                { "label": "2026", "value": "41,6 %", "percent": 41.6, "current": true }
+              ],
+              "text": "der Chatbot-Nutzenden verwenden diese anstelle von Google oder Bing. 2024 waren es noch 27,2 %.",
+              "source": "Comparis, Befragung von 1.035 Personen durch Innofact, März 2026",
+              "sourceUrl": "https://www.comparis.ch/publikationen/mitteilungen/2026/04/bereits-drei-viertel-der-bevoelkerung-nutzen-ki-helfer-wie-chatgpt-co-"
+            },
+            {
+              "country": "Österreich",
+              "value": "39 %",
+              "chartLabel": "Balkendiagramm: Nutzung generativer KI in Österreich, 2024 28 Prozent, 2025 39 Prozent",
+              "bars": [
+                { "label": "2024", "value": "28 %", "percent": 28 },
+                { "label": "2025", "value": "39 % (+11 Prozentpunkte)", "percent": 39, "current": true }
+              ],
+              "text": "der Bevölkerung nutzten 2025 generative KI – 11 Prozentpunkte mehr als 2024.",
+              "source": "Statistik Austria im Auftrag des OeAD, berichtet von vienna.at, Oktober 2026",
+              "sourceUrl": "https://www.vienna.at/vier-von-zehn-menschen-in-oesterreich-nutzen-ki/10524617"
+            }
+          ],
+          "note": {
+            "label": "Einordnung",
+            "paragraphs": [
+              "Die Zahlen stammen aus unterschiedlichen Studien mit unterschiedlichen Fragen und Zielgruppen. Direkt vergleichbar sind sie also nicht. Und sie bedeuten auch nicht, dass schon die Hälfte aller Kaufentscheidungen ohne Websitebesuch fällt. Aber die Richtung ist im gesamten DACH-Raum dieselbe: Menschen nutzen KI, und zwar zunehmend für Recherche und Einkauf.",
+              "Fairerweise: Suchmaschinen sind nicht tot. Sie bleiben laut [YouGov](https://yougov.com/de-de/artikel/55191-neue-studie-zur-web-suche-in-deutschland-ki-assistenten-sind-wichtiger-erganzender-suchkanal-doch-suchmaschinen-bleiben-fuhrend) der häufigste Startpunkt.\n\nJedoch hat der Weg zu den Unternehmen eine neue **Zwischenstation** bekommen."
+            ]
+          }
+        },
+        { "type": "statement", "text": "Denn Suchmaschinen lesen, statt zu schauen." },
+        { "type": "heading", "text": "Und jetzt kommen auch noch die KI-Agenten" },
+        { "type": "paragraph", "text": "Bis hierhin ging es um Menschen, die eine KI etwas fragen. Der nächste Schritt ist schon da: KI-Agenten, die selbst losgehen. Sie öffnen Websites, vergleichen Angebote, prüfen Öffnungszeiten oder Preise und bringen dem Menschen eine fertige Empfehlung zurück." },
+        { "type": "paragraph", "text": "So ein Agent ist im Grunde der ungeduldigste Besucher, den Ihre Website je hatte. Er bewundert keine Animation. Er wartet nicht auf ein Video. Er will in Sekunden wissen:" },
+        {
+          "type": "questions",
+          "items": [
+            "Wer ist dieses Unternehmen?",
+            "Was genau bietet es an – und für wen?",
+            "Wo, wann, zu welchen Bedingungen?",
+            "Warum sollte ich es empfehlen und nicht die Konkurrenz?"
+          ]
+        },
+        { "type": "paragraph", "text": "Findet er das klar formuliert und sauber strukturiert, landen Sie in der Antwort. Findet er es nicht, landet jemand anderes darin. Kein böser Wille, einfach Pragmatismus. Mit der KI-Brille gibt es nur zwei Zustände: **lesbar oder 404. Sozusagen.**" },
+        { "type": "heading", "text": "Was eine Website heute braucht:\n7 Punkte für die KI-Brille" },
+        { "type": "paragraph", "text": "Die gute Nachricht: Nichts davon verbietet schönes Design.\nEs braucht nur ein Fundament darunter." },
+        {
+          "type": "checklist",
+          "items": [
+            { "title": "Wichtige Inhalte als echten Text, nicht als Bild.", "text": "Leistungen, Preise, Öffnungszeiten, Standort gehören in lesbaren Text. Was nur in einer Grafik, einem Slider oder einem Video steckt, existiert für eine Maschine oft nicht." },
+            { "title": "Eine klare Überschriftenstruktur.", "text": "Eine H1 pro Seite, darunter logische H2 und H3. Wie ein Inhaltsverzeichnis, nicht wie ein Stilmittel für große Schrift." },
+            { "title": "Eine Seite pro Leistung.", "text": "Statt „Wir machen alles“ auf der Startseite: eigene Unterseiten, die jeweils eine Leistung erklären. Für wen, was, wie, was kostet es ungefähr." },
+            { "title": "Echte Fragen beantworten.", "text": "Was fragen Ihre Kunden und Kundinnen am Telefon? Genau diese Fragen und Antworten gehören auf die Website, gern als FAQ. Das ist das Material, aus dem KI-Antworten gebaut werden." },
+            { "title": "Strukturierte Daten einbauen.", "text": "Mit Schema-Markup sagen Sie Maschinen ausdrücklich, wer Sie sind, wo Sie sitzen und was Sie anbieten. Unsichtbar für Menschen, Gold wert für Suchmaschinen." },
+            { "title": "Schnell und technisch sauber.", "text": "Inhalte, die erst nach drei Skripten und zwei Animationen nachladen, sind für Crawler schwer erreichbar. Gute Ladezeiten helfen Menschen und Maschinen gleichermaßen." },
+            { "title": "Überall dieselbe Geschichte erzählen.", "text": "Name, Adresse, Leistungen und Bewertungen sollten auf Website, Google-Unternehmensprofil und Branchenverzeichnissen übereinstimmen. Die KI liest nämlich nicht nur Ihre Website, sondern alles, was über Sie im Netz steht." }
+          ]
+        },
+        { "type": "heading", "text": "Fazit: Schön darf sie sein. Verstanden werden muss sie aber auch." },
+        { "type": "paragraph", "text": "Eine Website ist heute nicht mehr nur eine digitale Visitenkarte für Menschen. Sie ist eine Informationsquelle für Menschen, Suchmaschinen und KI-Systeme zugleich. Lustigerweise wird damit wieder das wichtig, was am wenigsten glitzert: guter Text, klares Wissen, saubere Struktur." },
+        { "type": "paragraph", "text": "Gutes Design zieht an, aber eine gute Struktur sorgt dafür, dass man überhaupt gefunden, verstanden und weiterempfohlen wird. Ideal ist beides. Aber ohne Struktur fehlt das Fundament." },
+        { "type": "paragraph", "text": "Die Frage ist also nicht mehr nur: „Wie sieht meine Website aus?“ Sondern auch: **„Was sieht die KI, wenn sie die Brille aufsetzt?“**" }
+      ],
+      "cta": {
+        "title": "Neugierig, was die KI auf Ihrer Website sieht?",
+        "text": "Bei VisionIT schaue ich mir Ihre Website mit beiden Brillen an – der menschlichen und der maschinellen – und zeige Ihnen, wo es hakt.",
+        "primary": { "label": "Termin buchen", "href": "/#contact" },
+        "secondary": { "label": "Kontakt", "href": "mailto:office@vision-it.at" }
+      }
+    }
+  ]
+}

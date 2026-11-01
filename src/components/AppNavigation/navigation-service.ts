@@ -1,5 +1,20 @@
-import { HomePageData } from "@/app/[locale]/home/sections/data/types/home-types";
+import { HomePageData, MainNavigation } from "@/app/[locale]/home/sections/data/types/home-types";
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
+
+/**
+ * Items without a pageId link to their own page instead of a home section.
+ */
+export const isPageLink = (item: MainNavigation) => !item.pageId;
+
+export const isNavItemActive = (
+    item: MainNavigation,
+    activeSection: string,
+    pathname: string,
+    locale: string,
+) =>
+    isPageLink(item)
+        ? pathname.startsWith(`/${locale}${item.page}`)
+        : item.pageId.replace("#", "") === activeSection;
 
 export const navigate = (
     sectionId: string,

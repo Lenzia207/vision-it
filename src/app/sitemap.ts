@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { agenturenDetailUrl, baseUrl, briefingFormularUrl, caseStudiesUrl, caseStudySlugs, mobileAppDetailUrl, seoGeoDetailUrl, websiteDetailUrl } from './configs/configs';
+import { agenturenDetailUrl, baseUrl, blogSlugs, blogUrl, briefingFormularUrl, caseStudiesUrl, caseStudySlugs, mobileAppDetailUrl, seoGeoDetailUrl, websiteDetailUrl } from './configs/configs';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
@@ -197,6 +197,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
       },
     },
+    ...(['de', 'en'] as const).map((locale) => ({
+      url: `${baseUrl}/${locale}${blogUrl}/`,
+      lastModified,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+      alternates: {
+        languages: {
+          de: `${baseUrl}/de${blogUrl}/`,
+          en: `${baseUrl}/en${blogUrl}/`,
+        },
+      },
+    })),
+    ...blogSlugs.flatMap((slug) =>
+      (['de', 'en'] as const).map((locale) => ({
+        url: `${baseUrl}/${locale}${blogUrl}/${slug}/`,
+        lastModified,
+        changeFrequency: 'yearly' as const,
+        priority: 0.7,
+        alternates: {
+          languages: {
+            de: `${baseUrl}/de${blogUrl}/${slug}/`,
+            en: `${baseUrl}/en${blogUrl}/${slug}/`,
+          },
+        },
+      }))
+    ),
     ...caseStudySlugs.flatMap((slug) =>
       (['de', 'en'] as const).map((locale) => ({
         url: `${baseUrl}/${locale}${caseStudiesUrl}/${slug}`,

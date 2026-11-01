@@ -32,7 +32,7 @@ export default async function BlogPage(props: LocaleParams) {
               <div className="max-w-3xl flex flex-col gap-6 reveal-on-scroll">
                 <span className="section-tag">{overview.tag}</span>
                 <h1 className="text-display-2">{overview.title}</h1>
-                <p className="text-lg max-w-xl" style={{ color: "var(--text-300)" }}>{overview.description}</p>
+                
               </div>
             </div>
           </section>

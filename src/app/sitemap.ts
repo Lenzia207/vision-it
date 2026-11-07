@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { agenturenDetailUrl, baseUrl, blogSlugs, blogUrl, briefingFormularUrl, caseStudiesUrl, caseStudySlugs, mobileAppDetailUrl, seoGeoDetailUrl, websiteDetailUrl } from './configs/configs';
+import { agenturenDetailUrl, baseUrl, blogSlugs, blogUrl, briefingFormularUrl, caseStudiesUrl, caseStudySlugs, mobileAppDetailUrl, seoGeoDetailUrl, splitnPrivacyUrl, websiteDetailUrl } from './configs/configs';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
@@ -197,6 +197,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
       },
     },
+    ...(['de', 'en'] as const).map((locale) => ({
+      url: `${baseUrl}/${locale}${splitnPrivacyUrl}`,
+      lastModified,
+      changeFrequency: 'yearly' as const,
+      priority: 0.3,
+      alternates: {
+        languages: {
+          de: `${baseUrl}/de${splitnPrivacyUrl}`,
+          en: `${baseUrl}/en${splitnPrivacyUrl}`,
+        },
+      },
+    })),
     ...(['de', 'en'] as const).map((locale) => ({
       url: `${baseUrl}/${locale}${blogUrl}/`,
       lastModified,

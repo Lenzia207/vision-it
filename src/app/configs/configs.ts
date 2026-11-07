@@ -7,6 +7,7 @@ export const briefingFormularUrl = `/briefing-formular`;
 export const caseStudiesUrl = `/projekte`;
 export const caseStudySlugs = ["elektrochemie", "herzhirnhumor", "camp-currie", "pictolog", "splitn"] as const;
 export const splitnPrivacyUrl = `/app/splitn/datenschutz/`;
+export const splitnDeleteAccountUrl = `/app/splitn/konto-loeschen/`;
 export const blogUrl = `/blog`;
 export const blogSlugs = ["ki-sichtbarkeit-website"] as const;
 

@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { Link } from "@/app/i18n/routing";
 import { caseStudiesUrl } from "@/app/configs/configs";
 import Eyebrow from "../../home/sections/components/Eyebrow";
+import BalanceScale from "../../projekte/splitn/mockups/BalanceScale";
 import {
   AngebotMobileAppsApp,
   AngebotMobileAppsProjectsData,
@@ -50,22 +51,24 @@ function PictologPhone({ title }: { title: string }) {
 
 function SplitnPhone({ mock }: { mock: AngebotMobileAppsSplitnMock }) {
   return (
-    <div className={`w-[180px] h-[260px] bg-white border-[6px] border-b-0 border-[#181411] rounded-t-[30px] px-3.5 py-[18px] flex flex-col gap-2.5 box-border ${plusJakartaSans.className}`}>
-      <span className="text-[10px] font-bold tracking-[.08em] text-[#6E5C49]">{mock.balanceLabel}</span>
-      <span className="text-2xl font-extrabold text-[#9A6510]">{mock.balance}</span>
-      <div className="grid grid-cols-2 gap-1.5">
-        <span className="bg-[#F3EFEA] rounded-lg p-2 text-[9px] text-[#6E5C49]">
-          {mock.oweLabel}
-          <br />
-          <b className="text-[#181411] text-xs">{mock.owe}</b>
+    <div className={`w-[180px] h-[260px] bg-[#F8F7F6] border-[6px] border-b-0 border-[#181411] rounded-t-[30px] px-2.5 pt-4 flex flex-col gap-2 box-border overflow-hidden text-[#181411] ${plusJakartaSans.className}`}>
+      <div className="flex items-start justify-between gap-1.5">
+        <span className="flex flex-col min-w-0">
+          <span className="text-[11px] font-bold leading-tight truncate">{mock.greeting}</span>
+          <span className="text-[7px] text-[#8A8580] truncate">{mock.subtitle}</span>
         </span>
-        <span className="bg-[#F3EFEA] rounded-lg p-2 text-[9px] text-[#6E5C49]">
-          {mock.owedLabel}
-          <br />
-          <b className="text-[#181411] text-xs">{mock.owed}</b>
-        </span>
+        <span className="shrink-0 size-[22px] rounded-full bg-[#FDEBD3] border-2 border-[#F6D9AE]" />
       </div>
-      <span className="bg-[#EFAC39] text-[#181411] rounded-[10px] p-[9px] text-[11px] font-bold text-center">{mock.add}</span>
+
+      <div className="relative bg-white rounded-xl pt-2 pb-1 flex flex-col items-center overflow-hidden">
+        <span className="absolute -right-4 -top-4 size-10 rounded-full bg-[#FDF3E6]" />
+        <span className="absolute -left-4 -bottom-4 size-10 rounded-full bg-[#FDF3E6]" />
+        <span className="relative text-[6px] tracking-[.12em] text-[#8A8580]">{mock.balanceLabel}</span>
+        <span className="relative text-lg font-extrabold leading-tight text-[#0A8F7E]">{mock.balance}</span>
+        <BalanceScale oweLabel={mock.oweLabel} owedLabel={mock.owedLabel} className="relative w-28 h-auto" />
+      </div>
+
+      <span className="bg-[#EFAC39] text-white rounded-lg py-2 text-[10px] font-bold text-center">⊕ {mock.add}</span>
     </div>
   );
 }
@@ -98,7 +101,7 @@ function AppCard({
         <div aria-hidden="true">{phone}</div>
       </div>
       <div className="flex-1 flex flex-col gap-4 p-8">
-        <span className="font-mono text-[0.69rem] font-semibold uppercase tracking-[0.1em] bg-(--teal) text-white px-2.5 py-[5px] w-fit">
+        <span className="font-mono text-[0.69rem] font-semibold uppercase tracking-widest bg-(--teal) text-white px-2.5 py-[5px] w-fit">
           {app.badge}
         </span>
         <h3 className="m-0 font-mono text-[1.62rem] font-medium tracking-[-0.02em] text-(--teal)">{app.title}</h3>

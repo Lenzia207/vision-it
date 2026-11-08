@@ -110,12 +110,12 @@
           "Push · Login · DE / EN"
         ],
         "mock": {
+          "greeting": "Guten Morgen, Alex",
+          "subtitle": "Lass uns deine Ausgaben ordnen",
           "balanceLabel": "GESAMTSALDO",
-          "balance": "+ 42,50 €",
-          "oweLabel": "DU SCHULDEST",
-          "owe": "12,00 €",
-          "owedLabel": "DIR WIRD GESCHULDET",
-          "owed": "54,50 €",
+          "balance": "+ 545,00 €",
+          "oweLabel": "Du schuldest",
+          "owedLabel": "Du bekommst",
           "add": "Ausgabe hinzufügen"
         }
       },

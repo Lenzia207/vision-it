@@ -116,31 +116,44 @@ export interface SplitnCaseStudyData extends CaseStudyBase {
     titleStart: string;
     titleAccent: string;
     description: string;
-    /** Rendered once the app has a public store or waitlist link. */
-    storeCta?: string;
-    storeUrl?: string;
+    /** Store badges; each one becomes an external link once its url is set. */
+    stores: {
+      appStore: { url: string; alt: string };
+      googlePlay: { url: string; alt: string };
+    };
     detailsCta: string;
   };
   mock: {
-    greeting: string;
-    headline: string;
-    balanceLabel: string;
-    balance: string;
-    oweLabel: string;
-    owe: string;
-    owedLabel: string;
-    owed: string;
-    quickActions: string;
-    actions: string[];
-    groups: string;
-    groupName: string;
-    groupBalance: string;
-    expenseTitle: string;
-    expensePlaceholder: string;
-    expenseAmount: string;
-    splitWith: string;
-    splitOptions: string[];
-    save: string;
+    home: {
+      greeting: string;
+      subtitle: string;
+      balanceLabel: string;
+      balance: string;
+      oweLabel: string;
+      owedLabel: string;
+      quickActions: string;
+      add: string;
+      settleUp: string;
+      createGroup: string;
+      groups: string;
+      seeAll: string;
+      groupItems: { name: string; type: string; icon: "home" | "travel" }[];
+    };
+    group: {
+      title: string;
+      balance: string;
+      balanceLabel: string;
+      paid: string;
+      paidLabel: string;
+      total: string;
+      totalLabel: string;
+      settleAll: string;
+      membersLabel: string;
+      member: { name: string; detail: string; balance: string };
+      activityLabel: string;
+      pendingLabel: string;
+      activities: { title: string; detail: string; amount: string; positive?: boolean }[];
+    };
   };
   idea: CaseStudyIntro;
   splits: { title: string; items: { value: string; description: string }[] };

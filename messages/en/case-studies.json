@@ -224,28 +224,86 @@
         "titleStart": "Who owes whom? ",
         "titleAccent": "Sorted.",
         "description": "An app for couples, flatmates and groups of friends who shop and spend together – with fair splitting and clear balances. Idea, design, app and backend from a single source.",
+        "stores": {
+          "appStore": {
+            "url": "",
+            "alt": "Download on the App Store"
+          },
+          "googlePlay": {
+            "url": "",
+            "alt": "Get it on Google Play"
+          }
+        },
         "detailsCta": "How it works"
       },
       "mock": {
-        "greeting": "Good morning, Daniel",
-        "headline": "Let's sort out your expenses",
-        "balanceLabel": "TOTAL BALANCE",
-        "balance": "+ €42.50",
-        "oweLabel": "YOU OWE",
-        "owe": "€12.00",
-        "owedLabel": "YOU ARE OWED",
-        "owed": "€54.50",
-        "quickActions": "Quick actions",
-        "actions": ["Add expense", "Settle up", "Create group"],
-        "groups": "Your groups",
-        "groupName": "Flat groceries",
-        "groupBalance": "+ €18.20",
-        "expenseTitle": "What is this for?",
-        "expensePlaceholder": "Dinner, groceries, cinema…",
-        "expenseAmount": "€64.00",
-        "splitWith": "SPLIT WITH",
-        "splitOptions": ["50/50", "Full amount", "Percent", "Custom"],
-        "save": "Save expense"
+        "home": {
+          "greeting": "Good Morning, Alex",
+          "subtitle": "Let's sort out your expenses",
+          "balanceLabel": "TOTAL BALANCE",
+          "balance": "+ €545.00",
+          "oweLabel": "You owe",
+          "owedLabel": "You get",
+          "quickActions": "Quick Actions",
+          "add": "Add Expense",
+          "settleUp": "Settle Up",
+          "createGroup": "Create Group",
+          "groups": "Your Groups",
+          "seeAll": "See All",
+          "groupItems": [
+            {
+              "name": "Shared Home",
+              "type": "Home",
+              "icon": "home"
+            },
+            {
+              "name": "Barcelona Trip",
+              "type": "Holiday",
+              "icon": "travel"
+            }
+          ]
+        },
+        "group": {
+          "title": "Barcelona Trip",
+          "balance": "– €12.00",
+          "balanceLabel": "YOU NEED TO PAY",
+          "paid": "€272.00",
+          "paidLabel": "YOU PAID",
+          "total": "€558.00",
+          "totalLabel": "TOTAL",
+          "settleAll": "Settle Up All Debts",
+          "membersLabel": "Member Active Balances",
+          "member": {
+            "name": "Barbara",
+            "detail": "PAID IN TOTAL: €298.00",
+            "balance": "+ €12.00"
+          },
+          "activityLabel": "Recent Activity",
+          "pendingLabel": "PENDING",
+          "activities": [
+            {
+              "title": "Sagrada Família",
+              "detail": "Barbara paid €60.00",
+              "amount": "– €30.00"
+            },
+            {
+              "title": "Dinner",
+              "detail": "Barbara paid €49.00",
+              "amount": "– €35.00"
+            },
+            {
+              "title": "Apartment",
+              "detail": "You paid €240.00",
+              "amount": "+ €120.00",
+              "positive": true
+            },
+            {
+              "title": "Airport Taxi",
+              "detail": "Barbara paid €36.00",
+              "amount": "– €18.00"
+            }
+          ]
+        }
       },
       "facts": [
         { "label": "Project", "value": "Own app" },

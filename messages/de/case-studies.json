@@ -223,29 +223,87 @@
         "logoAlt": "splitn",
         "titleStart": "Wer schuldet wem? ",
         "titleAccent": "Geklärt.",
-        "description": "Eine App für Paare, WGs und Freundesgruppen, die gemeinsam einkaufen und ausgeben – mit fairer Aufteilung und klaren Salden. Idee, Design, App und Backend aus einer Hand.",
+        "description": "Eine App für Paare, WGs und Freundesgruppen, die gemeinsam einkaufen und ausgeben. Alles mit fairer Aufteilung und klaren Salden. Idee, Design, App und Backend aus einer Hand.",
+        "stores": {
+          "appStore": {
+            "url": "",
+            "alt": "Laden im App Store"
+          },
+          "googlePlay": {
+            "url": "",
+            "alt": "Jetzt bei Google Play"
+          }
+        },
         "detailsCta": "So funktioniert's"
       },
       "mock": {
-        "greeting": "Guten Morgen, Daniel",
-        "headline": "Lass uns deine Ausgaben klären",
-        "balanceLabel": "GESAMTSALDO",
-        "balance": "+ 42,50 €",
-        "oweLabel": "DU SCHULDEST",
-        "owe": "12,00 €",
-        "owedLabel": "DIR WIRD GESCHULDET",
-        "owed": "54,50 €",
-        "quickActions": "Schnellaktionen",
-        "actions": ["Ausgabe hinzufügen", "Abrechnen", "Gruppe erstellen"],
-        "groups": "Deine Gruppen",
-        "groupName": "WG Einkauf",
-        "groupBalance": "+ 18,20 €",
-        "expenseTitle": "Wofür ist das?",
-        "expensePlaceholder": "Abendessen, Einkäufe, Kino…",
-        "expenseAmount": "64,00 €",
-        "splitWith": "AUFTEILEN MIT",
-        "splitOptions": ["50/50", "Gesamtbetrag", "Prozent", "Individuell"],
-        "save": "Ausgabe speichern"
+        "home": {
+          "greeting": "Guten Morgen, Alex",
+          "subtitle": "Lass uns deine Ausgaben ordnen",
+          "balanceLabel": "GESAMTSALDO",
+          "balance": "+ 545,00 €",
+          "oweLabel": "Du schuldest",
+          "owedLabel": "Du bekommst",
+          "quickActions": "Schnellaktionen",
+          "add": "Ausgabe hinzufügen",
+          "settleUp": "Abrechnen",
+          "createGroup": "Gruppe erstellen",
+          "groups": "Deine Gruppen",
+          "seeAll": "Alle",
+          "groupItems": [
+            {
+              "name": "WG Einkauf",
+              "type": "Zuhause",
+              "icon": "home"
+            },
+            {
+              "name": "Barcelona Trip",
+              "type": "Urlaub",
+              "icon": "travel"
+            }
+          ]
+        },
+        "group": {
+          "title": "Barcelona Trip",
+          "balance": "– 12,00 €",
+          "balanceLabel": "DU MUSST ZAHLEN",
+          "paid": "272,00 €",
+          "paidLabel": "DU HAST BEZAHLT",
+          "total": "558,00 €",
+          "totalLabel": "GESAMT",
+          "settleAll": "Alle Schulden begleichen",
+          "membersLabel": "Aktive Salden",
+          "member": {
+            "name": "Barbara",
+            "detail": "GESAMT BEZAHLT: 298,00 €",
+            "balance": "+ 12,00 €"
+          },
+          "activityLabel": "Letzte Aktivitäten",
+          "pendingLabel": "OFFEN",
+          "activities": [
+            {
+              "title": "Sagrada Família",
+              "detail": "Barbara hat 60,00 € bezahlt",
+              "amount": "– 30,00 €"
+            },
+            {
+              "title": "Abendessen",
+              "detail": "Barbara hat 49,00 € bezahlt",
+              "amount": "– 35,00 €"
+            },
+            {
+              "title": "Apartment",
+              "detail": "Du hast 240,00 € bezahlt",
+              "amount": "+ 120,00 €",
+              "positive": true
+            },
+            {
+              "title": "Flughafen-Taxi",
+              "detail": "Barbara hat 36,00 € bezahlt",
+              "amount": "– 18,00 €"
+            }
+          ]
+        }
       },
       "facts": [
         { "label": "Projekt", "value": "Eigene App" },

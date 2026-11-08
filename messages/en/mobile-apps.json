@@ -110,12 +110,12 @@
           "Push · Login · DE / EN"
         ],
         "mock": {
+          "greeting": "Good Morning, Alex",
+          "subtitle": "Let's sort out your expenses",
           "balanceLabel": "TOTAL BALANCE",
-          "balance": "+ €42.50",
-          "oweLabel": "YOU OWE",
-          "owe": "€12.00",
-          "owedLabel": "YOU ARE OWED",
-          "owed": "€54.50",
+          "balance": "+ €545.00",
+          "oweLabel": "You owe",
+          "owedLabel": "You get",
           "add": "Add expense"
         }
       },

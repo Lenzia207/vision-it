@@ -69,12 +69,12 @@ export interface AngebotMobileAppsApp {
 }
 
 export interface AngebotMobileAppsSplitnMock {
+  greeting: string;
+  subtitle: string;
   balanceLabel: string;
   balance: string;
   oweLabel: string;
-  owe: string;
   owedLabel: string;
-  owed: string;
   add: string;
 }
 

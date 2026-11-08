@@ -86,7 +86,8 @@
             }
         ],
         "referencesLabel": "Referenz-Websites:",
-        "styleLabel": "Stilwunsch: modern-minimalistisch / corporate / kreativ / ___"
+        "styleLabel": "Stilwunsch: modern-minimalistisch / corporate / kreativ / ___",
+        "stylePlaceholder": "modern-minimalistisch / corporate / kreativ / ..."
     },
     "section3": {
         "title": "3. Inhalte & Texte",
@@ -108,7 +109,8 @@
                 "label": "Stock-Fotos benötigt"
             }
         ],
-        "pagesLabel": "Benötigte Seiten: Startseite / Über uns / Leistungen / Kontakt / Blog / Impressum / ___"
+        "pagesLabel": "Benötigte Seiten: Startseite / Über uns / Leistungen / Kontakt / Blog / Impressum / ___",
+        "pagesPlaceholder": "Startseite / Über uns / ..."
     },
     "section4": {
         "title": "4. Funktionen & Integrationen",
@@ -206,7 +208,8 @@
                 "label": "Inhalte der alten Website sollen übernommen werden"
             }
         ],
-        "accessesLabel": "Bereitzustellende Zugänge: Domain-Verwaltung / Hosting / Google Analytics / CMS / ___"
+        "accessesLabel": "Bereitzustellende Zugänge: Domain-Verwaltung / Hosting / Google Analytics / CMS / ___",
+        "accessesPlaceholder": "Domain / Hosting / CMS / ..."
     },
     "section7": {
         "title": "7. SEO & Marketing",
@@ -381,6 +384,7 @@
             }
         ],
         "multipleStakeholders": "Mehrere Ansprechpersonen / Entscheidungsträger",
-        "availabilityLabel": "Verfügbarkeit für Feedback:"
+        "availabilityLabel": "Verfügbarkeit für Feedback:",
+        "availabilityPlaceholder": "z.B. Mo–Fr 09:00–17:00"
     }
 }

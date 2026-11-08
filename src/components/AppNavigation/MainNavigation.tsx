@@ -8,6 +8,9 @@ import { MouseEvent, useCallback, useEffect, useState } from "react";
 import { checkSectionLocation, createScrollVisibilityHandler, isNavItemActive, isPageLink, navigate, setItemActive } from "./navigation-service";
 import MobileNavigation from "./MobileNavigation";
 import LanguageSwitcher from "../LanguageSwitcher";
+import MenuToggleButton from "./MenuToggleButton";
+import ServicesSubmenu from "./ServicesSubmenu";
+import { useEscapeKey } from "./use-escape-key";
 
 interface MainNavigationProps {
   data: HomePageData;
@@ -44,14 +47,6 @@ export default function MainNavigation({ data, locale }: MainNavigationProps) {
     return () => mq.removeEventListener("change", onChange);
   }, []);
 
-  // Close the services dropdown on Escape.
-  useEffect(() => {
-    if (!submenuOpen) return;
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setSubmenuOpen(false);
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [submenuOpen]);
-
   const handleNavigate = useCallback(
     (e: MouseEvent<HTMLAnchorElement>, pageId: string) => {
       e.preventDefault();
@@ -64,6 +59,7 @@ export default function MainNavigation({ data, locale }: MainNavigationProps) {
 
   const closeMenu = useCallback(() => setMenuOpen(false), []);
   const closeSubmenu = useCallback(() => setSubmenuOpen(false), []);
+  useEscapeKey(submenuOpen, closeSubmenu);
   const solid = scrolled || menuOpen || submenuOpen;
 
   return (
@@ -155,65 +151,17 @@ export default function MainNavigation({ data, locale }: MainNavigationProps) {
             </a>
           </nav>
 
-          <button
-            type="button"
-            onClick={() => setMenuOpen((open) => !open)}
-            aria-expanded={menuOpen}
-            aria-controls="mobile-navigation"
-            aria-label={menuOpen ? labels.closeMenu : labels.openMenu}
-            className="min-[1060px]:hidden flex items-center gap-3 min-h-11 px-1 py-2 bg-transparent border-0 cursor-pointer text-white font-mono text-[11px] font-semibold uppercase tracking-[0.16em]"
-          >
-            <span>{menuOpen ? labels.close : labels.menu}</span>
-            <span aria-hidden="true" className="relative block w-[26px] h-3.5">
-              <span
-                className={`absolute left-0 top-0.5 w-[26px] h-0.5 bg-white transition-transform duration-300 ${
-                  menuOpen ? "translate-y-1 rotate-45" : ""
-                }`}
-              />
-              <span
-                className={`absolute right-0 top-2.5 h-0.5 bg-(--lime) transition-[transform,width] duration-300 ${
-                  menuOpen ? "w-[26px] -translate-y-1 -rotate-45" : "w-[18px]"
-                }`}
-              />
-            </span>
-          </button>
+          <MenuToggleButton
+            open={menuOpen}
+            controls="mobile-navigation"
+            label={menuOpen ? labels.closeMenu : labels.openMenu}
+            text={menuOpen ? labels.close : labels.menu}
+            onToggle={() => setMenuOpen((open) => !open)}
+          />
         </div>
 
         {submenuOpen && submenuItem && (
-          <div id="services-submenu" className="hidden min-[1060px]:block border-t border-white/10">
-            <div className="max-w-[1320px] mx-auto grid grid-cols-[280px_1fr] gap-12 px-[clamp(20px,4vw,48px)] pt-8 pb-10">
-              <div className="flex flex-col gap-2.5">
-                <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.16em] text-(--lime)">
-                  {submenuItem.name}
-                </span>
-                {submenuItem.submenuDescription && (
-                  <p className="m-0 text-sm leading-relaxed text-[#C7D9D8]">{submenuItem.submenuDescription}</p>
-                )}
-              </div>
-              <ul className="m-0 p-0 list-none grid grid-cols-2 gap-x-8">
-                {serviceCards.map((card, i) => (
-                  <li key={card.key}>
-                    <Link
-                      href={`/${card.link}`}
-                      locale={locale}
-                      onClick={closeSubmenu}
-                      className="group h-full grid grid-cols-[28px_minmax(0,1fr)] items-baseline content-start gap-3 px-4 -mx-4 py-3.5 border-b border-white/8 no-underline transition-colors hover:bg-white/5"
-                    >
-                      <span className="font-mono text-[11px] font-semibold tracking-[0.08em] text-[#9DB3B2]">
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
-                      <span className="flex flex-col gap-1">
-                        <span className="font-mono text-[15px] font-medium text-white transition-colors group-hover:text-(--lime)">
-                          {card.title}
-                        </span>
-                        <span className="text-[13px] leading-normal text-[#9DB3B2]">{card.items.slice(0, 3).join(" · ")}</span>
-                      </span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+          <ServicesSubmenu id="services-submenu" item={submenuItem} serviceCards={serviceCards} locale={locale} onClose={closeSubmenu} />
         )}
       </header>
 

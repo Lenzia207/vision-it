@@ -1,265 +1,45 @@
 import { MetadataRoute } from 'next';
 import { agenturenDetailUrl, baseUrl, blogSlugs, blogUrl, briefingFormularUrl, caseStudiesUrl, caseStudySlugs, mobileAppDetailUrl, seoGeoDetailUrl, splitnDeleteAccountUrl, splitnPrivacyUrl, websiteDetailUrl } from './configs/configs';
 
+type SitemapEntry = MetadataRoute.Sitemap[number];
+type ChangeFrequency = NonNullable<SitemapEntry['changeFrequency']>;
+
+const locales = ['de', 'en'] as const;
+
+/** Every indexed page: its locale-independent path, how often it changes and its priority. */
+const routes: { path: string; changeFrequency: ChangeFrequency; priority: number }[] = [
+  { path: '/', changeFrequency: 'monthly', priority: 1 },
+  { path: '/impressum/', changeFrequency: 'yearly', priority: 0.3 },
+  { path: '/datenschutz/', changeFrequency: 'yearly', priority: 0.3 },
+  { path: briefingFormularUrl, changeFrequency: 'monthly', priority: 0.8 },
+  { path: seoGeoDetailUrl, changeFrequency: 'monthly', priority: 0.9 },
+  { path: mobileAppDetailUrl, changeFrequency: 'monthly', priority: 0.9 },
+  { path: agenturenDetailUrl, changeFrequency: 'monthly', priority: 0.9 },
+  { path: websiteDetailUrl, changeFrequency: 'monthly', priority: 0.9 },
+  { path: splitnPrivacyUrl, changeFrequency: 'yearly', priority: 0.3 },
+  { path: splitnDeleteAccountUrl, changeFrequency: 'yearly', priority: 0.3 },
+  { path: `${blogUrl}/`, changeFrequency: 'weekly', priority: 0.8 },
+  ...blogSlugs.map((slug) => ({ path: `${blogUrl}/${slug}/`, changeFrequency: 'yearly' as const, priority: 0.7 })),
+  ...caseStudySlugs.map((slug) => ({ path: `${caseStudiesUrl}/${slug}`, changeFrequency: 'yearly' as const, priority: 0.7 })),
+];
+
+/** One entry per locale, each linking to all language versions of the page. */
+function localizedEntries(path: string, changeFrequency: ChangeFrequency, priority: number, lastModified: Date): SitemapEntry[] {
+  return locales.map((locale) => ({
+    url: `${baseUrl}/${locale}${path}`,
+    lastModified,
+    changeFrequency,
+    priority,
+    alternates: {
+      languages: {
+        de: `${baseUrl}/de${path}`,
+        en: `${baseUrl}/en${path}`,
+      },
+    },
+  }));
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
-
-  return [
-    {
-      url: `${baseUrl}/de/`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 1,
-      alternates: {
-        languages: {
-          de: `${baseUrl}/de/`,
-          en: `${baseUrl}/en/`,
-        },
-      },
-    },
-    {
-      url: `${baseUrl}/en/`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 1,
-      alternates: {
-        languages: {
-          de: `${baseUrl}/de/`,
-          en: `${baseUrl}/en/`,
-        },
-      },
-    },
-    {
-      url: `${baseUrl}/de/impressum/`,
-      lastModified,
-      changeFrequency: 'yearly',
-      priority: 0.3,
-      alternates: {
-        languages: {
-          de: `${baseUrl}/de/impressum/`,
-          en: `${baseUrl}/en/impressum/`,
-        },
-      },
-    },
-    {
-      url: `${baseUrl}/en/impressum/`,
-      lastModified,
-      changeFrequency: 'yearly',
-      priority: 0.3,
-      alternates: {
-        languages: {
-          de: `${baseUrl}/de/impressum/`,
-          en: `${baseUrl}/en/impressum/`,
-        },
-      },
-    },
-    {
-      url: `${baseUrl}/de/datenschutz/`,
-      lastModified,
-      changeFrequency: 'yearly',
-      priority: 0.3,
-      alternates: {
-        languages: {
-          de: `${baseUrl}/de/datenschutz/`,
-          en: `${baseUrl}/en/datenschutz/`,
-        },
-      },
-    },
-    {
-      url: `${baseUrl}/en/datenschutz/`,
-      lastModified,
-      changeFrequency: 'yearly',
-      priority: 0.3,
-      alternates: {
-        languages: {
-          de: `${baseUrl}/de/datenschutz/`,
-          en: `${baseUrl}/en/datenschutz/`,
-        },
-      },
-    },
-    {
-      url: `${baseUrl}/de${briefingFormularUrl}`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-      alternates: {
-        languages: {
-          de: `${baseUrl}/de${briefingFormularUrl}`,
-          en: `${baseUrl}/en${briefingFormularUrl}`,
-        },
-      },
-    },
-    {
-      url: `${baseUrl}/en${briefingFormularUrl}`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-      alternates: {
-        languages: {
-          de: `${baseUrl}/de${briefingFormularUrl}`,
-          en: `${baseUrl}/en${briefingFormularUrl}`,
-        },
-      },
-    },
-    {
-      url: `${baseUrl}/de${seoGeoDetailUrl}`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-      alternates: {
-        languages: {
-          de: `${baseUrl}/de${seoGeoDetailUrl}`,
-          en: `${baseUrl}/en${seoGeoDetailUrl}`,
-        },
-      },
-    },
-    {
-      url: `${baseUrl}/en${seoGeoDetailUrl}`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-      alternates: {
-        languages: {
-          de: `${baseUrl}/de${seoGeoDetailUrl}`,
-          en: `${baseUrl}/en${seoGeoDetailUrl}`,
-        },
-      },
-    },
-    {
-      url: `${baseUrl}/de${mobileAppDetailUrl}`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-      alternates: {
-        languages: {
-          de: `${baseUrl}/de${mobileAppDetailUrl}`,
-          en: `${baseUrl}/en${mobileAppDetailUrl}`,
-        },
-      },
-    },
-    {
-      url: `${baseUrl}/en${mobileAppDetailUrl}`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-      alternates: {
-        languages: {
-          de: `${baseUrl}/de${mobileAppDetailUrl}`,
-          en: `${baseUrl}/en${mobileAppDetailUrl}`,
-        },
-      },
-    },
-    {
-      url: `${baseUrl}/de${agenturenDetailUrl}`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-      alternates: {
-        languages: {
-          de: `${baseUrl}/de${agenturenDetailUrl}`,
-          en: `${baseUrl}/en${agenturenDetailUrl}`,
-        },
-      },
-    },
-    {
-      url: `${baseUrl}/en${agenturenDetailUrl}`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-      alternates: {
-        languages: {
-          de: `${baseUrl}/de${agenturenDetailUrl}`,
-          en: `${baseUrl}/en${agenturenDetailUrl}`,
-        },
-      },
-    },
-    {
-      url: `${baseUrl}/de${websiteDetailUrl}`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-      alternates: {
-        languages: {
-          de: `${baseUrl}/de${websiteDetailUrl}`,
-          en: `${baseUrl}/en${websiteDetailUrl}`,
-        },
-      },
-    },
-    {
-      url: `${baseUrl}/en${websiteDetailUrl}`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-      alternates: {
-        languages: {
-          de: `${baseUrl}/de${websiteDetailUrl}`,
-          en: `${baseUrl}/en${websiteDetailUrl}`,
-        },
-      },
-    },
-    ...(['de', 'en'] as const).map((locale) => ({
-      url: `${baseUrl}/${locale}${splitnPrivacyUrl}`,
-      lastModified,
-      changeFrequency: 'yearly' as const,
-      priority: 0.3,
-      alternates: {
-        languages: {
-          de: `${baseUrl}/de${splitnPrivacyUrl}`,
-          en: `${baseUrl}/en${splitnPrivacyUrl}`,
-        },
-      },
-    })),
-    ...(['de', 'en'] as const).map((locale) => ({
-      url: `${baseUrl}/${locale}${splitnDeleteAccountUrl}`,
-      lastModified,
-      changeFrequency: 'yearly' as const,
-      priority: 0.3,
-      alternates: {
-        languages: {
-          de: `${baseUrl}/de${splitnDeleteAccountUrl}`,
-          en: `${baseUrl}/en${splitnDeleteAccountUrl}`,
-        },
-      },
-    })),
-    ...(['de', 'en'] as const).map((locale) => ({
-      url: `${baseUrl}/${locale}${blogUrl}/`,
-      lastModified,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-      alternates: {
-        languages: {
-          de: `${baseUrl}/de${blogUrl}/`,
-          en: `${baseUrl}/en${blogUrl}/`,
-        },
-      },
-    })),
-    ...blogSlugs.flatMap((slug) =>
-      (['de', 'en'] as const).map((locale) => ({
-        url: `${baseUrl}/${locale}${blogUrl}/${slug}/`,
-        lastModified,
-        changeFrequency: 'yearly' as const,
-        priority: 0.7,
-        alternates: {
-          languages: {
-            de: `${baseUrl}/de${blogUrl}/${slug}/`,
-            en: `${baseUrl}/en${blogUrl}/${slug}/`,
-          },
-        },
-      }))
-    ),
-    ...caseStudySlugs.flatMap((slug) =>
-      (['de', 'en'] as const).map((locale) => ({
-        url: `${baseUrl}/${locale}${caseStudiesUrl}/${slug}`,
-        lastModified,
-        changeFrequency: 'yearly' as const,
-        priority: 0.7,
-        alternates: {
-          languages: {
-            de: `${baseUrl}/de${caseStudiesUrl}/${slug}`,
-            en: `${baseUrl}/en${caseStudiesUrl}/${slug}`,
-          },
-        },
-      }))
-    ),
-  ];
+  return routes.flatMap(({ path, changeFrequency, priority }) => localizedEntries(path, changeFrequency, priority, lastModified));
 }

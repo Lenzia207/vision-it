@@ -1,70 +1,9 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import Script from "next/script";
-import localFont from "next/font/local";
 import "../globals.css";
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "ProfessionalService",
-      "@id": "https://vision-it.at/#business",
-      name: "VisionIT",
-      alternateName: "VisionIT Wien",
-      url: "https://vision-it.at/",
-      email: "office@vision-it.at",
-      sameAs: [
-        "https://www.linkedin.com/in/lena-z-230b01176",
-        "https://github.com/Lenzia207",
-      ],
-
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Zuckerkandlgasse 48/2",
-        addressLocality: "Wien",
-        postalCode: "1190",
-        addressCountry: "AT",
-      },
-
-      areaServed: {
-        "@type": "City",
-        name: "Wien",
-      },
-
-      founder: {
-        "@type": "Person",
-        name: "Lena Zyadeh",
-      },
-    },
-
-    {
-      "@type": "WebSite",
-      "@id": "https://vision-it.at/#website",
-      url: "https://vision-it.at/",
-      name: "VisionIT",
-      alternateName: "VisionIT Wien",
-      publisher: {
-        "@id": "https://vision-it.at/#business",
-      },
-      inLanguage: ["de", "en"],
-    },
-  ],
-};
-
-const manrope = localFont({
-  src: "../../fonts/manrope.woff2",
-  weight: "400 700",
-  variable: "--font-manrope",
-  display: "swap",
-});
-
-const spaceGrotesk = localFont({
-  src: "../../fonts/space-grotesk.woff2",
-  weight: "400 700",
-  variable: "--font-space-grotesk",
-  display: "swap",
-});
+import { organizationJsonLd } from "../configs/structured-data";
+import { manrope, spaceGrotesk } from "./site-fonts";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://vision-it.at"),
@@ -113,7 +52,7 @@ export default async function LocaleLayout({
         <Script
           id="json-ld-org"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
 
         <NextIntlClientProvider>{children}</NextIntlClientProvider>

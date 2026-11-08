@@ -42,14 +42,11 @@ export const checkSectionLocation = (isHomePage: boolean) => {
 };
 
 /**
- * Returns an onScroll handler that hides the nav when scrolling down
- * and shows it when scrolling up or near the top.
- *
- * Uses a ref for lastY to avoid stale closures — safe to use with an
- * empty dependency array.
+ * Subscribes to scroll and reports whether the page has scrolled past the top,
+ * so the header can switch to its solid background. Returns the cleanup.
  *
  * @example
- * useEffect(() => createScrollVisibilityHandler(lastYRef, setVisible), []);
+ * useEffect(() => createScrollVisibilityHandler(setScrolled), []);
  */
 export const createScrollVisibilityHandler = (
     setScrolled: React.Dispatch<React.SetStateAction<boolean>>

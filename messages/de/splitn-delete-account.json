@@ -1,0 +1,43 @@
+{
+    "meta": {
+        "title": "Splitn – Konto löschen",
+        "description": "So löschen Sie Ihr Splitn-Konto und welche Daten dabei gelöscht oder aufbewahrt werden."
+    },
+    "title": "Splitn – Konto löschen",
+    "intro": "Auf dieser Seite erfahren Sie, wie Sie Ihr Konto in der App {app} von VisionIT löschen und welche Daten dabei gelöscht oder aufbewahrt werden.",
+    "inApp": {
+        "title": "Option 1: Direkt in der App",
+        "steps": [
+            "Öffnen Sie Splitn und melden Sie sich an.",
+            "Tippen Sie auf der Startseite oben rechts auf Ihr Profilbild.",
+            "Scrollen Sie auf der Kontoseite ganz nach unten und tippen Sie auf „Account löschen“.",
+            "Bestätigen Sie mit „Account löschen“."
+        ],
+        "note": "Ihr Konto wird sofort gelöscht. Dieser Schritt kann nicht rückgängig gemacht werden."
+    },
+    "byEmail": {
+        "title": "Option 2: Per E-Mail",
+        "text": "Wenn Sie keinen Zugriff mehr auf die App haben, schreiben Sie an {mail} mit dem Betreff „Splitn – Konto löschen“. Senden Sie die E-Mail bitte von der Adresse, mit der Sie bei Splitn registriert sind, oder nennen Sie Ihren Benutzernamen. Wir löschen Ihr Konto innerhalb von 30 Tagen und bestätigen Ihnen die Löschung per E-Mail."
+    },
+    "deleted": {
+        "title": "Welche Daten gelöscht werden",
+        "items": [
+            "E-Mail-Adresse, Benutzername, Nachname, Telefonnummer und Profilbild",
+            "Passwort, Google-Anmeldedaten und alle Anmelde-Sitzungen",
+            "Geräte-Token für Push-Benachrichtigungen",
+            "Ihre Liste blockierter Nutzer",
+            "Offene Ausgleichsanfragen, an denen Sie beteiligt sind (sie werden abgelehnt)",
+            "Gruppen, in denen nach Ihrer Löschung kein aktives Mitglied mehr ist, samt allen Ausgaben"
+        ],
+        "note": "Eine Anmeldung mit dem gelöschten Konto ist danach nicht mehr möglich."
+    },
+    "kept": {
+        "title": "Welche Daten erhalten bleiben",
+        "text": "In Gruppen, in denen noch andere Mitglieder aktiv sind, bleiben Ihr Vorname (bzw. Benutzername) mit dem Zusatz „(gelöscht)“ sowie Ihre Ausgaben und Ausgleichszahlungen erhalten. Ohne diese Angaben wären die Abrechnungen und Salden der anderen Mitglieder falsch. Diese Daten bleiben so lange bestehen wie die jeweilige Gruppe und werden gelöscht, sobald die Gruppe kein aktives Mitglied mehr hat."
+    },
+    "more": {
+        "title": "Weitere Informationen",
+        "text": "Details zur Verarbeitung Ihrer Daten finden Sie in der {privacyLink}. Bei Fragen erreichen Sie uns unter {mail}.",
+        "privacyLinkText": "Datenschutzerklärung von Splitn"
+    }
+}

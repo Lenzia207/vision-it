@@ -2,7 +2,8 @@ export const runtime = "nodejs";
 
 import { NextResponse } from 'next/server';
 import { getOwnerNotificationEmail, getCustomerConfirmationEmail } from './email-format';
-import { emailRegex, transporter } from './utils';
+import { transporter } from '../_shared/mailer';
+import { parseContactPayload } from './validation';
 
 export async function POST(request: Request) {
   // basic size limit
@@ -18,34 +19,12 @@ export async function POST(request: Request) {
     return NextResponse.json({ success: false, error: 'Invalid JSON' }, { status: 400 });
   }
 
-  const payload = (body && typeof body === 'object' ? body : {}) as {
-    name?: unknown;
-    company?: unknown;
-    email?: unknown;
-    message?: unknown;
-    recaptchaToken?: unknown;
-    locale?: unknown;
-    privacyAccepted?: unknown;
-    interests?: unknown;
-    selectedPackage?: unknown;
-    selectedServices?: unknown;
-  };
-
-  const { name, company, email, message, locale, privacyAccepted, interests, selectedPackage, selectedServices } = payload;
-  if (!name || !email || !message || typeof name !== 'string' || typeof email !== 'string' || typeof message !== 'string') {
-    return NextResponse.json({ success: false, error: 'Invalid  input' }, { status: 400 });
+  const result = parseContactPayload(body);
+  if ('error' in result) {
+    return NextResponse.json({ success: false, error: result.error }, { status: result.status });
   }
-  if (message.length > 5000) {
-    return NextResponse.json({ success: false, error: 'Message too long' }, { status: 413 });
-  }
-
-  if (!emailRegex.test(email)) {
-    return NextResponse.json({ success: false, error: 'Invalid email format' }, { status: 400 });
-  }
-
-  if (privacyAccepted !== true) {
-    return NextResponse.json({ success: false, error: 'Privacy policy not accepted' }, { status: 400 });
-  }
+  const { data: contactData, locale } = result;
+  const { email } = contactData;
 
   // optional reCAPTCHA verification
   // if (process.env.RECAPTCHA_SECRET && recaptchaToken) {
@@ -67,17 +46,8 @@ export async function POST(request: Request) {
 
 
   try {
-    const contactData = {
-      name,
-      company: typeof company === 'string' ? company : undefined,
-      email,
-      message,
-      interests: Array.isArray(interests) ? interests.filter((i): i is string => typeof i === 'string') : undefined,
-      selectedPackage: typeof selectedPackage === 'string' ? selectedPackage : null,
-      selectedServices: Array.isArray(selectedServices) ? selectedServices.filter((s): s is string => typeof s === 'string') : undefined,
-    };
     const ownerEmail = getOwnerNotificationEmail(contactData);
-    const customerEmail = getCustomerConfirmationEmail(contactData, typeof locale === 'string' ? locale : 'de');
+    const customerEmail = getCustomerConfirmationEmail(contactData, locale);
 
     // Send email to site owner (me)
     await transporter.sendMail({

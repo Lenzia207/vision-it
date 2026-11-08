@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { Link } from "@/app/i18n/routing";
 import LanguageSwitcher from "../LanguageSwitcher";
 import { isNavItemActive, isPageLink } from "./navigation-service";
+import { useEscapeKey } from "./use-escape-key";
 import {
   MainNavigation as MainNavigationItem,
   NavigationLabels,
@@ -40,17 +41,16 @@ export default function MobileNavigation({
 }: MobileNavigationProps) {
   const pathname = usePathname();
 
-  // Lock body scroll and allow Escape to close while open
+  useEscapeKey(open, onClose);
+
+  // Lock body scroll while open
   useEffect(() => {
     if (!open) return;
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
     document.body.style.overflow = "hidden";
-    window.addEventListener("keydown", onKey);
     return () => {
       document.body.style.overflow = "";
-      window.removeEventListener("keydown", onKey);
     };
-  }, [open, onClose]);
+  }, [open]);
 
   if (!open) return null;
 

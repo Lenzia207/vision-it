@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import { SplitnCaseStudyData } from "../../data/case-studies-types";
-import { overline, sectionX } from "../splitn-styles";
+import { caseStudySectionX as sectionX } from "../../components/case-study-styles";
+import { overline } from "../splitn-styles";
 
 interface SplitnFeaturesSectionProps {
   features: SplitnCaseStudyData["features"];

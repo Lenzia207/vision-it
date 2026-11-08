@@ -86,7 +86,8 @@
             }
         ],
         "referencesLabel": "Reference websites:",
-        "styleLabel": "Style preference: modern-minimalist / corporate / creative / ___"
+        "styleLabel": "Style preference: modern-minimalist / corporate / creative / ___",
+        "stylePlaceholder": "modern-minimalist / corporate / creative / ..."
     },
     "section3": {
         "title": "3. Content & Texts",
@@ -108,7 +109,8 @@
                 "label": "Stock photos needed"
             }
         ],
-        "pagesLabel": "Required pages: Home / About / Services / Contact / Blog / Imprint / ___"
+        "pagesLabel": "Required pages: Home / About / Services / Contact / Blog / Imprint / ___",
+        "pagesPlaceholder": "Home / About / ..."
     },
     "section4": {
         "title": "4. Features & Integrations",
@@ -206,7 +208,8 @@
                 "label": "Content from old website should be migrated"
             }
         ],
-        "accessesLabel": "Accesses to provide: Domain management / Hosting / Google Analytics / CMS / ___"
+        "accessesLabel": "Accesses to provide: Domain management / Hosting / Google Analytics / CMS / ___",
+        "accessesPlaceholder": "Domain / Hosting / CMS / ..."
     },
     "section7": {
         "title": "7. SEO & Marketing",
@@ -381,6 +384,7 @@
             }
         ],
         "multipleStakeholders": "Multiple contact persons / decision makers",
-        "availabilityLabel": "Availability for feedback:"
+        "availabilityLabel": "Availability for feedback:",
+        "availabilityPlaceholder": "e.g. Mon–Fri 9 am–5 pm"
     }
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import PageWrapper from "@/components/PageWrapper";
 import { LocaleParams } from "@/app/i18n/local-params";
 import { baseUrl, splitnDeleteAccountUrl } from "@/app/configs/configs";
+import fetchSplitnDeleteAccountData from "./data/delete-account-data";
 import SplitnDeleteAccount from "./SplitnDeleteAccount";
 
 export const dynamic = "force-static";
@@ -25,23 +26,14 @@ export async function generateMetadata({ params }: LocaleParams): Promise<Metada
     },
   };
 
-  if (locale === "en") {
-    return {
-      ...shared,
-      title: "Splitn – Delete your account",
-      description: "How to delete your Splitn account and which data is deleted or kept.",
-    };
-  }
+  const data = await fetchSplitnDeleteAccountData(locale);
 
-  return {
-    ...shared,
-    title: "Splitn – Konto löschen",
-    description: "So löschen Sie Ihr Splitn-Konto und welche Daten dabei gelöscht oder aufbewahrt werden.",
-  };
+  return { ...shared, title: data.meta.title, description: data.meta.description };
 }
 
 export default async function SplitnDeleteAccountPage(props: LocaleParams) {
   const { locale } = await props.params;
+  const data = await fetchSplitnDeleteAccountData(locale);
 
-  return <PageWrapper locale={locale} pageContent={<SplitnDeleteAccount locale={locale === "en" ? "en" : "de"} />} />;
+  return <PageWrapper locale={locale} pageContent={<SplitnDeleteAccount data={data} locale={locale === "en" ? "en" : "de"} />} />;
 }

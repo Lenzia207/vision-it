@@ -1,0 +1,43 @@
+{
+    "meta": {
+        "title": "Splitn – Delete your account",
+        "description": "How to delete your Splitn account and which data is deleted or kept."
+    },
+    "title": "Splitn – Delete your account",
+    "intro": "This page explains how to delete your account in the {app} app by VisionIT and which data is deleted or kept.",
+    "inApp": {
+        "title": "Option 1: Directly in the app",
+        "steps": [
+            "Open Splitn and sign in.",
+            "On the home screen, tap your profile picture in the top right corner.",
+            "Scroll to the bottom of the account page and tap “Delete Account”.",
+            "Confirm with “Delete Account”."
+        ],
+        "note": "Your account is deleted immediately. This cannot be undone."
+    },
+    "byEmail": {
+        "title": "Option 2: By email",
+        "text": "If you can no longer access the app, write to {mail} with the subject “Splitn – delete account”. Please send the email from the address you registered with Splitn, or include your username. We delete your account within 30 days and confirm the deletion by email."
+    },
+    "deleted": {
+        "title": "Which data is deleted",
+        "items": [
+            "Email address, username, last name, phone number and profile picture",
+            "Password, Google sign-in data and all login sessions",
+            "Device tokens for push notifications",
+            "Your list of blocked users",
+            "Open settlement requests you are part of (they are rejected)",
+            "Groups with no active member left after your deletion, including all their expenses"
+        ],
+        "note": "You can no longer sign in with the deleted account."
+    },
+    "kept": {
+        "title": "Which data is kept",
+        "text": "In groups that still have other active members, your first name (or username) marked “(deleted)” and your expenses and settlements are kept. Without them, the other members’ expenses and balances would be wrong. This data is kept for as long as the group exists and is deleted once the group has no active member left."
+    },
+    "more": {
+        "title": "More information",
+        "text": "For details on how your data is processed, see the {privacyLink}. If you have any questions, contact us at {mail}.",
+        "privacyLinkText": "Splitn privacy policy"
+    }
+}

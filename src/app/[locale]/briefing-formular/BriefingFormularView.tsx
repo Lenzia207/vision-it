@@ -1,17 +1,16 @@
 "use client";
 
 import TitleHeader from "@/components/TitleHeader";
-import { BriefingFormData, BriefingFormState, CheckboxOption } from "./data/types/briefing-form-types";
+import { BriefingFormData, BriefingFormState } from "./data/types/briefing-form-types";
 import { FormEvent } from "react";
-import { Send } from "lucide-react";
 import InlineInput from "@/components/FormComponents/InlineInput";
 import RadioGroup from "@/components/FormComponents/RadioGroup";
 import CheckItem from "@/components/FormComponents/CheckItem";
 import TextareaInput from "@/components/FormComponents/TextareaInput";
 import TextInput from "@/components/FormComponents/TextInput";
-import FieldGroup from "@/components/FormComponents/FieldGroup";
 import SectionCard from "@/components/FormComponents/SectionCard";
-import AppButton from "@/components/AppButton";
+import BriefingSubmitArea from "./components/BriefingSubmitArea";
+import ChecklistGroup from "./components/ChecklistGroup";
 
 // ─── Prop types ──────────────────────────────────────────────────────────────
 
@@ -26,48 +25,6 @@ interface BriefingFormularViewProps {
     onRadio: (name: keyof BriefingFormState, value: string) => void;
     onBoolCheck: (name: keyof BriefingFormState, checked: boolean) => void;
     onSubmit: (e: FormEvent<HTMLFormElement>) => void;
-}
-
-// ─── Generic mapped checklist ────────────────────────────────────────────────
-
-/**
- * Renders a list of CheckItems from a CheckboxOption[] array.
- * onNestedCheck receives just (key, checked) — the caller binds the group via makeNestedCheck.
- */
-function ChecklistGroup({
-    options,
-    groupValues,
-    formState,
-    onNestedCheck,
-    onTextChange,
-}: {
-    options: CheckboxOption[];
-    groupValues: Record<string, boolean>;
-    formState: BriefingFormState;
-    onNestedCheck: (key: string, checked: boolean) => void;
-    onTextChange: BriefingFormularViewProps["onTextChange"];
-}) {
-    return (
-        <FieldGroup>
-            {options.map(opt => (
-                <CheckItem
-                    key={opt.key}
-                    label={opt.label}
-                    checked={!!groupValues[opt.key]}
-                    onChange={v => onNestedCheck(opt.key, v)}
-                >
-                    {opt.inlineInputName && (
-                        <InlineInput
-                            name={opt.inlineInputName}
-                            value={(formState as unknown as Record<string, string>)[opt.inlineInputName] ?? ""}
-                            placeholder={opt.inlineInputPlaceholder}
-                            onChange={onTextChange}
-                        />
-                    )}
-                </CheckItem>
-            ))}
-        </FieldGroup>
-    );
 }
 
 // ─── Main View ───────────────────────────────────────────────────────────────
@@ -141,7 +98,7 @@ export default function BriefingFormularView({
                         onTextChange={onTextChange}
                     />
                     <TextInput label={data.section2.referencesLabel} name="referenceWebsites" value={f.referenceWebsites} onChange={onTextChange} />
-                    <TextInput label={data.section2.styleLabel} name="styleWish" value={f.styleWish} placeholder="modern-minimalistisch / corporate / kreativ / ..." onChange={onTextChange} />
+                    <TextInput label={data.section2.styleLabel} name="styleWish" value={f.styleWish} placeholder={data.section2.stylePlaceholder} onChange={onTextChange} />
                 </SectionCard>
 
                 {/* ── Section 3 · Content & Texts ── */}
@@ -153,7 +110,7 @@ export default function BriefingFormularView({
                         onNestedCheck={makeNestedCheck("content")}
                         onTextChange={onTextChange}
                     />
-                    <TextInput label={data.section3.pagesLabel} name="requiredPages" value={f.requiredPages} placeholder="Startseite / Über uns / ..." onChange={onTextChange} />
+                    <TextInput label={data.section3.pagesLabel} name="requiredPages" value={f.requiredPages} placeholder={data.section3.pagesPlaceholder} onChange={onTextChange} />
                 </SectionCard>
 
                 {/* ── Section 4 · Features & Integrations ── */}
@@ -187,7 +144,7 @@ export default function BriefingFormularView({
                         onNestedCheck={makeNestedCheck("existing")}
                         onTextChange={onTextChange}
                     />
-                    <TextInput label={data.section6.accessesLabel} name="accessesNeeded" value={f.accessesNeeded} placeholder="Domain / Hosting / CMS / ..." onChange={onTextChange} />
+                    <TextInput label={data.section6.accessesLabel} name="accessesNeeded" value={f.accessesNeeded} placeholder={data.section6.accessesPlaceholder} onChange={onTextChange} />
                 </SectionCard>
 
                 {/* ── Section 7 · SEO & Marketing ── */}
@@ -213,7 +170,6 @@ export default function BriefingFormularView({
                     <p className="text-xs italic mt-2" style={{ color: "var(--text-muted)" }}>{data.section8.note}</p>
                 </SectionCard>
 
-      
 
                 {/* ── Section 9 · Budget & Timeline ── */}
                 <SectionCard title={data.section9.title}>
@@ -278,55 +234,20 @@ export default function BriefingFormularView({
                         checked={f.multipleStakeholders}
                         onChange={v => onBoolCheck("multipleStakeholders", v)}
                     />
-                    <TextInput label={data.section11.availabilityLabel} name="feedbackAvailability" value={f.feedbackAvailability} placeholder="z.B. Mo–Fr 09:00–17:00" onChange={onTextChange} />
+                    <TextInput label={data.section11.availabilityLabel} name="feedbackAvailability" value={f.feedbackAvailability} placeholder={data.section11.availabilityPlaceholder} onChange={onTextChange} />
                 </SectionCard>
 
                 {/* ── Privacy + Submit ── */}
-                <div className="glass-card rounded-2xl p-6 md:p-8 space-y-6">
-                    <label className="flex items-start gap-3 cursor-pointer">
-                        <input
-                            type="checkbox"
-                            checked={f.privacyAccepted}
-                            onChange={e => onBoolCheck("privacyAccepted", e.target.checked)}
-                            required
-                            className="mt-0.5 w-4 h-4 rounded shrink-0 focus:ring-2 focus:ring-(--ring)"
-                            style={{ background: "var(--bg-surface)", borderColor: "var(--border)", accentColor: "var(--accent)" }}
-                        />
-                        <span className="text-sm" style={{ color: "var(--text-secondary)" }}>{data.privacyLabel}</span>
-                    </label>
-
-                    {submitStatus && (
-                        <div className={`p-4 rounded-xl text-sm ${submitStatus === "success"
-                                ? "bg-green-500/10 border border-green-500/20 text-green-400"
-                                : "bg-red-500/10 border border-red-500/20 text-red-400"
-                            }`}>
-                            {statusMessage}
-                        </div>
-                    )}
-
-               
-
-                    <button
-                        type="submit"
-                        disabled={isSubmitting}
-                        className="w-full flex items-center justify-center gap-2 px-8 py-3.5 bg-blue-600 hover:bg-blue-500 disabled:opacity-60 disabled:cursor-not-allowed text-white font-medium rounded-xl transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-blue-600/15"
-                    >
-                        {isSubmitting ? (
-                            <span className="flex items-center gap-2">
-                                <svg className="animate-spin w-4 h-4" fill="none" viewBox="0 0 24 24">
-                                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" />
-                                </svg>
-                                {data.submittingText}
-                            </span>
-                        ) : (
-                            <>
-                                <Send className="w-4 h-4" />
-                                {data.submitButton}
-                            </>
-                        )}
-                    </button>
-                </div>
+                <BriefingSubmitArea
+                    privacyAccepted={f.privacyAccepted}
+                    privacyLabel={data.privacyLabel}
+                    onPrivacyChange={checked => onBoolCheck("privacyAccepted", checked)}
+                    submitStatus={submitStatus}
+                    statusMessage={statusMessage}
+                    isSubmitting={isSubmitting}
+                    submitButton={data.submitButton}
+                    submittingText={data.submittingText}
+                />
             </form>
         </div>
     );

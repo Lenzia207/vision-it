@@ -1,7 +1,7 @@
 import { Link } from "@/app/i18n/routing";
-import { caseStudiesUrl } from "@/app/configs/configs";
 import { SplitnCaseStudyData } from "../../data/case-studies-types";
-import { sectionX } from "../splitn-styles";
+import { nextCaseStudyHref } from "../../data/case-study-order";
+import { caseStudySectionX as sectionX } from "../../components/case-study-styles";
 
 interface SplitnNextSectionProps {
   next: SplitnCaseStudyData["next"];
@@ -13,7 +13,7 @@ export default function SplitnNextSection({ next, contact, locale }: SplitnNextS
   return (
     <section className={`${sectionX} pb-[clamp(72px,8vw,104px)]`}>
       <div className="max-w-[1240px] mx-auto grid grid-cols-[repeat(auto-fit,minmax(min(100%,420px),1fr))] gap-4">
-        <Link href={`${caseStudiesUrl}/elektrochemie`} locale={locale} className="flex flex-col gap-2.5 p-8 rounded-3xl bg-[#F8F7F6] no-underline text-[#181411]">
+        <Link href={nextCaseStudyHref("splitn")} locale={locale} className="flex flex-col gap-2.5 p-8 rounded-3xl bg-[#F8F7F6] no-underline text-[#181411]">
           <span className="text-[13px] text-[#6E5C49]">{next.label} →</span>
           <span className="text-[28px] font-extrabold">{next.title}</span>
         </Link>

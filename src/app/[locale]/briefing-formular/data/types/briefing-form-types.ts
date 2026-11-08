@@ -45,12 +45,14 @@ export interface BriefingFormData {
     options: CheckboxOption[];
     referencesLabel: string;
     styleLabel: string;
+    stylePlaceholder: string;
   };
 
   section3: {
     title: string;
     options: CheckboxOption[];
     pagesLabel: string;
+    pagesPlaceholder: string;
   };
 
   section4: {
@@ -67,6 +69,7 @@ export interface BriefingFormData {
     title: string;
     options: CheckboxOption[];
     accessesLabel: string;
+    accessesPlaceholder: string;
   };
 
   section7: {
@@ -105,6 +108,7 @@ export interface BriefingFormData {
     feedbackOptions: RadioOption[];
     multipleStakeholders: string;
     availabilityLabel: string;
+    availabilityPlaceholder: string;
   };
 }
 

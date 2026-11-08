@@ -1,5 +1,6 @@
 import { SplitnCaseStudyData } from "../../data/case-studies-types";
-import { overline, sectionX } from "../splitn-styles";
+import { caseStudySectionX as sectionX } from "../../components/case-study-styles";
+import { overline } from "../splitn-styles";
 
 export default function SplitnIdeaSection({ idea }: { idea: SplitnCaseStudyData["idea"] }) {
   return (

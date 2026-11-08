@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from "react";
 import BriefingFormularView from "./BriefingFormularView";
+import { initialBriefingState } from "./data/briefing-initial-state";
 import { BriefingFormData, BriefingFormState } from "./data/types/briefing-form-types";
 
 interface BriefingFormularScreenProps {
@@ -9,49 +10,8 @@ interface BriefingFormularScreenProps {
     locale: string;
 }
 
-const initialState: BriefingFormState = {
-    companyName: "",
-    contactPerson: "",
-    emailPhone: "",
-    existingWebsite: "",
-    projectTypes: { landingPage: false, businessWebsite: false, webshop: false, webapp: false, mobileApp: false, other: false },
-    projectTypeOther: "",
-    projectDescription: "",
-    design: { hasDesign: false, hasLogo: false, hasColors: false, noDesign: false },
-    designFile: "",
-    referenceWebsites: "",
-    styleWish: "",
-    content: { hasTexts: false, hasImages: false, needsTexts: false, needsStockPhotos: false },
-    requiredPages: "",
-    features: { contactForm: false, booking: false, newsletter: false, login: false, shop: false, multilingual: false, api: false, googleMaps: false, liveChat: false, other: false },
-    languages: "",
-    apiDetails: "",
-    featuresOther: "",
-    hosting: { hasDomain: false, needsDomain: false, hasHosting: false, visionItHosting: false, wantsCMS: false, keepEmails: false },
-    domainName: "",
-    hostingProvider: "",
-    existing: { siteReplaced: false, contentMigration: false },
-    accessesNeeded: "",
-    seo: { basicSEO: false, localSEO: false, googleBusiness: false, analytics: false, socialMedia: false },
-    socialPlatforms: "",
-    legal: { imprint: false, privacy: false, cookieBanner: false, agb: false, accessibility: false },
-
-    budget: "",
-    timeline: "",
-    fixedDate: "",
-    maintenanceType: "",
-    onboarding: false,
-    documentation: false,
-    preferredChannel: "",
-    channelOther: "",
-    feedbackRounds: "",
-    multipleStakeholders: false,
-    feedbackAvailability: "",
-    privacyAccepted: false,
-};
-
 export default function BriefingFormularScreen({ data, locale }: BriefingFormularScreenProps) {
-    const [formState, setFormState] = useState<BriefingFormState>(initialState);
+    const [formState, setFormState] = useState<BriefingFormState>(initialBriefingState);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null);
     const [statusMessage, setStatusMessage] = useState("");
@@ -95,7 +55,7 @@ export default function BriefingFormularScreen({ data, locale }: BriefingFormula
             if (json.success) {
                 setSubmitStatus("success");
                 setStatusMessage(data.successMessage);
-                setFormState(initialState);
+                setFormState(initialBriefingState);
             } else {
                 setSubmitStatus("error");
                 setStatusMessage(data.errorMessage);

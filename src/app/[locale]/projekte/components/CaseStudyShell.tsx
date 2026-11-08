@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import Footer from "../../home/sections/Footer";
 import { Link } from "@/app/i18n/routing";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { caseStudySectionX } from "./case-study-styles";
 
 interface CaseStudyShellProps {
   locale: string;
@@ -32,7 +33,7 @@ export function CaseStudyNav({ locale, nav, className, backClassName, labelClass
   return (
     <nav
       aria-label={nav.ariaLabel}
-      className={`flex flex-wrap justify-between items-center gap-3 py-4 px-[clamp(20px,5vw,64px)] ${className}`}
+      className={`flex flex-wrap justify-between items-center gap-3 py-4 ${caseStudySectionX} ${className}`}
     >
       <Link href="/#projekte" locale={locale} className={`inline-flex items-center min-h-11 no-underline ${backClassName}`}>
         ← {nav.back}

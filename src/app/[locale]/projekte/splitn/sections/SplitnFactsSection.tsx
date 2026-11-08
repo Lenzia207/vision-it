@@ -1,5 +1,5 @@
 import { SplitnCaseStudyData } from "../../data/case-studies-types";
-import { sectionX } from "../splitn-styles";
+import { caseStudySectionX as sectionX } from "../../components/case-study-styles";
 
 export default function SplitnFactsSection({ facts }: { facts: SplitnCaseStudyData["facts"] }) {
   return (

@@ -3,7 +3,7 @@ import { SplitnCaseStudyData } from "../../data/case-studies-types";
 import GroupPhone from "../mockups/GroupPhone";
 import HomePhone from "../mockups/HomePhone";
 import { caseStudySectionX as sectionX } from "../../components/case-study-styles";
-import StoreBadges from "./StoreBadges";
+import StoreBadges from "../../components/StoreBadges";
 
 interface SplitnHeroSectionProps {
   hero: SplitnCaseStudyData["hero"];

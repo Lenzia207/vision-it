@@ -159,8 +159,13 @@
         "titleStart": "Photograph. Describe. ",
         "titleAccent": "PDF.",
         "description": "An offline app that turns photos and notes into clean photo documentation in just a few steps – independently conceived, designed and developed.",
-        "storeCta": "View on the App Store",
-        "storeUrl": "https://apps.apple.com/us/app/pictolog-pdf/id6759091493",
+        "stores": {
+          "appStore": { "url": "", "alt": "Download on the App Store" },
+          "googlePlay": {
+            "url": "https://play.google.com/store/apps/details?id=at.visionit.pictolog&hl=en",
+            "alt": "Get it on Google Play"
+          }
+        },
         "featuresCta": "Features"
       },
       "mock": {

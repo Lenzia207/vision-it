@@ -1,15 +1,17 @@
 import Image from "next/image";
 import { caseStudySectionX as sectionX } from "../../components/case-study-styles";
 import { PictologCaseStudyData } from "../../data/case-studies-types";
+import StoreBadges from "../../components/StoreBadges";
 import PreviewPhone from "../mockups/PreviewPhone";
 import ProjectPhone from "../mockups/ProjectPhone";
 
 interface PictologHeroSectionProps {
   hero: PictologCaseStudyData["hero"];
   mock: PictologCaseStudyData["mock"];
+  locale: string;
 }
 
-export default function PictologHeroSection({ hero, mock }: PictologHeroSectionProps) {
+export default function PictologHeroSection({ hero, mock, locale }: PictologHeroSectionProps) {
   return (
     <header className={`${sectionX} pt-[clamp(72px,9vw,120px)] pb-[clamp(56px,7vw,88px)]`}>
       <div className="max-w-[1240px] mx-auto grid grid-cols-[repeat(auto-fit,minmax(min(100%,460px),1fr))] gap-[clamp(40px,6vw,80px)] items-center">
@@ -23,15 +25,8 @@ export default function PictologHeroSection({ hero, mock }: PictologHeroSectionP
             <span className="bg-[#C0E859] px-[.12em]">{hero.titleAccent}</span>
           </h1>
           <p className="m-0 max-w-[540px] text-[19px] leading-[1.6] text-[#3A3E43]">{hero.description}</p>
-          <div className="flex flex-wrap gap-3">
-            <a
-              href={hero.storeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center min-h-[50px] px-[26px] rounded-[14px] bg-black text-white font-bold no-underline"
-            >
-              {hero.storeCta} ↗
-            </a>
+          <div className="flex flex-wrap items-center gap-3">
+            <StoreBadges stores={hero.stores} locale={locale} />
             <a href="#features" className="inline-flex items-center min-h-[50px] px-[26px] rounded-[14px] bg-white border border-[#C4C8CC] text-black font-bold no-underline">
               {hero.featuresCta}
             </a>

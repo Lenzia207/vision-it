@@ -159,8 +159,13 @@
         "titleStart": "Fotografieren. Beschreiben. ",
         "titleAccent": "PDF.",
         "description": "Eine Offline-App, die aus Fotos und Notizen in wenigen Schritten eine saubere Fotodokumentation macht – eigenständig konzipiert, gestaltet und entwickelt.",
-        "storeCta": "Im App Store ansehen",
-        "storeUrl": "https://apps.apple.com/us/app/pictolog-pdf/id6759091493",
+        "stores": {
+          "appStore": { "url": "", "alt": "Laden im App Store" },
+          "googlePlay": {
+            "url": "https://play.google.com/store/apps/details?id=at.visionit.pictolog&hl=de_AT",
+            "alt": "Jetzt bei Google Play"
+          }
+        },
         "featuresCta": "Funktionen"
       },
       "mock": {
@@ -222,7 +227,7 @@
       "hero": {
         "logoAlt": "splitn",
         "titleStart": "Wer schuldet wem? ",
-        "titleAccent": "Geklärt.",
+        "titleAccent": "Check.",
         "description": "Eine App für Paare, WGs und Freundesgruppen, die gemeinsam einkaufen und ausgeben. Alles mit fairer Aufteilung und klaren Salden. Idee, Design, App und Backend aus einer Hand.",
         "stores": {
           "appStore": {
@@ -230,7 +235,7 @@
             "alt": "Laden im App Store"
           },
           "googlePlay": {
-            "url": "",
+            "url": "https://play.google.com/store/apps/details?id=at.visionit.splitn&hl=de_AT",
             "alt": "Jetzt bei Google Play"
           }
         },

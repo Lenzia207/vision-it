@@ -23,7 +23,7 @@ export default function PictologCaseStudy({ data, locale }: PictologCaseStudyPro
         backClassName="font-bold text-black"
         labelClassName="text-[#686D74]"
       />
-      <PictologHeroSection hero={data.hero} mock={data.mock} />
+      <PictologHeroSection hero={data.hero} mock={data.mock} locale={locale} />
       <PictologFactsSection facts={data.facts} />
       <PictologIdeaSection idea={data.idea} />
       <PictologStepsSection steps={data.steps} />

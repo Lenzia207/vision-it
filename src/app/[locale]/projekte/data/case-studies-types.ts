@@ -83,6 +83,12 @@ export interface CampCurrieCaseStudyData extends CaseStudyBase {
   work: { label: string; title: string; items: CaseStudyCard[] };
 }
 
+/** Store badges; each one becomes an external link once its url is set, otherwise it shows a "Coming Soon" toast. */
+export interface StoreLinks {
+  appStore: { url: string; alt: string };
+  googlePlay: { url: string; alt: string };
+}
+
 export interface PictologCaseStudyData extends CaseStudyBase {
   hero: {
     appName: string;
@@ -90,8 +96,7 @@ export interface PictologCaseStudyData extends CaseStudyBase {
     titleStart: string;
     titleAccent: string;
     description: string;
-    storeCta: string;
-    storeUrl: string;
+    stores: StoreLinks;
     featuresCta: string;
   };
   mock: {
@@ -116,11 +121,7 @@ export interface SplitnCaseStudyData extends CaseStudyBase {
     titleStart: string;
     titleAccent: string;
     description: string;
-    /** Store badges; each one becomes an external link once its url is set. */
-    stores: {
-      appStore: { url: string; alt: string };
-      googlePlay: { url: string; alt: string };
-    };
+    stores: StoreLinks;
     detailsCta: string;
   };
   mock: {
